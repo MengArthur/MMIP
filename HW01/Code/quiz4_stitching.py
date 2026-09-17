@@ -225,39 +225,37 @@ def run_quiz4(data_dir, output_dir):
             'H': H_stress
         })
 
-    # 4. Comprehensive Visualization Plot
-    fig = plt.figure(figsize=(18, 13))
-    gs = fig.add_gridspec(3, 2)
+    # 4. Plot 1: SIFT Matching & Stitched Panorama (合起來的成果)
+    fig1 = plt.figure(figsize=(16, 9))
+    gs1 = fig1.add_gridspec(2, 2, height_ratios=[1, 1.1])
 
-    # (0, 0) Matched SIFT Features
-    ax1 = fig.add_subplot(gs[0, :])
-    ax1.imshow(cv2.cvtColor(matched_vis, cv2.COLOR_BGR2RGB))
-    ax1.set_title(f"SIFT Feature Matching (Top 50 Inlier Correspondences | Inliers: {inliers})", fontsize=13, fontweight='bold')
-    ax1.axis('off')
+    ax_m = fig1.add_subplot(gs1[0, :])
+    ax_m.imshow(cv2.cvtColor(matched_vis, cv2.COLOR_BGR2RGB))
+    ax_m.set_title(f"SIFT Feature Matching (Top 50 Inlier Matches | Total Inliers: {inliers})", fontsize=12, fontweight='bold')
+    ax_m.axis('off')
 
-    # (1, 0) Basic Stitching (Visible seam)
-    ax2 = fig.add_subplot(gs[1, 0])
-    ax2.imshow(cv2.cvtColor(basic_stitched, cv2.COLOR_BGR2RGB))
-    ax2.set_title("Basic Task: Direct Overlay Stitching (Noticeable Vertical Seam)", fontsize=12, fontweight='bold')
-    ax2.axis('off')
+    ax_b = fig1.add_subplot(gs1[1, 0])
+    ax_b.imshow(cv2.cvtColor(basic_stitched, cv2.COLOR_BGR2RGB))
+    ax_b.set_title("Basic Task: Direct Overlay Stitching (Visible Vertical Seam)", fontsize=11, fontweight='bold')
+    ax_b.axis('off')
 
-    # (1, 1) Advanced Blending (Seamless)
-    ax3 = fig.add_subplot(gs[1, 1])
-    ax3.imshow(cv2.cvtColor(blended_stitched, cv2.COLOR_BGR2RGB))
-    ax3.set_title("Advanced Task: Distance-Weighted Linear Blending (Seamless Mosaic)", fontsize=12, fontweight='bold')
-    ax3.axis('off')
+    ax_s = fig1.add_subplot(gs1[1, 1])
+    ax_s.imshow(cv2.cvtColor(blended_stitched, cv2.COLOR_BGR2RGB))
+    ax_s.set_title("Advanced Task: Seamless Blended Panorama (Linear Feathering)", fontsize=11, fontweight='bold')
+    ax_s.axis('off')
 
-    # (2, 0) Failure Case: 50° Extreme Rotation Distortion
+    plt.suptitle("Quiz 4: SIFT Feature Matching & Stitched Panorama Results", fontsize=14, fontweight='bold', y=0.98)
+    plt.tight_layout()
+    plot1_path = os.path.join(output_dir, "quiz4_stitching_result.png")
+    fig1.savefig(plot1_path, dpi=180, bbox_inches='tight')
+    plt.close(fig1)
+    print(f"\n[Saved Output] Stitched panorama plot saved to: {plot1_path}")
+
+    # 5. Plot 2: Advance Failure Boundary (50° Rotation) & Preprocessing Enhancement (失敗的 advance)
     img_rot50 = cv2.imread(os.path.join(data_dir, "quiz4_scene_right_rot50.jpg"))
     _, _, _, H_r50, inl_r50 = detect_and_match_sift(img_left, img_rot50)
     stitched_r50 = stitch_images_basic(img_left, img_rot50, H_r50)
 
-    ax4 = fig.add_subplot(gs[2, 0])
-    ax4.imshow(cv2.cvtColor(stitched_r50, cv2.COLOR_BGR2RGB))
-    ax4.set_title(f"[Failure Boundary: 50° Extreme Rotation] Homography Breakdown & Distortion\n(Inliers dropped to {inl_r50} | Severe Parallax Mismatch)", fontsize=11, fontweight='bold', color='darkred')
-    ax4.axis('off')
-
-    # (2, 1) Preprocessing: CLAHE Enhancement on Dark Image
     img_dark = cv2.imread(os.path.join(data_dir, "quiz4_scene_right_dark40.jpg"))
     kp_l_c, kp_clahe, matches_clahe, H_clahe, inl_clahe = detect_and_match_sift(img_left, img_dark, use_clahe=True)
     match_vis_clahe = cv2.drawMatches(
@@ -267,22 +265,21 @@ def run_quiz4(data_dir, output_dir):
         matchColor=(0, 255, 0)
     )
 
-    ax5 = fig.add_subplot(gs[2, 1])
-    ax5.imshow(cv2.cvtColor(match_vis_clahe, cv2.COLOR_BGR2RGB))
-    ax5.set_title(f"[Preprocessing: CLAHE Enhancement] Normalized Dark Lighting\n(Rescued {len(matches_clahe)} Good Matches | Inliers: {inl_clahe})", fontsize=11, fontweight='bold', color='darkgreen')
-    ax5.axis('off')
+    fig2, axes2 = plt.subplots(1, 2, figsize=(16, 5.5))
+    axes2[0].imshow(cv2.cvtColor(stitched_r50, cv2.COLOR_BGR2RGB))
+    axes2[0].set_title(f"[Failure Boundary: 50° Extreme Rotation] Homography Collapse & Distortion\n(Inliers dropped to {inl_r50} | Severe Parallax Mismatch)", fontsize=11, fontweight='bold', color='darkred')
+    axes2[0].axis('off')
 
-    plt.suptitle("Quiz 4: SIFT Feature Matching, Seamless Stitching & Failure Boundary Analysis", fontsize=15, fontweight='bold', y=0.98)
+    axes2[1].imshow(cv2.cvtColor(match_vis_clahe, cv2.COLOR_BGR2RGB))
+    axes2[1].set_title(f"[Preprocessing: CLAHE Enhancement] Normalized Dark Lighting\n(Rescued {len(matches_clahe)} Good Matches | Inliers: {inl_clahe})", fontsize=11, fontweight='bold', color='darkgreen')
+    axes2[1].axis('off')
+
+    plt.suptitle("Quiz 4 Advance: Failure Boundary (50° Rotation) & Preprocessing Enhancement (CLAHE)", fontsize=13, fontweight='bold')
     plt.tight_layout()
-    out_plot_path = os.path.join(output_dir, "quiz4_comparison.png")
-    plt.savefig(out_plot_path, dpi=200, bbox_inches='tight')
-    plt.close()
-    print(f"\n[Saved Output] Plot saved to: {out_plot_path}")
-
-    # Also save the final panoramic high-res image
-    pano_out = os.path.join(output_dir, "quiz4_panorama_blended.jpg")
-    cv2.imwrite(pano_out, blended_stitched)
-    print(f"[Saved Output] Final Blended Panorama saved to: {pano_out}")
+    plot2_path = os.path.join(output_dir, "quiz4_advance_analysis.png")
+    fig2.savefig(plot2_path, dpi=180, bbox_inches='tight')
+    plt.close(fig2)
+    print(f"[Saved Output] Advance failure & preprocessing plot saved to: {plot2_path}")
 
     return {
         'inliers': inliers,

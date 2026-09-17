@@ -156,20 +156,7 @@ def run_quiz2(image_path, output_dir, N=1000):
     plt.close()
     print(f"\n[Saved Output] Plot saved to: {out_plot_path}")
 
-    # 4. Color HSV Equalization Demo (Slide 30)
-    color_eq = hist_equalize_color_hsv(bgr_img, method='opencv')
-    color_plot_path = os.path.join(output_dir, "quiz2_color_equalization.png")
-    fig_col, ax_col = plt.subplots(1, 2, figsize=(14, 6))
-    ax_col[0].imshow(cv2.cvtColor(bgr_img, cv2.COLOR_BGR2RGB))
-    ax_col[0].set_title("Original Color Image (Low Contrast)", fontsize=12, fontweight='bold')
-    ax_col[0].axis('off')
-    ax_col[1].imshow(cv2.cvtColor(color_eq, cv2.COLOR_BGR2RGB))
-    ax_col[1].set_title("Color Equalized via HSV V-Channel (Contrast Enhanced)", fontsize=12, fontweight='bold')
-    ax_col[1].axis('off')
-    plt.tight_layout()
-    plt.savefig(color_plot_path, dpi=200, bbox_inches='tight')
-    plt.close()
-    print(f"[Saved Output] Color equalization plot saved to: {color_plot_path}")
+    # Return metrics summary
 
     return {
         't_cv': t_cv_mean,

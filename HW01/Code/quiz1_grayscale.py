@@ -105,33 +105,26 @@ def run_quiz1(image_path, output_dir, N=1000):
     print(f"    - Max Absolute Diff:         {metrics_fp['max_diff']}")
     print(f"    - PSNR:                      {metrics_fp['psnr']:.2f} dB")
 
-    # 3. Visualization Plot
-    fig, axes = plt.subplots(2, 2, figsize=(14, 10))
+    # 3. Visualization Plot (1x3: Original RGB, OpenCV Grayscale, NumPy Grayscale)
+    fig, axes = plt.subplots(1, 3, figsize=(16, 5))
     rgb_disp = cv2.cvtColor(bgr_img, cv2.COLOR_BGR2RGB)
 
-    axes[0, 0].imshow(rgb_disp)
-    axes[0, 0].set_title("Original Color Image (RGB)", fontsize=13, fontweight='bold')
-    axes[0, 0].axis('off')
+    axes[0].imshow(rgb_disp)
+    axes[0].set_title("Original Color Image (RGB)", fontsize=12, fontweight='bold')
+    axes[0].axis('off')
 
-    axes[0, 1].imshow(gray_cv, cmap='gray')
-    axes[0, 1].set_title(f"OpenCV cvtColor ({t_cv_mean:.3f} ms)", fontsize=13, fontweight='bold')
-    axes[0, 1].axis('off')
+    axes[1].imshow(gray_cv, cmap='gray')
+    axes[1].set_title(f"OpenCV cvtColor ({t_cv_mean:.3f} ms)", fontsize=12, fontweight='bold')
+    axes[1].axis('off')
 
-    axes[1, 0].imshow(gray_np, cmap='gray')
-    axes[1, 0].set_title(f"NumPy Vectorized Float ({t_np_mean:.3f} ms)", fontsize=13, fontweight='bold')
-    axes[1, 0].axis('off')
+    axes[2].imshow(gray_np, cmap='gray')
+    axes[2].set_title(f"NumPy Vectorized Float ({t_np_mean:.3f} ms)", fontsize=12, fontweight='bold')
+    axes[2].axis('off')
 
-    # Amplify difference for visual clarity
-    diff_map = np.abs(gray_cv.astype(np.float32) - gray_np.astype(np.float32))
-    im_diff = axes[1, 1].imshow(diff_map, cmap='inferno')
-    axes[1, 1].set_title(f"Absolute Difference Map (Max Diff: {metrics_float['max_diff']})", fontsize=13, fontweight='bold')
-    axes[1, 1].axis('off')
-    fig.colorbar(im_diff, ax=axes[1, 1], fraction=0.046, pad=0.04)
-
-    plt.suptitle("Quiz 1: RGB to Grayscale Conversion Comparison (OpenCV vs NumPy)", fontsize=16, fontweight='bold', y=0.98)
+    plt.suptitle("Quiz 1: Color to Grayscale Conversion (OpenCV vs. Vectorized NumPy)", fontsize=14, fontweight='bold', y=0.98)
     plt.tight_layout()
     out_plot_path = os.path.join(output_dir, "quiz1_comparison.png")
-    plt.savefig(out_plot_path, dpi=200, bbox_inches='tight')
+    plt.savefig(out_plot_path, dpi=180, bbox_inches='tight')
     plt.close()
     print(f"\n[Saved Output] Plot saved to: {out_plot_path}")
 
