@@ -18,9 +18,9 @@
 >    - **Quiz 2**：深入剖析直方圖等化將動態範圍由 [2, 83] 完整拉伸至 [0, 255]（對比度標準差 Std 由 12.11 提升至 73.66）的物理意義；解釋為什麼 OpenCV 與 NumPy 誤差完全為 0 (MAE 0.000000，CDF 累加分配函數與 LUT 查表映射公式 100% 位元級一致)。
 >    - **Quiz 3**：基礎題手動 4 點透視校正；進階題同一套全自動流程在 5 種視角下的自動偵測與**扶正成果完整展示（2x5 對照結構）**；深入剖析 **60°~75° 校正效果嚴重退化與失效原因**（透視縮影 Foreshortening 導致遠端像素過少，逆向拉伸產生嚴重的插值模糊 Interpolation Blur 導致文字辨識不能；以及光學對比衰減導致 Canny 邊緣斷裂）。
 >    - **Quiz 4**：基礎題 SIFT 拼接 vs 進階題距離權重無痕漸變融合（消除接縫）；**7 種極限情境壓力測試動態評測總表**；深入剖析 **50° 極端旋轉失效破圖原因**（視差 Parallax 打破單應性平面假設，內點率驟降至 24% 造成幾何畸變飛鏢狀破圖）；以及 **CLAHE 前處理救回機制**（在暗部 -40% 下局部自適應增強弱邊緣梯度，穩定救回特徵點匹配）。
-> 4. **執行與查閱方式**：
->    - **完整技術報告**：請詳閱本份 `README.md`，圖文與數據俱全。
->    - **一鍵自動重跑評測**：終端機執行 `python HW01_main.py` 即會實時重新執行 1000 次基準測試並更新 `Output/` 圖片。
+> 4. **開發環境與執行驗證指引**：
+>    - **開發環境說明**：本作業開發環境採用輕量化 **Miniconda3 (Python 3.10+)**（非完整版 Anaconda），相依套件已精簡收錄於 `requirements.txt`。助教無論使用 **Miniconda** 或 **Anaconda** 均可 100% 無縫相容一鍵復現。
+>    - **一鍵全自動重跑評測**：在 Conda 環境下執行 `python HW01_main.py` 即會實時重新執行 1000 次基準測試並更新 `Output/` 圖片。
 >    - **互動筆記本**：開啟 `HW01_notebook.ipynb`，各題單元均已預先執行完畢，圖表與動態輸出完整內嵌。
 
 ---
@@ -243,17 +243,45 @@ C:\Users\yp455\Downloads\MMIP\HW01\
 
 ## 6. 執行方式與環境需求
 
-### 6.1 環境需求
-本專案支援 Python 3.10+，所需套件已列於 `requirements.txt`：
+### 6.1 環境建置說明（Miniconda / Anaconda）
+
+> [!NOTE]
+> **開發環境說明**：
+> 本作業開發與測試環境採用 **Miniconda3 (Python 3.10+)** 輕量化虛擬環境（相較於完整版 Anaconda 更加輕巧純淨，且指令與套件完全相容）。
+> 助教無論使用 **Miniconda** 或 **Anaconda**，皆可依下列步驟快速復現與執行作業：
+
+#### 步驟 1：建立並啟用 Conda 虛擬環境
 ```bash
+# 建立專用虛擬環境 mmip (建議 Python 3.10 或以上版本)
+conda create -n mmip python=3.10 -y
+
+# 啟用虛擬環境
+conda activate mmip
+```
+
+#### 步驟 2：安裝相依套件
+本作業所需的套件清單已精簡整理於 `requirements.txt`（包含 `opencv-python`, `numpy`, `matplotlib`, `Pillow`）：
+```bash
+# 切換至 HW01 目錄
+cd HW01
+
+# 安裝相依套件
 pip install -r requirements.txt
 ```
 
-### 6.2 一鍵評測主程式
-在專案根目錄下執行 `HW01_main.py`：
+### 6.2 一鍵評測主程式（評測模式）
+在 `HW01` 目錄下直接執行主程式，將自動執行 Quiz 1 ~ 4（含 1000 次基準測試）並於 `Output/` 輸出所有對比圖表：
 ```bash
 python HW01_main.py
 ```
 
-### 6.3 Jupyter Notebook 互動執行
-開啟 `HW01_notebook.ipynb`，即可逐步點選 Cell 查看各題成果。
+### 6.3 Jupyter Notebook 互動執行（互動模式）
+若助教欲以瀏覽器開啟互動式 Notebook 查閱：
+```bash
+# 若環境中尚未安裝 Jupyter Notebook，可先安裝：
+pip install notebook
+
+# 啟動 Notebook
+jupyter notebook HW01_notebook.ipynb
+```
+*(註：`HW01_notebook.ipynb` 內已預先執行並內嵌所有 Cell 的完整圖表與實時輸出數據，助教亦可直接在 GitHub 網頁上即時點閱，無需強制在本地啟動服務。)*
