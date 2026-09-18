@@ -298,12 +298,12 @@ def create_quiz4_stitching_pair():
     rot25_right = cv2.warpAffine(right_img, M_rot, (rw, rh), borderMode=cv2.BORDER_CONSTANT, borderValue=(0, 0, 0))
     cv2.imwrite(os.path.join(DATA_DIR, "quiz4_scene_right_rot25.jpg"), rot25_right)
 
-    # 4. Extreme rotation right image (50 degrees - failure case!)
+    # 4. Extreme rotation right image (50 degrees - SIFT handles this due to rotation invariance)
     M_rot50 = cv2.getRotationMatrix2D((rw // 2, rh // 2), 50.0, 1.0)
     rot50_right = cv2.warpAffine(right_img, M_rot50, (rw, rh), borderMode=cv2.BORDER_CONSTANT, borderValue=(0, 0, 0))
     cv2.imwrite(os.path.join(DATA_DIR, "quiz4_scene_right_rot50.jpg"), rot50_right)
 
-    # 5. Low overlap pair (only 10% overlap - failure case!)
+    # 5. Low overlap pair (narrow overlap interval)
     low_overlap_right = panorama[:, 720:1400].copy()
     cv2.imwrite(os.path.join(DATA_DIR, "quiz4_scene_right_low_overlap.jpg"), low_overlap_right)
     print("Generated all Quiz 4 stress test variants.")

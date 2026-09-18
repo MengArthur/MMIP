@@ -129,20 +129,25 @@ def run_quiz3(data_dir, output_dir):
     print("      QUIZ 3: PERSPECTIVE RECTIFICATION & KEYSTONE     ")
     print("=======================================================")
 
-    # 1. Basic Task: Manual 4-Point Transform
+    # 1. Basic Task: 4-Point Perspective Transform (Dynamic Detection with Manual Fallback)
     img_normal = cv2.imread(normal_img_path)
     if img_normal is None:
         raise FileNotFoundError(f"Cannot read image from {normal_img_path}")
 
-    # True corners ground truth or manual points
-    if os.path.exists(true_corners_path):
-        manual_pts = np.load(true_corners_path)
+    # Dynamically detect corners first for complete generalizability; fallback to ground truth if needed
+    auto_pts, is_exact, _ = auto_detect_document_corners(img_normal)
+    if auto_pts is not None:
+        target_pts = auto_pts
+        pts_mode = "Auto Detected Corners"
+    elif os.path.exists(true_corners_path):
+        target_pts = np.load(true_corners_path)
+        pts_mode = "Ground Truth Corners"
     else:
-        # Approximate corners
-        manual_pts = np.float32([[379, 171], [655, 163], [720, 689], [264, 693]])
+        target_pts = np.float32([[379, 171], [655, 163], [720, 689], [264, 693]])
+        pts_mode = "Manual Coordinates"
 
-    warped_manual, M_manual, (mw, mh) = four_point_transform(img_normal, manual_pts)
-    print(f"[Basic Task] Manual 4-Point Rectification Completed.")
+    warped_manual, M_manual, (mw, mh) = four_point_transform(img_normal, target_pts)
+    print(f"[Basic Task] 4-Point Rectification Completed ({pts_mode}).")
     print(f"  - Input Size: {img_normal.shape[1]}x{img_normal.shape[0]}")
     print(f"  - Restored Canonical Output Size: {mw}x{mh}")
     print(f"  - Homography Matrix H:\n{M_manual}")
@@ -192,7 +197,7 @@ def run_quiz3(data_dir, output_dir):
     # Basic Task in Row 0 (occupies col 1 and 2, centered)
     ax_b1 = fig.add_subplot(gs[0, 1])
     disp_b = cv2.cvtColor(img_normal.copy(), cv2.COLOR_BGR2RGB)
-    pts_int = manual_pts.astype(np.int32)
+    pts_int = target_pts.astype(np.int32)
     cv2.polylines(disp_b, [pts_int], True, (255, 0, 0), 4)
     for p in pts_int:
         cv2.circle(disp_b, tuple(p), 8, (0, 255, 0), -1)
