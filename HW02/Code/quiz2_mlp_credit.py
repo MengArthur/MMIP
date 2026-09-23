@@ -50,13 +50,29 @@ def set_seed(seed=42):
 
 def load_and_preprocess_credit_data(csv_path, test_size=0.2, random_state=42):
     """
-    Load Credit Card Default dataset, perform 80/20 stratified split,
-    and apply StandardScaler on 23 numerical features.
+    Load Credit Card Default dataset (from Kaggle UCI_Credit_Card.csv or standard CSV),
+    perform 80/20 stratified split, and apply StandardScaler on 23 numerical features.
     """
     df = pd.read_csv(csv_path)
-    feature_cols = [c for c in df.columns if c != 'default_payment_next_month']
+    # Drop non-feature ID column if present (e.g. from Kaggle)
+    if 'ID' in df.columns or 'id' in df.columns:
+        df = df.drop(columns=[c for c in df.columns if c.lower() == 'id'])
+
+    # Normalize column names: lowercase and replace '.' with '_'
+    df.columns = [c.lower().replace('.', '_').strip() for c in df.columns]
+
+    # Identify target column (e.g. 'default_payment_next_month' or 'default')
+    target_col = None
+    for c in df.columns:
+        if 'default' in c:
+            target_col = c
+            break
+    if target_col is None:
+        target_col = df.columns[-1]
+
+    feature_cols = [c for c in df.columns if c != target_col]
     X = df[feature_cols].values.astype(np.float32)
-    y = df['default_payment_next_month'].values.astype(np.float32)
+    y = df[target_col].values.astype(np.float32)
 
     X_train, X_val, y_train, y_val = train_test_split(
         X, y, test_size=test_size, random_state=random_state, stratify=y
@@ -245,10 +261,11 @@ def run_quiz2(data_dir, output_dir):
     5. Compare Before vs After (Loss curves & Classification metrics)
     """
     os.makedirs(output_dir, exist_ok=True)
-    csv_path = os.path.join(data_dir, "default_of_credit_card_clients.csv")
+    csv_path = os.path.join(data_dir, "UCI_Credit_Card.csv")
     if not os.path.exists(csv_path):
-        from .Data.download_dataset import download_credit_card_dataset
-        download_credit_card_dataset()
+        csv_path = os.path.join(data_dir, "default_of_credit_card_clients.csv")
+    if not os.path.exists(csv_path):
+        raise FileNotFoundError(f"Credit Card dataset not found in {data_dir}. Expected 'UCI_Credit_Card.csv'.")
 
     set_seed(42)
     data = load_and_preprocess_credit_data(csv_path, test_size=0.2, random_state=42)

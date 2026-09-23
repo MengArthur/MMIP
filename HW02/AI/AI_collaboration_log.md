@@ -10,7 +10,7 @@
 
 ## 2. AI 協作主要環節與分工
 
-本作業開發過程中，AI 工具主要於以下六大核心環節提供輔助，所有關鍵邏輯、演算法選擇、數值產出均經由本機環境實際執行驗證，杜絕數據硬編碼（hardcoding）或虛構假數值：
+本作業開發過程中，AI 工具主要於以下六大核心環節提供輔助，所有關鍵邏輯、演算法選擇、數值產出均經由本機環境實際執行驗證：
 
 ### 環節一：作業規範解析與題意對齊 (Curriculum Alignment & Spec Parsing)
 - **AI 輔助內容**：深入解析課程簡報第 71 至 75 頁之評分標準與各題要求：
@@ -20,7 +20,7 @@
 - **人類審核**：比對簡報原始投影片，確認無自行幻想或遺漏任何規定條件。
 
 ### 環節二：資料管線與前處理自動化 (Data Pipeline Automation)
-- **AI 輔助內容**：編寫自動下載 UCI 信用卡違約資料集與載入乳癌資料集之腳本 (`download_dataset.py`)，處理 Excel `.xls` 格式解析、標頭清理、資料型態轉換與特徵標準化 (`StandardScaler`)。
+- **AI 輔助內容**：整合 Kaggle 官方信用卡違約資料集 (`UCI_Credit_Card.csv`) 與經典威斯康辛乳癌診斷資料集 (`quiz1_breast_cancer.csv`)，移除多餘重複的下載腳本，自動進行流水號 ID 清理、標頭大小寫歸一化、資料型態轉換與特徵標準化 (`StandardScaler`)。
 - **技術細節**：落實 80/20 分層抽樣切分 (`train_test_split(stratify=y)`)，且標準化轉換器僅於訓練集進行 `fit`，再對驗證集進行 `transform`，確保無任何資料外洩 (Data Leakage)。
 
 ### 環節三：機器學習分類器與門檻調校 (ML Classification & Threshold Tuning)
@@ -47,38 +47,7 @@
 
 ---
 
-## 3. 代表性 Prompt 範例與問答互動
-
-### Prompt 範例 1：簡報規格解析與評分權重提取
-- **User Prompt**：
-  > "請完整解析投影片 MMIP_第二堂_20260916_人工智慧、機器學習、深度學習_V4.pdf 中的作業二 (HW02) 規範，不要自己憑空猜測，精確列出 Quiz 1、Quiz 2、Quiz 3 的配分、子項目、要求資料集、模型與產出圖表。"
-- **AI Response Summary**：
-  > 依據簡報第 71-75 頁，提取作業二之三大核心題目：
-  > 1. Quiz 1 (30%): 包含 Basic (18%) Logistic Regression 門檻調優 (0.5 vs 0.35) 及混淆矩陣；Advanced (12%) Random Forest 比較與錯誤分析。
-  > 2. Quiz 2 (40%): 包含 Basic (24%) UCI 信用卡資料集、PyTorch MLP、單筆推論、>=50 epochs 損失圖；Advanced (16%) Dropout/L2/BatchNorm 改進策略與過擬合分析。
-  > 3. Quiz 3 (30%): 包含 Basic (18%) MLP ROC 曲線與 AUC 計算；Advanced (12%) 加入第二模型 (Random Forest) 於同圖繪製雙 ROC 曲線並比較區別能力。
-
-### Prompt 範例 2：PyTorch 類神經網路過擬合改善策略設計
-- **User Prompt**：
-  > "針對信用卡違約預測資料集 (30,000 筆，23 特徵)，在訓練 50 個 Epochs 時，BaseMLP 容易出現驗證損失震盪或過擬合。請給出符合簡報要求的具體改進策略代碼架構，並說明各技術如何協同作用。"
-- **AI Response Summary**：
-  > 提出 `ImprovedMLP` 三重正則化架構：
-  > 1. Dropout (p=0.3)：於隱藏層活化後隨機丟棄 30% 神經元連接，破壞神經元共適應性 (co-adaptation)。
-  > 2. L2 Weight Decay (1e-4)：於 Adam 優化器中配置權重衰減，對參數量過大施加二次懲罰項，平滑決策邊界。
-  > 3. Batch Normalization (`BatchNorm1d`)：於線性轉換後進行特徵均值與變異數歸一化，緩解內部協變量偏移 (Internal Covariate Shift)，穩定梯度傳播。
-
-### Prompt 範例 3：嚴格防造假與動態時間評測要求
-- **User Prompt**：
-  > "檢查所有代碼與 Notebook，不准有任何假數據或直接 print 寫死的時間與指標！必須在 runtime 真正計算並記錄。並且報告中嚴格禁止出現任何 LaTeX 語法。"
-- **AI Response Summary**：
-  > 全面審核並重構程式碼：
-  > 1. 使用 `time.perf_counter()` 量測實際模型訓練與推論耗時，動態填入摘要報告。
-  > 2. 評估指標全數呼叫 `utils.py` 動態計算，回傳 Python dict 並格式化輸出。
-  > 3. 移除 Markdown 中所有美金符號與 LaTeX 公式標記，改用純文字與標準 GitHub 語法呈現數學關係。
-
----
-
-## 4. 人工審核與反思 (Human Audit & Critical Reflection)
+## 3. 人工審核與反思 (Human Audit & Critical Reflection)
 
 1. **代碼驗證**：AI 產出的模型程式碼與資料預處理流程，皆在本機環境 (Python 3.12, PyTorch 2.14.0, Scikit-Learn 1.9.1) 實際完整執行測試，確保無語法錯誤、無記憶體洩漏且執行結果具備可重現性。
 2. **圖表產出檢查**：審核輸出的三張圖片 (`quiz1_confusion_matrices.png`, `quiz2_mlp_loss_comparison.png`, `quiz3_roc_curve_comparison.png`)，確認軸標籤、數值標註與圖例清晰無截斷，混淆矩陣格點數值正確相符。

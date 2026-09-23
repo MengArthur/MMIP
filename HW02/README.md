@@ -28,9 +28,8 @@ HW02/
 │   ├── quiz2_mlp_credit.py          # Quiz 2: PyTorch MLP 深度學習與防過擬合
 │   └── quiz3_roc_eval.py            # Quiz 3: ROC 曲線與 AUC 判別力評估
 ├── Data/
-│   ├── download_dataset.py          # 自動下載與資料前處理管線
-│   ├── default_of_credit_card_clients.csv  # 信用卡違約資料 (30,000 筆)
-│   └── quiz1_breast_cancer.csv      # 乳癌診斷資料 (569 筆)
+│   ├── UCI_Credit_Card.csv          # Kaggle 官方信用卡違約資料 (30,000 筆, 24 欄位)
+│   └── quiz1_breast_cancer.csv      # 威斯康辛乳癌診斷資料 (569 筆, 30 特徵)
 ├── Output/
 │   ├── quiz1_confusion_matrices.png # Quiz 1 四分割混淆矩陣圖
 │   ├── quiz2_mlp_loss_comparison.png# Quiz 2 訓練/驗證損失對比曲線圖
@@ -76,7 +75,7 @@ python -m Code.quiz3_roc_eval
 ## Quiz 1：機器學習二元分類 (配分: 30%)
 
 ### 1. 任務規範與資料前處理
-- **資料集**：威斯康辛乳癌診斷資料集 (Breast Cancer Wisconsin Diagnostic)，共 569 筆樣本、30 個連續型細胞核特徵。目標為預測惡性 (Malignant, label=1) 或良性 (Benign, label=0)。
+- **資料集來源與規範對齊**：依據課程簡報第 72 頁規定「自行選擇一份二元分類資料集，可使用 AI 產生模擬資料（X 欄位至少 5 個），或從 Kaggle 尋找公開資料集」，本專案選擇機器學習與 Kaggle 公開醫療領域最具權威性的真實基準資料集：**威斯康辛乳癌診斷資料集 (Breast Cancer Wisconsin Diagnostic Dataset)**。該資料集亦為 Scikit-Learn 官方標準收錄 (`load_breast_cancer`)，共 569 筆真實臨床樣本、**30 個連續型細胞核特徵**（遠超簡報要求的 5 個欄位門檻），目標為預測惡性 (Malignant, label=1) 或良性 (Benign, label=0)。
 - **切分原則**：80% 訓練集 (455 筆)、20% 驗證集 (114 筆)，採用分層抽樣 (`stratify=y`) 維持類別比例一致。
 - **特徵標準化**：使用 `StandardScaler`。為防範資料外洩 (Data Leakage)，僅使用訓練集進行 `fit`，再對驗證集執行 `transform`。
 
@@ -122,7 +121,7 @@ python -m Code.quiz3_roc_eval
 ## Quiz 2：深度學習信用卡違約預測 (配分: 40%)
 
 ### 1. 任務規範與資料特性
-- **資料集**：UCI / Kaggle Default of Credit Card Clients Dataset，共 30,000 筆台灣信用卡客戶資料、23 個輸入特徵 (額度、性別、教育、婚姻、年齡、過去 6 個月還款狀態與帳單金額)。
+- **資料集來源與規範對齊**：依據課程簡報第 73 頁規定之 Kaggle 連結，直接採用官方發布之 `UCI_Credit_Card.csv`，共 30,000 筆信用卡客戶資料、23 個輸入特徵 (額度、性別、教育、婚姻、年齡、過去 6 個月還款狀態與帳單金額) 及 1 項違約目標標籤。
 - **標籤分佈**：違約類別 (Default=1) 佔比約 22.12%，非違約 (Default=0) 佔比約 77.88%，屬於典型非平衡資料集。
 - **訓練與驗證切分**：80% 訓練集 (24,000 筆)、20% 驗證集 (6,000 筆)，採用分層抽樣並透過 `StandardScaler` 標準化。
 

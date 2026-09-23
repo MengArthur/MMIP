@@ -40,7 +40,11 @@ def run_quiz3(data_dir, output_dir, mlp_bundle=None):
     5. Output detailed discriminative capacity analysis
     """
     os.makedirs(output_dir, exist_ok=True)
-    csv_path = os.path.join(data_dir, "default_of_credit_card_clients.csv")
+    csv_path = os.path.join(data_dir, "UCI_Credit_Card.csv")
+    if not os.path.exists(csv_path):
+        csv_path = os.path.join(data_dir, "default_of_credit_card_clients.csv")
+    if not os.path.exists(csv_path):
+        raise FileNotFoundError(f"Credit Card dataset not found in {data_dir}. Expected 'UCI_Credit_Card.csv'.")
 
     set_seed(42)
     data = load_and_preprocess_credit_data(csv_path, test_size=0.2, random_state=42)

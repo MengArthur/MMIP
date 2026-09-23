@@ -86,8 +86,10 @@ def run_quiz1(data_dir, output_dir):
     os.makedirs(output_dir, exist_ok=True)
     csv_path = os.path.join(data_dir, "quiz1_breast_cancer.csv")
     if not os.path.exists(csv_path):
-        from .Data.download_dataset import prepare_quiz1_dataset
-        prepare_quiz1_dataset()
+        from sklearn.datasets import load_breast_cancer
+        ds = load_breast_cancer(as_frame=True)
+        df_bc = ds.frame
+        df_bc.to_csv(csv_path, index=False)
 
     data = load_and_preprocess_quiz1_data(csv_path, test_size=0.2, random_state=42)
     X_train, X_val = data['X_train'], data['X_val']
