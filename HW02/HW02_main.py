@@ -86,7 +86,9 @@ def main():
     print(f"  - Deep Learning Framework:      PyTorch (Native TensorDataset & DataLoader)")
     print(f"  - Validation Sample Demo:       Sample #0 Pred Prob={q2_results['sample_demo']['predicted_prob']:.4f} -> Pred Label={q2_results['sample_demo']['predicted_label']} (Ground Truth={q2_results['sample_demo']['true_label']})")
     print(f"  - Baseline MLP Training:        50 Epochs trained | Final Train Loss={q2_results['res_base']['train_losses'][-1]:.4f} | Final Val Loss={q2_results['res_base']['val_losses'][-1]:.4f}")
-    print(f"  - Overfitting Observation:      Baseline MLP exhibits validation loss plateau/rebound after Epoch 20")
+    gap_base = q2_results['res_base']['val_losses'][-1] - q2_results['res_base']['train_losses'][-1]
+    gap_imp = q2_results['res_improved']['val_losses'][-1] - q2_results['res_improved']['train_losses'][-1]
+    print(f"  - Overfitting Observation:      Baseline generalization gap is {gap_base:.4f}; Regularization narrows gap to {gap_imp:.4f}")
     print(f"  - Improved MLP Strategy:        Dropout (0.3) + L2 Regularization (Weight Decay 1e-4) + BatchNorm")
     print(f"  - Improvement Verification:     Val Loss reduced to {q2_results['res_improved']['val_losses'][-1]:.4f}, F1 improved to {q2_results['m_improved']['f1_score']:.4f}")
     print(f"  - Output Plot:                  {q2_results['plot_path']}")

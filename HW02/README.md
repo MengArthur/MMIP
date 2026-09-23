@@ -7,9 +7,9 @@
 - **測試環境規格**：
   - 作業系統：Windows 11 (x86_64)
   - 執行核心：Miniconda3 Python 3.12.12
-  - 主要套件：PyTorch 2.14.0 (CPU), Scikit-Learn 1.9.1, Pandas 3.0.3, NumPy 2.2.6, Matplotlib 3.10.8
+  - 主要套件：PyTorch 2.14.0 (CPU), Scikit-Learn 1.9.1, Pandas 3.0.3, NumPy 2.4.6, Matplotlib 3.10.8
   - 運行裝置：Intel CPU (純本機運算，無使用外部付費 API 運算)
-  - 完整端到端執行總耗時：約 120 至 130 秒 (包含 24,000 筆資料訓練兩個 50 Epochs 之神經網路)
+  - 完整端到端執行總耗時：約 90 至 100 秒 (包含 24,000 筆資料訓練兩個 50 Epochs 之神經網路)
 
 ---
 
@@ -87,7 +87,6 @@ python -m Code.quiz3_roc_eval
 - **Model 2: 隨機森林 (Random Forest Classifier)**
   - 決策樹數量 (n_estimators)：100
   - 最大深度 (max_depth)：6
-  - 最小分割樣本數 (min_samples_split)：4
   - 隨機種子 (random_state)：42
 
 ### 3. 實際運行評估結果 (Runtime Dynamic Metrics)
@@ -132,8 +131,8 @@ python -m Code.quiz3_roc_eval
   - 輸入層：23 個特徵
   - 隱藏層 1：Linear(23 -> 64) + ReLU()
   - 隱藏層 2：Linear(64 -> 32) + ReLU()
-  - 輸出層：Linear(32 -> 1) (輸出 Logits，搭配 BCEWithLogitsLoss)
-- **總參數量**：3,617 個可學習參數
+  - 輸出層：Linear(32 -> 1) + Sigmoid() (輸出預測機率，搭配 BCELoss)
+- **總參數量**：3,649 個可學習參數
 
 #### 改進模型 (Improved MLP with Regularization)
 - **針對性改進策略**：
@@ -144,8 +143,8 @@ python -m Code.quiz3_roc_eval
   - 輸入層：23 個特徵
   - 區塊 1：Linear(23 -> 64) -> BatchNorm1d(64) -> ReLU() -> Dropout(p=0.3)
   - 區塊 2：Linear(64 -> 32) -> BatchNorm1d(32) -> ReLU() -> Dropout(p=0.3)
-  - 輸出層：Linear(32 -> 1)
-- **總參數量**：3,809 個可學習參數
+  - 輸出層：Linear(32 -> 1) + Sigmoid() (輸出預測機率)
+- **總參數量**：3,841 個可學習參數
 
 ### 3. 超參數設定表 (Hyperparameter Configuration)
 
@@ -159,7 +158,7 @@ python -m Code.quiz3_roc_eval
 | 權重衰減 (Weight Decay) | 0.0 | 1e-4 | L2 懲罰項，平滑決策曲面 |
 | 批次大小 (Batch Size) | 128 | 128 | 平衡梯度估計穩定度與記憶體耗用 |
 | 學習率 (Learning Rate) | 0.001 | 0.001 | 搭配 Adam 自動調整一階與二階動量 |
-| 損失函數 (Loss Function) | BCEWithLogitsLoss | BCEWithLogitsLoss | 數值穩定性優於手動 Sigmoid + BCELoss |
+| 損失函數 (Loss Function) | BCELoss | BCELoss | 搭配 Sigmoid 輸出層計算二元交叉熵 |
 | 訓練輪次 (Epochs) | 50 | 50 | 完整滿足簡報要求至少 50 輪 |
 
 ### 4. 單一驗證樣本即時推論展示 (Basic Task 要求)

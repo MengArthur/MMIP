@@ -155,8 +155,7 @@ def train_mlp_model(
     epochs=50,
     batch_size=128,
     lr=0.001,
-    weight_decay=0.0,
-    pos_weight=None
+    weight_decay=0.0
 ):
     """
     Train an MLP model for specified epochs, recording Train and Val Loss at each epoch.
@@ -170,12 +169,7 @@ def train_mlp_model(
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
     val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
 
-    if pos_weight is not None:
-        pw = torch.tensor([pos_weight], dtype=torch.float32, device=device)
-        # Note: If using BCEWithLogitsLoss pos_weight is supported, for BCELoss we apply sample weights
-        criterion = nn.BCELoss()
-    else:
-        criterion = nn.BCELoss()
+    criterion = nn.BCELoss()
 
     optimizer = optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
 
@@ -338,7 +332,7 @@ def run_quiz2(data_dir, output_dir):
     # 4. Comparative Metrics Table
     # -------------------------------------------------------------
     print("\n" + "=" * 80)
-    print("QUIZ 2 MLP MODEL PERFORMANCE COMPARISON (50 Epochs, N=6,000 Validation Samples)")
+    print(f"QUIZ 2 MLP MODEL PERFORMANCE COMPARISON (50 Epochs, N={len(y_val)} Validation Samples)")
     print("=" * 80)
     header = f"{'Model Variant':35s} | {'Final Train Loss':>16s} | {'Final Val Loss':>14s} | {'Accuracy':>8s} | {'Precision':>9s} | {'Recall':>8s} | {'F1-Score':>8s}"
     print(header)
@@ -356,7 +350,7 @@ def run_quiz2(data_dir, output_dir):
     # Plot A: Baseline MLP Loss Curves
     axes[0].plot(epochs_range, res_base['train_losses'], label='Training Loss', color='#1f77b4', linewidth=2)
     axes[0].plot(epochs_range, res_base['val_losses'], label='Validation Loss', color='#d62728', linewidth=2, linestyle='--')
-    axes[0].set_title("Baseline MLP: Loss Curves\n(Signs of Overfitting: Val Loss rebounds after Epoch 20)", fontsize=11, fontweight='bold')
+    axes[0].set_title("Baseline MLP: Loss Curves\n(No Regularization)", fontsize=11, fontweight='bold')
     axes[0].set_xlabel("Epoch", fontsize=10, fontweight='bold')
     axes[0].set_ylabel("Binary Cross Entropy Loss", fontsize=10, fontweight='bold')
     axes[0].grid(True, alpha=0.3)
@@ -365,7 +359,7 @@ def run_quiz2(data_dir, output_dir):
     # Plot B: Improved MLP Loss Curves
     axes[1].plot(epochs_range, res_improved['train_losses'], label='Training Loss', color='#1f77b4', linewidth=2)
     axes[1].plot(epochs_range, res_improved['val_losses'], label='Validation Loss', color='#2ca02c', linewidth=2, linestyle='--')
-    axes[1].set_title("Improved MLP: Regularized Loss Curves\n(Dropout 0.3 + L2 Weight Decay: Val Loss stays stable & aligned)", fontsize=11, fontweight='bold')
+    axes[1].set_title("Improved MLP: Loss Curves\n(Dropout 0.3 + L2 Weight Decay + BatchNorm)", fontsize=11, fontweight='bold')
     axes[1].set_xlabel("Epoch", fontsize=10, fontweight='bold')
     axes[1].set_ylabel("Binary Cross Entropy Loss", fontsize=10, fontweight='bold')
     axes[1].grid(True, alpha=0.3)

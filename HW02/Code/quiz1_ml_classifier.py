@@ -142,7 +142,7 @@ def run_quiz1(data_dir, output_dir):
     # 3. Comparative Summary & Error Analysis
     # -------------------------------------------------------------
     print("\n" + "=" * 80)
-    print("QUIZ 1 MODEL PERFORMANCE COMPARISON TABLE (Validation Set, N=114)")
+    print(f"QUIZ 1 MODEL PERFORMANCE COMPARISON TABLE (Validation Set, N={len(y_val)})")
     print("=" * 80)
     header = f"{'Model & Condition':35s} | {'Thresh':>6s} | {'Accuracy':>8s} | {'Precision':>9s} | {'Recall':>8s} | {'F1-Score':>8s} | {'Errors (FP/FN)':>14s}"
     print(header)
