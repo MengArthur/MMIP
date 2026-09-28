@@ -15,28 +15,34 @@ NYCU College of Artificial Intelligence
   - **Quiz 3**: Perspective Transformation & Automated Keystone Rectification (5-Angle Evaluation)
   - **Quiz 4**: SIFT Feature Matching, Seamless Mosaic & Multi-Condition Failure Analysis
 
+- **[HW02: Machine Learning, Deep Learning & Model Evaluation (點此查閱完整作業報告)](HW02/README.md)**
+  - **Quiz 1**: Machine Learning Binary Classification (Logistic Regression vs. Random Forest, Threshold Tuning)
+  - **Quiz 2**: Deep Learning Credit Default Prediction (PyTorch MLP, Overfitting & Regularization)
+  - **Quiz 3**: Model Performance Evaluation (ROC Curve & AUC Comparison)
+
 ---
 
 ## 環境建置說明（Miniconda / Anaconda）
 
 > [!NOTE]
 > **開發環境說明**：
-> 本作業開發與測試環境採用 **Miniconda3 (Python 3.10+)** 輕量化虛擬環境（相較於完整版 Anaconda 更加輕巧純淨，且指令與套件完全相容）。
-> 助教無論使用 **Miniconda** 或 **Anaconda**，皆可依下列步驟快速復現與執行作業：
+> 本課程作業開發與測試環境採用 **Miniconda3 (Python 3.10+)** 輕量化虛擬環境（相較於完整版 Anaconda 更加輕巧純淨，且指令與套件完全相容）。
+> 每週作業各自獨立管理相依套件（見各資料夾內的 `requirements.txt`），助教可依下列步驟快速復現與執行：
 
-`ash
+```bash
 # 1. 建立並啟用專用虛擬環境
 conda create -n mmip python=3.10 -y
 conda activate mmip
 
-# 2. 安裝核心相依套件 (opencv-python, numpy, matplotlib, Pillow)
-pip install -r requirements.txt
-
-# 3. 執行 HW01 主程式評測
+# 2. 執行 HW01（電腦視覺）
 cd HW01
+pip install -r requirements.txt
 python HW01_main.py
+# 或啟動互動介面：jupyter notebook HW01_notebook.ipynb
 
-# 4. 或啟動 Jupyter Notebook 互動介面
-pip install notebook
-jupyter notebook HW01_notebook.ipynb
-`
+# 3. 執行 HW02（機器學習／深度學習）
+cd ../HW02
+pip install -r requirements.txt
+python HW02_main.py
+# 或啟動互動介面：jupyter notebook HW02_notebook.ipynb
+```

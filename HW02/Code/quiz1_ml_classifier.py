@@ -15,10 +15,12 @@ Advanced (12%):
 """
 
 import os
+import sys
 import numpy as np
 import pandas as pd
 import matplotlib
-matplotlib.use('Agg')
+if 'ipykernel' not in sys.modules:
+    matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -199,17 +201,31 @@ def run_quiz1(data_dir, output_dir):
     rf_val_probs = rf_model.predict_proba(X_val)[:, 1]
 
     m2_base = compute_classification_metrics(y_val, rf_val_probs, threshold=0.5)
-    # F1-optimal threshold ties with 0.50 on this validation set (RF is already very
-    # confident/separated except for 3 genuinely hard malignant cases with low predicted
-    # probability). Optimizing F2 instead -- weighting Recall 2x over Precision -- targets
-    # the same "don't miss a malignant case" priority already used for Model 1's fine-tuning.
-    opt_th, m2_tuned = find_optimal_threshold(y_val, rf_val_probs, beta=2.0)
+    # Official Advanced Task answer: F1-optimal threshold, matching the spec's literal
+    # "compare Accuracy/Precision/Recall/F1-Score" requirement. On this validation set
+    # this ties with the 0.50 baseline (RF is already very confident/separated except for
+    # 3 genuinely hard malignant cases with low predicted probability), so the numbers
+    # below are identical to the baseline row -- that is a real property of this model/
+    # data, not a bug.
+    opt_th, m2_tuned = find_optimal_threshold(y_val, rf_val_probs, beta=1.0)
 
     print("\n[Advanced Task: Model 2 - Random Forest Classifier]")
     print(f"  Baseline (Threshold=0.50): Acc={m2_base['accuracy']:.4f}, Prec={m2_base['precision']:.4f}, Rec={m2_base['recall']:.4f}, F1={m2_base['f1_score']:.4f}")
     print(f"    Confusion Matrix: TN={m2_base['tn']}, FP={m2_base['fp']}, FN={m2_base['fn']}, TP={m2_base['tp']}")
-    print(f"  F2-Optimized for Recall (Threshold={opt_th:.2f}): Acc={m2_tuned['accuracy']:.4f}, Prec={m2_tuned['precision']:.4f}, Rec={m2_tuned['recall']:.4f}, F1={m2_tuned['f1_score']:.4f}")
+    print(f"  Optimized (Threshold={opt_th:.2f}): Acc={m2_tuned['accuracy']:.4f}, Prec={m2_tuned['precision']:.4f}, Rec={m2_tuned['recall']:.4f}, F1={m2_tuned['f1_score']:.4f}")
     print(f"    Confusion Matrix: TN={m2_tuned['tn']}, FP={m2_tuned['fp']}, FN={m2_tuned['fn']}, TP={m2_tuned['tp']}")
+
+    # ---------------------------------------------------------------
+    # Supplementary discussion (beyond the spec requirement, optional):
+    # the F1-optimal search above ties with the default threshold because there are no
+    # validation samples with predicted probability in (0.442, 0.524]. Searching for the
+    # F2-optimal threshold instead (weighting Recall 2x over Precision) shows what a
+    # recall-focused choice -- consistent with Model 1's clinical framing -- would look like.
+    # ---------------------------------------------------------------
+    opt_th_f2, m2_f2 = find_optimal_threshold(y_val, rf_val_probs, beta=2.0)
+    print("\n[Supplementary / Not required by spec] F2-Score (Recall-weighted) threshold search:")
+    print(f"  F2-Optimized (Threshold={opt_th_f2:.2f}): Acc={m2_f2['accuracy']:.4f}, Prec={m2_f2['precision']:.4f}, Rec={m2_f2['recall']:.4f}, F1={m2_f2['f1_score']:.4f}")
+    print(f"    Confusion Matrix: TN={m2_f2['tn']}, FP={m2_f2['fp']}, FN={m2_f2['fn']}, TP={m2_f2['tp']}")
 
     # -------------------------------------------------------------
     # 3. Comparative Summary & Error Analysis
@@ -224,7 +240,7 @@ def run_quiz1(data_dir, output_dir):
         ("M1: Logistic Regression (Default)", 0.50, m1_base),
         ("M1: Logistic Regression (Fine-tuned)", 0.35, m1_tuned),
         ("M2: Random Forest (Default)", 0.50, m2_base),
-        ("M2: Random Forest (F2-Optimized)", opt_th, m2_tuned),
+        ("M2: Random Forest (Optimized)", opt_th, m2_tuned),
     ]
     for name, th, m in rows:
         err_str = f"FP={m['fp']} / FN={m['fn']}"
@@ -260,7 +276,7 @@ def run_quiz1(data_dir, output_dir):
 
     render_confusion_matrix_axis(
         axes[1, 1], m2_tuned['confusion_matrix'],
-        title=f"Model 2: Random Forest (F2-Optimized = {opt_th:.2f})",
+        title=f"Model 2: Random Forest (Optimized = {opt_th:.2f})",
         class_names=class_names,
         subtitle=f"Acc: {m2_tuned['accuracy']:.3f} | Prec: {m2_tuned['precision']:.3f} | Rec: {m2_tuned['recall']:.3f} | F1: {m2_tuned['f1_score']:.3f}"
     )
@@ -278,5 +294,7 @@ def run_quiz1(data_dir, output_dir):
         'm2_base': m2_base,
         'm2_tuned': m2_tuned,
         'opt_threshold': opt_th,
+        'm2_f2': m2_f2,
+        'opt_threshold_f2': opt_th_f2,
         'plot_path': plot_path
     }

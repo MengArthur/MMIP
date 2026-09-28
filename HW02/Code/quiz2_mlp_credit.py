@@ -21,7 +21,8 @@ import random
 import numpy as np
 import pandas as pd
 import matplotlib
-matplotlib.use('Agg')
+if 'ipykernel' not in sys.modules:
+    matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 try:
@@ -312,6 +313,7 @@ def run_quiz2(data_dir, output_dir):
     # 3. Advanced Task: Train Improved MLP (Dropout + L2 + BatchNorm)
     # -------------------------------------------------------------
     print("\n[Advanced Task: Improved MLP Training with Dropout & L2 Regularization (50 Epochs)]")
+    set_seed(42)
     improved_mlp = ImprovedCreditMLP(in_features=X_train.shape[1], dropout_rate=0.3)
     res_improved = train_mlp_model(
         improved_mlp, X_train, y_train, X_val, y_val,

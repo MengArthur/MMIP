@@ -17,7 +17,8 @@ import os
 import sys
 import numpy as np
 import matplotlib
-matplotlib.use('Agg')
+if 'ipykernel' not in sys.modules:
+    matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
 
@@ -96,16 +97,17 @@ def run_quiz3(data_dir, output_dir, mlp_bundle=None):
     header = f"{'Model':30s} | {'Algorithm Type':20s} | {'AUC Score':>10s} | {'Discriminatory Rank':>19s}"
     print(header)
     print("-" * len(header))
-    better_model = "Random Forest" if roc_rf['auc'] >= roc_mlp['auc'] else "PyTorch MLP"
-    print(f"{'PyTorch Improved MLP':30s} | {'Deep Neural Network':20s} | {roc_mlp['auc']:10.4f} | {'Baseline / Competitor':>19s}")
-    print(f"{'Random Forest Classifier':30s} | {'Ensemble Decision Trees':20s} | {roc_rf['auc']:10.4f} | {'Superior AUC (Winner)' if better_model=='Random Forest' else 'Runner-up':>19s}")
+    better_model = "Random Forest" if roc_rf['auc'] > roc_mlp['auc'] else "PyTorch MLP"
+    print(f"{'PyTorch Improved MLP':30s} | {'Deep Neural Network':20s} | {roc_mlp['auc']:10.4f} | {'Higher AUC' if better_model=='PyTorch MLP' else 'Lower AUC':>19s}")
+    print(f"{'Random Forest Classifier':30s} | {'Ensemble Decision Trees':20s} | {roc_rf['auc']:10.4f} | {'Higher AUC' if better_model=='Random Forest' else 'Lower AUC':>19s}")
     print("=" * 75)
 
     diff_auc = abs(roc_rf['auc'] - roc_mlp['auc'])
     print(f"\n[Comparative Insights]")
     print(f"1. AUC Comparison: Random Forest ({roc_rf['auc']:.4f}) vs MLP ({roc_mlp['auc']:.4f}) -> Delta = {diff_auc:.4f}")
-    print(f"2. Superior Discriminatory Power: {better_model} achieves a higher AUC, demonstrating better separation between defaulting and non-defaulting cardholders across all classification thresholds.")
-    print("3. Why Tree Ensemble Excels on Tabular Data: Random Forest naturally captures non-linear tabular feature interactions and step-function relationships without requiring smooth continuous manifold assumptions.")
+    print(f"2. {better_model} has the higher AUC, i.e. slightly better separation between defaulting and non-defaulting cardholders across all thresholds.")
+    if diff_auc < 0.01:
+        print("3. The AUC gap is below 0.01 and the two ROC curves nearly overlap, so in practice both models have essentially equal discriminatory power on this dataset.")
 
     # -------------------------------------------------------------
     # 4. Visualization: Combined ROC Curve Comparison
@@ -136,15 +138,6 @@ def run_quiz3(data_dir, output_dir, mlp_bundle=None):
     ax.set_ylim([-0.01, 1.02])
     ax.grid(True, linestyle=':', alpha=0.6)
     ax.legend(loc='lower right', fontsize=10.5, frameon=True, framealpha=0.95, edgecolor='#cccccc')
-
-    # Annotate best operating region
-    ax.scatter([0.15], [0.55], color='red', s=40, zorder=5)
-    ax.annotate(
-        "Practical Banking Operating Zone\n(Low False Alarms, High True Catch)",
-        xy=(0.15, 0.55), xytext=(0.28, 0.42),
-        arrowprops=dict(facecolor='black', shrink=0.08, width=1, headwidth=6),
-        fontsize=9.5, fontweight='bold', bbox=dict(boxstyle="round,pad=0.4", fc="yellow", alpha=0.3)
-    )
 
     plt.tight_layout()
     plot_path = os.path.join(output_dir, "quiz3_roc_curve_comparison.png")

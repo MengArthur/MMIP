@@ -4,10 +4,15 @@ Provides functions for confusion matrix, classification metrics,
 ROC curve computation, plotting utilities, and runtime benchmarking.
 """
 
+import sys
 import time
 import numpy as np
 import matplotlib
-matplotlib.use('Agg')
+if 'ipykernel' not in sys.modules:
+    # Force a headless backend for plain-script execution (HW02_main.py) so
+    # figures save to disk without needing a display. Skip this inside Jupyter
+    # so plt.show() can render inline instead of silently doing nothing.
+    matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from sklearn.metrics import (
     accuracy_score,

@@ -3,7 +3,7 @@
 ## 1. 協作基本資訊與工具說明
 - **課程名稱**：多媒體影像處理 (Multimedia Image Processing, MMIP)
 - **作業項目**：作業二 (HW02 - Machine Learning, Deep Learning, and Model Evaluation)
-- **協作 AI 工具**：Google DeepMind Antigravity (Gemini 2.5 Pro 核心架構)
+- **協作 AI 工具**：Google DeepMind Antigravity
 - **協作目的**：依據課程簡報規範，協助進行課程簡報規格解析、機器學習與深度學習程式架構設計、資料前處理管線建置、模型除錯優化、指標視覺化以及防呆防造假嚴格檢驗。
 
 ---
@@ -53,4 +53,4 @@
 2. **圖表產出檢查**：審核輸出的三張圖片 (`quiz1_confusion_matrices.png`, `quiz2_mlp_loss_comparison.png`, `quiz3_roc_curve_comparison.png`)，確認軸標籤、數值標註與圖例清晰無截斷，混淆矩陣格點數值正確相符。
 3. **平台相容性修正**：AI 最初撰寫 Matplotlib 繪圖模組時未指定後端，在多執行緒環境下引發 Tkinter 警告；經人工指示與調整後，加入 `matplotlib.use('Agg')`，徹底排除非預期錯誤。
 4. **恪守學術誠信**：AI 僅作為開發效率輔助工具，核心演算法理解、作業結構規劃與最終結果審核均由開發者完整掌握與把關。
-5. **二次審查發現並修正之問題**：在提交前的獨立複查中，發現並修正以下四點：(a) `HW02_main.py` 原本無條件印出「Status: PASSED (100% Score)」，屬於未經驗證的寫死字樣，已移除（評分應由授課教師認定）；(b) Quiz 2 摘要原本無條件宣稱「F1 improved」，但在不同機器/套件版本下重跑，F1 實際可能持平或下降（Recall/Precision 消長所致），已改為依實際計算差值動態描述方向；(c) Quiz 1 資料集原始程式碼欄位命名沿用 Scikit-Learn 內部格式，與課程簡報「從 Kaggle 尋找公開資料集」的敘述不完全相符，已改為直接從 UCI Machine Learning Repository 官方公開檔案下載（欄位格式與病患原始 ID 皆與 Kaggle 公開版本一致），並在文件中如實註明來源；(d) Quiz 1 的 Random Forest「門檻最佳化」原以 F1 為目標，在此驗證集上與預設門檻 0.50 完全打平、未能展示有意義的效果，已改以 F2-Score（加重 Recall）作為進階題目標，得到門檻 0.13、Recall=100% 的實質權衡結果。
+5. **二次審查發現並修正之問題**：在提交前的獨立複查中，發現並修正以下四點：(a) `HW02_main.py` 原本無條件印出「Status: PASSED (100% Score)」，屬於未經驗證的寫死字樣，已移除（評分應由授課教師認定）；(b) Quiz 2 摘要原本無條件宣稱「F1 improved」，但在不同機器/套件版本下重跑，F1 實際可能持平或下降（Recall/Precision 消長所致），已改為依實際計算差值動態描述方向；(c) Quiz 1 資料集原始程式碼欄位命名沿用 Scikit-Learn 內部格式，與課程簡報「從 Kaggle 尋找公開資料集」的敘述不完全相符，已改為直接從 UCI Machine Learning Repository 官方公開檔案下載（欄位格式與病患原始 ID 皆與 Kaggle 公開版本一致），並在文件中如實註明來源；(d) Quiz 1 的 Random Forest 以 F1 為目標搜尋門檻時，在此驗證集上與預設門檻 0.50 完全打平；正式答案維持規範要求的 F1 搜尋，並於文件中說明打平原因，另以 F2-Score（加重 Recall）作為補充延伸討論（門檻 0.13、Recall=100%），不取代正式比較表；(e) Jupyter Notebook 原本因模組強制使用非互動式 `Agg` 後端，導致所有 `plt.show()` 圖表未能內嵌，已改為僅在非 Jupyter 環境下設定 `Agg` 並於 Notebook 開頭加入 `%matplotlib inline`；(f) `HW02_main.py` 與 Notebook 訓練 Improved MLP 前的隨機種子設定不一致，導致兩者 AUC 結論相反，已統一在訓練前重設種子，並將 Quiz 3 結論改為依實際 AUC 動態判定。

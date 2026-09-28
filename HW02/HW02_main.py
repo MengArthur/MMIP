@@ -76,7 +76,8 @@ def main():
     print(f"  - Feature Scaling:              StandardScaler applied to all continuous features")
     print(f"  - Model 1 (Logistic Regression): Baseline (Thresh=0.50): Acc={q1_results['m1_base']['accuracy']:.4f}, Rec={q1_results['m1_base']['recall']:.4f}, F1={q1_results['m1_base']['f1_score']:.4f}")
     print(f"  - Model 1 Fine-Tuned (Thresh=0.35): Recall boosted from {q1_results['m1_base']['recall']:.4f} -> {q1_results['m1_tuned']['recall']:.4f} (Catches more malignant cases)")
-    print(f"  - Model 2 (Random Forest):      F2-Optimized (Thresh={q1_results['opt_threshold']:.2f}): Acc={q1_results['m2_tuned']['accuracy']:.4f}, Prec={q1_results['m2_tuned']['precision']:.4f}, F1={q1_results['m2_tuned']['f1_score']:.4f}")
+    print(f"  - Model 2 (Random Forest):      Optimized (Thresh={q1_results['opt_threshold']:.2f}): Acc={q1_results['m2_tuned']['accuracy']:.4f}, Prec={q1_results['m2_tuned']['precision']:.4f}, F1={q1_results['m2_tuned']['f1_score']:.4f}")
+    print(f"  - [Supplementary] F2-Optimized (Thresh={q1_results['opt_threshold_f2']:.2f}): Rec={q1_results['m2_f2']['recall']:.4f} (catches all malignant cases at the cost of {q1_results['m2_f2']['fp']} FP)")
     print(f"  - Error Trade-off Analysis:     Logistic Regression has FP={q1_results['m1_base']['fp']}, FN={q1_results['m1_base']['fn']}; Random Forest has FP={q1_results['m2_base']['fp']}, FN={q1_results['m2_base']['fn']}")
     print(f"  - Output Plot:                  {q1_results['plot_path']}")
 
