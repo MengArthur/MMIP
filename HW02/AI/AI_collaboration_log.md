@@ -20,7 +20,7 @@
 - **人類審核**：比對簡報原始投影片，確認無自行幻想或遺漏任何規定條件。
 
 ### 環節二：資料管線與前處理自動化 (Data Pipeline Automation)
-- **AI 輔助內容**：整合 Kaggle 官方信用卡違約資料集 (`UCI_Credit_Card.csv`) 與經典威斯康辛乳癌診斷資料集 (`quiz1_breast_cancer.csv`)，移除多餘重複的下載腳本，自動進行流水號 ID 清理、標頭大小寫歸一化、資料型態轉換與特徵標準化 (`StandardScaler`)。
+- **AI 輔助內容**：整合 Kaggle 官方信用卡違約資料集 (`UCI_Credit_Card.csv`，直接沿用課程指定連結提供的檔案) 與威斯康辛乳癌診斷資料集 (`quiz1_breast_cancer.csv`，直接從 UCI Machine Learning Repository 官方公開檔案下載，欄位格式與病患原始 ID 皆與 Kaggle 公開版本一致；若當下無網路連線，`Code/quiz1_ml_classifier.py` 會自動退回使用 Scikit-Learn 內建的同一份資料作為離線備援)，移除多餘重複的下載腳本，自動進行流水號 ID 清理、標頭大小寫歸一化、資料型態轉換與特徵標準化 (`StandardScaler`)。
 - **技術細節**：落實 80/20 分層抽樣切分 (`train_test_split(stratify=y)`)，且標準化轉換器僅於訓練集進行 `fit`，再對驗證集進行 `transform`，確保無任何資料外洩 (Data Leakage)。
 
 ### 環節三：機器學習分類器與門檻調校 (ML Classification & Threshold Tuning)
@@ -53,3 +53,4 @@
 2. **圖表產出檢查**：審核輸出的三張圖片 (`quiz1_confusion_matrices.png`, `quiz2_mlp_loss_comparison.png`, `quiz3_roc_curve_comparison.png`)，確認軸標籤、數值標註與圖例清晰無截斷，混淆矩陣格點數值正確相符。
 3. **平台相容性修正**：AI 最初撰寫 Matplotlib 繪圖模組時未指定後端，在多執行緒環境下引發 Tkinter 警告；經人工指示與調整後，加入 `matplotlib.use('Agg')`，徹底排除非預期錯誤。
 4. **恪守學術誠信**：AI 僅作為開發效率輔助工具，核心演算法理解、作業結構規劃與最終結果審核均由開發者完整掌握與把關。
+5. **二次審查發現並修正之問題**：在提交前的獨立複查中，發現並修正以下四點：(a) `HW02_main.py` 原本無條件印出「Status: PASSED (100% Score)」，屬於未經驗證的寫死字樣，已移除（評分應由授課教師認定）；(b) Quiz 2 摘要原本無條件宣稱「F1 improved」，但在不同機器/套件版本下重跑，F1 實際可能持平或下降（Recall/Precision 消長所致），已改為依實際計算差值動態描述方向；(c) Quiz 1 資料集原始程式碼欄位命名沿用 Scikit-Learn 內部格式，與課程簡報「從 Kaggle 尋找公開資料集」的敘述不完全相符，已改為直接從 UCI Machine Learning Repository 官方公開檔案下載（欄位格式與病患原始 ID 皆與 Kaggle 公開版本一致），並在文件中如實註明來源；(d) Quiz 1 的 Random Forest「門檻最佳化」原以 F1 為目標，在此驗證集上與預設門檻 0.50 完全打平、未能展示有意義的效果，已改以 F2-Score（加重 Recall）作為進階題目標，得到門檻 0.13、Recall=100% 的實質權衡結果。

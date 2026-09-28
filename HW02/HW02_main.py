@@ -76,10 +76,9 @@ def main():
     print(f"  - Feature Scaling:              StandardScaler applied to all continuous features")
     print(f"  - Model 1 (Logistic Regression): Baseline (Thresh=0.50): Acc={q1_results['m1_base']['accuracy']:.4f}, Rec={q1_results['m1_base']['recall']:.4f}, F1={q1_results['m1_base']['f1_score']:.4f}")
     print(f"  - Model 1 Fine-Tuned (Thresh=0.35): Recall boosted from {q1_results['m1_base']['recall']:.4f} -> {q1_results['m1_tuned']['recall']:.4f} (Catches more malignant cases)")
-    print(f"  - Model 2 (Random Forest):      Optimized (Thresh={q1_results['opt_threshold']:.2f}): Acc={q1_results['m2_tuned']['accuracy']:.4f}, Prec={q1_results['m2_tuned']['precision']:.4f}, F1={q1_results['m2_tuned']['f1_score']:.4f}")
+    print(f"  - Model 2 (Random Forest):      F2-Optimized (Thresh={q1_results['opt_threshold']:.2f}): Acc={q1_results['m2_tuned']['accuracy']:.4f}, Prec={q1_results['m2_tuned']['precision']:.4f}, F1={q1_results['m2_tuned']['f1_score']:.4f}")
     print(f"  - Error Trade-off Analysis:     Logistic Regression has FP={q1_results['m1_base']['fp']}, FN={q1_results['m1_base']['fn']}; Random Forest has FP={q1_results['m2_base']['fp']}, FN={q1_results['m2_base']['fn']}")
     print(f"  - Output Plot:                  {q1_results['plot_path']}")
-    print(f"  - Status: PASSED (100% Score)")
 
     print("\n[Quiz 2: Deep Learning Credit Default Prediction (24% Basic + 16% Advanced)]")
     print(f"  - Dataset:                      UCI / Kaggle Default of Credit Card Clients (30,000 Samples)")
@@ -88,11 +87,16 @@ def main():
     print(f"  - Baseline MLP Training:        50 Epochs trained | Final Train Loss={q2_results['res_base']['train_losses'][-1]:.4f} | Final Val Loss={q2_results['res_base']['val_losses'][-1]:.4f}")
     gap_base = q2_results['res_base']['val_losses'][-1] - q2_results['res_base']['train_losses'][-1]
     gap_imp = q2_results['res_improved']['val_losses'][-1] - q2_results['res_improved']['train_losses'][-1]
-    print(f"  - Overfitting Observation:      Baseline generalization gap is {gap_base:.4f}; Regularization narrows gap to {gap_imp:.4f}")
+    gap_word = "narrows" if gap_imp < gap_base else "widens"
+    print(f"  - Overfitting Observation:      Baseline generalization gap is {gap_base:.4f}; Regularization {gap_word} gap to {gap_imp:.4f}")
     print(f"  - Improved MLP Strategy:        Dropout (0.3) + L2 Regularization (Weight Decay 1e-4) + BatchNorm")
-    print(f"  - Improvement Verification:     Val Loss reduced to {q2_results['res_improved']['val_losses'][-1]:.4f}, F1 improved to {q2_results['m_improved']['f1_score']:.4f}")
+
+    val_loss_delta = q2_results['res_improved']['val_losses'][-1] - q2_results['res_base']['val_losses'][-1]
+    f1_delta = q2_results['m_improved']['f1_score'] - q2_results['m_base']['f1_score']
+    val_loss_word = "decreased" if val_loss_delta < 0 else "increased"
+    f1_word = "improved" if f1_delta > 0 else ("declined" if f1_delta < 0 else "unchanged")
+    print(f"  - Improvement Verification:     Val Loss {val_loss_word} to {q2_results['res_improved']['val_losses'][-1]:.4f} (Delta={val_loss_delta:+.4f}); F1 {f1_word} to {q2_results['m_improved']['f1_score']:.4f} (Delta={f1_delta:+.4f})")
     print(f"  - Output Plot:                  {q2_results['plot_path']}")
-    print(f"  - Status: PASSED (100% Score)")
 
     print("\n[Quiz 3: Model Performance Evaluation (18% Basic + 12% Advanced)]")
     print(f"  - PyTorch MLP ROC & AUC:        AUC = {q3_results['roc_mlp']['auc']:.4f} (Marked on ROC Curve)")
@@ -100,7 +104,6 @@ def main():
     print(f"  - Random Forest ROC & AUC:      AUC = {q3_results['roc_rf']['auc']:.4f} (Marked on same ROC Curve)")
     print(f"  - Discriminatory Power Verdict: {q3_results['better_model']} achieves superior positive/negative separation")
     print(f"  - Output Plot:                  {q3_results['plot_path']}")
-    print(f"  - Status: PASSED (100% Score)")
 
     print("\n" + "=" * 80)
     print(f"All visual figures and diagnostic plots saved in: {output_dir}")
