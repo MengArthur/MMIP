@@ -1,0 +1,21 @@
+index,model,true,pred,confidence,correct,centre_mass,feature_map
+8777,Plain CNN,airplane,airplane,0.999,True,0.575,8x8
+8777,ResNet-18,airplane,airplane,0.999,True,0.102,4x4
+6371,Plain CNN,automobile,automobile,0.989,True,0.385,8x8
+6371,ResNet-18,automobile,automobile,1.0,True,0.187,4x4
+5032,Plain CNN,bird,bird,1.0,True,0.578,8x8
+5032,ResNet-18,bird,bird,1.0,True,0.766,4x4
+2617,Plain CNN,cat,cat,1.0,True,0.52,8x8
+2617,ResNet-18,cat,cat,1.0,True,0.276,4x4
+3054,Plain CNN,deer,deer,1.0,True,0.638,8x8
+3054,ResNet-18,deer,deer,0.983,True,0.733,4x4
+389,Plain CNN,dog,dog,1.0,True,0.407,8x8
+389,ResNet-18,dog,dog,1.0,True,0.673,4x4
+735,Plain CNN,deer,frog,0.985,False,0.733,8x8
+735,ResNet-18,deer,bird,0.982,False,0.227,4x4
+188,Plain CNN,deer,cat,0.677,False,0.626,8x8
+188,ResNet-18,deer,cat,0.999,False,0.361,4x4
+8020,Plain CNN,frog,cat,0.849,False,0.508,8x8
+8020,ResNet-18,frog,cat,0.586,False,0.082,4x4
+1823,Plain CNN,airplane,horse,0.796,False,0.293,8x8
+1823,ResNet-18,airplane,truck,0.767,False,0.249,4x4

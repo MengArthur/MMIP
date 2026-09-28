@@ -1,0 +1,5 @@
+experiment,epochs,best_epoch,final_train_acc,best_val_acc,test_top1,test_top5,test_macro_auc,train_minutes,trainable_params,train_val_acc_gap
+plain_baseline,30,23,0.9763,0.832,0.8344,0.9917,0.9839,2.9,288746,0.1605
+plain_augment,30,30,0.892,0.8672,0.8661,0.9951,0.9902,4.4,288746,0.0248
+resnet18_finetune_lr1e-4,15,15,0.9955,0.8948,0.898,0.9961,0.9916,4.2,11181642,0.1007
+resnet18_finetune_lr1e-4_augment,15,13,0.9736,0.9202,0.9138,0.9976,0.9953,6.0,11181642,0.0572

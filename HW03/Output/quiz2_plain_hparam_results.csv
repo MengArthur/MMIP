@@ -1,0 +1,5 @@
+experiment,epochs,best_epoch,final_train_acc,best_val_acc,test_top1,test_top5,test_macro_auc,train_minutes,trainable_params
+plain_baseline,30,23,0.9763,0.832,0.8344,0.9917,0.9839,2.9,288746
+plain_lr1e-2,30,25,0.9749,0.8242,0.8329,0.9917,0.9831,2.9,288746
+plain_lr1e-4,30,30,0.9068,0.7772,0.7748,0.9861,0.9731,2.9,288746
+plain_dropout0,30,30,0.9847,0.8144,0.817,0.991,0.9816,2.9,288746

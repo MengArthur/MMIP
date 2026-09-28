@@ -20,6 +20,11 @@ NYCU College of Artificial Intelligence
   - **Quiz 2**: Deep Learning Credit Default Prediction (PyTorch MLP, Overfitting & Regularization)
   - **Quiz 3**: Model Performance Evaluation (ROC Curve & AUC Comparison)
 
+- **[HW03: Convolutional Neural Networks, Transfer Learning & Explainability (點此查閱完整作業報告)](HW03/README.md)**
+  - **Quiz 1**: Image Dataset Preparation (CIFAR-10, Stratified Train / Validation / Test Split)
+  - **Quiz 2**: Plain CNN vs. ResNet-18 (Top-1 / Top-5, Per-Class ROC & Macro-AUC, Hyperparameter & Transfer-Learning Experiments)
+  - **Quiz 3**: Generalization (Data Augmentation), Kernel Visualization & Grad-CAM
+
 ---
 
 ## 環境建置說明（Miniconda / Anaconda）
@@ -45,4 +50,10 @@ cd ../HW02
 pip install -r requirements.txt
 python HW02_main.py
 # 或啟動互動介面：jupyter notebook HW02_notebook.ipynb
+
+# 4. 執行 HW03（CNN；建議使用 GPU，Notebook 已在 Colab T4 執行完成並內嵌所有輸出）
+cd ../HW03
+pip install -r requirements.txt
+python HW03_main.py
+# 或啟動互動介面：jupyter notebook HW03_notebook.ipynb
 ```

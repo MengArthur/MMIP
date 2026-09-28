@@ -1,0 +1,3 @@
+model,epochs,best_epoch,final_train_acc,best_val_acc,test_top1,test_top5,test_macro_auc,train_minutes,trainable_params,total_params
+Plain CNN,30,23,0.9763,0.832,0.8344,0.9917,0.9839,2.9,288746,288746
+"ResNet-18 (ImageNet-pretrained, fine-tuned)",15,15,0.9955,0.8948,0.898,0.9961,0.9916,4.2,11181642,11181642

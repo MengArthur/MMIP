@@ -1,0 +1,6 @@
+# Dataset files are downloaded automatically by Code/data.py (~140 MB)
+Data/*.parquet
+Data/*.npz
+
+# Model checkpoints (~45 MB each for ResNet-18); training histories (*.json) are kept
+Checkpoints/*.pt
