@@ -1,0 +1,202 @@
+{
+ "caption:16": {
+  "caption": "A black dog jumping in the air to catch a blue frisbee with another dog running towards it.",
+  "latency_s": 4.354,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:40": {
+  "caption": "A toddler squats on the ground outdoors, holding something near his mouth.",
+  "latency_s": 2.201,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:74": {
+  "caption": "A child jumping from a swing set in a playground.",
+  "latency_s": 8.483,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:173": {
+  "caption": "A black dog holding something in its mouth in the water.",
+  "latency_s": 18.32,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:265": {
+  "caption": "A photo capturing a man doing a stunt on a bicycle in the air, with three men watching.",
+  "latency_s": 2.169,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:303": {
+  "caption": "A small beagle walks on the green grass of a park.",
+  "latency_s": 1.236,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:500": {
+  "caption": "Two kids playing soccer on a field.",
+  "latency_s": 6.825,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:502": {
+  "caption": "A smiling young woman in a bikini holds a \"FREE HUGS\" sign while talking to a man.",
+  "latency_s": 1.619,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:542": {
+  "caption": "A young woman in an orange shirt is raising her hand.",
+  "latency_s": 1.224,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:559": {
+  "caption": "A man holding a tennis racket while wearing a headband and a green and white shirt.",
+  "latency_s": 1.534,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:602": {
+  "caption": "A yellow dog leaping in the air to catch a frisbee in the yard.",
+  "latency_s": 1.402,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:625": {
+  "caption": "A girl with blonde hair running in a grassy field with a big smile.",
+  "latency_s": 1.513,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:630": {
+  "caption": "A young girl in a hat and beige dress plays with a ball alongside an adult in a park.",
+  "latency_s": 1.398,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:643": {
+  "caption": "Two young women stand close together outdoors, smiling and looking off to the side.",
+  "latency_s": 2.057,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:726": {
+  "caption": "A group of tourists facing away from the camera in front of historic buildings.",
+  "latency_s": 2.146,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:805": {
+  "caption": "A close up of a puppy chewing on a stick.",
+  "latency_s": 1.108,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:834": {
+  "caption": "A white egret takes flight from the water, displaying its wide wings and yellow-eyed expression.",
+  "latency_s": 2.081,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:905": {
+  "caption": "A red racing car drifting on a dirt road, kicking up dust.",
+  "latency_s": 6.972,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:935": {
+  "caption": "A woman sits outside at a table reading a book and holding a cup.",
+  "latency_s": 1.353,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "caption:965": {
+  "caption": "A golden retriever jumping with a black and tan dog in a grassy field.",
+  "latency_s": 3.767,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:16": {
+  "raw": "[\n  {\n    \"id\": \"A\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurately describes both dogs, the jumping black dog catching the frisbee, and the other running.\"\n  },\n  {\n    \"id\": \"B\",\n    \"verdict\": \"partial\",\n    \"score\": 3,\n    \"reason\": \"The black dog is jumping, not just running, and misses context of the second dog.\"\n  },\n  {\n    \"id\": \"C\",\n    \"verdict\": \"partial\",\n    \"score\": 3,\n    \"reason\": \"The dog is jumping in the air, not running.\"\n  },\n  {\n    \"id\": \"D\",\n    \"verdict\": \"match\",\n    \"score\": 4,\n    \"reason\": \"Correctly identifies two dogs playing in the grass.\"\n  },\n  {\n    \"id\": \"E\",\n    \"verdict\": \"partial\",\n    \"score\": 3,\n    \"reason\": \"The black dog is jumping in the air rather than running.\"\n  },\n  {\n    \"id\": \"F\",\n    \"verdict\": \"partial\",\n    \"score\": 3,\n    \"reason\": \"The brown dog is actually in front/behind, and the black dog is jumping.\"\n  },\n  {\n    \"id\": \"G\",\n    \"verdict\": \"partial\",\n    \"score\": 3,\n    \"reason\": \"The black dog is jumping in the air, not running on the ground.\"\n  }\n]",
+  "latency_s": 1.582,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:40": {
+  "raw": "[\n  {\"id\": \"A\", \"verdict\": \"mismatch\", \"score\": 1, \"reason\": \"There are no two boys or bench.\"},\n  {\"id\": \"B\", \"verdict\": \"partial\", \"score\": 3, \"reason\": \"Child holds something near mouth, dirt is unconfirmed.\"},\n  {\"id\": \"C\", \"verdict\": \"mismatch\", \"score\": 1, \"reason\": \"No cellphone present.\"},\n  {\"id\": \"D\", \"verdict\": \"mismatch\", \"score\": 1, \"reason\": \"No cellphone present.\"},\n  {\"id\": \"E\", \"verdict\": \"partial\", \"score\": 4, \"reason\": \"Little boy squatting on the ground.\"},\n  {\"id\": \"F\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"Accurately describes the toddler squatting and holding something near mouth.\"},\n  {\"id\": \"G\", \"verdict\": \"mismatch\", \"score\": 1, \"reason\": \"No bench or man present.\"}\n]",
+  "latency_s": 1.307,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:74": {
+  "raw": "[\n  {\n    \"id\": \"A\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"It's a swing, not a trampoline.\"\n  },\n  {\n    \"id\": \"B\",\n    \"verdict\": \"partial\",\n    \"score\": 3,\n    \"reason\": \"It's a girl, not a boy.\"\n  },\n  {\n    \"id\": \"C\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurately describes the young girl jumping on the swing.\"\n  },\n  {\n    \"id\": \"D\",\n    \"verdict\": \"match\",\n    \"score\": 4,\n    \"reason\": \"The building in the background is indeed red.\"\n  },\n  {\n    \"id\": \"E\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurately describes a child jumping from a swing set.\"\n  },\n  {\n    \"id\": \"F\",\n    \"verdict\": \"partial\",\n    \"score\": 4,\n    \"reason\": \"Describes the action, but she is mid-air, not landing yet.\"\n  },\n  {\n    \"id\": \"G\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"It's a swing, not a trampoline.\"\n  }\n]",
+  "latency_s": 1.579,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:173": {
+  "raw": "[\n  {\n    \"id\": \"A\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"The black dog is correctly described running through the water.\"\n  },\n  {\n    \"id\": \"B\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"The dog is black and carrying an object out of water.\"\n  },\n  {\n    \"id\": \"C\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurate description of a black dog running through water.\"\n  },\n  {\n    \"id\": \"D\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"The black dog is holding something in its mouth in water.\"\n  },\n  {\n    \"id\": \"E\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"A black dog is running through the water accurately.\"\n  },\n  {\n    \"id\": \"F\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"There is only one dog, not two.\"\n  },\n  {\n    \"id\": \"G\",\n    \"verdict\": \"match\",\n    \"score\": 4,\n    \"reason\": \"Correct, though simple, description of the black dog in water.\"\n  }\n]",
+  "latency_s": 1.584,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:265": {
+  "raw": "[\n  {\n    \"id\": \"A\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurately describes the man doing a trick on a bicycle.\"\n  },\n  {\n    \"id\": \"B\",\n    \"verdict\": \"match\",\n    \"score\": 4,\n    \"reason\": \"Correct, though slightly redundant phrasing.\"\n  },\n  {\n    \"id\": \"C\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurately describes the man doing a trick on a bicycle.\"\n  },\n  {\n    \"id\": \"D\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Very accurate description of the airborne bicycle trick.\"\n  },\n  {\n    \"id\": \"E\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Provides accurate detail about the skate and bike park context.\"\n  },\n  {\n    \"id\": \"F\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"Incorrectly states it is a skateboard instead of a bicycle.\"\n  },\n  {\n    \"id\": \"G\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Detailed and entirely accurate description including the spectators.\"\n  }\n]",
+  "latency_s": 2.237,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:303": {
+  "raw": "[\n  {\n    \"id\": \"A\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurately describes the brown dog running through the grassy field.\"\n  },\n  {\n    \"id\": \"B\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Correctly identifies the brown dog running through the grass.\"\n  },\n  {\n    \"id\": \"C\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Correct description of the brown dog running in a grassy field.\"\n  },\n  {\n    \"id\": \"D\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurate description of a dog running through the grass.\"\n  },\n  {\n    \"id\": \"E\",\n    \"verdict\": \"partial\",\n    \"score\": 3,\n    \"reason\": \"Correctly identifies a dog in the grass, but lacks detail.\"\n  },\n  {\n    \"id\": \"F\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Correctly specifies it's a beagle moving through the grass.\"\n  },\n  {\n    \"id\": \"G\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Detailed and accurate description of the beagle in the park.\"\n  }\n]",
+  "latency_s": 1.494,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:500": {
+  "raw": "[\n  {\"id\": \"A\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"Accurately describes children in uniforms playing sport on a green field.\"},\n  {\"id\": \"B\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"Correctly identifies two children playing soccer in a field.\"},\n  {\"id\": \"C\", \"verdict\": \"match\", \"score\": 4, \"reason\": \"Accurate, but lacks context of the field.\"},\n  {\"id\": \"D\", \"verdict\": \"match\", \"score\": 4, \"reason\": \"Accurate, though missing location details.\"},\n  {\"id\": \"E\", \"verdict\": \"match\", \"score\": 4, \"reason\": \"Accurate description of two girls playing soccer.\"},\n  {\"id\": \"F\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"Correctly notes two kids playing soccer on a field.\"},\n  {\"id\": \"G\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"Precisely describes two girls playing soccer on a field.\"}\n]",
+  "latency_s": 1.326,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:502": {
+  "raw": "[\n  {\"id\": \"A\", \"verdict\": \"partial\", \"score\": 3, \"reason\": \"People are smiling, but it is not a full group smiling.\"},\n  {\"id\": \"B\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"The girl in bikini holds a free hugs sign.\"},\n  {\"id\": \"C\", \"verdict\": \"partial\", \"score\": 3, \"reason\": \"Not clearly posing for a picture.\"},\n  {\"id\": \"D\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"Accurately describes the woman and the man.\"},\n  {\"id\": \"E\", \"verdict\": \"partial\", \"score\": 3, \"reason\": \"People are not posing for a picture.\"},\n  {\"id\": \"F\", \"verdict\": \"partial\", \"score\": 3, \"reason\": \"Sign is held rather than on her chest.\"},\n  {\"id\": \"G\", \"verdict\": \"mismatch\", \"score\": 1, \"reason\": \"The woman is wearing a bikini, not a white dress.\"}\n]",
+  "latency_s": 1.215,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:542": {
+  "raw": "[\n  {\n    \"id\": \"A\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"The woman is not flying a kite.\"\n  },\n  {\n    \"id\": \"B\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"A person in an orange shirt is reaching up.\"\n  },\n  {\n    \"id\": \"C\",\n    \"verdict\": \"mismatch\",\n    \"score\": 2,\n    \"reason\": \"The person in the background has red shorts, not a red shirt.\"\n  },\n  {\n    \"id\": \"D\",\n    \"verdict\": \"mismatch\",\n    \"score\": 2,\n    \"reason\": \"The person in the background has red shorts, not a red shirt.\"\n  },\n  {\n    \"id\": \"E\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"A young woman in an orange shirt raises her hand.\"\n  },\n  {\n    \"id\": \"F\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"There is no man in a blue shirt or large rock.\"\n  },\n  {\n    \"id\": \"G\",\n    \"verdict\": \"mismatch\",\n    \"score\": 2,\n    \"reason\": \"The person has red shorts and is standing/running, not jumping off a hill.\"\n  }\n]",
+  "latency_s": 1.348,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:559": {
+  "raw": "[\n  {\n    \"id\": \"A\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"The man is not wearing a red shirt and is holding a racket.\"\n  },\n  {\n    \"id\": \"B\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurately describes the athlete, sweatband, Nike shirt, and tennis racket.\"\n  },\n  {\n    \"id\": \"C\",\n    \"verdict\": \"partial\",\n    \"score\": 4,\n    \"reason\": \"Correctly identifies the tennis player holding a racket, but is too brief.\"\n  },\n  {\n    \"id\": \"D\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"The subject is a man, not a woman.\"\n  },\n  {\n    \"id\": \"E\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"The subject is a male tennis player.\"\n  },\n  {\n    \"id\": \"F\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"The player is not wearing a red shirt.\"\n  },\n  {\n    \"id\": \"G\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurately describes the man holding a racket, headband, and shirt.\"\n  }\n]",
+  "latency_s": 1.664,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:602": {
+  "raw": "[\n  {\"id\": \"A\", \"verdict\": \"partial\", \"score\": 2, \"reason\": \"Misses the main action with the dog.\"},\n  {\"id\": \"B\", \"verdict\": \"match\", \"score\": 4, \"reason\": \"Accurate, though the dog is jumping rather than running.\"},\n  {\"id\": \"C\", \"verdict\": \"match\", \"score\": 4, \"reason\": \"Accurate, though jumping rather than running.\"},\n  {\"id\": \"D\", \"verdict\": \"match\", \"score\": 4, \"reason\": \"Correct description of the dog playing with a toy.\"},\n  {\"id\": \"E\", \"verdict\": \"mismatch\", \"score\": 1, \"reason\": \"There is only one dog, and it's not black.\"},\n  {\"id\": \"F\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"Highly accurate and descriptive.\"},\n  {\"id\": \"G\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"Very accurate description of the action and objects.\"}\n]",
+  "latency_s": 1.387,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:625": {
+  "raw": "[\n  {\n    \"id\": \"A\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"The description accurately captures the blonde girl running and smiling in a grassy field.\"\n  },\n  {\n    \"id\": \"B\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"The girl is wearing a teal skirt and white shirt, not a pink dress.\"\n  },\n  {\n    \"id\": \"C\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"The girl is not wearing pink and is not blowing bubbles.\"\n  },\n  {\n    \"id\": \"D\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"The girl is not wearing a pink dress.\"\n  },\n  {\n    \"id\": \"E\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurately describes the teal skirt and the peace sign shirt.\"\n  },\n  {\n    \"id\": \"F\",\n    \"verdict\": \"partial\",\n    \"score\": 3,\n    \"reason\": \"Correctly identifies the tutu, but the color is teal, not green.\"\n  },\n  {\n    \"id\": \"G\",\n    \"verdict\": \"partial\",\n    \"score\": 2,\n    \"reason\": \"She is smiling, but her shirt is white, not pink.\"\n  }\n]",
+  "latency_s": 1.843,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:630": {
+  "raw": "[\n  {\n    \"id\": \"A\",\n    \"verdict\": \"partial\",\n    \"score\": 3,\n    \"reason\": \"Girl is in a dress, not a blue shirt, and ignores the ball.\"\n  },\n  {\n    \"id\": \"B\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurately describes the girl in hat/dress playing ball with adult in park.\"\n  },\n  {\n    \"id\": \"C\",\n    \"verdict\": \"mismatch\",\n    \"score\": 2,\n    \"reason\": \"It's an adult woman and a child, not two children.\"\n  },\n  {\n    \"id\": \"D\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Correctly identifies a child and her mother playing ball in a park.\"\n  },\n  {\n    \"id\": \"E\",\n    \"verdict\": \"mismatch\",\n    \"score\": 2,\n    \"reason\": \"One is an adult woman, not two girls.\"\n  },\n  {\n    \"id\": \"F\",\n    \"verdict\": \"mismatch\",\n    \"score\": 2,\n    \"reason\": \"Girl is not wearing a blue shirt.\"\n  },\n  {\n    \"id\": \"G\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurately describes a woman and a child playing with a ball.\"\n  }\n]",
+  "latency_s": 1.667,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:643": {
+  "raw": "[\n  {\"id\": \"A\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"Two young women stand close together outdoors, smiling.\"},\n  {\"id\": \"B\", \"verdict\": \"mismatch\", \"score\": 1, \"reason\": \"Neither girl is wearing pink or holding a camera.\"},\n  {\"id\": \"C\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"One wears a white tee with red sleeves, the other has words.\"},\n  {\"id\": \"D\", \"verdict\": \"mismatch\", \"score\": 1, \"reason\": \"No unicycle is present in the image.\"},\n  {\"id\": \"E\", \"verdict\": \"mismatch\", \"score\": 1, \"reason\": \"No girl is wearing a pink shirt.\"},\n  {\"id\": \"F\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"Two girls are standing next to each other.\"},\n  {\"id\": \"G\", \"verdict\": \"mismatch\", \"score\": 1, \"reason\": \"Neither girl wears pink or holds a green bottle.\"}\n]",
+  "latency_s": 1.217,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:726": {
+  "raw": "[  {    \"id\": \"A\",    \"verdict\": \"match\",    \"score\": 5,    \"reason\": \"Accurately describes the scene.\"  },  {    \"id\": \"B\",    \"verdict\": \"match\",    \"score\": 5,    \"reason\": \"Accurately describes the group standing.\"  },  {    \"id\": \"C\",    \"verdict\": \"match\",    \"score\": 5,    \"reason\": \"Correct description of the scene.\"  },  {    \"id\": \"D\",    \"verdict\": \"match\",    \"score\": 5,    \"reason\": \"Correctly identifies the Italian-style buildings.\"  },  {    \"id\": \"E\",    \"verdict\": \"match\",    \"score\": 5,    \"reason\": \"Accurately describes the group.\"  },  {    \"id\": \"F\",    \"verdict\": \"match\",    \"score\": 5,    \"reason\": \"Very descriptive and accurate.\"  },  {    \"id\": \"G\",    \"verdict\": \"match\",    \"score\": 5,    \"reason\": \"Accurately describes the people.\"  }]",
+  "latency_s": 1.422,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:805": {
+  "raw": "[\n  {\n    \"id\": \"A\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"The dog is chewing on a stick or post, not a ball.\"\n  },\n  {\n    \"id\": \"B\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"A brown puppy is chewing on a metallic post.\"\n  },\n  {\n    \"id\": \"C\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"A close-up of a puppy chewing on a stick.\"\n  },\n  {\n    \"id\": \"D\",\n    \"verdict\": \"match\",\n    \"score\": 4,\n    \"reason\": \"True, but it lacks specific details about the puppy.\"\n  },\n  {\n    \"id\": \"E\",\n    \"verdict\": \"mismatch\",\n    \"score\": 2,\n    \"reason\": \"The dog is chewing a stick, not playing with a toy.\"\n  },\n  {\n    \"id\": \"F\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"The dog is chewing on a stick, not playing with a ball.\"\n  },\n  {\n    \"id\": \"G\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"The dog is chewing on a stick, not playing with a ball.\"\n  }\n]",
+  "latency_s": 1.964,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:834": {
+  "raw": "[\n  {\n    \"id\": \"A\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"The white bird is correctly described flying over the water.\"\n  },\n  {\n    \"id\": \"B\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"The white bird is flying through the air.\"\n  },\n  {\n    \"id\": \"C\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurately describes the egret taking flight with wide wings and yellow eyes.\"\n  },\n  {\n    \"id\": \"D\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"The bird is indeed white.\"\n  },\n  {\n    \"id\": \"E\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"A white bird is flying over a lake.\"\n  },\n  {\n    \"id\": \"F\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"A white bird flies through the air.\"\n  },\n  {\n    \"id\": \"G\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"The bird is entirely white, not grey.\"\n  }\n]",
+  "latency_s": 1.507,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:905": {
+  "raw": "[\n  {\"id\": \"A\", \"verdict\": \"mismatch\", \"score\": 1, \"reason\": \"The car is driving on a dirt road, not through the air.\"},\n  {\"id\": \"B\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"The red racing car is drifting and kicking up dust.\"},\n  {\"id\": \"C\", \"verdict\": \"match\", \"score\": 4, \"reason\": \"A race car is driving over the track.\"},\n  {\"id\": \"D\", \"verdict\": \"mismatch\", \"score\": 2, \"reason\": \"The car is driving on a dusty dirt track, not mud.\"},\n  {\"id\": \"E\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"A car is driven on a dusty track.\"},\n  {\"id\": \"F\", \"verdict\": \"mismatch\", \"score\": 2, \"reason\": \"It is a dusty dirt track, not mud.\"},\n  {\"id\": \"G\", \"verdict\": \"match\", \"score\": 3, \"reason\": \"True, but extremely vague and misses the car.\"}\n]",
+  "latency_s": 1.342,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:935": {
+  "raw": "[\n  {\n    \"id\": \"A\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurately describes the woman sitting outside reading and holding a cup.\"\n  },\n  {\n    \"id\": \"B\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"There is no man present in the image.\"\n  },\n  {\n    \"id\": \"C\",\n    \"verdict\": \"partial\",\n    \"score\": 3,\n    \"reason\": \"Correctly identifies a woman sitting, but it is outside on a porch, not inside a restaurant.\"\n  },\n  {\n    \"id\": \"D\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Accurately describes a woman sitting at a table on a porch.\"\n  },\n  {\n    \"id\": \"E\",\n    \"verdict\": \"match\",\n    \"score\": 5,\n    \"reason\": \"Correctly notes the girl reading and holding a Starbucks coffee.\"\n  },\n  {\n    \"id\": \"F\",\n    \"verdict\": \"mismatch\",\n    \"score\": 1,\n    \"reason\": \"Incorrectly states there is a man in a blue shirt.\"\n  },\n  {\n    \"id\": \"G\",\n    \"verdict\": \"partial\",\n    \"score\": 3,\n    \"reason\": \"She is wearing a hat, but she is sitting at a table on a chair, not a bench.\"\n  }\n]",
+  "latency_s": 2.363,
+  "model": "gemini-3.5-flash-lite"
+ },
+ "judge:965": {
+  "raw": "[\n  {\"id\": \"A\", \"verdict\": \"partial\", \"score\": 3, \"reason\": \"Mentions brown and white dog, but it's a golden retriever.\"},\n  {\"id\": \"B\", \"verdict\": \"mismatch\", \"score\": 1, \"reason\": \"There is no cat in this photo.\"},\n  {\"id\": \"C\", \"verdict\": \"partial\", \"score\": 3, \"reason\": \"Golden retriever is jumping, not running.\"},\n  {\"id\": \"D\", \"verdict\": \"partial\", \"score\": 3, \"reason\": \"Golden retriever is jumping, not running.\"},\n  {\"id\": \"E\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"Accurately describes the interaction between the two dogs.\"},\n  {\"id\": \"F\", \"verdict\": \"match\", \"score\": 5, \"reason\": \"Accurately describes the golden retriever, small dog, and setting.\"},\n  {\"id\": \"G\", \"verdict\": \"partial\", \"score\": 3, \"reason\": \"Golden retriever is jumping, not running.\"}\n]",
+  "latency_s": 1.341,
+  "model": "gemini-3.5-flash-lite"
+ }
+}

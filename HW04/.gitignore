@@ -1,0 +1,6 @@
+# Datasets are downloaded automatically from Hugging Face; cached image features are large
+Data/hf_cache/
+Data/*.pt
+
+# Model checkpoints (ViT-B/16 is ~330 MB); training histories (*.json) are kept
+Checkpoints/*.pt

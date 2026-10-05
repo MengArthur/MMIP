@@ -1,0 +1,13 @@
+source,review (first 120 chars),true,RNN prediction,LSTM prediction
+test #21259,This movie is a masterpiece of brilliant acting and timely patriotic sense of pride in America. The Nazi Saboteurs of th,positive,positive (0.96),positive (1.00)
+test #1880,"Anatomie isn't very unique in horror genre, in fact it isn't even scary at all. It reminds me of its American cousins, h",negative,negative (0.97),negative (1.00)
+test #413,"I love the so-called ""blaxploitation"" films and have seen dozens. Some, such as COTTON COMES TO HARLEM, SHAFT and HAMMER",negative,negative (0.88),negative (1.00)
+test #12775,This is another one of Hitchcock's highest rated movies and rightfully so. This is a tale of two men who meet on a train,positive,positive (0.80),positive (1.00)
+test #7694,"This appears to be one of Noel Coward's lesser known films, and it is easy to understand why. Taken at face value it's n",negative,positive (0.93),positive (0.74)
+test #6743,A poor basketball movie. A gruff coach with a dubious background comes to a small Indiana high school basketball team in,negative,negative (0.72),negative (0.99)
+test #1024,"Let me first start with the obvious: antisemitism has been a serious problem throughout history, present in many societi",negative,negative (0.83),positive (0.93)
+test #15920,"Overall, the Dad's Army movie is very funny, although the humour isn't quite as catchy and sparkly as in the TV and radi",positive,positive (0.81),positive (0.95)
+custom,"This movie was absolutely wonderful, the acting and the story were brilliant.",positive,positive (0.77),positive (0.93)
+custom,A complete waste of time. The plot made no sense and the acting was terrible.,negative,negative (0.95),negative (1.00)
+custom,"I expected to hate this film, but by the end I was completely won over.",positive,negative (0.76),negative (0.68)
+custom,"The first half is great, but the ending ruins everything and I left the cinema disappointed.",negative,positive (0.66),positive (0.85)

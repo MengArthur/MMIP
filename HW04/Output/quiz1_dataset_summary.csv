@@ -1,0 +1,4 @@
+task,dataset,hf_id,classes / targets,train,val,test,notes
+Sentiment Analysis (Quiz 2),IMDB Large Movie Review,stanfordnlp/imdb,negative / positive,22500,2500,25000,median review length 175 tokens
+Image Classification (Quiz 3),Oxford-IIIT Pet,timm/oxford-iiit-pet,37 cat & dog breeds,3128,552,3669,"fine-grained, roughly 100 train images per class"
+Image Captioning (Quiz 4),Flickr8k,jxie/flickr8k,5 reference captions per image,6000,1000,1000,"30,000 training captions, median 10 words"

@@ -25,6 +25,12 @@ NYCU College of Artificial Intelligence
   - **Quiz 2**: Plain CNN vs. ResNet-18 (Top-1 / Top-5, Per-Class ROC & Macro-AUC, Hyperparameter & Transfer-Learning Experiments)
   - **Quiz 3**: Generalization (Data Augmentation), Kernel Visualization & Grad-CAM
 
+- **[HW04: Time-Series Models & Transformers (點此查閱完整作業報告)](HW04/README.md)**
+  - **Quiz 1**: Dataset Preparation (IMDB, Oxford-IIIT Pet, Flickr8k)
+  - **Quiz 2**: Sentiment Analysis with RNN vs. LSTM (Accuracy / F1 / ROC-AUC, Accuracy by Review Length)
+  - **Quiz 3**: Fine-tuning Vision Transformer (ViT-B/16) vs. ResNet-50 (Macro-AUC Comparison)
+  - **Quiz 4**: Image Captioning (CNN-LSTM & CNN-Transformer, Gemini Judge, BLEU / BERTScore, Response-Time Comparison)
+
 ---
 
 ## 環境建置說明（Miniconda / Anaconda）
@@ -56,4 +62,11 @@ cd ../HW03
 pip install -r requirements.txt
 python HW03_main.py
 # 或啟動互動介面：jupyter notebook HW03_notebook.ipynb
+
+# 5. 執行 HW04（RNN / LSTM、ViT、Image Captioning；建議使用 GPU，Notebook 已在 Colab T4 執行完成並內嵌所有輸出）
+#    Quiz 4 的 Gemini 部分需要先設定環境變數 GEMINI_API_KEY
+cd ../HW04
+pip install -r requirements.txt
+python HW04_main.py
+# 或啟動互動介面：jupyter notebook HW04_notebook.ipynb
 ```

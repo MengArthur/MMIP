@@ -1,0 +1,141 @@
+test_index,method,caption,verdict,score,reason
+16,Gemini,a black dog jumping in the air to catch a blue frisbee with another dog running towards it,match,5,"Accurately describes both dogs, the jumping black dog catching the frisbee, and the other running."
+16,LSTM greedy,a black dog is running through a field,partial,3,"The black dog is jumping, not just running, and misses context of the second dog."
+16,LSTM beam3,a black dog is running through a grassy field,partial,3,"The dog is jumping in the air, not running."
+16,BLIP-base,two dogs playing in the grass,match,4,Correctly identifies two dogs playing in the grass.
+16,Transformer greedy,a black dog is running through the grass,partial,3,The black dog is jumping in the air rather than running.
+16,Human reference,a dog with a frisbee in front of a brown dog,partial,3,"The brown dog is actually in front/behind, and the black dog is jumping."
+16,Transformer beam3,a black dog is running through the grass,partial,3,"The black dog is jumping in the air, not running on the ground."
+40,LSTM beam3,two young boys are sitting on a bench,mismatch,1,There are no two boys or bench.
+40,Human reference,a child puts dirt into his mouth,partial,3,"Child holds something near mouth, dirt is unconfirmed."
+40,Transformer greedy,a boy is sitting on a cellphone with his cellphone,mismatch,1,No cellphone present.
+40,Transformer beam3,a little boy is sitting on a cellphone with his cellphone,mismatch,1,No cellphone present.
+40,BLIP-base,a little boy sitting on the ground,partial,4,Little boy squatting on the ground.
+40,Gemini,a toddler squats on the ground outdoors holding something near his mouth,match,5,Accurately describes the toddler squatting and holding something near mouth.
+40,LSTM greedy,a young boy sits on a bench with a man in a blue shirt,mismatch,1,No bench or man present.
+74,Transformer beam3,a girl in a pink shirt is jumping on a trampoline,mismatch,1,"It's a swing, not a trampoline."
+74,LSTM greedy,a boy is jumping on a swing,partial,3,"It's a girl, not a boy."
+74,LSTM beam3,a young girl is jumping on a swing,match,5,Accurately describes the young girl jumping on the swing.
+74,BLIP-base,the building is red,match,4,The building in the background is indeed red.
+74,Gemini,a child jumping from a swing set in a playground,match,5,Accurately describes a child jumping from a swing set.
+74,Human reference,a girl dismounts from a swing as high as she can and lands on the rubber tiles below,partial,4,"Describes the action, but she is mid-air, not landing yet."
+74,Transformer greedy,a girl in a pink shirt is jumping on a trampoline,mismatch,1,"It's a swing, not a trampoline."
+173,LSTM beam3,a black dog is running through the water,match,5,The black dog is correctly described running through the water.
+173,Human reference,a black dog carrying an object out of the water,match,5,The dog is black and carrying an object out of water.
+173,Transformer beam3,a black dog runs through the water,match,5,Accurate description of a black dog running through water.
+173,Gemini,a black dog holding something in its mouth in the water,match,5,The black dog is holding something in its mouth in water.
+173,LSTM greedy,a black dog is running through the water,match,5,A black dog is running through the water accurately.
+173,Transformer greedy,two black dogs running in the water,mismatch,1,"There is only one dog, not two."
+173,BLIP-base,a black dog in the water,match,4,"Correct, though simple, description of the black dog in water."
+265,LSTM greedy,a man is doing a trick on a bicycle,match,5,Accurately describes the man doing a trick on a bicycle.
+265,Transformer greedy,a man on a bike is doing a trick on a bike,match,4,"Correct, though slightly redundant phrasing."
+265,LSTM beam3,a man is doing a trick on a bicycle,match,5,Accurately describes the man doing a trick on a bicycle.
+265,Transformer beam3,a man on a bike is doing a trick in the air,match,5,Very accurate description of the airborne bicycle trick.
+265,Human reference,a cyclist is airborne over a jump in a public skate and bike park,match,5,Provides accurate detail about the skate and bike park context.
+265,BLIP-base,a boy doing a trick on a skateboard,mismatch,1,Incorrectly states it is a skateboard instead of a bicycle.
+265,Gemini,a photo capturing a man doing a stunt on a bicycle in the air with three men watching,match,5,Detailed and entirely accurate description including the spectators.
+303,Transformer beam3,a brown dog is running through a grassy field,match,5,Accurately describes the brown dog running through the grassy field.
+303,LSTM beam3,a brown dog is running through the grass,match,5,Correctly identifies the brown dog running through the grass.
+303,Transformer greedy,a brown dog is running through a grassy field,match,5,Correct description of the brown dog running in a grassy field.
+303,LSTM greedy,a dog runs through the grass,match,5,Accurate description of a dog running through the grass.
+303,BLIP-base,a dog in the grass,partial,3,"Correctly identifies a dog in the grass, but lacks detail."
+303,Human reference,a beagle walks through the grass,match,5,Correctly specifies it's a beagle moving through the grass.
+303,Gemini,a small beagle walks on the green grass of a park,match,5,Detailed and accurate description of the beagle in the park.
+500,Human reference,children participate in a sport on a green field while in uniforms,match,5,Accurately describes children in uniforms playing sport on a green field.
+500,Transformer beam3,two children are playing soccer in a field,match,5,Correctly identifies two children playing soccer in a field.
+500,Transformer greedy,two children are playing soccer,match,4,"Accurate, but lacks context of the field."
+500,BLIP-base,two girls playing soccer,match,4,"Accurate, though missing location details."
+500,LSTM greedy,two girls are playing soccer,match,4,Accurate description of two girls playing soccer.
+500,Gemini,two kids playing soccer on a field,match,5,Correctly notes two kids playing soccer on a field.
+500,LSTM beam3,two girls are playing soccer on a field,match,5,Precisely describes two girls playing soccer on a field.
+502,LSTM greedy,a group of people are smiling and smiling,partial,3,"People are smiling, but it is not a full group smiling."
+502,Human reference,a girl in a bikini wears a sign saying free hugs,match,5,The girl in bikini holds a free hugs sign.
+502,Transformer beam3,a group of people are posing for a picture,partial,3,Not clearly posing for a picture.
+502,Gemini,a smiling young woman in a bikini holds a free hugs sign while talking to a man,match,5,Accurately describes the woman and the man.
+502,LSTM beam3,a group of people are posing for a picture,partial,3,People are not posing for a picture.
+502,BLIP-base,a young girl with a sign on her chest,partial,3,Sign is held rather than on her chest.
+502,Transformer greedy,a woman in a white dress and a group of people are posing for a picture,mismatch,1,"The woman is wearing a bikini, not a white dress."
+542,BLIP-base,a woman flying a kite in a park,mismatch,1,The woman is not flying a kite.
+542,Human reference,a person in an orange shirt reaching up,match,5,A person in an orange shirt is reaching up.
+542,Transformer beam3,a boy in a red shirt is jumping in the air,mismatch,2,"The person in the background has red shorts, not a red shirt."
+542,LSTM greedy,a boy in a red shirt is jumping in the air,mismatch,2,"The person in the background has red shorts, not a red shirt."
+542,Gemini,a young woman in an orange shirt is raising her hand,match,5,A young woman in an orange shirt raises her hand.
+542,LSTM beam3,a man in a blue shirt is standing in front of a large rock,mismatch,1,There is no man in a blue shirt or large rock.
+542,Transformer greedy,a boy in a red shirt is jumping off a hill,mismatch,2,"The person has red shorts and is standing/running, not jumping off a hill."
+559,LSTM greedy,a man in a red shirt is holding a tennis ball,mismatch,1,The man is not wearing a red shirt and is holding a racket.
+559,Human reference,a male athlete is wearing a teal sweatband and a shirt from nike and is holding a tennis racket,match,5,"Accurately describes the athlete, sweatband, Nike shirt, and tennis racket."
+559,BLIP-base,a tennis player holding a tennis racket,partial,4,"Correctly identifies the tennis player holding a racket, but is too brief."
+559,Transformer beam3,a woman with a tennis racket playing tennis,mismatch,1,"The subject is a man, not a woman."
+559,Transformer greedy,a woman in a blue headband is playing tennis,mismatch,1,The subject is a male tennis player.
+559,LSTM beam3,a tennis player in a red shirt is playing with a tennis ball,mismatch,1,The player is not wearing a red shirt.
+559,Gemini,a man holding a tennis racket while wearing a headband and a green and white shirt,match,5,"Accurately describes the man holding a racket, headband, and shirt."
+602,BLIP-base,a white house,partial,2,Misses the main action with the dog.
+602,LSTM greedy,a dog is running through a field of a white building,match,4,"Accurate, though the dog is jumping rather than running."
+602,LSTM beam3,a white dog is running through the grass,match,4,"Accurate, though jumping rather than running."
+602,Transformer greedy,a dog is playing with a toy,match,4,Correct description of the dog playing with a toy.
+602,Transformer beam3,a white dog is playing with a black dog,mismatch,1,"There is only one dog, and it's not black."
+602,Gemini,a yellow dog leaping in the air to catch a frisbee in the yard,match,5,Highly accurate and descriptive.
+602,Human reference,a dog is jumping in the air trying to catch a red frisbee,match,5,Very accurate description of the action and objects.
+625,Gemini,a girl with blonde hair running in a grassy field with a big smile,match,5,The description accurately captures the blonde girl running and smiling in a grassy field.
+625,LSTM greedy,a girl in a pink dress is running through a field,mismatch,1,"The girl is wearing a teal skirt and white shirt, not a pink dress."
+625,Transformer beam3,a little girl in a pink shirt is blowing bubbles,mismatch,1,The girl is not wearing pink and is not blowing bubbles.
+625,LSTM beam3,a little girl in a pink dress is playing in the grass,mismatch,1,The girl is not wearing a pink dress.
+625,Human reference,a young girl is in a teal colored netted skirt and wearing a shirt with a peace sign,match,5,Accurately describes the teal skirt and the peace sign shirt.
+625,BLIP-base,a little girl in a green tutue,partial,3,"Correctly identifies the tutu, but the color is teal, not green."
+625,Transformer greedy,a little girl in a pink shirt is smiling,partial,2,"She is smiling, but her shirt is white, not pink."
+630,LSTM beam3,a little girl in a blue shirt is running in a field,partial,3,"Girl is in a dress, not a blue shirt, and ignores the ball."
+630,Gemini,a young girl in a hat and beige dress plays with a ball alongside an adult in a park,match,5,Accurately describes the girl in hat/dress playing ball with adult in park.
+630,Transformer beam3,two children playing with a soccer ball,mismatch,2,"It's an adult woman and a child, not two children."
+630,Human reference,a child and her mother are playing ball in a park,match,5,Correctly identifies a child and her mother playing ball in a park.
+630,Transformer greedy,two girls playing with a soccer ball,mismatch,2,"One is an adult woman, not two girls."
+630,LSTM greedy,a young girl in a blue shirt and a blue shirt is running on a field,mismatch,2,Girl is not wearing a blue shirt.
+630,BLIP-base,a woman and a child playing with a ball in a park,match,5,Accurately describes a woman and a child playing with a ball.
+643,Gemini,two young women stand close together outdoors smiling and looking off to the side,match,5,"Two young women stand close together outdoors, smiling."
+643,LSTM greedy,a girl in a pink shirt is holding a camera,mismatch,1,Neither girl is wearing pink or holding a camera.
+643,Human reference,one girl is wearing a white t shirt with red sleeves the other has words on hers,match,5,"One wears a white tee with red sleeves, the other has words."
+643,Transformer beam3,a young girl in a red shirt is holding a unicycle,mismatch,1,No unicycle is present in the image.
+643,LSTM beam3,a young girl wearing a pink shirt is standing in front of a brick wall,mismatch,1,No girl is wearing a pink shirt.
+643,BLIP-base,two girls standing next to each other,match,5,Two girls are standing next to each other.
+643,Transformer greedy,a girl in a pink shirt is holding a green bottle,mismatch,1,Neither girl wears pink or holds a green bottle.
+726,Transformer beam3,a group of people stand in front of a building,match,5,Accurately describes the scene.
+726,Transformer greedy,a group of people are standing in front of a building,match,5,Accurately describes the group standing.
+726,LSTM beam3,a group of people stand in front of a building,match,5,Correct description of the scene.
+726,Human reference,a crowd of people are standing in front of italian style buildings,match,5,Correctly identifies the Italian-style buildings.
+726,BLIP-base,a group of people standing in front of a building,match,5,Accurately describes the group.
+726,Gemini,a group of tourists facing away from the camera in front of historic buildings,match,5,Very descriptive and accurate.
+726,LSTM greedy,a group of people are standing in front of a building,match,5,Accurately describes the people.
+805,LSTM beam3,a brown dog is playing with a ball,mismatch,1,"The dog is chewing on a stick or post, not a ball."
+805,Human reference,a brown puppy is gnawing in a metallic post that is stuck into the ground,match,5,A brown puppy is chewing on a metallic post.
+805,Gemini,a close up of a puppy chewing on a stick,match,5,A close-up of a puppy chewing on a stick.
+805,BLIP-base,the dog is brown,match,4,"True, but it lacks specific details about the puppy."
+805,Transformer beam3,a brown and white dog is playing with a toy,mismatch,2,"The dog is chewing a stick, not playing with a toy."
+805,Transformer greedy,a brown dog is playing with a ball,mismatch,1,"The dog is chewing on a stick, not playing with a ball."
+805,LSTM greedy,a dog is playing with a ball,mismatch,1,"The dog is chewing on a stick, not playing with a ball."
+834,LSTM beam3,a white bird is flying over the water,match,5,The white bird is correctly described flying over the water.
+834,Transformer greedy,a white bird is flying through the air,match,5,The white bird is flying through the air.
+834,Gemini,a white egret takes flight from the water displaying its wide wings and yellow eyed expression,match,5,Accurately describes the egret taking flight with wide wings and yellow eyes.
+834,BLIP-base,the bird is white,match,5,The bird is indeed white.
+834,LSTM greedy,a white bird is flying over a lake,match,5,A white bird is flying over a lake.
+834,Transformer beam3,a white bird flies through the air,match,5,A white bird flies through the air.
+834,Human reference,a large grey and white water bird,mismatch,1,"The bird is entirely white, not grey."
+905,LSTM greedy,a race car is driving through the air,mismatch,1,"The car is driving on a dirt road, not through the air."
+905,Gemini,a red racing car drifting on a dirt road kicking up dust,match,5,The red racing car is drifting and kicking up dust.
+905,Transformer beam3,a race car is driving over the track,match,4,A race car is driving over the track.
+905,LSTM beam3,a race car is driving through the mud,mismatch,2,"The car is driving on a dusty dirt track, not mud."
+905,Human reference,a car is driven on a dusty track,match,5,A car is driven on a dusty track.
+905,Transformer greedy,a race car is driving through the mud,mismatch,2,"It is a dusty dirt track, not mud."
+905,BLIP-base,dirt is on the ground,match,3,"True, but extremely vague and misses the car."
+935,Gemini,a woman sits outside at a table reading a book and holding a cup,match,5,Accurately describes the woman sitting outside reading and holding a cup.
+935,LSTM beam3,a man and a woman sitting on a bench in front of a building,mismatch,1,There is no man present in the image.
+935,Transformer greedy,a woman sits in a restaurant,partial,3,"Correctly identifies a woman sitting, but it is outside on a porch, not inside a restaurant."
+935,BLIP-base,a woman sitting at a table on a porch,match,5,Accurately describes a woman sitting at a table on a porch.
+935,Human reference,a girl is reading while drinking starbuck s coffee,match,5,Correctly notes the girl reading and holding a Starbucks coffee.
+935,LSTM greedy,a man in a blue shirt and a woman sitting on a bench,mismatch,1,Incorrectly states there is a man in a blue shirt.
+935,Transformer beam3,a woman in a hat sits on a bench,partial,3,"She is wearing a hat, but she is sitting at a table on a chair, not a bench."
+965,LSTM beam3,a brown and white dog is running through the grass,partial,3,"Mentions brown and white dog, but it's a golden retriever."
+965,BLIP-base,a dog and a cat playing in the grass,mismatch,1,There is no cat in this photo.
+965,Transformer greedy,a brown dog is running through the grass,partial,3,"Golden retriever is jumping, not running."
+965,Transformer beam3,a brown dog is running through the grass,partial,3,"Golden retriever is jumping, not running."
+965,Human reference,a brown dog about to jump on a smaller black and tan dog,match,5,Accurately describes the interaction between the two dogs.
+965,Gemini,a golden retriever jumping with a black and tan dog in a grassy field,match,5,"Accurately describes the golden retriever, small dog, and setting."
+965,LSTM greedy,a brown dog is running through the grass,partial,3,"Golden retriever is jumping, not running."

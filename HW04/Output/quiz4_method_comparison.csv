@@ -1,0 +1,8 @@
+method,BLEU-4,BERTScore_F1,mean_latency_ms,median_latency_ms,gemini_mean_score,gemini_match_rate,trainable_params
+LSTM greedy,0.2024,0.5819,17.7,17.4,2.8,0.35,6795749.0
+LSTM beam3,0.1237,0.5888,18.3,17.9,3.0,0.4,6795749.0
+Transformer greedy,0.2127,0.5933,48.6,45.3,2.55,0.3,16316389.0
+Transformer beam3,0.2419,0.5961,58.0,56.8,2.9,0.35,16316389.0
+BLIP-base,0.231,0.5554,205.4,206.0,3.5,0.55,
+Gemini,0.1645,0.5842,3588.1,2069.0,5.0,1.0,
+Human reference,,,,,4.55,0.8,
