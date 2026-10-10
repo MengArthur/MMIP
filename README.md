@@ -31,6 +31,11 @@ NYCU College of Artificial Intelligence
   - **Quiz 3**: Fine-tuning Vision Transformer (ViT-B/16) vs. ResNet-50 (Macro-AUC Comparison)
   - **Quiz 4**: Image Captioning (CNN-LSTM & CNN-Transformer, Gemini Judge, BLEU / BERTScore, Response-Time Comparison)
 
+- **[HW05: Multimodal Deep Neural Networks (點此查閱完整作業報告)](HW05/README.md)**
+  - **Quiz 1**: Image Retrieval on Unseen Species (CUB-200-2011, ResNet-50 vs. ViT-B/16, Recall@K & mAP)
+  - **Quiz 2**: Image-Text Multimodal Classification (Flickr8k Match / Not-Match, Feature Fusion, 4 Backbone Combinations incl. CLIP)
+  - **Quiz 3**: CLIP Image Captioning (CLIP Encoder + LSTM / Transformer Decoder, BLEU / BERTScore vs. Week 4)
+
 ---
 
 ## 環境建置說明（Miniconda / Anaconda）
@@ -69,4 +74,10 @@ cd ../HW04
 pip install -r requirements.txt
 python HW04_main.py
 # 或啟動互動介面：jupyter notebook HW04_notebook.ipynb
+
+# 6. 執行 HW05（影像檢索、圖文多模態分類、CLIP Image Captioning；建議使用 GPU，Notebook 已在 Colab T4 執行完成並內嵌所有輸出）
+cd ../HW05
+pip install -r requirements.txt
+python HW05_main.py
+# 或啟動互動介面：jupyter notebook HW05_notebook.ipynb
 ```

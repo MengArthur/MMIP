@@ -1,0 +1,10 @@
+encoder,method,BLEU-1,BLEU-2,BLEU-3,BLEU-4,BERTScore_F1
+ImageNet ResNet-50 (Week 4),LSTM greedy,0.5866,0.4127,0.2787,0.1866,0.568
+ImageNet ResNet-50 (Week 4),LSTM beam3,0.6183,0.4414,0.3077,0.2119,0.5838
+ImageNet ResNet-50 (Week 4),Transformer greedy,0.5847,0.4091,0.2784,0.1882,0.5621
+ImageNet ResNet-50 (Week 4),Transformer beam3,0.6164,0.4373,0.3053,0.2087,0.5803
+"BLIP-base (pretrained, Week 4 reference)",BLIP-base,0.642,0.491,0.3636,0.2672,0.6067
+CLIP ViT-B/32 (Week 5),LSTM greedy,0.5828,0.4031,0.2636,0.1737,0.5604
+CLIP ViT-B/32 (Week 5),LSTM beam3,0.598,0.419,0.2853,0.1931,0.5697
+CLIP ViT-B/32 (Week 5),Transformer greedy,0.626,0.4448,0.3038,0.2038,0.5828
+CLIP ViT-B/32 (Week 5),Transformer beam3,0.6411,0.4637,0.324,0.2243,0.5933

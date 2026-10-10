@@ -1,0 +1,6 @@
+# Datasets and cached features are re-created automatically
+Data/hf_cache/
+Data/*.pt
+
+# Model checkpoints; training histories (*.json) are kept
+Checkpoints/*.pt

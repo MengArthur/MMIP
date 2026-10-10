@@ -1,0 +1,5 @@
+model,embedding_dim,R@1,R@2,R@4,R@8,mAP,params,train_minutes,images_per_sec
+ResNet-50 (CNN) pretrained (no training),2048,0.5029,0.6389,0.7557,0.8425,0.2015,23508032,0.0,152.3
+ResNet-50 (CNN) + retrieval training,512,0.6035,0.7265,0.8256,0.898,0.3027,24557120,7.94,166.4
+ViT-B/16 pretrained (no training),768,0.5663,0.6955,0.8003,0.8766,0.2206,85798656,0.0,146.4
+ViT-B/16 + retrieval training,512,0.6403,0.7591,0.8406,0.9024,0.3317,86192384,12.61,148.7
