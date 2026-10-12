@@ -20,11 +20,11 @@
 | 題目（配分） | 規範要求 | 文字說明與分析 | 圖表 / 結果檔 |
 | :--- | :--- | :--- | :--- |
 | Quiz 1 基礎（5） | 準備影像檢索資料集 | [Quiz 1 設計](#quiz-1影像檢索任務基礎-20-分--進階-10-分) | — |
-| Quiz 1 基礎（10 + 5） | 訓練檢索模型；展示檢索結果 | [1-1、1-3](#1-1-檢索訓練的效果基礎) | `Output/quiz1_training_curves.png`、`quiz1_retrieval_examples_*.png` |
-| Quiz 1 進階（5 + 5） | CNN 與 ViT 兩種 Backbone；比較檢索表現 | [1-2](#1-2-cnn-vs-vit進階) | `Output/quiz1_retrieval_results.csv`、`quiz1_recall_at_k.png` |
+| Quiz 1 基礎（10 + 5） | 訓練檢索模型；展示檢索結果（基礎模型：**ResNet-50 (CNN)** 檢索模型） | [1-1、1-3](#1-1-檢索訓練的效果基礎) | `Output/quiz1_training_curves.png`、`quiz1_retrieval_examples_*.png` |
+| Quiz 1 進階（5 + 5） | CNN 與 ViT 兩種 Backbone；比較檢索表現（另訓練 **ViT-B/16** 版本，與 ResNet-50 比較） | [1-2](#1-2-cnn-vs-vit進階) | `Output/quiz1_retrieval_results.csv`、`quiz1_recall_at_k.png` |
 | Quiz 2 基礎（5） | 準備影像與文字的多模態資料集 | [Quiz 2 設計](#quiz-2多模態深度學習神經網路基礎-20-分--進階-15-分) | — |
-| Quiz 2 基礎（10 + 5） | 影像與文字 Backbone 萃取特徵、融合後分類；訓練與推論 | [2-1、2-3](#2-1-訓練與推論基礎) | `Output/quiz2_training_curves.png`、`quiz2_inference_examples*.png`、`quiz2_custom_text_inference.*` |
-| Quiz 2 進階（10 + 5） | 更換 Backbone；比較不同組合 | [2-2](#2-2-backbone-組合比較進階) | `Output/quiz2_backbone_comparison.csv` |
+| Quiz 2 基礎（10 + 5） | 影像與文字 Backbone 萃取特徵、融合後分類；訓練與推論（基礎模型：**ResNet-50 + BERT**） | [2-1](#2-1-訓練與推論基礎) | `Output/quiz2_training_curves.png`、`quiz2_inference_examples*.png`、`quiz2_custom_text_inference.*` |
+| Quiz 2 進階（10 + 5） | 更換 Backbone；比較不同組合（換成 ViT-B/16、CLIP 影像、CLIP 文字，共 3 組重新訓練與推論） | [2-2](#2-2-backbone-組合比較進階) | `Output/quiz2_backbone_comparison.csv` |
 | Quiz 3 基礎（5 + 10 + 5） | 資料準備；CLIP Encoder ＋ 文字 Decoder；訓練並產生描述 | [3-1](#3-1-訓練與產生的描述基礎) | `Output/quiz3_training_curves.png`、`quiz3_sample_captions.png`、`quiz3_test_captions.csv` |
 | Quiz 3 進階（10） | 比較 Week 4 與本次的 BLEU、BERTScore | [3-2](#3-2-week-4-vs-week-5-bleu--bertscore進階) | `Output/quiz3_week4_vs_clip*.csv`、`quiz3_week4_vs_clip.png` |
 
