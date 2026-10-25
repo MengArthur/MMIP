@@ -1,0 +1,72 @@
+﻿id,task,source,question,reference,model,answer,auto,seconds,n_new_tokens,gemini_score,gemini_reason
+B01,影像分類,COCO val2017,What kind of animal is shown in this image? Answer with one word.,elephant (two elephants touching trunks),Qwen3-VL-2B,elephant,1,0.26,1,10,Fully correct and strictly follows the requested one-word answer format.
+B02,物件計數,COCO val2017,How many zebras are in this image? Answer with a number only.,"3 (two in the centre, one partly visible at the left edge)",Qwen3-VL-2B,3,1,0.223,1,10,Correct count of 3 zebras.
+B03,物件計數,COCO val2017,How many horses are in this image? Answer with a number only.,2,Qwen3-VL-2B,2,1,0.219,1,10,Correctly counted 2 horses and followed the format.
+B04,小物件計數,COCO val2017,How many remote controls are in this image? Answer with a number only.,"2 (two remotes at the top of the pink couch, next to two sleeping cats)",Qwen3-VL-2B,2,1,0.224,1,10,Correct count with the requested format.
+B05,人物計數,COCO val2017,How many people are standing in front of the elephant? Answer with a number only.,3 (a woman in a cap and two men),Qwen3-VL-2B,3,1,0.208,1,10,Correctly answers the question with the requested number only.
+B06,場景文字辨識 (OCR),COCO val2017,What word is written on the sign?,"STOP (red stop sign, black-and-white background)",Qwen3-VL-2B,"Based on the image provided, the word written on the sign is **STOP**.
+
+The sign is a standard red octagonal stop sign, and the word ""STOP"" is clearly visible in white capital letters. The background is in black and white, which makes the red of the sign stand out.",1,3.243,60,10,Accurately identifies the word and provides a helpful explanation.
+B07,場景文字辨識 (OCR),COCO val2017,What number is printed on the back of the jersey of the boy in the front? Answer with a number only.,"4 (the ""182"" in the background is on the fence)",Qwen3-VL-2B,4,1,0.232,1,10,Correct number and matches the requested format.
+B08,屬性辨識（顏色）,COCO val2017,What color is the cat? Answer in a few words.,orange / ruddy brown (an Abyssinian-type cat on a wicker chair),Qwen3-VL-2B,brown,1,0.253,1,10,"Accurate, concise, and matches the requested format."
+B09,空間關係,COCO val2017,Where is the cat sitting?,inside a (bathroom) sink,Qwen3-VL-2B,"Based on the image provided, the cat is sitting in a **white bathroom sink**.
+
+Here are the key details:
+- The sink is small and appears to be a pedestal sink, with the cat positioned in the basin.
+- The cat is lying down with its body stretched out and its head resting on the edge of the sink.
+- The sink is located in a bathroom, as indicated by the presence of a faucet, a soap dispenser, and other bathroom items.
+- The cat is looking directly at the camera with its bright green eyes.",1,5.789,109,10,Accurate and detailed answer.
+B10,多物件偵測,COCO val2017,What two kinds of animals can be seen in this image?,"a cat (grey, inside) and a dog (outside the window)",Qwen3-VL-2B,"Based on the image provided, two kinds of animals can be seen:
+
+- A **cat**. It is a gray cat sitting on a wooden surface, looking down at a small potted plant.
+- A **dog**. It is standing on a balcony or patio, looking towards the cat.",1,3.143,60,7,"Accurate, but not in the requested JSON format."
+B11,動作 / 運動辨識,COCO val2017,What sport is the man playing? Answer with one word.,tennis (on a clay court),Qwen3-VL-2B,tennis,1,0.208,1,10,Correctly answers the sport in one word.
+B12,情境推理,COCO val2017,What is the weather like in this scene? Briefly explain the visual evidence.,"rainy: wet road, water splashing, vehicles with headlights on",Qwen3-VL-2B,"Based on the visual evidence in the image, the weather is rainy.
+
+The most direct evidence is the wet road surface, which is reflecting the lights from the bus and cars. The road is visibly slick with water, and there are visible splashes of water being kicked up by the vehicles, particularly the bus. The trees in the background are also wet, and the overall scene has a dark, overcast appearance, which is typical of a rainy day.",1,4.86,91,10,"Fully correct, detailed, and includes visual evidence."
+B13,細粒度辨識,COCO val2017,"What type of pizza is this, and what utensil is next to it?",pepperoni pizza; a fork,Qwen3-VL-2B,"Based on the visual evidence in the image, here is a detailed analysis:
+
+-   **Pizza Type:** This is a **pepperoni pizza**. The most prominent feature is the large number of round, red, and slightly curled slices of pepperoni distributed across the surface. The pizza is topped with melted cheese, which appears to be mozzarella, and is served on a white plate. The crust is thick and appears to be a classic, slightly puffy, hand-tossed style.
+
+-   **Utensil:** Next to the pizza on the right side of the plate is a **fork**. It is a standard silver",1,6.607,128,7,"Accurate, but cuts off mid-sentence and fails to adhere to concise formatting."
+B14,幻覺檢測（不存在物件）,COCO val2017,Is there a zebra in this image? Answer yes or no.,"no (two giraffes eating leaves, no zebra)",Qwen3-VL-2B,no,1,0.225,1,10,"Accurate, concise, and follows the requested format."
+B15,形容照片,COCO val2017,Describe this image in one or two sentences.,a person with raised arms flying a colourful kite on a grassy hill by the sea,Qwen3-VL-2B,"A person with their back to the camera is standing on a grassy cliff overlooking the ocean, holding up a colorful kite with their arms raised. The kite is pink, yellow, and black. The sky is partly cloudy and the sun is low, casting a warm glow over the scene.",1,3.072,58,7,"Accurate, but exceeds the one-to-two sentence limit (it is three sentences)."
+B16,文件 / 招牌 OCR,synthetic,What is the name of the cafe and what is its phone number?,"CAFE LUNA, 03-571-2121",Qwen3-VL-2B,"Based on the text in the image, here is the information about the cafe:
+
+-   **Name:** The name of the cafe is **CAFE LUNA**.
+-   **Phone Number:** The phone number is **03-571-2121**.
+
+The image also indicates that the cafe is open from 9:00 to 18:00.",1,4.313,82,9,"Correct, but includes extra information not explicitly requested."
+B17,物件計數（合成）,synthetic,How many red circles are in the image? Answer with a number only.,7 (plus 4 blue squares as distractors),Qwen3-VL-2B,7,1,0.225,1,10,Correct count of 7 red circles with a number only.
+B18,圖表理解,synthetic,"According to the bar chart, which month has the highest sales, and what is the value?","April, 25",Qwen3-VL-2B,"Based on the bar chart titled ""Monthly Sales (units)"", we can determine the month with the highest sales by examining the height of each bar and its corresponding value.
+
+- The chart displays sales data for six months: January (Jan), February (Feb), March (Mar), April (Apr), May (May), and June (Jun).
+- The vertical axis represents ""Sales (units)"" and the horizontal axis represents the months.
+
+Let's look at the sales for each month:
+- **Jan**: 12 units
+- **Feb**: 18 units
+- **Mar**: 9 units
+- **Apr**: 2",0,6.68,128,4,The response is cut off and incomplete.
+B19,空間關係（合成）,synthetic,Is the green triangle to the left or to the right of the yellow star? Answer with one word.,left,Qwen3-VL-2B,left,1,0.209,1,10,Correct answer with one word.
+B20,視覺數學,synthetic,Solve the math problem shown in the image. Answer with a number only.,42 (27 + 15),Qwen3-VL-2B,2,0,0.166,1,1,Incorrect answer; completely wrong calculation.
+B01,影像分類,COCO val2017,What kind of animal is shown in this image? Answer with one word.,elephant (two elephants touching trunks),SmolVLM2-2.2B,Elephant,1,1.111,1,10,"Fully correct, matches the one-word answer requirement."
+B02,物件計數,COCO val2017,How many zebras are in this image? Answer with a number only.,"3 (two in the centre, one partly visible at the left edge)",SmolVLM2-2.2B,4,0,0.996,2,1,"Incorrect count, there are only 3 zebras."
+B03,物件計數,COCO val2017,How many horses are in this image? Answer with a number only.,2,SmolVLM2-2.2B,2,1,0.99,2,10,Correctly counted 2 horses and followed the format.
+B04,小物件計數,COCO val2017,How many remote controls are in this image? Answer with a number only.,"2 (two remotes at the top of the pink couch, next to two sleeping cats)",SmolVLM2-2.2B,2,1,1.148,2,10,Correct count with the requested format.
+B05,人物計數,COCO val2017,How many people are standing in front of the elephant? Answer with a number only.,3 (a woman in a cap and two men),SmolVLM2-2.2B,3,1,1.004,2,10,Correctly answers the question with the requested number only.
+B06,場景文字辨識 (OCR),COCO val2017,What word is written on the sign?,"STOP (red stop sign, black-and-white background)",SmolVLM2-2.2B,"The word ""STOP"" is written on the sign.",1,1.272,11,10,Directly and correctly answers the question with the exact word.
+B07,場景文字辨識 (OCR),COCO val2017,What number is printed on the back of the jersey of the boy in the front? Answer with a number only.,"4 (the ""182"" in the background is on the fence)",SmolVLM2-2.2B,4,1,1.32,2,10,Correct number and matches the requested format.
+B08,屬性辨識（顏色）,COCO val2017,What color is the cat? Answer in a few words.,orange / ruddy brown (an Abyssinian-type cat on a wicker chair),SmolVLM2-2.2B,orange.,1,1.328,2,10,"Accurate, concise, and matches the requested format."
+B09,空間關係,COCO val2017,Where is the cat sitting?,inside a (bathroom) sink,SmolVLM2-2.2B,The cat is sitting in a white sink.,1,1.206,9,10,Accurate and direct answer.
+B10,多物件偵測,COCO val2017,What two kinds of animals can be seen in this image?,"a cat (grey, inside) and a dog (outside the window)",SmolVLM2-2.2B,A cat and a dog can be seen in this image.,1,1.285,12,7,"Accurate, but not in the requested JSON format."
+B11,動作 / 運動辨識,COCO val2017,What sport is the man playing? Answer with one word.,tennis (on a clay court),SmolVLM2-2.2B,tennis,1,0.985,1,10,Correctly answers the sport in one word.
+B12,情境推理,COCO val2017,What is the weather like in this scene? Briefly explain the visual evidence.,"rainy: wet road, water splashing, vehicles with headlights on",SmolVLM2-2.2B,It is raining in this scene.,1,1.148,8,7,"Accurate, but lacks the requested explanation of visual evidence."
+B13,細粒度辨識,COCO val2017,"What type of pizza is this, and what utensil is next to it?",pepperoni pizza; a fork,SmolVLM2-2.2B,"This is a pepperoni pizza, and there is a fork next to it.",1,1.362,16,10,"Accurate, concise, and correctly identifies both the pizza type and the utensil."
+B14,幻覺檢測（不存在物件）,COCO val2017,Is there a zebra in this image? Answer yes or no.,"no (two giraffes eating leaves, no zebra)",SmolVLM2-2.2B,No.,1,1.029,2,10,"Accurate, concise, and follows the requested format."
+B15,形容照片,COCO val2017,Describe this image in one or two sentences.,a person with raised arms flying a colourful kite on a grassy hill by the sea,SmolVLM2-2.2B,A person is flying a kite on a grassy hill overlooking the ocean.,1,1.361,14,10,"Accurate, concise, and follows the one-to-two sentence limit."
+B16,文件 / 招牌 OCR,synthetic,What is the name of the cafe and what is its phone number?,"CAFE LUNA, 03-571-2121",SmolVLM2-2.2B,The name of the cafe is Cafe Luna and its phone number is 03-571-2121.,1,1.747,28,10,Fully correct and directly answers the question.
+B17,物件計數（合成）,synthetic,How many red circles are in the image? Answer with a number only.,7 (plus 4 blue squares as distractors),SmolVLM2-2.2B,10,0,1.021,3,1,Incorrect count of 10.
+B18,圖表理解,synthetic,"According to the bar chart, which month has the highest sales, and what is the value?","April, 25",SmolVLM2-2.2B,"The month with the highest sales is April, with a value of 25 units.",1,1.465,18,10,Accurately identifies the month with the highest sales and the correct value.
+B19,空間關係（合成）,synthetic,Is the green triangle to the left or to the right of the yellow star? Answer with one word.,left,SmolVLM2-2.2B,Left,1,0.979,1,10,Correct answer with one word.
+B20,視覺數學,synthetic,Solve the math problem shown in the image. Answer with a number only.,42 (27 + 15),SmolVLM2-2.2B,27 + 15 = 42,0,0.975,11,7,"Correct math solution, but included the equation instead of just a number."

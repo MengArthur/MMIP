@@ -1,0 +1,802 @@
+[
+ {
+  "id": "MMLU01",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU02",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "D",
+  "correct": 0,
+  "response": "D"
+ },
+ {
+  "id": "MMLU03",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "C",
+  "correct": 1,
+  "response": "C"
+ },
+ {
+  "id": "MMLU04",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "C",
+  "correct": 1,
+  "response": "C"
+ },
+ {
+  "id": "MMLU05",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "C",
+  "correct": 1,
+  "response": "C"
+ },
+ {
+  "id": "MMLU06",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "D",
+  "correct": 1,
+  "response": "D"
+ },
+ {
+  "id": "MMLU07",
+  "source": "MMLU",
+  "answer": "A",
+  "pred": "A",
+  "correct": 1,
+  "response": "A"
+ },
+ {
+  "id": "MMLU08",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "D",
+  "correct": 1,
+  "response": "D"
+ },
+ {
+  "id": "MMLU09",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "C",
+  "correct": 0,
+  "response": "C"
+ },
+ {
+  "id": "MMLU10",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU11",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "D",
+  "correct": 1,
+  "response": "D"
+ },
+ {
+  "id": "MMLU12",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "C",
+  "correct": 1,
+  "response": "C"
+ },
+ {
+  "id": "MMLU13",
+  "source": "MMLU",
+  "answer": "A",
+  "pred": "A",
+  "correct": 1,
+  "response": "A"
+ },
+ {
+  "id": "MMLU14",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "D",
+  "correct": 1,
+  "response": "D"
+ },
+ {
+  "id": "MMLU15",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "D",
+  "correct": 0,
+  "response": "D"
+ },
+ {
+  "id": "MMLU16",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU17",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "D",
+  "correct": 1,
+  "response": "D"
+ },
+ {
+  "id": "MMLU18",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU19",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU20",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "D",
+  "correct": 1,
+  "response": "D"
+ },
+ {
+  "id": "MMLU21",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU22",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU23",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "C",
+  "correct": 0,
+  "response": "C. Not wrong, Wrong"
+ },
+ {
+  "id": "MMLU24",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "C",
+  "correct": 1,
+  "response": "C"
+ },
+ {
+  "id": "MMLU25",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "C",
+  "correct": 1,
+  "response": "C"
+ },
+ {
+  "id": "MMLU26",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "D",
+  "correct": 1,
+  "response": "D"
+ },
+ {
+  "id": "MMLU27",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "A",
+  "correct": 0,
+  "response": "A"
+ },
+ {
+  "id": "MMLU28",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "B",
+  "correct": 0,
+  "response": "B. Wrong, Not wrong"
+ },
+ {
+  "id": "MMLU29",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "C",
+  "correct": 1,
+  "response": "C"
+ },
+ {
+  "id": "MMLU30",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU31",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU32",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "C",
+  "correct": 1,
+  "response": "C"
+ },
+ {
+  "id": "MMLU33",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "D",
+  "correct": 1,
+  "response": "D"
+ },
+ {
+  "id": "MMLU34",
+  "source": "MMLU",
+  "answer": "A",
+  "pred": "C",
+  "correct": 0,
+  "response": "C. Not wrong, Wrong"
+ },
+ {
+  "id": "MMLU35",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU36",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU37",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU38",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "D",
+  "correct": 1,
+  "response": "D"
+ },
+ {
+  "id": "MMLU39",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "C",
+  "correct": 0,
+  "response": "C"
+ },
+ {
+  "id": "MMLU40",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU41",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "D",
+  "correct": 1,
+  "response": "D"
+ },
+ {
+  "id": "MMLU42",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "C",
+  "correct": 0,
+  "response": "C"
+ },
+ {
+  "id": "MMLU43",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "A",
+  "correct": 0,
+  "response": "A"
+ },
+ {
+  "id": "MMLU44",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU45",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "D",
+  "correct": 1,
+  "response": "D"
+ },
+ {
+  "id": "MMLU46",
+  "source": "MMLU",
+  "answer": "A",
+  "pred": "C",
+  "correct": 0,
+  "response": "C"
+ },
+ {
+  "id": "MMLU47",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "C",
+  "correct": 1,
+  "response": "C"
+ },
+ {
+  "id": "MMLU48",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "C",
+  "correct": 1,
+  "response": "C"
+ },
+ {
+  "id": "MMLU49",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "C",
+  "correct": 1,
+  "response": "C"
+ },
+ {
+  "id": "MMLU50",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU51",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "MMLU52",
+  "source": "MMLU",
+  "answer": "A",
+  "pred": "A",
+  "correct": 1,
+  "response": "A"
+ },
+ {
+  "id": "MMLU53",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "D",
+  "correct": 0,
+  "response": "D"
+ },
+ {
+  "id": "MMLU54",
+  "source": "MMLU",
+  "answer": "A",
+  "pred": "A",
+  "correct": 1,
+  "response": "A"
+ },
+ {
+  "id": "MMLU55",
+  "source": "MMLU",
+  "answer": "A",
+  "pred": "A",
+  "correct": 1,
+  "response": "A"
+ },
+ {
+  "id": "MMLU56",
+  "source": "MMLU",
+  "answer": "A",
+  "pred": "A",
+  "correct": 1,
+  "response": "A"
+ },
+ {
+  "id": "MMLU57",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "C",
+  "correct": 1,
+  "response": "C. Not wrong, Wrong"
+ },
+ {
+  "id": "MMLU58",
+  "source": "MMLU",
+  "answer": "C",
+  "pred": "C",
+  "correct": 1,
+  "response": "C"
+ },
+ {
+  "id": "MMLU59",
+  "source": "MMLU",
+  "answer": "D",
+  "pred": "D",
+  "correct": 1,
+  "response": "D"
+ },
+ {
+  "id": "MMLU60",
+  "source": "MMLU",
+  "answer": "B",
+  "pred": "B",
+  "correct": 1,
+  "response": "B"
+ },
+ {
+  "id": "GSM01",
+  "source": "GSM8K",
+  "answer": "120",
+  "pred": "120",
+  "correct": 1,
+  "response": "We are given a word problem about cooking times for rice, beans, and pork. Let's solve it step by step.\n\n---\n\n**Step 1: Define variables**\n\nLet:\n- $ R $ = cooking time for rice\n- $ P $ = cooking time for pork\n- $ B $ = cooking time for beans\n\nWe are told:\n\n1. It took her **20 more minutes to cook pork than rice**  \n   → $ P = R + 20 $\n\n2. **Beans took half the combined cooking time of pork and rice**  \n   → $ B = \\frac{1}{2}(P + R) $\n\n3. It took her **30 minutes to cook rice**  \n   → $ R = 30 $\n\n---\n\n**Step 2: Plug in the value of R**\n\nSince $ R = 30 $, substitute into the equation for pork:\n\n$ P = 30 + 20 = 50 $ minutes\n\n---\n\n**Step 3: Find beans cooking time**\n\n$ B = \\frac{1}{2}(P + R) = \\frac{1}{2}(50 + 30) = \\frac{1}{2}(80) = 40 $ minutes\n\n---\n\n**Step 4: Total cooking time for all food**\n\nAdd up the times:\n\n$ R + P + B = 30 + 50 + 40 = 120 $ minutes\n\n---\n\nAnswer: 120"
+ },
+ {
+  "id": "GSM02",
+  "source": "GSM8K",
+  "answer": "200",
+  "pred": "160",
+  "correct": 0,
+  "response": "Let's solve the problem step by step.\n\n### Step 1: Initial number of cannolis\nWe are told that Allan has a total of **40 cannolis** in his house initially.\n\n> So, initial cannolis = 40\n\n---\n\n### Step 2: Initial number of corns\nWe are told that there is **twice as much corn as cannolis**.\n\nSo, initial corns = 2 × cannolis = 2 × 40 = **80**\n\n---\n\n### Step 3: Allan buys more cannolis\nHe buys **60 more cannolis** at the store.\n\nSo, new total cannolis = 40 + 60 = **100**\n\n---\n\n### Step 4: He has 40 fewer corns than the number of cannolis\nNow, after buying more cannolis, the number of **corns** he has is **40 fewer than the current number of cannolis**.\n\nCurrent cannolis = 100  \nSo, new number of corns = 100 − 40 = **60**\n\n---\n\n### Step 5: Find the combined total of corns and cannolis now\n\nTotal = new cannolis + new corns  \n= 100 + 60 = **160**\n\n---\n\nAnswer: 160"
+ },
+ {
+  "id": "GSM03",
+  "source": "GSM8K",
+  "answer": "19",
+  "pred": "19",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\n### Step 1: Count the total eyeshadow colors Amy originally had.\n\nAmy had:\n- **Two eyeshadow palettes**, each with **4 colors**  \n  So, from palettes:  \n  $ 2 \\times 4 = 8 $ colors\n\n- **Three makeup sets**, each with **6 eyeshadow colors**  \n  So, from makeup sets:  \n  $ 3 \\times 6 = 18 $ colors\n\n**Total original eyeshadow colors**:  \n$ 8 + 18 = 26 $ colors\n\n---\n\n### Step 2: Her sister steals one of the palettes.\n\nEach palette has 4 colors, so stealing one palette removes:  \n$ 4 $ colors\n\nRemaining from palettes:  \n$ 8 - 4 = 4 $ colors\n\n---\n\n### Step 3: Amy uses up half of the colors from **one** makeup set.\n\nOne makeup set has 6 colors.  \nHalf of that is:  \n$ \\frac{6}{2} = 3 $ colors used up\n\nSo, remaining from that one makeup set:  \n$ 6 - 3 = 3 $ colors\n\nThe other two makeup sets are untouched, so they still have:  \n$ 2 \\times 6 = 12 $ colors\n\nSo, total remaining from makeup sets:  \n$ 3 + 12 = 15 $ colors\n\n---\n\n### Step 4: Total eyeshadow colors left\n\n- From palettes: 4 colors  \n- From makeup sets: 15 colors  \n\nTotal:  \n$ 4 + 15 = 19 $ colors\n\nAnswer: 19"
+ },
+ {
+  "id": "GSM04",
+  "source": "GSM8K",
+  "answer": "100",
+  "pred": "100",
+  "correct": 1,
+  "response": "Let's solve the problem step by step:\n\n1. Josie has a 10-acre farm.  \n2. Each acre produces 5 tons of grapes per year.  \n   So, total grapes produced per year = 10 acres × 5 tons/acre = 50 tons.  \n3. Each ton of grapes makes 2 barrels of wine.  \n   So, total barrels of wine = 50 tons × 2 barrels/ton = 100 barrels.  \n\nAnswer: 100"
+ },
+ {
+  "id": "GSM05",
+  "source": "GSM8K",
+  "answer": "5",
+  "pred": "5",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\n### Given:\n- Jay can build **20 snowballs per hour**.\n- **2 snowballs melt every 15 minutes**.\n- We want to know how long it will take until Jay has **60 snowballs**.\n\n---\n\n### Step 1: Understand the rate of snowball building and melting\n\nFirst, convert everything to **per hour** for consistency.\n\n#### Building rate:\nJay builds 20 snowballs per hour.\n\n#### Melting rate:\n2 snowballs melt every 15 minutes.\n\nThere are 60 minutes in an hour, so there are:\n- 60 ÷ 15 = 4 intervals of 15 minutes in an hour.\n\nSo, in one hour:\n- 2 snowballs melt × 4 = **8 snowballs melt per hour**.\n\n#### Net rate of snowball accumulation:\nBuilding: +20 per hour  \nMelting: −8 per hour  \nNet gain = 20 − 8 = **12 snowballs per hour**\n\n---\n\n### Step 2: How long to reach 60 snowballs?\n\nWe assume Jay starts with **0 snowballs**.\n\nHe gains 12 snowballs per hour.\n\nWe want to find time $ t $ such that:\n$$\n12t = 60\n$$\n$$\nt = \\frac{60}{12} = 5 \\text{ hours}\n$$\n\n---\n\n### Step 3: Verify the logic\n\n- In 5 hours:\n  - Jay builds: $ 20 \\times 5 = 100 $ snowballs\n  - Melting: 8 snowballs per hour → $ 8 \\times 5 = 40 $ snowballs melt\n  - Net snowballs: $ 100 - 40 = 60 $\n\n✅ Matches the target.\n\n---\n\nAnswer: 5"
+ },
+ {
+  "id": "GSM06",
+  "source": "GSM8K",
+  "answer": "5",
+  "pred": "5",
+  "correct": 1,
+  "response": "We are given information about how straw is distributed among different rodents at a pet store. We need to find **how many rats are in each cage**.\n\n---\n\n### Step 1: Understand the distribution\n\n- **Rats**:  \n  - There are **3 cages** of rats, and the rats are in **equal groups**.  \n  - Each **rat** gets **6 pieces of straw**.  \n  - Let the number of rats in **each cage** be **r**.  \n  - So total rats = 3 × r  \n  - Total straw given to rats = (3r) × 6 = **18r**\n\n- **Hamsters**:  \n  - 10 cages, each with **one group** (kept alone), so each cage has some number of hamsters.  \n  - Each **hamster** gets **5 pieces of straw**.  \n  - But we are **not told how many hamsters per cage**, only that there are 10 cages.  \n  - However, we are told that **total straw distributed is 160**, and that **no straw is used elsewhere**.  \n  - Also, there is a **pen of rabbits** where **20 pieces of straw** are distributed.\n\n---\n\n### Step 2: Total straw used\n\nTotal straw = straw to rats + straw to hamsters + straw to rabbits  \nWe are told total straw = **160**\n\nStraw to rabbits = **20**\n\nSo, straw to rats + straw to hamsters = 160 − 20 = **140**\n\nSo:\n\n> Straw to rats + Straw to hamsters = 140  \n> We already have: straw to rats = 18r  \n> So: 18r + (straw to hamsters) = 140\n\nWe don’t know how many hamsters there are, but we are not given any direct number. However, we are only asked to find **how many rats are in each cage**, so maybe we can find **r** without knowing the number of hamsters?\n\nWait — is there a missing piece?\n\nLet’s re-read the problem:\n\n> \"There are 10 cages of hamsters that are kept alone and each hamster is given 5 pieces of straw.\"\n\n\"Kept alone\" might mean each cage has **one hamster**? That could be a reasonable interpretation.\n\nIn many such problems, \"kept alone\" implies"
+ },
+ {
+  "id": "GSM07",
+  "source": "GSM8K",
+  "answer": "104",
+  "pred": "104",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\nWe are given:\n\n- Each blog article takes an average of **4 hours** to research and write.\n- Meredith wrote:\n  - **5 articles on Monday**\n  - **2/5 times more articles on Tuesday than on Monday**\n  - **Twice the number of articles on Wednesday as on Tuesday**\n\nWe need to find the **total number of hours** she spent writing articles over the three days.\n\n---\n\n### Step 1: Articles on Monday\n\nGiven directly:\n\n> Monday: 5 articles\n\n---\n\n### Step 2: Articles on Tuesday\n\nIt says she wrote **2/5 times more** articles on Tuesday than on Monday.\n\nThis phrase can be interpreted as:\n\n> Tuesday = Monday + (2/5) × Monday  \n> = (1 + 2/5) × Monday  \n> = (7/5) × 5  \n> = 7 articles\n\n✅ So, Tuesday: 7 articles\n\n---\n\n### Step 3: Articles on Wednesday\n\nShe wrote **twice** the number of articles she wrote on Tuesday.\n\n> Wednesday = 2 × Tuesday = 2 × 7 = 14 articles\n\n---\n\n### Step 4: Total articles over three days\n\nAdd them up:\n\n- Monday: 5  \n- Tuesday: 7  \n- Wednesday: 14  \n\nTotal articles = 5 + 7 + 14 = **26 articles**\n\n---\n\n### Step 5: Total hours spent\n\nEach article takes 4 hours.\n\nTotal hours = 26 × 4 = **104 hours**\n\n---\n\nAnswer: 104"
+ },
+ {
+  "id": "GSM08",
+  "source": "GSM8K",
+  "answer": "4",
+  "pred": "4",
+  "correct": 1,
+  "response": "Let's solve the problem step by step:\n\n1. **Number of horses**: 4  \n2. **Oats per horse per meal**: 5 pounds  \n3. **Feeding frequency**: Twice a day → 2 meals per day  \n4. **Oats consumed per horse per day**:  \n   $ 5 \\text{ pounds/meal} \\times 2 \\text{ meals} = 10 \\text{ pounds/day} $\n\n5. **Total oats for all horses per day**:  \n   $ 4 \\text{ horses} \\times 10 \\text{ pounds/day} = 40 \\text{ pounds/day} $\n\n6. **Total oats for 5 days**:  \n   $ 40 \\text{ pounds/day} \\times 5 \\text{ days} = 200 \\text{ pounds} $\n\n7. **One bag contains 50 pounds of oats**  \n   So, number of bags needed:  \n   $ \\frac{200}{50} = 4 $\n\nAnswer: 4"
+ },
+ {
+  "id": "GSM09",
+  "source": "GSM8K",
+  "answer": "24",
+  "pred": "24",
+  "correct": 1,
+  "response": "We are told that:\n\n- Digimon had its 20th anniversary.\n- When it came out, John was twice as old as Jim.\n- John is 28 years old now.\n- We need to find Jim's current age.\n\n---\n\nStep 1: Understand the timeline.\n\nDigimon came out 20 years ago (since it's celebrating its 20th anniversary).\n\nAt that time (20 years ago), John was twice as old as Jim.\n\nLet’s let Jim’s age 20 years ago be **x**.\n\nThen John’s age 20 years ago was **2x**.\n\n---\n\nStep 2: Use current ages.\n\nJohn is currently 28 years old.\n\nSo, 20 years ago, John was:\n\n28 − 20 = 8 years old.\n\nBut we also said John was 2x at that time.\n\nSo:\n\n2x = 8  \n→ x = 4\n\nSo Jim was 4 years old 20 years ago.\n\n---\n\nStep 3: Find Jim’s current age.\n\nJim is now:\n\n4 + 20 = 24 years old.\n\n---\n\nAnswer: 24"
+ },
+ {
+  "id": "GSM10",
+  "source": "GSM8K",
+  "answer": "90",
+  "pred": "90",
+  "correct": 1,
+  "response": "We are given that the three angles in a triangle add up to 180 degrees.  \nLet the smallest angle be $ x $ degrees.\n\nAccording to the problem:\n- One angle is twice the smallest angle: $ 2x $\n- One angle is three times the smallest angle: $ 3x $\n\nSince these are the three angles of a triangle, their sum is:\n\n$$\nx + 2x + 3x = 6x\n$$\n\nWe know that the sum of the angles in a triangle is 180 degrees, so:\n\n$$\n6x = 180\n$$\n\nNow, solve for $ x $:\n\n$$\nx = \\frac{180}{6} = 30\n$$\n\nNow find the measures of the angles:\n- Smallest angle: $ x = 30^\\circ $\n- Twice the smallest: $ 2x = 60^\\circ $\n- Three times the smallest: $ 3x = 90^\\circ $\n\nThe largest angle is $ 90^\\circ $.\n\nAnswer: 90"
+ },
+ {
+  "id": "GSM11",
+  "source": "GSM8K",
+  "answer": "342",
+  "pred": "168",
+  "correct": 0,
+  "response": "Let's solve the problem step by step.\n\n---\n\n**Step 1: Understand the flower bed dimensions**\n\n- The flower bed is **111 feet long**.\n- Each flower grows **12 inches wide**.\n- Convert 12 inches to feet:  \n  $ 12 \\text{ inches} = 1 \\text{ foot} $  \n  So each flower takes up **1 foot of space**.\n\n- Pat needs to leave **1.5 feet between every plant**.\n\n> Important: This means that between each pair of adjacent plants, there is a 1.5-foot gap.\n\n---\n\n**Step 2: Determine how many plants can fit in the 111-foot bed**\n\nWe need to account for:\n- The width of each plant (1 foot)\n- The gaps between them (1.5 feet)\n\nLet’s suppose Pat plants **n** flowers.\n\nThen:\n- The total space taken by the plants: $ n \\times 1 = n $ feet\n- The number of **gaps between plants** is $ n - 1 $\n- Each gap is 1.5 feet, so total gap space: $ 1.5(n - 1) $ feet\n\nTotal space used = plant space + gap space  \n$$\nn + 1.5(n - 1) \\leq 111\n$$\n\nSolve the inequality:\n\n$$\nn + 1.5(n - 1) \\leq 111\n$$\n$$\nn + 1.5n - 1.5 \\leq 111\n$$\n$$\n2.5n - 1.5 \\leq 111\n$$\n$$\n2.5n \\leq 112.5\n$$\n$$\nn \\leq \\frac{112.5}{2.5} = 45\n$$\n\nSo, Pat can fit **at most 45 plants** in the flower bed.\n\n---\n\n**Step 3: Pat already owns 17 flowers**\n\nSo, she needs to **buy**:\n$$\n45 - 17 = 28 \\text{ more flowers}\n$$\n\n---\n\n**Step 4: Cost of each flower**\n\nEach flowering plant costs **$6**.\n\nTotal cost:\n$$\n28 \\times 6 = 168\n$$\n\n---\n\n**Answer: 168**"
+ },
+ {
+  "id": "GSM12",
+  "source": "GSM8K",
+  "answer": "14",
+  "pred": "14",
+  "correct": 1,
+  "response": "Step 1: Jean starts with 30 lollipops.  \nStep 2: Jean eats 2 lollipops.  \nSo, the number of lollipops remaining is:  \n30 - 2 = 28 lollipops.  \n\nStep 3: Jean wants to package 2 lollipops in one bag.  \nTo find out how many bags she can fill, divide the remaining lollipops by 2:  \n28 ÷ 2 = 14 bags.  \n\nAnswer: 14"
+ },
+ {
+  "id": "GSM13",
+  "source": "GSM8K",
+  "answer": "27",
+  "pred": "27",
+  "correct": 1,
+  "response": "We are given the following information:\n\n- George has 18 pens.\n- Timothy has three times the number of pens that George owns.\n- Sarah has half as many pens as Timothy.\n\nLet's solve this step by step.\n\n**Step 1: Find how many pens Timothy has.**\n\nTimothy has three times the number of pens that George has.\n\nGeorge has 18 pens, so:\n\nTimothy = 3 × 18 = 54 pens\n\n**Step 2: Find how many pens Sarah has.**\n\nSarah has half as many pens as Timothy.\n\nSo:\n\nSarah = 54 ÷ 2 = 27 pens\n\n**Final Answer:**\n\nAnswer: 27"
+ },
+ {
+  "id": "GSM14",
+  "source": "GSM8K",
+  "answer": "25",
+  "pred": "2",
+  "correct": 0,
+  "response": "Let's solve the problem step by step.\n\nWe are given that Jerry is rolling a six-sided die. We are to compare:\n\n- The probability that he rolls a number **greater than 3**  \n- The probability that he rolls **two even numbers in a row**\n\nThen, we are to find **how much more likely** the first event is than the second, **expressed as a percentage**.\n\n---\n\n### Step 1: Probability of rolling a number greater than 3\n\nA six-sided die has faces: 1, 2, 3, 4, 5, 6.\n\nNumbers greater than 3: 4, 5, 6 → that's 3 outcomes.\n\nSo, probability:\n\n$$\nP(\\text{greater than 3}) = \\frac{3}{6} = \\frac{1}{2} = 0.5\n$$\n\n---\n\n### Step 2: Probability of rolling two even numbers in a row\n\nEven numbers on a die: 2, 4, 6 → 3 even numbers.\n\nSo, probability of rolling an even number on one roll:  \n$$\nP(\\text{even}) = \\frac{3}{6} = \\frac{1}{2}\n$$\n\nSince the rolls are independent, probability of two evens in a row:\n\n$$\nP(\\text{two evens}) = \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{4} = 0.25\n$$\n\n---\n\n### Step 3: How much more likely is the first event than the second?\n\nWe want to find **how much more likely** rolling a number > 3 is than rolling two even numbers in a row.\n\nThat is:\n\n$$\n\\text{Difference} = P(\\text{>3}) - P(\\text{two evens}) = 0.5 - 0.25 = 0.25\n$$\n\nNow, express this **as a percentage of the second probability** (i.e., how much more likely in percentage terms).\n\nThis is a common interpretation: \"how much more likely\" often means **the ratio of the probabilities**, expressed as a percentage.\n\nSo, we compute:\n\n$$\n\\frac{P(\\text{>3})}{P(\\text{two evens})} = \\frac{0.5}{0.25} = 2\n$$\n\nSo, it's **2"
+ },
+ {
+  "id": "GSM15",
+  "source": "GSM8K",
+  "answer": "172",
+  "pred": "172",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\nWe are given:\n\n- Ophelia and Jenna live in the same apartment building.\n- Each of them has **2 fewer sofas than chairs**.\n- Jenna has **3 times as many chairs as Ophelia**.\n- Ophelia has **20 sofas**.\n\nWe are to find the **total number of sofas and chairs** that **Ophelia and Jenna** have together.\n\n---\n\n### Step 1: Let’s define variables\n\nLet:\n\n- $ O_s $ = number of sofas Ophelia has  \n- $ O_c $ = number of chairs Ophelia has  \n- $ J_s $ = number of sofas Jenna has  \n- $ J_c $ = number of chairs Jenna has\n\nWe are told:\n\n- Ophelia has 20 sofas → $ O_s = 20 $\n- Each has 2 fewer sofas than chairs →  \n  So for Ophelia: $ O_s = O_c - 2 $  \n  So $ 20 = O_c - 2 $ → $ O_c = 22 $\n\n- Jenna has 3 times as many chairs as Ophelia →  \n  $ J_c = 3 \\times O_c = 3 \\times 22 = 66 $\n\n- Since Jenna has 2 fewer sofas than chairs:  \n  $ J_s = J_c - 2 = 66 - 2 = 64 $\n\n---\n\n### Step 2: Total number of sofas and chairs\n\nNow compute total sofas and chairs:\n\n- Ophelia: 20 sofas + 22 chairs  \n- Jenna: 64 sofas + 66 chairs\n\nTotal sofas = $ 20 + 64 = 84 $  \nTotal chairs = $ 22 + 66 = 88 $\n\nTotal furniture (sofas and chairs) = $ 84 + 88 = 172 $\n\n---\n\nAnswer: 172"
+ },
+ {
+  "id": "GSM16",
+  "source": "GSM8K",
+  "answer": "50",
+  "pred": "50",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\nWe are told:\n\n- Henry wants to make **twice as many cookies as he did last year**.\n- He **actually baked 15 more than he meant to**.\n- He **drops 5 cookies** while putting them out to cool.\n- After dropping 5, he has **110 cookies** left.\n\nWe are to find **how many cookies Henry baked last year**.\n\n---\n\n### Step 1: Define variables\n\nLet:\n- $ x $ = number of cookies Henry **baked last year**\n\nThen, he **wanted to make twice as many** as last year, so he **meant to bake** $ 2x $ cookies.\n\nBut he **actually baked 15 more than he meant to**, so:\n\n> Actual number baked = $ 2x + 15 $\n\n---\n\n### Step 2: He drops 5 cookies\n\nAfter dropping 5, he has 110 cookies left.\n\nSo:\n\n> $ (2x + 15) - 5 = 110 $\n\nSimplify:\n\n> $ 2x + 10 = 110 $\n\n---\n\n### Step 3: Solve for $ x $\n\nSubtract 10 from both sides:\n\n> $ 2x = 100 $\n\nDivide by 2:\n\n> $ x = 50 $\n\n---\n\n### Final Answer:\n\nAnswer: 50"
+ },
+ {
+  "id": "GSM17",
+  "source": "GSM8K",
+  "answer": "5",
+  "pred": "5",
+  "correct": 1,
+  "response": "We are given:\n\n- There are 50 deer in total.\n- 50 percent of them are bucks.\n- 20 percent of the bucks are 8 points.\n\nWe need to find how many **8 point bucks** there are.\n\n---\n\n**Step 1: Find the number of bucks.**\n\n50 percent of 50 deer are bucks:\n\n$$\n50\\% \\text{ of } 50 = 0.50 \\times 50 = 25 \\text{ bucks}\n$$\n\n---\n\n**Step 2: Find how many of those bucks are 8 points.**\n\n20 percent of the bucks are 8 points:\n\n$$\n20\\% \\text{ of } 25 = 0.20 \\times 25 = 5\n$$\n\n---\n\n**Answer: 5**"
+ },
+ {
+  "id": "GSM18",
+  "source": "GSM8K",
+  "answer": "68",
+  "pred": "68",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\nWe are told that Brittany's quilted comforter is made up of 1-foot by 1-foot squares. So, each square is 1 square foot. Therefore, the **total number of squares** equals the **total square feet** of the comforter.\n\nWe are given:\n\n- Red squares: 14  \n- Blue squares: 4 more than red squares  \n- Green squares: 6 more than blue squares  \n- White squares: 12 fewer than green squares  \n\n---\n\n**Step 1: Find the number of blue squares**\n\nBlue = Red + 4  \nBlue = 14 + 4 = **18**\n\n---\n\n**Step 2: Find the number of green squares**\n\nGreen = Blue + 6  \nGreen = 18 + 6 = **24**\n\n---\n\n**Step 3: Find the number of white squares**\n\nWhite = Green - 12  \nWhite = 24 - 12 = **12**\n\n---\n\n**Step 4: Add all the squares to get total square feet**\n\nTotal squares = Red + Blue + Green + White  \n= 14 + 18 + 24 + 12\n\nAdd them:\n\n14 + 18 = 32  \n32 + 24 = 56  \n56 + 12 = **68**\n\n---\n\nAnswer: 68"
+ },
+ {
+  "id": "GSM19",
+  "source": "GSM8K",
+  "answer": "67",
+  "pred": "67",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\n**Step 1: Calculate how far Cho hiked.**  \nCho hiked at a speed of 14 kilometers per hour for 8 hours.  \n\nDistance = Speed × Time  \nDistance_Cho = 14 km/h × 8 h = 112 kilometers\n\n**Step 2: Calculate how far Chloe hiked.**  \nChloe hiked at a speed of 9 kilometers per hour for 5 hours.  \n\nDistance_Chloe = 9 km/h × 5 h = 45 kilometers\n\n**Step 3: Find the difference in distance.**  \nWe want to know how many kilometers **farther** Cho hiked than Chloe.  \n\nDifference = Distance_Cho − Distance_Chloe  \nDifference = 112 km − 45 km = 67 kilometers\n\n**Final Answer:**  \nAnswer: 67"
+ },
+ {
+  "id": "GSM20",
+  "source": "GSM8K",
+  "answer": "7",
+  "pred": "7",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\n1. Daisy bought a bag of **regular potatoes** that weighed **5 pounds**.  \n   → This is given directly.\n\n2. She bought a bag of **sweet potatoes** that weighed **2 times as much** as the regular potatoes.  \n   So, weight of sweet potatoes = 2 × 5 = **10 pounds**.\n\n3. She bought a bag of **carrots** that weighed **3 pounds fewer than the sweet potatoes**.  \n   So, weight of carrots = weight of sweet potatoes − 3  \n   = 10 − 3 = **7 pounds**.\n\nAnswer: 7"
+ },
+ {
+  "id": "GSM21",
+  "source": "GSM8K",
+  "answer": "7",
+  "pred": "7.00",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\n### Step 1: Find the cost of one candy\nWe are told that Manolo bought **five lollipops and four candies** that cost **$3.20** in total.  \nWe are also told that **each lollipop costs $0.40**.\n\nSo, cost of 5 lollipops:\n$$\n5 \\times 0.40 = 2.00 \\text{ dollars}\n$$\n\nTotal cost of 5 lollipops and 4 candies = $3.20  \nSo, the cost of 4 candies is:\n$$\n3.20 - 2.00 = 1.20 \\text{ dollars}\n$$\n\nTherefore, cost of one candy:\n$$\n1.20 \\div 4 = 0.30 \\text{ dollars}\n$$\n\nSo, each candy costs **$0.30**.\n\n---\n\n### Step 2: Find the cost of 10 lollipops and 10 candies\n\nCost of 10 lollipops:\n$$\n10 \\times 0.40 = 4.00 \\text{ dollars}\n$$\n\nCost of 10 candies:\n$$\n10 \\times 0.30 = 3.00 \\text{ dollars}\n$$\n\nTotal cost:\n$$\n4.00 + 3.00 = 7.00 \\text{ dollars}\n$$\n\nAnswer: 7.00"
+ },
+ {
+  "id": "GSM22",
+  "source": "GSM8K",
+  "answer": "64",
+  "pred": "64",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\nWe are told:\n\n- One glass costs $5.\n- Every **second glass** costs only **60%** of the price.\n- Kylar wants to buy **16 glasses**.\n\nWe need to find the total cost for 16 glasses under this pricing rule.\n\n---\n\n### Step 1: Understand the pricing pattern\n\nThe rule says: **every second glass** costs 60% of the price.\n\nThis means:\n- Glass 1: full price = $5\n- Glass 2: 60% of $5 = $3\n- Glass 3: full price = $5\n- Glass 4: 60% of $5 = $3\n- And so on...\n\nSo the pattern is: **odd-numbered glasses** (1st, 3rd, 5th, ...) cost $5  \n**even-numbered glasses** (2nd, 4th, 6th, ...) cost 60% of $5 = $3\n\n---\n\n### Step 2: Count how many glasses are at full price and how many at discounted price\n\nTotal glasses = 16\n\n- Odd-numbered glasses: 1, 3, 5, 7, 9, 11, 13, 15 → that's 8 glasses\n- Even-numbered glasses: 2, 4, 6, 8, 10, 12, 14, 16 → that's 8 glasses\n\nSo:\n- 8 glasses at $5 each\n- 8 glasses at 60% of $5 = $3 each\n\n---\n\n### Step 3: Calculate total cost\n\nCost for full-price glasses:  \n8 × $5 = $40\n\nCost for discounted glasses:  \n8 × $3 = $24\n\nTotal cost = $40 + $24 = $64\n\n---\n\nAnswer: 64"
+ },
+ {
+  "id": "GSM23",
+  "source": "GSM8K",
+  "answer": "131250",
+  "pred": "131250",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\n### Step 1: Identify the prices of each bike type\n- Price of one **MTB** = $500  \n- Price of one **BMX** = half the price of MTB = $500 ÷ 2 = **$250**  \n- Price of one **Trekking** bike = **$450**\n\n### Step 2: Total number of bikes sold = 300\n\nWe are told:\n- Half of the bikes were **Trekking**\n- 15% were **BMX**\n- The rest were **MTB**\n\n### Step 3: Calculate number of each type sold\n\n**Trekking bikes**:  \nHalf of 300 = $ \\frac{1}{2} \\times 300 = 150 $ bikes\n\n**BMX bikes**:  \n15% of 300 = $ 0.15 \\times 300 = 45 $ bikes\n\n**MTB bikes**:  \nThe rest = total – Trekking – BMX  \n= 300 – 150 – 45 = **105** bikes\n\n### Step 4: Calculate earnings from each type\n\n- Earnings from **MTB**:  \n105 bikes × $500 = $52,500\n\n- Earnings from **BMX**:  \n45 bikes × $250 = $11,250\n\n- Earnings from **Trekking**:  \n150 bikes × $450 = $67,500\n\n### Step 5: Total earnings\n\nAdd them up:  \n$52,500 + $11,250 + $67,500 = **$131,250**\n\nAnswer: 131250"
+ },
+ {
+  "id": "GSM24",
+  "source": "GSM8K",
+  "answer": "17000",
+  "pred": "17000",
+  "correct": 1,
+  "response": "Let's solve the problem step by step:\n\n1. Mr. Josue initially had $5000 in capital.\n\n2. The first bank gave him $4000.\n\n3. The second bank gave him twice as much as the first bank.  \n   So, twice $4000 is:  \n   $2 \\times 4000 = $8000.\n\n4. Total money received from both banks:  \n   $4000 + $8000 = $12,000.\n\n5. Add this to his initial capital:  \n   $5000 + $12,000 = $17,000.\n\nSo, his total capital now is $17,000.\n\nAnswer: 17000"
+ },
+ {
+  "id": "GSM25",
+  "source": "GSM8K",
+  "answer": "40",
+  "pred": "40",
+  "correct": 1,
+  "response": "We are given the following information:\n\n- Peter's locker is 1/4 as big as Zack's locker.\n- Peter's locker is 5 cubic inches.\n- Zack's locker is half as big as Timothy's locker.\n\nWe need to find the size of Timothy's locker in cubic inches.\n\n---\n\n**Step 1: Find the size of Zack's locker.**\n\nPeter's locker is 1/4 of Zack's locker.\n\nSo, if Peter's locker = 5 cubic inches, then:\n\nZack's locker = 4 × Peter's locker  \nZack's locker = 4 × 5 = 20 cubic inches\n\n---\n\n**Step 2: Find the size of Timothy's locker.**\n\nZack's locker is half as big as Timothy's locker.\n\nThat means:  \nZack's locker = (1/2) × Timothy's locker\n\nSo, Timothy's locker = 2 × Zack's locker  \nTimothy's locker = 2 × 20 = 40 cubic inches\n\n---\n\nAnswer: 40"
+ },
+ {
+  "id": "GSM26",
+  "source": "GSM8K",
+  "answer": "300",
+  "pred": "300",
+  "correct": 1,
+  "response": "Let's solve the problem step by step:\n\n1. **Total number of trucks dispatched**:  \n   Mr Hezekiah had **20 trucks** dispatched for delivery.\n\n2. **Each truck carries**:  \n   Each truck was carrying **20 tons** of fertiliser.\n\n3. **Number of trucks with mechanical failures**:  \n   A quarter of the trucks had mechanical failures.  \n   So, quarter of 20 =  \n   \\( \\frac{1}{4} \\times 20 = 5 \\) trucks.\n\n4. **Number of trucks that could deliver**:  \n   Total trucks – faulty trucks =  \n   \\( 20 - 5 = 15 \\) trucks.\n\n5. **Fertiliser carried by delivering trucks**:  \n   Each of these 15 trucks carries 20 tons.  \n   So, total fertiliser delivered =  \n   \\( 15 \\times 20 = 300 \\) tons.\n\n✅ Therefore, the total number of tons of fertiliser that reached the farmers is **300 tons**.\n\nAnswer: 300"
+ },
+ {
+  "id": "GSM27",
+  "source": "GSM8K",
+  "answer": "58",
+  "pred": "58",
+  "correct": 1,
+  "response": "We are told:\n\n- Betsy's part took 18 minutes longer than Donovan's part.\n- The total time for the meal was 98 minutes.\n\nLet’s define variables:\n\nLet \\( d \\) be the time (in minutes) that Donovan's part took.\n\nThen Betsy's part took \\( d + 18 \\) minutes.\n\nThe total time is the sum of both parts:\n\n\\[\nd + (d + 18) = 98\n\\]\n\nSimplify the equation:\n\n\\[\n2d + 18 = 98\n\\]\n\nSubtract 18 from both sides:\n\n\\[\n2d = 80\n\\]\n\nDivide both sides by 2:\n\n\\[\nd = 40\n\\]\n\nSo Donovan's part took 40 minutes.\n\nBetsy's part took:\n\n\\[\n40 + 18 = 58 \\text{ minutes}\n\\]\n\nAnswer: 58"
+ },
+ {
+  "id": "GSM28",
+  "source": "GSM8K",
+  "answer": "750",
+  "pred": "750",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\nWe are given:\n\n- The **average car** can go **120 miles per hour**.\n- The **2nd fastest car** is **5 times faster** than the average car.\n- The **fastest car** is **1.25 times faster** than the 2nd fastest car.\n\nWe need to find how fast the **fastest car** goes.\n\n---\n\n**Step 1: Find the speed of the 2nd fastest car**\n\nThe 2nd fastest car is 5 times faster than the average car.\n\nAverage car speed = 120 mph  \nSo, 2nd fastest car speed = 5 × 120 = **600 mph**\n\n---\n\n**Step 2: Find the speed of the fastest car**\n\nThe fastest car is 1.25 times faster than the 2nd fastest car.\n\nSo, fastest car speed = 1.25 × 600\n\nCalculate that:\n\n1.25 × 600 = (5/4) × 600 = (5 × 600) / 4 = 3000 / 4 = **750 mph**\n\n---\n\nAnswer: 750"
+ },
+ {
+  "id": "GSM29",
+  "source": "GSM8K",
+  "answer": "1",
+  "pred": "1",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\nWe are told:\n\n- Ellen eats **two carrots**, **one salad**, and **one yogurt** every day.\n- The **salad costs $6**.\n- The **yogurt is half the price of the salad**.\n- In total, she pays **$11 per day**.\n- We need to find out **how much she pays for one carrot every day**.\n\n---\n\n**Step 1: Find the cost of the yogurt**\n\nSalad = $6  \nYogurt = half of salad = $6 ÷ 2 = **$3**\n\n---\n\n**Step 2: Total cost of salad and yogurt**\n\nSalad + Yogurt = $6 + $3 = **$9**\n\n---\n\n**Step 3: Total daily cost is $11**\n\nSo, the remaining amount must be spent on carrots.\n\nTotal spent on carrots = Total daily cost − (salad + yogurt)  \n= $11 − $9 = **$2**\n\n---\n\n**Step 4: She eats two carrots every day**\n\nSo, the cost for **two carrots** is $2  \nTherefore, the cost for **one carrot** = $2 ÷ 2 = **$1**\n\n---\n\nAnswer: 1"
+ },
+ {
+  "id": "GSM30",
+  "source": "GSM8K",
+  "answer": "120",
+  "pred": "120",
+  "correct": 1,
+  "response": "Let's solve the problem step by step:\n\nStep 1: Find the total distance Hannah runs.  \nShe runs 8 laps, and each lap is 0.25 km.  \nSo, total distance = 8 × 0.25 km  \n= 2 km\n\nStep 2: Determine how much water she needs per kilometer.  \nHannah needs 60 ml of water for each kilometer.\n\nStep 3: Calculate total water needed for 2 km.  \nTotal water = 2 km × 60 ml/km  \n= 120 ml\n\nAnswer: 120"
+ },
+ {
+  "id": "GSM31",
+  "source": "GSM8K",
+  "answer": "80",
+  "pred": "80",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\nWe are given three friends' guesses about the number of jelly beans in a jar.\n\n1. **First friend says:** 80  \n   So, guess₁ = 80\n\n2. **Second friend says:** 20 more than half the first one.  \n   Half of the first one = ½ × 80 = 40  \n   20 more than that = 40 + 20 = 60  \n   So, guess₂ = 60\n\n3. **Third friend says:** 25% more than the first one.  \n   25% of 80 = 0.25 × 80 = 20  \n   25% more than 80 = 80 + 20 = 100  \n   So, guess₃ = 100\n\nNow, to find the **average guess**, we add all three guesses and divide by 3:\n\nAverage = (guess₁ + guess₂ + guess₃) ÷ 3  \n= (80 + 60 + 100) ÷ 3  \n= 240 ÷ 3  \n= 80\n\nAnswer: 80"
+ },
+ {
+  "id": "GSM32",
+  "source": "GSM8K",
+  "answer": "32",
+  "pred": "32",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\n**Step 1: Find the total cost of all party supplies.**\n\nIsabelle spent money on the following items:\n\n- Ingredients for the cake: $12  \n- Birthday presents: $43  \n- Decorations: $15  \n- Invitations: $4  \n- Goodie bags: $22  \n\nAdd them up:\n\n$$\n12 + 43 = 55  \n$$\n$$\n55 + 15 = 70  \n$$\n$$\n70 + 4 = 74  \n$$\n$$\n74 + 22 = 96  \n$$\n\nSo, the total cost is **$96**.\n\n**Step 2: Split the cost evenly among three people.**\n\nIsabelle split the cost **evenly three ways** with her two parents. That means three people total: Isabelle and her two parents.\n\nSo, divide the total cost by 3:\n\n$$\n96 \\div 3 = 32\n$$\n\n**Step 3: Each person pays $32.**\n\nAnswer: 32"
+ },
+ {
+  "id": "GSM33",
+  "source": "GSM8K",
+  "answer": "15",
+  "pred": "15",
+  "correct": 1,
+  "response": "We are given:\n\n- Uriah needs to remove **15 pounds** from his book bag.\n- Each **comic book** weighs **1/4 pound**.\n- Each **toy** weighs **1/2 pound**.\n- He removes **30 comic books**.\n- We need to find out **how many toys** he needs to remove to reach a total weight removal of 15 pounds.\n\n---\n\n### Step 1: Calculate the total weight of the removed comic books\n\nEach comic book weighs $ \\frac{1}{4} $ pound, and he removes 30 of them:\n\n$$\n30 \\times \\frac{1}{4} = \\frac{30}{4} = 7.5 \\text{ pounds}\n$$\n\n---\n\n### Step 2: Determine how much more weight needs to be removed\n\nTotal weight to remove: 15 pounds  \nWeight from comic books: 7.5 pounds  \n\n$$\n15 - 7.5 = 7.5 \\text{ pounds}\n$$\n\nSo, he needs to remove **7.5 pounds** more from toys.\n\n---\n\n### Step 3: Calculate how many toys weigh 7.5 pounds\n\nEach toy weighs $ \\frac{1}{2} $ pound.\n\nLet $ x $ be the number of toys.\n\n$$\nx \\times \\frac{1}{2} = 7.5\n$$\n\nMultiply both sides by 2:\n\n$$\nx = 7.5 \\times 2 = 15\n$$\n\n---\n\n### Final Answer:\n\nAnswer: 15"
+ },
+ {
+  "id": "GSM34",
+  "source": "GSM8K",
+  "answer": "40",
+  "pred": "40",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\nWe are told:\n\n- The Doubtfire sisters are driving home with **7 kittens** they adopted from the local animal shelter.\n- Their mother calls to say that their two house cats have had kittens:\n  - **Patchy** has had **thrice the number of adopted kittens**.\n  - **Trixie** has had **12 kittens**.\n\nWe are to find the **total number of kittens** the Doubtfire family now has.\n\n---\n\nStep 1: Understand what \"Patchy has had thrice the number of adopted kittens\" means.\n\nThe adopted kittens are the 7 kittens the sisters adopted.\n\nSo, \"thrice the number of adopted kittens\" = 3 × 7 = 21.\n\nSo, Patchy has had **21 kittens**.\n\nTrixie has had **12 kittens**.\n\n---\n\nStep 2: Add up all the kittens.\n\n- Adopted kittens: 7\n- Kittens from Patchy: 21\n- Kittens from Trixie: 12\n\nTotal kittens = 7 + 21 + 12 = **40**\n\n---\n\nAnswer: 40"
+ },
+ {
+  "id": "GSM35",
+  "source": "GSM8K",
+  "answer": "7300",
+  "pred": "7300",
+  "correct": 1,
+  "response": "Let's solve the problem step by step.\n\n### Step 1: Understand what is given\n- Hortex produces **4200 bottles per day**.\n- Each bottle covers **20%** of one person's daily energy demand.\n- We want to satisfy **100%** of the daily energy needs of **2300 people**.\n\n### Step 2: Calculate total energy demand for 2300 people\nEach person needs 100% of their daily energy.\n\nSo, total energy demand = 2300 people × 100% = **2300 units** (in terms of daily energy needs).\n\n### Step 3: Determine how much energy one bottle provides\nEach bottle covers **20%** of one person's daily energy demand.\n\nSo, one bottle = 20% of 1 person = 0.2 units of daily energy.\n\n### Step 4: Calculate how many bottles are needed to cover 2300 people's full needs\nTotal bottles needed = Total energy demand ÷ Energy per bottle  \n= 2300 × 100% ÷ 20%  \n= 2300 ÷ 0.2  \n= 11,500 bottles\n\n### Step 5: Hortex currently produces 4200 bottles\nSo, additional bottles needed = Total needed – Current production  \n= 11,500 – 4,200  \n= 7,300 bottles\n\n### Final Answer:\nAnswer: 7300"
+ },
+ {
+  "id": "GSM36",
+  "source": "GSM8K",
+  "answer": "50",
+  "pred": "50",
+  "correct": 1,
+  "response": "We start with the total number of toys Argo has:\n\n**200 toys**\n\nArgo gives away toys to three people:\n\n- 40 toys to Alyssa  \n- 80 toys to Bonnie  \n- 30 toys to Nicky  \n\nStep 1: Add the number of toys given away  \n40 + 80 + 30 = 150 toys given away\n\nStep 2: Subtract the total given away from the original amount  \n200 - 150 = 50 toys remaining\n\nAnswer: 50"
+ },
+ {
+  "id": "GSM37",
+  "source": "GSM8K",
+  "answer": "12",
+  "pred": "12",
+  "correct": 1,
+  "response": "We are given the following information:\n\n- Alice is 7 years older than Beth.\n- Beth is 5 years older than Erica.\n- Erica is 30 years old.\n\nWe need to find the **difference between the ages of Alice and Erica**.\n\n---\n\n**Step 1: Find Beth's age**\n\nBeth is 5 years older than Erica.  \nErica = 30 years  \nSo, Beth = 30 + 5 = **35 years**\n\n---\n\n**Step 2: Find Alice's age**\n\nAlice is 7 years older than Beth.  \nBeth = 35 years  \nSo, Alice = 35 + 7 = **42 years**\n\n---\n\n**Step 3: Find the difference between Alice and Erica**\n\nAlice = 42  \nErica = 30  \nDifference = 42 - 30 = **12 years**\n\n---\n\nAnswer: 12"
+ },
+ {
+  "id": "GSM38",
+  "source": "GSM8K",
+  "answer": "11",
+  "pred": "11",
+  "correct": 1,
+  "response": "We are told:\n\n- Tom bought **1 CD** for **$4**.\n- He also bought a **headphone set**.\n- The **total amount** he paid is **$48**.\n\nWe are asked: **How many more CDs could Tom have bought if he had decided not to buy the headphone set?**\n\n---\n\n### Step 1: Find the cost of the headphone set\n\nTom spent $48 in total.\n\nHe spent $4 on the CD.\n\nSo, the cost of the headphone set is:\n\n$$\n48 - 4 = 44 \\text{ dollars}\n$$\n\n---\n\n### Step 2: Determine how much money Tom would have saved by not buying the headphones\n\nIf he had **not** bought the headphone set, he would have saved **$44**.\n\nThat $44 could have been used to buy more CDs.\n\n---\n\n### Step 3: How many CDs can be bought with $44?\n\nEach CD costs $4.\n\nSo, number of additional CDs he could buy:\n\n$$\n44 \\div 4 = 11\n$$\n\n---\n\n### Final Answer:\n\nAnswer: 11"
+ },
+ {
+  "id": "GSM39",
+  "source": "GSM8K",
+  "answer": "56",
+  "pred": "56",
+  "correct": 1,
+  "response": "We are given:\n\n- Total number of **heads** = 180  \n- Total number of **bumps (humps)** = 304  \n- Camels have **2 humps** each  \n- Dromedaries have **1 hump** each  \n\nWe are to find the number of **dromedaries**.\n\n---\n\n### Step 1: Define variables\n\nLet:\n- $ c $ = number of camels  \n- $ d $ = number of dromedaries  \n\nFrom the heads:\n> Each animal has one head, so  \n> $ c + d = 180 $   (Equation 1)\n\nFrom the humps:\n> Camels have 2 humps, dromedaries have 1 hump, so  \n> $ 2c + 1d = 304 $   (Equation 2)\n\n---\n\n### Step 2: Solve the system of equations\n\nFrom Equation 1:  \n$ d = 180 - c $\n\nSubstitute into Equation 2:\n$$\n2c + (180 - c) = 304\n$$\n$$\n2c + 180 - c = 304\n$$\n$$\nc + 180 = 304\n$$\n$$\nc = 304 - 180 = 124\n$$\n\nNow find $ d $:\n$$\nd = 180 - c = 180 - 124 = 56\n$$\n\n---\n\n### Step 3: Verify\n\n- Heads: $ 124 + 56 = 180 $ ✅  \n- Humps: $ 2 \\times 124 = 248 $, $ 1 \\times 56 = 56 $, total = $ 248 + 56 = 304 $ ✅\n\nEverything checks out.\n\nAnswer: 56"
+ },
+ {
+  "id": "GSM40",
+  "source": "GSM8K",
+  "answer": "762",
+  "pred": "762",
+  "correct": 1,
+  "response": "Let's solve the problem step by step:\n\n1. **First bag**:  \n   Mary buys the first bag and it has **300 M&Ms**.\n\n2. **Second bag**:  \n   The second bag has **12 more M&Ms than the first bag**.  \n   So, second bag = 300 + 12 = **312 M&Ms**.\n\n3. **Third bag**:  \n   The third bag has a hole in it, so it only has **half the number of M&Ms that the first bag had**.  \n   First bag = 300, so half of that is:  \n   300 ÷ 2 = **150 M&Ms**.\n\n4. **Total M&Ms**:  \n   Add up all three bags:  \n   First bag: 300  \n   Second bag: 312  \n   Third bag: 150  \n\n   Total = 300 + 312 + 150 = **762**\n\nAnswer: 762"
+ }
+]

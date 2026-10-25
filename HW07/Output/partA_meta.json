@@ -1,0 +1,21 @@
+{
+ "gpu": {
+  "device": "cuda",
+  "name": "Tesla T4",
+  "vram_gb": 14.56,
+  "capability": "7.5",
+  "torch": "2.11.0+cu130"
+ },
+ "model": "Qwen/Qwen3-4B-Instruct-2507",
+ "best_technique": "zero_shot_cot",
+ "footprint_mib": {
+  "fp16": 7672.2,
+  "int8": 4207.2,
+  "nf4": 2474.7
+ },
+ "load_seconds": {
+  "fp16": 32.8,
+  "int8": 37.1,
+  "nf4": 32.2
+ }
+}

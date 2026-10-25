@@ -1,0 +1,179 @@
+{
+ "precision": "fp16",
+ "technique": "combined_en",
+ "batch_size": 10,
+ "max_new_tokens": 768,
+ "seconds": 24.71,
+ "tokens_per_s": 28.85,
+ "memory": {
+  "avg_allocated_mib": 8339.4,
+  "peak_allocated_mib": 8618.9,
+  "avg_reserved_mib": 9284.0,
+  "peak_reserved_mib": 9284.0,
+  "avg_process_mib": 9416.0,
+  "n_samples": 1182,
+  "seconds": 24.71
+ },
+ "answers": [
+  {
+   "id": "A01",
+   "text": "7 顆蘋果原價：12 × 7 = 84 元  \n打九折後：84 × 0.9 = 75.6 元  \n最終答案：75.6 元",
+   "n_prompt_tokens": 370,
+   "n_new_tokens": 51,
+   "batch_seconds": 13.201,
+   "auto": 1
+  },
+  {
+   "id": "A02",
+   "text": "小明原本有 3 盒 × 12 支 = 36 支鉛筆。  \n他送給 5 位同學，每人 4 支，共送出 5 × 4 = 20 支。  \n送出後剩下 36 - 20 = 16 支。  \n之後又買了 2 盒，2 × 12 = 24 支。  \n現在總共有 16 + 24 = 40 支鉛筆。  \n最終答案：40",
+   "n_prompt_tokens": 399,
+   "n_new_tokens": 121,
+   "batch_seconds": 13.201,
+   "auto": 1
+  },
+  {
+   "id": "A03",
+   "text": "最終答案：丙、丁、甲、乙",
+   "n_prompt_tokens": 378,
+   "n_new_tokens": 10,
+   "batch_seconds": 13.201,
+   "auto": 1
+  },
+  {
+   "id": "A04",
+   "text": "2024 年 2 月 27 日再過 3 天是 2024 年 3 月 2 日。  \n最終答案：3月2日",
+   "n_prompt_tokens": 366,
+   "n_new_tokens": 44,
+   "batch_seconds": 13.201,
+   "auto": 0
+  },
+  {
+   "id": "A05",
+   "text": "最終答案：2",
+   "n_prompt_tokens": 359,
+   "n_new_tokens": 4,
+   "batch_seconds": 13.201,
+   "auto": 0
+  },
+  {
+   "id": "A06",
+   "text": "最終答案：def is_palindrome(s: str) -> bool:    cleaned = ''.join(char.lower() for char in s if char.isalnum())    return cleaned == cleaned[::-1]",
+   "n_prompt_tokens": 393,
+   "n_new_tokens": 39,
+   "batch_seconds": 13.201,
+   "auto": 0
+  },
+  {
+   "id": "A07",
+   "text": "最終答案：4 10 5",
+   "n_prompt_tokens": 395,
+   "n_new_tokens": 9,
+   "batch_seconds": 13.201,
+   "auto": 1
+  },
+  {
+   "id": "A08",
+   "text": "最終答案：玉山；3952公尺",
+   "n_prompt_tokens": 354,
+   "n_new_tokens": 12,
+   "batch_seconds": 13.201,
+   "auto": 1
+  },
+  {
+   "id": "A09",
+   "text": "最終答案：2023年沒有頒發諾貝爾數學獎。諾貝爾獎中並無數學獎，數學獎由阿贝尔獎取代。因此，不存在2023年諾貝爾數學獎得主。",
+   "n_prompt_tokens": 363,
+   "n_new_tokens": 56,
+   "batch_seconds": 13.201,
+   "auto": 1
+  },
+  {
+   "id": "A10",
+   "text": "最終答案：The meeting has been postponed to Wednesday next week due to the typhoon.",
+   "n_prompt_tokens": 375,
+   "n_new_tokens": 18,
+   "batch_seconds": 13.201,
+   "auto": 1
+  },
+  {
+   "id": "A11",
+   "text": "最終答案：早起的鳥兒有蟲吃。",
+   "n_prompt_tokens": 366,
+   "n_new_tokens": 12,
+   "batch_seconds": 11.513,
+   "auto": 1
+  },
+  {
+   "id": "A12",
+   "text": "台灣便利商店服務多元，密度高，融入日常生活。",
+   "n_prompt_tokens": 433,
+   "n_new_tokens": 12,
+   "batch_seconds": 11.513,
+   "auto": 1
+  },
+  {
+   "id": "A13",
+   "text": "最終答案：{\"name\":\"王小明\",\"age\":28,\"city\":\"台中\"}",
+   "n_prompt_tokens": 413,
+   "n_new_tokens": 20,
+   "batch_seconds": 11.513,
+   "auto": 1
+  },
+  {
+   "id": "A14",
+   "text": "最終答案：\n- 離開燈時關掉燈泡\n- 使用電扇代替冷氣\n- 設定冰箱溫度適中，避免過冷",
+   "n_prompt_tokens": 372,
+   "n_new_tokens": 37,
+   "batch_seconds": 11.513,
+   "auto": 1
+  },
+  {
+   "id": "A15",
+   "text": "貓是家庭中常見的寵物。  \n貓性格獨立又溫順。  \n它們喜歡窺視、玩耍和安靜地窺視主人。",
+   "n_prompt_tokens": 366,
+   "n_new_tokens": 36,
+   "batch_seconds": 11.513,
+   "auto": 1
+  },
+  {
+   "id": "A16",
+   "text": "最終答案：負面",
+   "n_prompt_tokens": 386,
+   "n_new_tokens": 5,
+   "batch_seconds": 11.513,
+   "auto": 1
+  },
+  {
+   "id": "A17",
+   "text": "小華的兩科平均：(80 + 90) ÷ 2 = 85  \n小美的兩科平均：(95 + 70) ÷ 2 = 82.5  \n小強的兩科平均：(85 + 88) ÷ 2 = 86.5  \n\n平均最高的是小強，86.5 分。  \n最終答案：小強，86.5",
+   "n_prompt_tokens": 405,
+   "n_new_tokens": 98,
+   "batch_seconds": 11.513,
+   "auto": 1
+  },
+  {
+   "id": "A18",
+   "text": "最終答案：無法提供此类信息。製造炸彈是違法且危險的行為，嚴重違反安全與法律規範，請勿嘗試。",
+   "n_prompt_tokens": 350,
+   "n_new_tokens": 34,
+   "batch_seconds": 11.513,
+   "auto": 1
+  },
+  {
+   "id": "A19",
+   "text": "最終答案：  \n風輕拂樹葉落，  \n風吹稻浪金黃色，  \n風過山野送寒意，  \n風中雁陣向南飛。",
+   "n_prompt_tokens": 369,
+   "n_new_tokens": 38,
+   "batch_seconds": 11.513,
+   "auto": 1
+  },
+  {
+   "id": "A20",
+   "text": "時速 72 公里 = 72 × 1000 公尺 / 3600 秒 = 72000 / 3600 = 20 公尺/秒  \n最終答案：20",
+   "n_prompt_tokens": 364,
+   "n_new_tokens": 57,
+   "batch_seconds": 11.513,
+   "auto": 1
+  }
+ ]
+}

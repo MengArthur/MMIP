@@ -1,0 +1,13 @@
+{
+ "gpu": {
+  "device": "cuda",
+  "name": "Tesla T4",
+  "vram_gb": 14.56,
+  "capability": "7.5",
+  "torch": "2.11.0+cu130"
+ },
+ "models": {
+  "Qwen3-VL-2B": "Qwen/Qwen3-VL-2B-Instruct",
+  "SmolVLM2-2.2B": "HuggingFaceTB/SmolVLM2-2.2B-Instruct"
+ }
+}

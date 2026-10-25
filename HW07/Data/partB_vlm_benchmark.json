@@ -1,0 +1,336 @@
+[
+ {
+  "id": "B01",
+  "image": "000000088250.jpg",
+  "source": "COCO val2017",
+  "task": "影像分類",
+  "question": "What kind of animal is shown in this image? Answer with one word.",
+  "reference": "elephant (two elephants touching trunks)",
+  "check": {
+   "type": "vqa_keywords",
+   "groups": [
+    [
+     "elephant"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "B02",
+  "image": "000000031269.jpg",
+  "source": "COCO val2017",
+  "task": "物件計數",
+  "question": "How many zebras are in this image? Answer with a number only.",
+  "reference": "3 (two in the centre, one partly visible at the left edge)",
+  "check": {
+   "type": "vqa_number",
+   "target": 3
+  }
+ },
+ {
+  "id": "B03",
+  "image": "000000118209.jpg",
+  "source": "COCO val2017",
+  "task": "物件計數",
+  "question": "How many horses are in this image? Answer with a number only.",
+  "reference": "2",
+  "check": {
+   "type": "vqa_number",
+   "target": 2
+  }
+ },
+ {
+  "id": "B04",
+  "image": "000000039769.jpg",
+  "source": "COCO val2017",
+  "task": "小物件計數",
+  "question": "How many remote controls are in this image? Answer with a number only.",
+  "reference": "2 (two remotes at the top of the pink couch, next to two sleeping cats)",
+  "check": {
+   "type": "vqa_number",
+   "target": 2
+  }
+ },
+ {
+  "id": "B05",
+  "image": "000000183648.jpg",
+  "source": "COCO val2017",
+  "task": "人物計數",
+  "question": "How many people are standing in front of the elephant? Answer with a number only.",
+  "reference": "3 (a woman in a cap and two men)",
+  "check": {
+   "type": "vqa_number",
+   "target": 3
+  }
+ },
+ {
+  "id": "B06",
+  "image": "000000079408.jpg",
+  "source": "COCO val2017",
+  "task": "場景文字辨識 (OCR)",
+  "question": "What word is written on the sign?",
+  "reference": "STOP (red stop sign, black-and-white background)",
+  "check": {
+   "type": "vqa_keywords",
+   "groups": [
+    [
+     "stop"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "B07",
+  "image": "000000427160.jpg",
+  "source": "COCO val2017",
+  "task": "場景文字辨識 (OCR)",
+  "question": "What number is printed on the back of the jersey of the boy in the front? Answer with a number only.",
+  "reference": "4 (the \"182\" in the background is on the fence)",
+  "check": {
+   "type": "vqa_number",
+   "target": 4
+  }
+ },
+ {
+  "id": "B08",
+  "image": "000000210099.jpg",
+  "source": "COCO val2017",
+  "task": "屬性辨識（顏色）",
+  "question": "What color is the cat? Answer in a few words.",
+  "reference": "orange / ruddy brown (an Abyssinian-type cat on a wicker chair)",
+  "check": {
+   "type": "vqa_keywords",
+   "groups": [
+    [
+     "orange",
+     "brown",
+     "ginger",
+     "tan",
+     "golden",
+     "fawn",
+     "red"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "B09",
+  "image": "000000501523.jpg",
+  "source": "COCO val2017",
+  "task": "空間關係",
+  "question": "Where is the cat sitting?",
+  "reference": "inside a (bathroom) sink",
+  "check": {
+   "type": "vqa_keywords",
+   "groups": [
+    [
+     "sink",
+     "basin"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "B10",
+  "image": "000000022892.jpg",
+  "source": "COCO val2017",
+  "task": "多物件偵測",
+  "question": "What two kinds of animals can be seen in this image?",
+  "reference": "a cat (grey, inside) and a dog (outside the window)",
+  "check": {
+   "type": "vqa_keywords",
+   "groups": [
+    [
+     "cat",
+     "kitten"
+    ],
+    [
+     "dog",
+     "puppy"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "B11",
+  "image": "000000133418.jpg",
+  "source": "COCO val2017",
+  "task": "動作 / 運動辨識",
+  "question": "What sport is the man playing? Answer with one word.",
+  "reference": "tennis (on a clay court)",
+  "check": {
+   "type": "vqa_keywords",
+   "groups": [
+    [
+     "tennis"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "B12",
+  "image": "000000084170.jpg",
+  "source": "COCO val2017",
+  "task": "情境推理",
+  "question": "What is the weather like in this scene? Briefly explain the visual evidence.",
+  "reference": "rainy: wet road, water splashing, vehicles with headlights on",
+  "check": {
+   "type": "vqa_keywords",
+   "groups": [
+    [
+     "rain",
+     "wet",
+     "drizzl",
+     "storm"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "B13",
+  "image": "000000351331.jpg",
+  "source": "COCO val2017",
+  "task": "細粒度辨識",
+  "question": "What type of pizza is this, and what utensil is next to it?",
+  "reference": "pepperoni pizza; a fork",
+  "check": {
+   "type": "vqa_keywords",
+   "groups": [
+    [
+     "pepperoni",
+     "salami"
+    ],
+    [
+     "fork"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "B14",
+  "image": "000000420472.jpg",
+  "source": "COCO val2017",
+  "task": "幻覺檢測（不存在物件）",
+  "question": "Is there a zebra in this image? Answer yes or no.",
+  "reference": "no (two giraffes eating leaves, no zebra)",
+  "check": {
+   "type": "vqa_yesno",
+   "target": "no"
+  }
+ },
+ {
+  "id": "B15",
+  "image": "000000367228.jpg",
+  "source": "COCO val2017",
+  "task": "形容照片",
+  "question": "Describe this image in one or two sentences.",
+  "reference": "a person with raised arms flying a colourful kite on a grassy hill by the sea",
+  "check": {
+   "type": "vqa_keywords",
+   "groups": [
+    [
+     "kite"
+    ],
+    [
+     "person",
+     "man",
+     "woman",
+     "boy",
+     "girl",
+     "someone",
+     "people",
+     "child"
+    ],
+    [
+     "sea",
+     "ocean",
+     "water",
+     "coast",
+     "beach",
+     "lake",
+     "shore"
+    ]
+   ],
+   "min_hits": 2
+  }
+ },
+ {
+  "id": "B16",
+  "image": "synth_ocr_sign.png",
+  "source": "synthetic",
+  "task": "文件 / 招牌 OCR",
+  "question": "What is the name of the cafe and what is its phone number?",
+  "reference": "CAFE LUNA, 03-571-2121",
+  "check": {
+   "type": "vqa_keywords",
+   "groups": [
+    [
+     "luna"
+    ],
+    [
+     "571-2121",
+     "5712121",
+     "571 2121"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "B17",
+  "image": "synth_shapes.png",
+  "source": "synthetic",
+  "task": "物件計數（合成）",
+  "question": "How many red circles are in the image? Answer with a number only.",
+  "reference": "7 (plus 4 blue squares as distractors)",
+  "check": {
+   "type": "vqa_number",
+   "target": 7
+  }
+ },
+ {
+  "id": "B18",
+  "image": "synth_bar_chart.png",
+  "source": "synthetic",
+  "task": "圖表理解",
+  "question": "According to the bar chart, which month has the highest sales, and what is the value?",
+  "reference": "April, 25",
+  "check": {
+   "type": "vqa_keywords",
+   "groups": [
+    [
+     "apr"
+    ],
+    [
+     "25"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "B19",
+  "image": "synth_spatial.png",
+  "source": "synthetic",
+  "task": "空間關係（合成）",
+  "question": "Is the green triangle to the left or to the right of the yellow star? Answer with one word.",
+  "reference": "left",
+  "check": {
+   "type": "vqa_label",
+   "target": "left",
+   "others": [
+    "right"
+   ]
+  }
+ },
+ {
+  "id": "B20",
+  "image": "synth_math.png",
+  "source": "synthetic",
+  "task": "視覺數學",
+  "question": "Solve the math problem shown in the image. Answer with a number only.",
+  "reference": "42 (27 + 15)",
+  "check": {
+   "type": "vqa_number",
+   "target": 42
+  }
+ }
+]

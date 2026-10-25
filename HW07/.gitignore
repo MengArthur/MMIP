@@ -1,0 +1,8 @@
+# COCO images downloaded at run time (Part C advanced)
+Data/coco_images/
+
+# LoRA adapter weights and PEFT's auto-generated (empty) model cards;
+# training histories (history.json) and adapter_config.json are kept
+Checkpoints/**/*.safetensors
+Checkpoints/**/*.bin
+Checkpoints/**/README.md

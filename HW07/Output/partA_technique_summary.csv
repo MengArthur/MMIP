@@ -1,0 +1,9 @@
+﻿precision,technique,description,auto_pass,auto_pass_rate,gemini_mean,avg_new_tokens,tokens_per_s,seconds,avg_allocated_mib,peak_allocated_mib,avg_process_mib
+fp16,baseline,Zero-shot：直接輸入題目（預設 Prompt）,20,1.0,9.65,145.6,44.57,65.33,8162.5,8682.0,8642.2
+fp16,zero_shot_cot,Zero-shot Chain-of-Thought：要求逐步思考並以「最終答案：」收尾,20,1.0,9.3,232.6,45.99,101.17,8366.6,9066.4,8966.0
+fp16,few_shot,Few-shot：3 組示範問答（含「最終答案：」格式）,16,0.8,8.5,45.8,29.43,31.09,8195.1,8464.8,9416.0
+fp16,emotion,Emotional Stimuli：加上「這對我的職涯發展非常重要」,19,0.95,8.85,229.6,39.3,116.83,8343.9,9014.9,9416.0
+fp16,xml,XML 結構化 Prompt：<instruction> / <question>,16,0.8,8.2,55.2,34.32,32.17,8001.2,8252.2,9416.0
+fp16,markdown,Markdown 結構化 Prompt：## 任務 / ## 問題,16,0.8,8.0,87.1,19.4,89.8,8343.5,9027.4,9416.0
+fp16,combined_zh,組合（中文系統提示）：Markdown 系統提示 + XML 題目 + CoT + Few-shot + Emotional Stimuli,18,0.9,8.65,61.2,27.3,44.84,8435.9,8743.0,9416.0
+fp16,combined_en,組合（英文系統提示）：同上，但系統提示改用英文,17,0.85,8.65,35.6,28.85,24.71,8339.4,8618.9,9416.0

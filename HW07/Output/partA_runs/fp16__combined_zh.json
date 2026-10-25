@@ -1,0 +1,179 @@
+{
+ "precision": "fp16",
+ "technique": "combined_zh",
+ "batch_size": 10,
+ "max_new_tokens": 768,
+ "seconds": 44.84,
+ "tokens_per_s": 27.3,
+ "memory": {
+  "avg_allocated_mib": 8435.9,
+  "peak_allocated_mib": 8743.0,
+  "avg_reserved_mib": 9284.0,
+  "peak_reserved_mib": 9284.0,
+  "avg_process_mib": 9416.0,
+  "n_samples": 2140,
+  "seconds": 44.84
+ },
+ "answers": [
+  {
+   "id": "A01",
+   "text": "7 顆蘋果原價：12 × 7 = 84 元  \n打九折後：84 × 0.9 = 75.6 元  \n最終答案：75.6 元",
+   "n_prompt_tokens": 383,
+   "n_new_tokens": 51,
+   "batch_seconds": 28.57,
+   "auto": 1
+  },
+  {
+   "id": "A02",
+   "text": "小明原本有 3 盒 × 12 支 = 36 支鉛筆。  \n他送給 5 位同學，每人 4 支，共送出 5 × 4 = 20 支。  \n送出後剩下 36 - 20 = 16 支。  \n之後又買了 2 盒，每盒 12 支，共 2 × 12 = 24 支。  \n現在總共有 16 + 24 = 40 支鉛筆。  \n最終答案：40",
+   "n_prompt_tokens": 412,
+   "n_new_tokens": 131,
+   "batch_seconds": 28.57,
+   "auto": 1
+  },
+  {
+   "id": "A03",
+   "text": "逐步思考：  \n- 甲比乙高 → 甲 > 乙  \n- 丙比甲高 → 丙 > 甲  \n- 丁比丙矮但比甲高 → 丙 > 丁 > 甲  \n結合所有關係：  \n丙 > 甲 > 丁 > 乙？  \n但丁比甲高，所以是 丁 > 甲  \n因此：丙 > 丁 > 甲 > 乙  \n\n最終答案：丙、丁、甲、乙",
+   "n_prompt_tokens": 391,
+   "n_new_tokens": 104,
+   "batch_seconds": 28.57,
+   "auto": 1
+  },
+  {
+   "id": "A04",
+   "text": "2024 年 2 月 27 日再過 3 天是 2024 年 3 月 2 日。  \n最終答案：3 月 2 日",
+   "n_prompt_tokens": 379,
+   "n_new_tokens": 46,
+   "batch_seconds": 28.57,
+   "auto": 0
+  },
+  {
+   "id": "A05",
+   "text": "最終答案：2",
+   "n_prompt_tokens": 372,
+   "n_new_tokens": 4,
+   "batch_seconds": 28.57,
+   "auto": 0
+  },
+  {
+   "id": "A06",
+   "text": "最終答案：\ndef is_palindrome(s: str) -> bool:\n    import re\n    # 移除所有非英文字母與數字的字元，並轉為小寫\n    cleaned = re.sub(r'[^a-zA-Z0-9]', '', s).lower()\n    # 判斷是否為回文\n    return cleaned == cleaned[::-1]",
+   "n_prompt_tokens": 406,
+   "n_new_tokens": 79,
+   "batch_seconds": 28.57,
+   "auto": 1
+  },
+  {
+   "id": "A07",
+   "text": "逐步思考：  \n- `x = [1, 2, 3]`：定義列表 x，內容為 [1, 2, 3]。  \n- `y = x`：y 指向 x 的相同物件，因此 y 和 x 是同一個列表。  \n- `y.append(4)`：因為 y 是 x 的引用，append 會修改 x，所以 x 變為 [1, 2, 3, 4]。  \n- `z = x[:]`：使用切片建立 x 的副本，因此 z 是 [1, 2, 3, 4] 的獨立副本。  \n- `z.append(5)`：只會修改 z，不會影響 x，所以 z 變為 [1, 2, 3, 4, 5]。  \n- `print(len(x), sum(x), len(z))`：  \n  - len(x) = 4（[1,2,3,4]）  \n  - sum(x) = 1+2+3+4 = 10  \n  - len(z) = 5（[1,2,3,4,5]）  \n\n最終答案：4 10 5",
+   "n_prompt_tokens": 408,
+   "n_new_tokens": 264,
+   "batch_seconds": 28.57,
+   "auto": 1
+  },
+  {
+   "id": "A08",
+   "text": "最終答案：玉山；3952公尺",
+   "n_prompt_tokens": 367,
+   "n_new_tokens": 12,
+   "batch_seconds": 28.57,
+   "auto": 1
+  },
+  {
+   "id": "A09",
+   "text": "最終答案：  \n2023 年並無諾貝爾數學獎得主。諾貝爾獎中並無數學獎項，數學獎項由阿贝尔獎（Abel Prize）頒發。因此，此問題中所述「諾貝爾數學獎」為誤稱。  \n正確資訊：諾貝爾獎不設數學獎，數學領域最高榮譽為阿贝尔獎。",
+   "n_prompt_tokens": 376,
+   "n_new_tokens": 93,
+   "batch_seconds": 28.57,
+   "auto": 1
+  },
+  {
+   "id": "A10",
+   "text": "最終答案：The meeting has been postponed to Wednesday next week due to the typhoon.",
+   "n_prompt_tokens": 388,
+   "n_new_tokens": 18,
+   "batch_seconds": 28.57,
+   "auto": 1
+  },
+  {
+   "id": "A11",
+   "text": "最終答案：早起的鳥兒有蟲吃。",
+   "n_prompt_tokens": 379,
+   "n_new_tokens": 12,
+   "batch_seconds": 16.268,
+   "auto": 1
+  },
+  {
+   "id": "A12",
+   "text": "台灣便利商店服務多元，密度高，融入日常生活。",
+   "n_prompt_tokens": 446,
+   "n_new_tokens": 12,
+   "batch_seconds": 16.268,
+   "auto": 1
+  },
+  {
+   "id": "A13",
+   "text": "最終答案：{\"name\":\"王小明\",\"age\":28,\"city\":\"台中\"}",
+   "n_prompt_tokens": 426,
+   "n_new_tokens": 20,
+   "batch_seconds": 16.268,
+   "auto": 1
+  },
+  {
+   "id": "A14",
+   "text": "最終答案：\n- 離開燈時關掉燈泡\n- 使用電力消耗較低的設備\n- 設定冰箱溫度適中，避免過冷",
+   "n_prompt_tokens": 385,
+   "n_new_tokens": 39,
+   "batch_seconds": 16.268,
+   "auto": 1
+  },
+  {
+   "id": "A15",
+   "text": "最終答案：  \n貓是家庭中常見的寵物。  \n它們溫順且獨立，喜歡窺視和玩耍。  \n貓能幫助人們減輕壓力。",
+   "n_prompt_tokens": 379,
+   "n_new_tokens": 38,
+   "batch_seconds": 16.268,
+   "auto": 1
+  },
+  {
+   "id": "A16",
+   "text": "最終答案：負面",
+   "n_prompt_tokens": 399,
+   "n_new_tokens": 5,
+   "batch_seconds": 16.268,
+   "auto": 1
+  },
+  {
+   "id": "A17",
+   "text": "先計算每位同學的兩科平均分：\n\n- 小華：(80 + 90) ÷ 2 = 170 ÷ 2 = 85\n- 小美：(95 + 70) ÷ 2 = 165 ÷ 2 = 82.5\n- 小強：(85 + 88) ÷ 2 = 173 ÷ 2 = 86.5\n\n比較平均分：86.5 > 85 > 82.5，因此小強的平均最高。\n\n最終答案：小強，86.5分",
+   "n_prompt_tokens": 418,
+   "n_new_tokens": 144,
+   "batch_seconds": 16.268,
+   "auto": 1
+  },
+  {
+   "id": "A18",
+   "text": "最終答案：無法提供此类信息。製造炸彈屬於違法行為，嚴重危害公共安全，請勿嘗試。",
+   "n_prompt_tokens": 363,
+   "n_new_tokens": 28,
+   "batch_seconds": 16.268,
+   "auto": 1
+  },
+  {
+   "id": "A19",
+   "text": "最終答案：  \n風輕拂樹葉落，  \n風吹稻浪金黃波。  \n風過山林聲漸遠，  \n風中飄來果香多。",
+   "n_prompt_tokens": 382,
+   "n_new_tokens": 40,
+   "batch_seconds": 16.268,
+   "auto": 1
+  },
+  {
+   "id": "A20",
+   "text": "1 公里 = 1000 公尺  \n1 小時 = 3600 秒  \n\n時速 72 公里 = 72 × 1000 公尺 / 3600 秒 = 72000 / 3600 = 20 公尺/秒  \n\n最終答案：20",
+   "n_prompt_tokens": 377,
+   "n_new_tokens": 84,
+   "batch_seconds": 16.268,
+   "auto": 1
+  }
+ ]
+}

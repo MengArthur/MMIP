@@ -1,0 +1,4 @@
+﻿model,MMLU_acc (60),GSM8K_acc (40),overall_acc (100)
+Base,0.7667,0.875,0.81
+DPO,0.8,0.925,0.85
+DPO+SFT,0.7667,0.925,0.83

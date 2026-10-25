@@ -1,0 +1,157 @@
+{
+ "model": "Qwen3-VL-2B",
+ "hf_id": "Qwen/Qwen3-VL-2B-Instruct",
+ "footprint_mib": 4057.9,
+ "memory": {
+  "avg_allocated_mib": 4112.4,
+  "peak_allocated_mib": 4116.6,
+  "avg_reserved_mib": 4276.8,
+  "peak_reserved_mib": 4280.0,
+  "avg_process_mib": 4420.8,
+  "n_samples": 1965,
+  "seconds": 40.9
+ },
+ "prompt_tokens_640x480": 271,
+ "answers": [
+  {
+   "id": "B01",
+   "text": "elephant",
+   "n_new_tokens": 1,
+   "seconds": 0.26,
+   "auto": 1
+  },
+  {
+   "id": "B02",
+   "text": "3",
+   "n_new_tokens": 1,
+   "seconds": 0.223,
+   "auto": 1
+  },
+  {
+   "id": "B03",
+   "text": "2",
+   "n_new_tokens": 1,
+   "seconds": 0.219,
+   "auto": 1
+  },
+  {
+   "id": "B04",
+   "text": "2",
+   "n_new_tokens": 1,
+   "seconds": 0.224,
+   "auto": 1
+  },
+  {
+   "id": "B05",
+   "text": "3",
+   "n_new_tokens": 1,
+   "seconds": 0.208,
+   "auto": 1
+  },
+  {
+   "id": "B06",
+   "text": "Based on the image provided, the word written on the sign is **STOP**.\n\nThe sign is a standard red octagonal stop sign, and the word \"STOP\" is clearly visible in white capital letters. The background is in black and white, which makes the red of the sign stand out.",
+   "n_new_tokens": 60,
+   "seconds": 3.243,
+   "auto": 1
+  },
+  {
+   "id": "B07",
+   "text": "4",
+   "n_new_tokens": 1,
+   "seconds": 0.232,
+   "auto": 1
+  },
+  {
+   "id": "B08",
+   "text": "brown",
+   "n_new_tokens": 1,
+   "seconds": 0.253,
+   "auto": 1
+  },
+  {
+   "id": "B09",
+   "text": "Based on the image provided, the cat is sitting in a **white bathroom sink**.\n\nHere are the key details:\n- The sink is small and appears to be a pedestal sink, with the cat positioned in the basin.\n- The cat is lying down with its body stretched out and its head resting on the edge of the sink.\n- The sink is located in a bathroom, as indicated by the presence of a faucet, a soap dispenser, and other bathroom items.\n- The cat is looking directly at the camera with its bright green eyes.",
+   "n_new_tokens": 109,
+   "seconds": 5.789,
+   "auto": 1
+  },
+  {
+   "id": "B10",
+   "text": "Based on the image provided, two kinds of animals can be seen:\n\n- A **cat**. It is a gray cat sitting on a wooden surface, looking down at a small potted plant.\n- A **dog**. It is standing on a balcony or patio, looking towards the cat.",
+   "n_new_tokens": 60,
+   "seconds": 3.143,
+   "auto": 1
+  },
+  {
+   "id": "B11",
+   "text": "tennis",
+   "n_new_tokens": 1,
+   "seconds": 0.208,
+   "auto": 1
+  },
+  {
+   "id": "B12",
+   "text": "Based on the visual evidence in the image, the weather is rainy.\n\nThe most direct evidence is the wet road surface, which is reflecting the lights from the bus and cars. The road is visibly slick with water, and there are visible splashes of water being kicked up by the vehicles, particularly the bus. The trees in the background are also wet, and the overall scene has a dark, overcast appearance, which is typical of a rainy day.",
+   "n_new_tokens": 91,
+   "seconds": 4.86,
+   "auto": 1
+  },
+  {
+   "id": "B13",
+   "text": "Based on the visual evidence in the image, here is a detailed analysis:\n\n-   **Pizza Type:** This is a **pepperoni pizza**. The most prominent feature is the large number of round, red, and slightly curled slices of pepperoni distributed across the surface. The pizza is topped with melted cheese, which appears to be mozzarella, and is served on a white plate. The crust is thick and appears to be a classic, slightly puffy, hand-tossed style.\n\n-   **Utensil:** Next to the pizza on the right side of the plate is a **fork**. It is a standard silver",
+   "n_new_tokens": 128,
+   "seconds": 6.607,
+   "auto": 1
+  },
+  {
+   "id": "B14",
+   "text": "no",
+   "n_new_tokens": 1,
+   "seconds": 0.225,
+   "auto": 1
+  },
+  {
+   "id": "B15",
+   "text": "A person with their back to the camera is standing on a grassy cliff overlooking the ocean, holding up a colorful kite with their arms raised. The kite is pink, yellow, and black. The sky is partly cloudy and the sun is low, casting a warm glow over the scene.",
+   "n_new_tokens": 58,
+   "seconds": 3.072,
+   "auto": 1
+  },
+  {
+   "id": "B16",
+   "text": "Based on the text in the image, here is the information about the cafe:\n\n-   **Name:** The name of the cafe is **CAFE LUNA**.\n-   **Phone Number:** The phone number is **03-571-2121**.\n\nThe image also indicates that the cafe is open from 9:00 to 18:00.",
+   "n_new_tokens": 82,
+   "seconds": 4.313,
+   "auto": 1
+  },
+  {
+   "id": "B17",
+   "text": "7",
+   "n_new_tokens": 1,
+   "seconds": 0.225,
+   "auto": 1
+  },
+  {
+   "id": "B18",
+   "text": "Based on the bar chart titled \"Monthly Sales (units)\", we can determine the month with the highest sales by examining the height of each bar and its corresponding value.\n\n- The chart displays sales data for six months: January (Jan), February (Feb), March (Mar), April (Apr), May (May), and June (Jun).\n- The vertical axis represents \"Sales (units)\" and the horizontal axis represents the months.\n\nLet's look at the sales for each month:\n- **Jan**: 12 units\n- **Feb**: 18 units\n- **Mar**: 9 units\n- **Apr**: 2",
+   "n_new_tokens": 128,
+   "seconds": 6.68,
+   "auto": 0
+  },
+  {
+   "id": "B19",
+   "text": "left",
+   "n_new_tokens": 1,
+   "seconds": 0.209,
+   "auto": 1
+  },
+  {
+   "id": "B20",
+   "text": "2",
+   "n_new_tokens": 1,
+   "seconds": 0.166,
+   "auto": 0
+  }
+ ]
+}

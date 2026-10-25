@@ -1,0 +1,82 @@
+{
+ "partB::B01::Qwen3-VL-2B|SmolVLM2-2.2B": {
+  "raw": "[\n  {\"id\": \"A\", \"score\": 10, \"reason\": \"Fully correct and strictly follows the requested one-word answer format.\"},\n  {\"id\": \"B\", \"score\": 10, \"reason\": \"Fully correct, matches the one-word answer requirement.\"}\n]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B02::SmolVLM2-2.2B|Qwen3-VL-2B": {
+  "raw": "[\n  {\"id\": \"A\", \"score\": 1, \"reason\": \"Incorrect count, there are only 3 zebras.\"},\n  {\"id\": \"B\", \"score\": 10, \"reason\": \"Correct count of 3 zebras.\"}\n]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B03::SmolVLM2-2.2B|Qwen3-VL-2B": {
+  "raw": "[{\"id\": \"A\", \"score\": 10, \"reason\": \"Correctly counted 2 horses and followed the format.\"}, {\"id\": \"B\", \"score\": 10, \"reason\": \"Correctly counted 2 horses and followed the format.\"}]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B04::SmolVLM2-2.2B|Qwen3-VL-2B": {
+  "raw": "[\n  {\"id\": \"A\", \"score\": 10, \"reason\": \"Correct count with the requested format.\"},\n  {\"id\": \"B\", \"score\": 10, \"reason\": \"Correct count with the requested format.\"}\n]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B05::SmolVLM2-2.2B|Qwen3-VL-2B": {
+  "raw": "[\n  {\"id\": \"A\", \"score\": 10, \"reason\": \"Correctly answers the question with the requested number only.\"},\n  {\"id\": \"B\", \"score\": 10, \"reason\": \"Correctly answers the question with the requested number only.\"}\n]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B06::Qwen3-VL-2B|SmolVLM2-2.2B": {
+  "raw": "[\n  {\"id\": \"A\", \"score\": 10, \"reason\": \"Accurately identifies the word and provides a helpful explanation.\"},\n  {\"id\": \"B\", \"score\": 10, \"reason\": \"Directly and correctly answers the question with the exact word.\"}\n]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B07::Qwen3-VL-2B|SmolVLM2-2.2B": {
+  "raw": "[{\"id\": \"A\", \"score\": 10, \"reason\": \"Correct number and matches the requested format.\"}, {\"id\": \"B\", \"score\": 10, \"reason\": \"Correct number and matches the requested format.\"}]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B08::SmolVLM2-2.2B|Qwen3-VL-2B": {
+  "raw": "[  {\"id\": \"A\", \"score\": 10, \"reason\": \"Accurate, concise, and matches the requested format.\"},  {\"id\": \"B\", \"score\": 10, \"reason\": \"Accurate, concise, and matches the requested format.\"}]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B09::SmolVLM2-2.2B|Qwen3-VL-2B": {
+  "raw": "[\n  {\"id\": \"A\", \"score\": 10, \"reason\": \"Accurate and direct answer.\"},\n  {\"id\": \"B\", \"score\": 10, \"reason\": \"Accurate and detailed answer.\"}\n]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B10::Qwen3-VL-2B|SmolVLM2-2.2B": {
+  "raw": "[\n  {\"id\": \"A\", \"score\": 7, \"reason\": \"Accurate, but not in the requested JSON format.\"},\n  {\"id\": \"B\", \"score\": 7, \"reason\": \"Accurate, but not in the requested JSON format.\"}\n]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B11::SmolVLM2-2.2B|Qwen3-VL-2B": {
+  "raw": "[\n  {\"id\": \"A\", \"score\": 10, \"reason\": \"Correctly answers the sport in one word.\"},\n  {\"id\": \"B\", \"score\": 10, \"reason\": \"Correctly answers the sport in one word.\"}\n]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B12::SmolVLM2-2.2B|Qwen3-VL-2B": {
+  "raw": "[\n  {\"id\": \"A\", \"score\": 7, \"reason\": \"Accurate, but lacks the requested explanation of visual evidence.\"},\n  {\"id\": \"B\", \"score\": 10, \"reason\": \"Fully correct, detailed, and includes visual evidence.\"}\n]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B13::SmolVLM2-2.2B|Qwen3-VL-2B": {
+  "raw": "[{\"id\": \"A\", \"score\": 10, \"reason\": \"Accurate, concise, and correctly identifies both the pizza type and the utensil.\"}, {\"id\": \"B\", \"score\": 7, \"reason\": \"Accurate, but cuts off mid-sentence and fails to adhere to concise formatting.\"}]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B14::Qwen3-VL-2B|SmolVLM2-2.2B": {
+  "raw": "[\n  {\"id\": \"A\", \"score\": 10, \"reason\": \"Accurate, concise, and follows the requested format.\"},\n  {\"id\": \"B\", \"score\": 10, \"reason\": \"Accurate, concise, and follows the requested format.\"}\n]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B15::Qwen3-VL-2B|SmolVLM2-2.2B": {
+  "raw": "[\n  {\n    \"id\": \"A\",\n    \"score\": 7,\n    \"reason\": \"Accurate, but exceeds the one-to-two sentence limit (it is three sentences).\"\n  },\n  {\n    \"id\": \"B\",\n    \"score\": 10,\n    \"reason\": \"Accurate, concise, and follows the one-to-two sentence limit.\"\n  }\n]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B16::SmolVLM2-2.2B|Qwen3-VL-2B": {
+  "raw": "[\n  {\"id\": \"A\", \"score\": 10, \"reason\": \"Fully correct and directly answers the question.\"},\n  {\"id\": \"B\", \"score\": 9, \"reason\": \"Correct, but includes extra information not explicitly requested.\"}\n]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B17::Qwen3-VL-2B|SmolVLM2-2.2B": {
+  "raw": "[\n  {\"id\": \"A\", \"score\": 10, \"reason\": \"Correct count of 7 red circles with a number only.\"},\n  {\"id\": \"B\", \"score\": 1, \"reason\": \"Incorrect count of 10.\"}\n]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B18::SmolVLM2-2.2B|Qwen3-VL-2B": {
+  "raw": "[\n  {\"id\": \"A\", \"score\": 10, \"reason\": \"Accurately identifies the month with the highest sales and the correct value.\"},\n  {\"id\": \"B\", \"score\": 4, \"reason\": \"The response is cut off and incomplete.\"}\n]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B19::SmolVLM2-2.2B|Qwen3-VL-2B": {
+  "raw": "[\n  {\"id\": \"A\", \"score\": 10, \"reason\": \"Correct answer with one word.\"},\n  {\"id\": \"B\", \"score\": 10, \"reason\": \"Correct answer with one word.\"}\n]",
+  "model": "gemini-3.5-flash-lite"
+ },
+ "partB::B20::SmolVLM2-2.2B|Qwen3-VL-2B": {
+  "raw": "[\n  {\"id\": \"A\", \"score\": 7, \"reason\": \"Correct math solution, but included the equation instead of just a number.\"},\n  {\"id\": \"B\", \"score\": 1, \"reason\": \"Incorrect answer; completely wrong calculation.\"}\n]",
+  "model": "gemini-3.5-flash-lite"
+ }
+}

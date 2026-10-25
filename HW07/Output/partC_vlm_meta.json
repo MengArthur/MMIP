@@ -1,0 +1,30 @@
+{
+ "gpu": {
+  "device": "cuda",
+  "name": "Tesla T4",
+  "vram_gb": 14.56,
+  "capability": "7.5",
+  "torch": "2.11.0+cu130"
+ },
+ "model": "Qwen/Qwen3-VL-2B-Instruct",
+ "max_pixels": 200704,
+ "pairs": 449,
+ "pair_stats": {
+  "desc_on_policy": 43,
+  "desc_injected": 106,
+  "desc_skipped": 1,
+  "yes": 150,
+  "no": 150
+ },
+ "n_train": 404,
+ "n_val": 45,
+ "dpo": {
+  "beta": 0.1,
+  "lr": 5e-05,
+  "epochs": 2,
+  "grad_accum": 8
+ },
+ "lora_r": 16,
+ "train_seconds": 1106.0,
+ "best_epoch": 2
+}

@@ -36,6 +36,11 @@ NYCU College of Artificial Intelligence
   - **Quiz 2**: Image-Text Multimodal Classification (Flickr8k Match / Not-Match, Feature Fusion, 4 Backbone Combinations incl. CLIP)
   - **Quiz 3**: CLIP Image Captioning (CLIP Encoder + LSTM / Transformer Decoder, BLEU / BERTScore vs. Week 4)
 
+- **[HW07: Multimodal Language Models (點此查閱完整作業報告)](HW07/README.md)**
+  - **作業一**: Open-source LLM (Qwen3-4B) — 20-Question Instruction Benchmark, Prompting Techniques, FP16 / INT8 / NF4, GPU Memory
+  - **作業 B**: Two Open-source VLMs (Qwen3-VL-2B vs. SmolVLM2-2.2B) on a 20-Question Visual Benchmark, Gemini Judge
+  - **作業 C**: DPO Fine-tuning — LLM (Taiwan Traditional Chinese) and VLM (Object Hallucination, POPE / CHAIR, Image Degradations)
+
 ---
 
 ## 環境建置說明（Miniconda / Anaconda）
@@ -80,4 +85,11 @@ cd ../HW05
 pip install -r requirements.txt
 python HW05_main.py
 # 或啟動互動介面：jupyter notebook HW05_notebook.ipynb
+
+# 7. 執行 HW07（LLM / VLM 評估與 DPO 微調；需要 GPU：Colab T4 或 RTX 2080 Ti）
+#    Gemini 評審需要環境變數 GEMINI_API_KEY（沒有則只跳過評審）
+cd ../HW07
+pip install -r requirements.txt
+python HW07_main.py
+# 或啟動互動介面：jupyter notebook HW07_notebook.ipynb
 ```

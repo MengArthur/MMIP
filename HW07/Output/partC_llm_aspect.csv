@@ -1,0 +1,4 @@
+﻿model,n,clean_rate,chinese_answer_rate,with_simplified_rate,with_mainland_term_rate,terms_per_response,terms_per_1k_chars,simplified_per_1k_chars,with_other_script_rate,avg_cjk_chars
+Base,40,0.7,1.0,0.075,0.225,0.375,2.662,0.71,0.0,140.9
+DPO,40,0.225,1.0,0.775,0.0,0.0,0.0,12.219,0.075,167.8
+DPO+SFT,40,0.75,1.0,0.175,0.075,0.075,0.524,2.27,0.0,143.2

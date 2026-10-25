@@ -1,0 +1,7 @@
+﻿precision,technique,footprint_mib,auto_pass,auto_pass_rate,gemini_mean,avg_new_tokens,tokens_per_s,seconds,avg_allocated_mib,peak_allocated_mib,avg_process_mib
+fp16,baseline,7672.2,20,1.0,9.65,145.6,44.57,65.33,8162.5,8682.0,8642.2
+fp16,zero_shot_cot,7672.2,20,1.0,9.3,232.6,45.99,101.17,8366.6,9066.4,8966.0
+int8,baseline,4207.2,20,1.0,9.65,150.2,12.99,231.3,4742.8,5401.1,5371.3
+int8,zero_shot_cot,4207.2,20,1.0,9.6,213.7,21.69,197.06,4707.2,5189.5,5864.0
+nf4,baseline,2474.7,20,1.0,9.35,165.6,32.69,101.29,3150.0,3848.9,3726.5
+nf4,zero_shot_cot,2474.7,20,1.0,9.45,258.9,48.02,107.82,3216.1,3925.5,4282.0

@@ -1,0 +1,7 @@
+﻿prompt,answer,new_tokens,tokens_per_s,peak_allocated_mib
+請用三句話向高中生解釋什麼是大型語言模型。,"大型語言模型是一種能模仿人類語言的電腦程序，它透過學習海量的文本資料，掌握了各種語法、詞彙和語境。  
+它不靠記憶知識，而是根據輸入的句子，預測最可能的下一句，就像在讀書時猜下一句會怎麼寫。  
+簡單說，它就像一個會「讀書」又「會說話」的超級智能助手，能寫文章、回答問題，甚至編故事。",102,14.3,12083.1
+Write a haiku about Taipei in the rain.,"Rain taps on Taipei's rooftops,  
+Neon glows through misty streets—  
+Silent, warm, and deep.",27,14.7,12067.7

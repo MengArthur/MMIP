@@ -1,0 +1,14 @@
+torch
+numpy
+pandas
+scikit-learn
+matplotlib
+Pillow
+transformers==5.15.0   # tested version; some newer Colab builds break SmolVLM2 (inputs_merger reshapes by vision patch_size)
+accelerate
+bitsandbytes>=0.45
+peft>=0.13
+opencc-python-reimplemented
+num2words
+google-genai
+nvidia-ml-py

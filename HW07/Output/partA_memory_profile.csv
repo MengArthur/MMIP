@@ -1,0 +1,7 @@
+﻿precision,technique,footprint_mib,tokens_per_s_batch1,b1_avg_allocated_mib,b1_peak_allocated_mib,b1_avg_reserved_mib,b1_peak_reserved_mib,b1_avg_process_mib,b1_seconds
+fp16,baseline,7672.2,15.07,7701.3,7741.6,9303.9,9316.0,9435.9,26.47
+fp16,zero_shot_cot,7672.2,15.06,7710.9,7750.8,9318.0,9322.0,9450.0,55.59
+int8,baseline,4207.2,4.61,4241.5,4313.2,5710.4,5724.0,5850.4,89.85
+int8,zero_shot_cot,4207.2,4.67,4250.5,4326.7,5724.7,5730.0,5864.7,171.67
+nf4,baseline,2474.7,11.35,2561.8,2604.6,4122.4,4132.0,4262.4,45.99
+nf4,zero_shot_cot,2474.7,11.38,2568.7,2615.4,4178.0,4180.0,4318.0,76.56

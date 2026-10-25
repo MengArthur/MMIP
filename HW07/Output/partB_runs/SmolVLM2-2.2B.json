@@ -1,0 +1,157 @@
+{
+ "model": "SmolVLM2-2.2B",
+ "hf_id": "HuggingFaceTB/SmolVLM2-2.2B-Instruct",
+ "footprint_mib": 4285.4,
+ "memory": {
+  "avg_allocated_mib": 4393.8,
+  "peak_allocated_mib": 4508.9,
+  "avg_reserved_mib": 5244.0,
+  "peak_reserved_mib": 5244.0,
+  "avg_process_mib": 5377.9,
+  "n_samples": 1159,
+  "seconds": 24.27
+ },
+ "prompt_tokens_640x480": 1092,
+ "answers": [
+  {
+   "id": "B01",
+   "text": "Elephant",
+   "n_new_tokens": 1,
+   "seconds": 1.111,
+   "auto": 1
+  },
+  {
+   "id": "B02",
+   "text": "4",
+   "n_new_tokens": 2,
+   "seconds": 0.996,
+   "auto": 0
+  },
+  {
+   "id": "B03",
+   "text": "2",
+   "n_new_tokens": 2,
+   "seconds": 0.99,
+   "auto": 1
+  },
+  {
+   "id": "B04",
+   "text": "2",
+   "n_new_tokens": 2,
+   "seconds": 1.148,
+   "auto": 1
+  },
+  {
+   "id": "B05",
+   "text": "3",
+   "n_new_tokens": 2,
+   "seconds": 1.004,
+   "auto": 1
+  },
+  {
+   "id": "B06",
+   "text": "The word \"STOP\" is written on the sign.",
+   "n_new_tokens": 11,
+   "seconds": 1.272,
+   "auto": 1
+  },
+  {
+   "id": "B07",
+   "text": "4",
+   "n_new_tokens": 2,
+   "seconds": 1.32,
+   "auto": 1
+  },
+  {
+   "id": "B08",
+   "text": "orange.",
+   "n_new_tokens": 2,
+   "seconds": 1.328,
+   "auto": 1
+  },
+  {
+   "id": "B09",
+   "text": "The cat is sitting in a white sink.",
+   "n_new_tokens": 9,
+   "seconds": 1.206,
+   "auto": 1
+  },
+  {
+   "id": "B10",
+   "text": "A cat and a dog can be seen in this image.",
+   "n_new_tokens": 12,
+   "seconds": 1.285,
+   "auto": 1
+  },
+  {
+   "id": "B11",
+   "text": "tennis",
+   "n_new_tokens": 1,
+   "seconds": 0.985,
+   "auto": 1
+  },
+  {
+   "id": "B12",
+   "text": "It is raining in this scene.",
+   "n_new_tokens": 8,
+   "seconds": 1.148,
+   "auto": 1
+  },
+  {
+   "id": "B13",
+   "text": "This is a pepperoni pizza, and there is a fork next to it.",
+   "n_new_tokens": 16,
+   "seconds": 1.362,
+   "auto": 1
+  },
+  {
+   "id": "B14",
+   "text": "No.",
+   "n_new_tokens": 2,
+   "seconds": 1.029,
+   "auto": 1
+  },
+  {
+   "id": "B15",
+   "text": "A person is flying a kite on a grassy hill overlooking the ocean.",
+   "n_new_tokens": 14,
+   "seconds": 1.361,
+   "auto": 1
+  },
+  {
+   "id": "B16",
+   "text": "The name of the cafe is Cafe Luna and its phone number is 03-571-2121.",
+   "n_new_tokens": 28,
+   "seconds": 1.747,
+   "auto": 1
+  },
+  {
+   "id": "B17",
+   "text": "10",
+   "n_new_tokens": 3,
+   "seconds": 1.021,
+   "auto": 0
+  },
+  {
+   "id": "B18",
+   "text": "The month with the highest sales is April, with a value of 25 units.",
+   "n_new_tokens": 18,
+   "seconds": 1.465,
+   "auto": 1
+  },
+  {
+   "id": "B19",
+   "text": "Left",
+   "n_new_tokens": 1,
+   "seconds": 0.979,
+   "auto": 1
+  },
+  {
+   "id": "B20",
+   "text": "27 + 15 = 42",
+   "n_new_tokens": 11,
+   "seconds": 0.975,
+   "auto": 0
+  }
+ ]
+}
