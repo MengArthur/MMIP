@@ -2,9 +2,9 @@
 CHAIR-style object mention extraction (Rohrbach et al., 2018): map words in a generated description to
 COCO categories, so that hallucinated objects (mentioned but not annotated in the image) can be counted.
 
-The synonym lists are a conservative subset of the original CHAIR lists: ambiguous words are left out
-(e.g. "glass", "bag", "plant", "screen", "baseball" as a sport) so that a mention is only counted when
-it clearly names a COCO object. "orange" is only counted as a fruit ("oranges" / "an orange").
+The synonym lists are a subset of the original CHAIR lists. Some ambiguous words are left out ("glass",
+"bag", "plant", "screen", "baseball" as a sport); others are kept as in CHAIR ("table", "phone", "glove",
+"jet", "tie", "bat"). "orange" is only counted as a fruit ("oranges" / "an orange").
 """
 
 import re

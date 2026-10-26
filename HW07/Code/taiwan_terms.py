@@ -23,6 +23,10 @@ import opencc
 
 # mainland term (in Traditional characters) -> Taiwan term. Only terms that are clearly non-Taiwanese
 # usage are listed; ambiguous ones (支持, 窗口, 菜單, 運行, 項目, 文件, 數據, 優化 ...) are left out.
+# Known limitation: matching is by substring without word segmentation, so short entries can fire inside
+# other words (的士 in 士林 after 的, 存儲 in 暫存儲器, 打的 in 他打的字). The submitted results were produced
+# with this table (2 of 130 chosen answers were altered wrongly, see README); a future run should drop
+# such short entries or use a word segmenter.
 MAINLAND_TO_TW = {
     '軟件': '軟體', '硬件': '硬體', '網絡': '網路', '互聯網': '網際網路', '移動網絡': '行動網路',
     '視頻通話': '視訊通話', '視頻會議': '視訊會議', '視頻': '影片', '音頻': '音訊', '信息': '資訊', '短信': '簡訊',
