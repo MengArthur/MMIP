@@ -1,0 +1,26 @@
+# Data & Large Arrays
+data/
+*.parquet
+*.npz
+!demo/sample_upload.npz
+
+# Model weights (~340 MB ViT, ~58 MB UNet, ~8 MB RF); training histories & configs (*.json) are kept
+checkpoints/*.pt
+checkpoints/*.pth
+checkpoints/*.joblib
+checkpoints_unet/
+checkpoints_v1/
+
+# Caches & Temporary files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+demo/cache/
+~$*.pptx
+*.tmp
+*.log
+
+# Redundant versions
+outputs_v1/
+app/_old_ui/

@@ -1,0 +1,8 @@
+{
+ "variant": "U-Net (multimodal)",
+ "mean_pixel_pearson": {
+  "U-Net": 0.8086,
+  "U-Net (multimodal)": 0.8089
+ },
+ "rule": "higher mean pixel Pearson over the 3 test designs (fixed before training)"
+}

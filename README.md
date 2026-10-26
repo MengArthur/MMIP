@@ -36,6 +36,11 @@ NYCU College of Artificial Intelligence
   - **Quiz 2**: Image-Text Multimodal Classification (Flickr8k Match / Not-Match, Feature Fusion, 4 Backbone Combinations incl. CLIP)
   - **Quiz 3**: CLIP Image Captioning (CLIP Encoder + LSTM / Transformer Decoder, BLEU / BERTScore vs. Week 4)
 
+- **[Midterm: RouteVision — 晶片版圖繞線壅塞熱點預測 (點此查閱完整專案報告)](Midterm/README.md)**
+  - **任務定義**：鑑別式 AI 系統，輸入 placement 特徵圖與設計參數，預測 global routing 壅塞熱點。
+  - **比較方法**：EDA 基準（RUDY, eGR）、OpenCV + Random Forest、MLP、CNN、Multimodal、ViT-B/16、Ensemble、U-Net（逐像素回歸）。
+  - **核心成果**：跨設計驗證（LODO）達到 0.984 ROC-AUC、不確定度分析（分歧度 AUROC 0.911）、Grad-CAM 可解釋性與完整 Flask Web Demo。
+
 - **[HW07: Multimodal Language Models (點此查閱完整作業報告)](HW07/README.md)**
   - **作業一**: Open-source LLM (Qwen3-4B) — 20-Question Instruction Benchmark, Prompting Techniques, FP16 / INT8 / NF4, GPU Memory
   - **作業 B**: Two Open-source VLMs (Qwen3-VL-2B vs. SmolVLM2-2.2B) on a 20-Question Visual Benchmark, Gemini Judge
@@ -86,7 +91,13 @@ pip install -r requirements.txt
 python HW05_main.py
 # 或啟動互動介面：jupyter notebook HW05_notebook.ipynb
 
-# 7. 執行 HW07（LLM / VLM 評估與 DPO 微調；需要 GPU：Colab T4 或 RTX 2080 Ti）
+# 7. 執行 Midterm（RouteVision Web Demo；本機 CPU 即可快速啟動）
+cd ../Midterm
+pip install -r requirements.txt
+python app/server.py
+# 瀏覽器開啟 http://127.0.0.1:5000 即可體驗四步驟互動分析
+
+# 8. 執行 HW07（LLM / VLM 評估與 DPO 微調；需要 GPU：Colab T4 或 RTX 2080 Ti）
 #    Gemini 評審需要環境變數 GEMINI_API_KEY（沒有則只跳過評審）
 cd ../HW07
 pip install -r requirements.txt

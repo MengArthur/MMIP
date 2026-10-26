@@ -1,0 +1,7 @@
+{
+ "setting": "aug",
+ "mean_roc_auc_learned": {
+  "aug": 0.9539,
+  "no_aug": 0.9536
+ }
+}

@@ -1,0 +1,13 @@
+torch
+torchvision
+numpy
+pandas
+scikit-learn==1.6.1   # same version as Colab, where checkpoints/RandomForest.joblib was saved
+opencv-python
+matplotlib
+pillow
+joblib
+flask
+waitress
+streamlit
+pytest

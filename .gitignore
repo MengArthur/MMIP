@@ -19,3 +19,4 @@ env/
 # Temporary and local test files
 *.tmp
 *.log
+.claude/

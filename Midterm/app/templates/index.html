@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RouteVision</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='2' y='2' width='20' height='20' rx='5' fill='%230f766e'/%3E%3Cpath d='M7 7h4v4H7zM13 13h4v4h-4z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 7h4v4H7zM13 13h4v4h-4zM11 9h4v4M9 11v4h4"/></svg>
+    </span>
+    <span class="brand-name">RouteVision</span>
+    <span class="brand-sub">placement 一完成，就預測 routing 後哪裡會塞</span>
+  </div>
+  <nav class="views" role="tablist" aria-label="頁面">
+    <button class="view-tab active" data-view="analyze" role="tab" aria-selected="true">即時分析</button>
+    <button class="view-tab" data-view="results" role="tab" aria-selected="false">整體成效</button>
+    <button class="view-tab" data-view="method" role="tab" aria-selected="false">方法與流程</button>
+  </nav>
+  <div class="who">林孟霆 · 315833033</div>
+</header>
+
+<!-- ============================================================ 即時分析 -->
+<main id="view-analyze" class="view">
+  <aside class="rail" aria-label="選擇版圖">
+    <div class="rail-head">
+      <span>版圖</span>
+      <button class="btn ghost small" id="uploadOpen">
+        <svg viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>上傳
+      </button>
+    </div>
+    <div id="gallery" class="gallery"></div>
+    <div class="kbd-hint"><kbd>←</kbd><kbd>→</kbd> 換步驟　<kbd>↑</kbd><kbd>↓</kbd> 換版圖</div>
+  </aside>
+
+  <section class="stage">
+    <div id="welcome" class="welcome">
+      <h1>placement 一完成，就知道 routing 後哪裡會塞</h1>
+      <p class="lead">從左邊選一張版圖開始。每張版圖分四個步驟看：</p>
+      <ol class="welcome-steps">
+        <li><span class="n">1</span><b>熱點預測</b><span>EDA 粗估、AI、真實熱點並排比較</span></li>
+        <li><span class="n">2</span><b>使用率圖</b><span>U-Net 預測整張使用率圖</span></li>
+        <li><span class="n">3</span><b>可信度</b><span>標出模型沒把握的區塊</span></li>
+        <li><span class="n">4</span><b>判斷依據</b><span>Grad-CAM 看模型關注哪裡</span></li>
+      </ol>
+      <p class="note">左側「沒看過的晶片」是完全沒參與訓練的測試設計。</p>
+    </div>
+
+    <div id="analysis" class="hidden">
+      <header class="layout-head">
+        <div class="lh-title">
+          <h1 id="layoutTitle"></h1>
+          <span class="tag" id="layoutGroup"></span>
+        </div>
+        <div class="lh-params" id="layoutParams"></div>
+      </header>
+
+      <nav class="steps" role="tablist" aria-label="分析步驟">
+        <button class="step active" data-step="hot" role="tab"><span class="n">1</span>熱點預測</button>
+        <button class="step" data-step="map" role="tab"><span class="n">2</span>使用率圖</button>
+        <button class="step" data-step="trust" role="tab"><span class="n">3</span>可信度</button>
+        <button class="step" data-step="why" role="tab"><span class="n">4</span>判斷依據</button>
+      </nav>
+
+      <div class="step-bar">
+        <p class="step-desc" id="stepDesc"></p>
+        <div class="step-ctrl" id="stepCtrl"></div>
+      </div>
+
+      <p class="verdict" id="verdict" aria-live="polite"></p>
+
+      <div class="compare">
+        <figure class="panel" id="p0"><figcaption><span class="p-title" id="pt0"></span><span class="p-num" id="pn0"></span></figcaption>
+          <div class="canvas-wrap"><canvas id="cv0" width="512" height="512"></canvas></div></figure>
+        <figure class="panel focus" id="p1"><figcaption><span class="p-title" id="pt1"></span><span class="p-num" id="pn1"></span></figcaption>
+          <div class="canvas-wrap"><canvas id="cv1" width="512" height="512"></canvas>
+            <div class="p-loading hidden" id="pl1"><span class="spinner"></span>計算中…</div></div></figure>
+        <figure class="panel" id="p2"><figcaption><span class="p-title" id="pt2"></span><span class="p-num" id="pn2"></span></figcaption>
+          <div class="canvas-wrap"><canvas id="cv2" width="512" height="512"></canvas></div></figure>
+      </div>
+      <div class="legend" id="legend"></div>
+
+      <details class="more">
+        <summary>這張版圖上，所有方法的 F1</summary>
+        <div id="f1Bars" class="bars"></div>
+        <p class="note">單張版圖只有 64 個區塊，熱點少時差一格 F1 就差很多；方法好壞請看 <a href="#" data-goto="results">整體成效</a>。點一下可切換方法。</p>
+      </details>
+    </div>
+
+    <div id="busy" class="busy hidden" aria-live="polite">
+      <div class="busy-card"><span class="spinner big"></span><div id="busyText">推論中…</div><div class="muted small" id="busyTimer"></div></div>
+    </div>
+  </section>
+</main>
+
+<dialog id="uploadDlg" class="dialog">
+  <h2>上傳版圖</h2>
+  <label class="drop" id="drop">
+    <input type="file" id="fileInput" accept=".npz" hidden>
+    <svg viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>
+    <strong>拖曳 .npz 到這裡，或點擊選擇</strong>
+    <em id="fileName"></em>
+  </label>
+  <p class="note"><code>X</code> 4×256×256（cell 密度、RUDY、腳位 RUDY、macro）、<code>params</code> 6 個設計參數；<code>label</code>、<code>egr</code> 可省略。上限 20 MB。範例：<code>demo/sample_upload.npz</code>。所有方法即時推論，CPU 約 20 秒。</p>
+  <div class="dialog-actions">
+    <button class="btn" id="uploadCancel">取消</button>
+    <button class="btn primary" id="uploadBtn" disabled>分析</button>
+  </div>
+</dialog>
+
+<!-- ============================================================ 整體成效 -->
+<main id="view-results" class="view page hidden">
+  <div class="page-intro">
+    <h1>整體成效</h1>
+    <p class="lead">以「沒看過的晶片」為準：測試設計完全不參與訓練，閾值一律在驗證集決定。</p>
+  </div>
+  <div class="tiles" id="tiles"></div>
+
+  <section class="card">
+    <div class="card-head">
+      <div>
+        <h2>三個設計輪流當「沒看過的晶片」</h2>
+        <p class="sub" id="lodoSub"></p>
+      </div>
+      <div class="seg" id="lodoMetric">
+        <button class="seg-btn active" data-metric="ROC-AUC">ROC-AUC</button>
+        <button class="seg-btn" data-metric="Macro-F1">Macro-F1</button>
+        <button class="seg-btn" data-metric="PR-AUC">PR-AUC</button>
+      </div>
+    </div>
+    <div class="chart-legend" id="lodoLegend"></div>
+    <div id="lodoChart" class="dotplot"></div>
+    <details class="more"><summary>以表格檢視</summary><div id="lodoTable" class="table-scroll"></div></details>
+  </section>
+
+  <section class="card" id="pixelCard">
+    <div class="card-head"><div>
+      <h2>U-Net 預測整張使用率圖</h2>
+      <p class="sub">逐像素和 routing 後的真實使用率比較（三個設計平均）；eGR 本身就是使用率，可以直接比。</p>
+    </div></div>
+    <div class="mini-stats" id="pixelStats"></div>
+    <details class="more"><summary>各設計數據與消融實驗</summary>
+      <div class="table-scroll"><table class="data" id="pixelTable"></table></div>
+      <ul class="plain small-list" id="pixelNotes"></ul>
+    </details>
+  </section>
+
+  <section class="card" id="uncCard">
+    <div class="card-head"><div>
+      <h2>模型知道自己哪裡沒把握</h2>
+      <p class="sub">不確定度＝Ensemble 三個成員（RF、Multimodal、ViT）意見的分歧程度，推論時就能算，不需要答案。</p>
+    </div></div>
+    <div class="mini-stats" id="uncStats"></div>
+    <details class="more"><summary>各設計數據</summary>
+      <div class="table-scroll"><table class="data" id="uncTable"></table></div>
+      <p class="note">對照組「離閾值遠近」：分數越接近閾值越不確定。網頁上的「沒把握」門檻為測試設計所有區塊中不確定度前 20%。</p>
+    </details>
+  </section>
+
+  <section class="card">
+    <details class="more flush"><summary id="testTitle">完整數據：測試設計 Vortex-small</summary>
+      <div class="table-scroll"><table class="data" id="testTable"></table></div>
+      <p class="note">粗體為該欄最佳。「贏 eGR 的版圖」是逐張版圖比較 F1。</p>
+    </details>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><h2>限制</h2></div>
+    <ul class="plain">
+      <li><b>只有 3 個設計</b>，平均 ± 標準差只來自 3 個數字；每組實驗只訓練一次（seed 42）。</li>
+      <li><b>同設計 vs 跨設計有落差</b>：同設計驗證集 ROC-AUC 約 0.99，換成沒看過的設計是 0.89–0.99。</li>
+      <li><b>設計之間分布差很多</b>：熱點比例 10%–68%、macro 有無、原始尺寸差約一倍。</li>
+      <li><b>ROC-AUC 穩定、F1 隨設計變動</b>：「多擠才算熱點」的閾值需要依設計調整。</li>
+    </ul>
+  </section>
+</main>
+
+<!-- ============================================================ 方法與流程 -->
+<main id="view-method" class="view page hidden">
+  <div class="page-intro">
+    <h1>方法與流程</h1>
+    <p class="lead">只用 placement 後就能取得的資訊，預測 routing 後的壅塞。工程師不用等 routing 跑完（數小時以上）才發現哪裡塞爆。</p>
+  </div>
+
+  <section class="card">
+    <div class="card-head"><h2>系統流程</h2></div>
+    <ol class="pipeline">
+      <li><span class="pl-k">輸入</span><b>Placement 後的版圖</b><span>4 張特徵圖：cell 密度、RUDY、腳位 RUDY、macro</span></li>
+      <li><span class="pl-k">第二種模態</span><b>設計參數</b><span>時脈、使用率、macro 擺法、電源網路、filler 時機</span></li>
+      <li><span class="pl-k">鑑別式模型</span><b>區塊分類＋逐像素回歸</b><span>8×8 區塊判斷熱點；U-Net 預測整張使用率圖</span></li>
+      <li><span class="pl-k">輸出</span><b>熱點圖＋可信度＋依據</b><span>不確定度標出沒把握的區塊；Grad-CAM 顯示判斷依據</span></li>
+    </ol>
+    <p class="note">標註：routing 後的真實繞線使用率；區塊平均 ≥ 0.6 為熱點。依設計切分，避免「考到看過的題目」。</p>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><h2>比較的方法</h2><span class="sub">ROC-AUC：Vortex-small ／ 三個設計平均</span></div>
+    <div class="method-grid" id="methodGrid"></div>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><h2>資料：CircuitNet-N14</h2></div>
+    <div class="table-scroll"><table class="data" id="dataTable"></table></div>
+    <p class="note">每個設計的 96 張版圖＝同一顆電路的 96 種設計參數組合，各跑一次完整的實體設計流程。</p>
+  </section>
+
+  <section class="card">
+    <div class="card-head"><h2>系統架構</h2></div>
+    <div class="stack">
+      <div><b>資料</b><span>串流解壓 CircuitNet，面積平均縮成 256×256</span></div>
+      <div><b>模型</b><span>PyTorch、torchvision（ViT-B/16、ResNet-18）、OpenCV、scikit-learn</span></div>
+      <div><b>訓練</b><span>Colab T4，三個設計輪流測試</span></div>
+      <div><b>後端</b><span>Flask REST API；啟動時預先算好範例</span></div>
+      <div><b>前端</b><span>HTML / CSS / JS，Canvas 繪圖，離線可用</span></div>
+    </div>
+  </section>
+</main>
+
+<div id="tooltip" class="tooltip hidden" role="tooltip"></div>
+<div id="toast" class="toast hidden" role="alert"></div>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
