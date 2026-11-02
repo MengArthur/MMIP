@@ -1,5 +1,5 @@
 """
-Measure how fast this GPU runs the HW07 workloads (run it on Colab T4 and on the lab RTX 2080 Ti):
+Measure how fast this GPU runs the HW06 workloads (run it on Colab T4 and on the lab RTX 2080 Ti):
 
   python gpu_benchmark.py            # ~3 min: matmul, bandwidth, Qwen3-4B FP16 decoding, one DPO step
   python gpu_benchmark.py --quick    # ~10 s: matmul + bandwidth only (no model download)

@@ -1,9 +1,9 @@
 """
-MMIP HW07: multimodal language models -- one-command pipeline.
+MMIP HW06: multimodal language models -- one-command pipeline.
 
-  python HW07_main.py                      # all parts (about 1.5 h on a Colab T4)
-  python HW07_main.py --parts A B          # choose parts: A, B, C (LLM DPO), CV (VLM DPO)
-  python HW07_main.py --no-gemini          # skip the Gemini judge (rule-based metrics only)
+  python HW06_main.py                      # all parts (about 1.5 h on a Colab T4)
+  python HW06_main.py --parts A B          # choose parts: A, B, C (LLM DPO), CV (VLM DPO)
+  python HW06_main.py --no-gemini          # skip the Gemini judge (rule-based metrics only)
 
 Every generation run, Gemini answer and LoRA adapter is cached in Output/ and Checkpoints/, so an
 interrupted run resumes where it stopped. Needs a CUDA GPU (T4 16 GB or RTX 2080 Ti 11 GB).

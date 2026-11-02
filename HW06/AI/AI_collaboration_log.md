@@ -1,4 +1,4 @@
-# 人工智慧工具協作紀錄 (AI Collaboration Log) — HW07
+# 人工智慧工具協作紀錄 (AI Collaboration Log) — HW06
 
 - **課程**：多模態影像資料處理 (MMIP) — Week 07 多模態語言模型如何運作
 - **學生**：林孟霆（`315833033`）

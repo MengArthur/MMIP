@@ -1,4 +1,4 @@
-# 國立陽明交通大學 多模態影像資料處理 (MMIP) 作業七技術報告
+# 國立陽明交通大學 多模態影像資料處理 (MMIP) 作業六技術報告
 ## 多模態語言模型：LLM 部署／評估／提示工程／量化、VLM 比較、DPO 微調 LLM 與 VLM
 
 - **學生**：林孟霆（`315833033`）
@@ -9,7 +9,7 @@
 > [!NOTE]
 > **給助教的導覽 (For TA & Reviewers)**：
 > - **文字報告與分析**：本 `README.md`。
-> - **程式執行結果**：`HW07_notebook.ipynb`（已在 Colab T4 上執行，表格與圖表內嵌在輸出中）。
+> - **程式執行結果**：`HW06_notebook.ipynb`（已在 Colab T4 上執行，表格與圖表內嵌在輸出中）。
 > - **圖表與結果檔**：`Output/`；**所有模型回答**：`Output/partA_answers.csv`、`partB_answers.csv`、`partC_llm_test_responses.csv`、`partC_vlm_descriptions.csv`；**Gemini 回覆紀錄**：`Output/*_gemini_cache.json`；**DPO 訓練紀錄**：`Checkpoints/*/history.json`。
 > - **自訂 Benchmark 與資料**：`Data/`（作業一 20 題、作業 B 20 題與影像、作業 C 170 題繁中問題、100 題通用能力、COCO 子集）。
 > - **AI 協作紀錄**：`AI/AI_collaboration_log.md`。
@@ -18,7 +18,7 @@
 > **建議閱讀順序**：
 > 1. 下方「**評分項目對照表**」：每一小題對應的 README 段落與結果檔。
 > 2. 各部分的「結果」小節（A-1～A-5、B-1～B-2、C-1～C-3、CV-1～CV-2）：表格 + 分析，數字都可在 `Output/` 的同名 CSV 查到。
-> 3. 需要看實際執行過程時再開 `HW07_notebook.ipynb`。**Notebook 中作業一表格的「規則式通過」是修正前的數字**（A17 檢查規則有誤，見[執行紀錄](#執行紀錄)），修正後的數字在 Notebook 的說明格與本 README；以「說明」開頭的引用框是事後加入的文字說明。
+> 3. 需要看實際執行過程時再開 `HW06_notebook.ipynb`。**Notebook 中作業一表格的「規則式通過」是修正前的數字**（A17 檢查規則有誤，見[執行紀錄](#執行紀錄)），修正後的數字在 Notebook 的說明格與本 README；以「說明」開頭的引用框是事後加入的文字說明。
 > 4. 想看模型實際的回答：`Output/partA_answers.csv`（含 Gemini 給分理由）、`partB_answers.csv`、`partC_llm_test_responses.csv`、`partC_vlm_descriptions.csv`。
 
 ### 評分項目對照表（各小題在哪裡看）
@@ -46,9 +46,9 @@
 ## 目錄結構
 
 ```text
-HW07/
-├── HW07_main.py              # 一鍵執行（--parts A B C CV）
-├── HW07_notebook.ipynb       # 已在 Colab T4 執行的 Notebook
+HW06/
+├── HW06_main.py              # 一鍵執行（--parts A B C CV）
+├── HW06_notebook.ipynb       # 已在 Colab T4 執行的 Notebook
 ├── gpu_benchmark.py          # 量測 GPU 速度（T4 / 2080 Ti 各跑一次比較）
 ├── README.md
 ├── requirements.txt
@@ -85,7 +85,7 @@ HW07/
 └── AI/AI_collaboration_log.md
 ```
 
-**執行方式**：Colab 上把 `HW07/` 放到 Google Drive `MyDrive/MMIP/HW07`（或壓縮成 `HW07.zip` 上傳）、選 T4 GPU、在 Secrets 加入 `GEMINI_API_KEY` 後全部執行（詳見 Notebook 第一格）。伺服器：`pip install -r requirements.txt` 後執行 `python HW07_main.py`。每個生成結果、Gemini 回覆與 LoRA adapter 都有快取，中斷後重新執行會從斷點繼續。
+**執行方式**：Colab 上把 `HW06/` 放到 Google Drive `MyDrive/MMIP/HW06`（或壓縮成 `HW06.zip` 上傳）、選 T4 GPU、在 Secrets 加入 `GEMINI_API_KEY` 後全部執行（詳見 Notebook 第一格）。伺服器：`pip install -r requirements.txt` 後執行 `python HW06_main.py`。每個生成結果、Gemini 回覆與 LoRA adapter 都有快取，中斷後重新執行會從斷點繼續。
 
 ---
 
@@ -113,7 +113,7 @@ HW07/
 | 全部（含評估、下載約 21 GB 模型） | 約 1.5 小時 | 約 1 小時 |
 
 - T4 的矩陣乘法（8192 × 8192 FP16）與頻寬是 `gpu_benchmark.py` 實測的（分別為規格值的 1/3 與 73%；頻寬實測達到規格的 70–80% 屬於常態，矩陣乘法偏低則可能部分來自 70 W 功耗上限造成的降頻）；該腳本後半段的 LLM 解碼與 DPO 步驟量測受 torchao 問題影響沒有完成（見[執行紀錄](#執行紀錄)）。2080 Ti 的數字是依規格的頻寬與運算量比例推估，沒有實測。
-- **Colab 免費版的限制**：不保證分配到 GPU、閒置會斷線、每日 GPU 時數有上限，斷線後本機磁碟清空。把 `HW07/` 放在 Google Drive 讓快取在斷線後保留，本次中途數次重新啟動都只重算尚未完成的部分。
+- **Colab 免費版的限制**：不保證分配到 GPU、閒置會斷線、每日 GPU 時數有上限，斷線後本機磁碟清空。把 `HW06/` 放在 Google Drive 讓快取在斷線後保留，本次中途數次重新啟動都只重算尚未完成的部分。
 - **2080 Ti 的限制**：作業一需改用 batch 5；作業 C 的 4B DPO 峰值依權重 8 GB 加上 LoRA、優化器與中間值推估約 9.5–10 GB（沒有實測），接近 11 GB 上限，共用伺服器需先確認 GPU 空閒。優點是沒有時數限制、不會斷線，速度約快 1.5 倍。
 
 ---
