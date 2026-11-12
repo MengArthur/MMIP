@@ -46,6 +46,11 @@ NYCU College of Artificial Intelligence
   - **作業 B**: Two Open-source VLMs (Qwen3-VL-2B vs. SmolVLM2-2.2B) on a 20-Question Visual Benchmark, Gemini Judge
   - **作業 C**: DPO Fine-tuning — LLM (Taiwan Traditional Chinese) and VLM (Object Hallucination, POPE / CHAIR, Image Degradations)
 
+- **[HW07: Structured Output of LLMs — Multimodal Customer-Service Router (點此查閱完整作業報告)](HW07/README.md)**
+  - **作業一**: Scenario (3C Web Shop, 7 Downstream Departments), JSON Spec / Schema, Architecture Diagram with 18 Corner Cases
+  - **作業二**: Four Routing Nodes on Qwen3-VL-2B — Prompt, SFT / SFT+DPO, Self-implemented FSM Constrained Decoding, System One (Joint Schema Head); 52-Case Multimodal Benchmark (Structure / Accuracy / Latency / Cost)
+  - **作業三**: Gradio Chatbot (System One + System 2 Routing), UX Topic Transition, Off-topic Handling, Text / Image Prompt-Injection Defence
+
 ---
 
 ## 環境建置說明（Miniconda / Anaconda）
@@ -103,4 +108,11 @@ cd ../HW06
 pip install -r requirements.txt
 python HW06_main.py
 # 或啟動互動介面：jupyter notebook HW06_notebook.ipynb
+
+# 9. 執行 HW07（結構化輸出與客服分流機器人；需要 GPU：Colab T4 或 RTX 2080 Ti）
+#    Gemini 參考組 / 評審需要環境變數 GEMINI_API_KEY（沒有則只跳過這部分）
+cd ../HW07
+pip install -r requirements.txt
+python HW07_main.py            # 作業二 + 作業三；加上 --ui 啟動聊天介面
+# 或啟動互動介面：jupyter notebook HW07_notebook.ipynb
 ```

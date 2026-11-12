@@ -1,0 +1,12 @@
+# LoRA adapter weights, System One head weights and PEFT's auto-generated (empty) model cards;
+# training histories (history.json) and adapter_config.json are kept
+Checkpoints/**/*.safetensors
+Checkpoints/**/*.bin
+Checkpoints/**/head.pt
+Checkpoints/**/README.md
+HW07_results.zip
+__pycache__/
+hw07.md5
+Checkpoints/**/resume*.pt
+Checkpoints/**/refs.pt
+Output/*.partial.json

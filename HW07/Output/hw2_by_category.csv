@@ -1,0 +1,81 @@
+method,category,n,decision_%,exact_%
+A Prompt,attack,6,33.3,33.3
+A Prompt,clarify,7,57.1,28.6
+A Prompt,hard,4,75.0,75.0
+A Prompt,image,7,57.1,14.3
+A Prompt,multi_turn,6,100.0,83.3
+A Prompt,off_topic,4,75.0,75.0
+A Prompt,route,14,71.4,57.1
+A Prompt,switch,4,50.0,50.0
+C Constrained decoding,attack,6,50.0,50.0
+C Constrained decoding,clarify,7,57.1,28.6
+C Constrained decoding,hard,4,75.0,75.0
+C Constrained decoding,image,7,57.1,14.3
+C Constrained decoding,multi_turn,6,100.0,83.3
+C Constrained decoding,off_topic,4,75.0,75.0
+C Constrained decoding,route,14,71.4,57.1
+C Constrained decoding,switch,4,50.0,50.0
+B SFT,attack,6,100.0,83.3
+B SFT,clarify,7,28.6,28.6
+B SFT,hard,4,75.0,75.0
+B SFT,image,7,100.0,100.0
+B SFT,multi_turn,6,100.0,100.0
+B SFT,off_topic,4,100.0,100.0
+B SFT,route,14,85.7,71.4
+B SFT,switch,4,75.0,50.0
+B SFT+DPO,attack,6,100.0,83.3
+B SFT+DPO,clarify,7,71.4,57.1
+B SFT+DPO,hard,4,50.0,50.0
+B SFT+DPO,image,7,85.7,85.7
+B SFT+DPO,multi_turn,6,83.3,83.3
+B SFT+DPO,off_topic,4,100.0,100.0
+B SFT+DPO,route,14,64.3,35.7
+B SFT+DPO,switch,4,75.0,0.0
+B+C SFT + constrained,attack,6,100.0,83.3
+B+C SFT + constrained,clarify,7,28.6,28.6
+B+C SFT + constrained,hard,4,75.0,75.0
+B+C SFT + constrained,image,7,100.0,100.0
+B+C SFT + constrained,multi_turn,6,100.0,100.0
+B+C SFT + constrained,off_topic,4,100.0,100.0
+B+C SFT + constrained,route,14,85.7,71.4
+B+C SFT + constrained,switch,4,75.0,50.0
+B+C SFT+DPO + constrained,attack,6,100.0,83.3
+B+C SFT+DPO + constrained,clarify,7,85.7,57.1
+B+C SFT+DPO + constrained,hard,4,50.0,50.0
+B+C SFT+DPO + constrained,image,7,85.7,85.7
+B+C SFT+DPO + constrained,multi_turn,6,100.0,100.0
+B+C SFT+DPO + constrained,off_topic,4,100.0,100.0
+B+C SFT+DPO + constrained,route,14,78.6,50.0
+B+C SFT+DPO + constrained,switch,4,75.0,25.0
+D System One v1,attack,6,33.3,33.3
+D System One v1,clarify,7,0.0,0.0
+D System One v1,hard,4,0.0,0.0
+D System One v1,image,7,42.9,42.9
+D System One v1,multi_turn,6,50.0,50.0
+D System One v1,off_topic,4,0.0,0.0
+D System One v1,route,14,14.3,0.0
+D System One v1,switch,4,0.0,0.0
+D System One v2 (+state),attack,6,83.3,83.3
+D System One v2 (+state),clarify,7,0.0,0.0
+D System One v2 (+state),hard,4,25.0,25.0
+D System One v2 (+state),image,7,71.4,57.1
+D System One v2 (+state),multi_turn,6,33.3,33.3
+D System One v2 (+state),off_topic,4,25.0,25.0
+D System One v2 (+state),route,14,35.7,28.6
+D System One v2 (+state),switch,4,0.0,0.0
+Gemini prompt,attack,6,100.0,100.0
+Gemini prompt,clarify,7,85.7,71.4
+Gemini prompt,hard,4,100.0,100.0
+Gemini prompt,image,7,57.1,28.6
+Gemini prompt,multi_turn,6,100.0,83.3
+Gemini prompt,off_topic,4,100.0,100.0
+Gemini prompt,route,14,85.7,85.7
+Gemini prompt,switch,4,75.0,75.0
+Gemini structured output,attack,6,100.0,100.0
+Gemini structured output,clarify,7,100.0,85.7
+Gemini structured output,hard,4,100.0,100.0
+Gemini structured output,image,7,57.1,28.6
+Gemini structured output,multi_turn,6,83.3,66.7
+Gemini structured output,off_topic,4,100.0,100.0
+Gemini structured output,route,14,78.6,71.4
+Gemini structured output,switch,4,100.0,100.0

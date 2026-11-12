@@ -1,0 +1,252 @@
+[
+ {
+  "id": "O01",
+  "category": "fresh",
+  "turns": [
+   {
+    "role": "user",
+    "text": "你覺得貓跟狗哪個比較好養",
+    "images": []
+   }
+  ],
+  "pending": null
+ },
+ {
+  "id": "O02",
+  "category": "fresh",
+  "turns": [
+   {
+    "role": "user",
+    "text": "幫我把這句翻成英文：今天的會議延到明天",
+    "images": []
+   }
+  ],
+  "pending": null
+ },
+ {
+  "id": "O03",
+  "category": "fresh",
+  "turns": [
+   {
+    "role": "user",
+    "text": "我最近失眠很嚴重怎麼辦",
+    "images": []
+   }
+  ],
+  "pending": null
+ },
+ {
+  "id": "O04",
+  "category": "fresh",
+  "turns": [
+   {
+    "role": "user",
+    "text": "推薦我一本好看的小說",
+    "images": []
+   }
+  ],
+  "pending": null
+ },
+ {
+  "id": "O05",
+  "category": "fresh",
+  "turns": [
+   {
+    "role": "user",
+    "text": "今年的颱風好多喔",
+    "images": []
+   }
+  ],
+  "pending": null
+ },
+ {
+  "id": "O06",
+  "category": "fresh",
+  "turns": [
+   {
+    "role": "user",
+    "text": "幫我算 1234 乘以 5678",
+    "images": []
+   }
+  ],
+  "pending": null
+ },
+ {
+  "id": "O07",
+  "category": "fresh",
+  "turns": [
+   {
+    "role": "user",
+    "text": "你可以幫我寫一篇 500 字的讀書心得嗎",
+    "images": []
+   }
+  ],
+  "pending": null
+ },
+ {
+  "id": "O08",
+  "category": "fresh",
+  "turns": [
+   {
+    "role": "user",
+    "text": "週末去哪裡露營比較好",
+    "images": []
+   }
+  ],
+  "pending": null
+ },
+ {
+  "id": "O09",
+  "category": "fresh_image",
+  "turns": [
+   {
+    "role": "user",
+    "text": "這是哪一種狗？",
+    "images": [
+     "images/coco_eval_000000367195.jpg"
+    ]
+   }
+  ],
+  "pending": null
+ },
+ {
+  "id": "O10",
+  "category": "fresh_image",
+  "turns": [
+   {
+    "role": "user",
+    "text": "你看這個蛋糕",
+    "images": [
+     "images/coco_eval_000000180101.jpg"
+    ]
+   }
+  ],
+  "pending": null
+ },
+ {
+  "id": "O11",
+  "category": "fresh_image",
+  "turns": [
+   {
+    "role": "user",
+    "text": "",
+    "images": [
+     "images/coco_eval_000000533206.jpg"
+    ]
+   }
+  ],
+  "pending": null
+ },
+ {
+  "id": "O12",
+  "category": "mid",
+  "turns": [
+   {
+    "role": "user",
+    "text": "我想退貨",
+    "images": []
+   },
+   {
+    "role": "assistant",
+    "text": "請提供您的訂單編號（SD 開頭加 8 位數字），或上傳訂單明細的截圖。",
+    "images": []
+   },
+   {
+    "role": "user",
+    "text": "等等，你知道現在幾點嗎",
+    "images": []
+   }
+  ],
+  "pending": "order_id"
+ },
+ {
+  "id": "O13",
+  "category": "mid",
+  "turns": [
+   {
+    "role": "user",
+    "text": "Pixel 8 螢幕裂了想修",
+    "images": []
+   },
+   {
+    "role": "assistant",
+    "text": "麻煩拍一張損壞處的照片給我們，方便判斷維修方式。",
+    "images": []
+   },
+   {
+    "role": "user",
+    "text": "話說你們公司在哪裡上班比較好啊，有在徵人嗎",
+    "images": []
+   }
+  ],
+  "pending": "photo"
+ },
+ {
+  "id": "O14",
+  "category": "mid",
+  "turns": [
+   {
+    "role": "user",
+    "text": "發票要改統編",
+    "images": []
+   },
+   {
+    "role": "assistant",
+    "text": "請提供您的訂單編號（SD 開頭加 8 位數字），或上傳訂單明細的截圖。",
+    "images": []
+   },
+   {
+    "role": "user",
+    "text": "我先去吃午餐，你推薦吃什麼",
+    "images": []
+   }
+  ],
+  "pending": "order_id"
+ },
+ {
+  "id": "O15",
+  "category": "mid",
+  "turns": [
+   {
+    "role": "user",
+    "text": "我的東西壞掉了",
+    "images": []
+   },
+   {
+    "role": "assistant",
+    "text": "可以再描述一下具體遇到什麼狀況嗎？",
+    "images": []
+   },
+   {
+    "role": "user",
+    "text": "算了，你會唱歌嗎",
+    "images": []
+   }
+  ],
+  "pending": "issue_detail"
+ },
+ {
+  "id": "O16",
+  "category": "mid",
+  "turns": [
+   {
+    "role": "user",
+    "text": "這台還有貨嗎？",
+    "images": []
+   },
+   {
+    "role": "assistant",
+    "text": "請問是哪一款產品呢？",
+    "images": []
+   },
+   {
+    "role": "user",
+    "text": "你看我家的狗",
+    "images": [
+     "images/coco_eval_000000251572.jpg"
+    ]
+   }
+  ],
+  "pending": "product"
+ }
+]

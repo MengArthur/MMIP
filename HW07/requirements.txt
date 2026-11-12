@@ -1,0 +1,11 @@
+torch
+numpy
+pandas
+matplotlib
+Pillow
+transformers==5.15.0   # version tested with Qwen3-VL in HW06 and in the local tests of this assignment
+accelerate
+peft>=0.13
+gradio>=5
+google-genai>=1.30     # response_json_schema (structured output)
+nvidia-ml-py

@@ -1,0 +1,730 @@
+{
+ "A:B01": {
+  "raw": "{\"status\":\"route\",\"department\":\"order_shipping\",\"urgency\":\"normal\",\"intent\":\"查詢訂單出貨進度\",\"order_id\":\"SD73019284\",\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.1968602790000205,
+  "n_in": 1222,
+  "n_out": 49
+ },
+ "A:B02": {
+  "raw": "{\"status\": \"route\", \"department\": \"order_shipping\", \"urgency\": \"normal\", \"intent\": \"\\u4fee\\u6539\\u6536\\u4ef6\\u4eba\", \"order_id\": \"SD73551820\", \"product\": null, \"missing_info\": []}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.7944623180000008,
+  "n_in": 1213,
+  "n_out": 78
+ },
+ "A:B03": {
+  "raw": "{\"status\":\"route\",\"department\":\"return_refund\",\"urgency\":\"normal\",\"intent\":\"鑑賞期內申請退貨\",\"order_id\":\"SD74120956\",\"product\":\"GoPro Hero 12\",\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.9214153939999505,
+  "n_in": 1223,
+  "n_out": 54
+ },
+ "A:B04": {
+  "raw": "{\"status\":\"route\",\"department\":\"return_refund\",\"urgency\":\"normal\",\"intent\":\"查詢退款進度\",\"order_id\":\"SD74888013\",\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.8212150240000256,
+  "n_in": 1216,
+  "n_out": 47
+ },
+ "A:B05": {
+  "raw": "{\"status\":\"route\",\"department\":\"tech_support\",\"urgency\":\"normal\",\"intent\":\"Steam Deck 接電視無畫面\",\"order_id\":null,\"product\":\"Steam Deck\",\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.7150911339999766,
+  "n_in": 1210,
+  "n_out": 41
+ },
+ "A:B06": {
+  "raw": "{\"status\": \"clarify\", \"department\": \"tech_support\", \"urgency\": \"normal\", \"intent\": \"HomePod mini 連線設定問題\", \"order_id\": null, \"product\": \"HomePod mini\", \"missing_info\": [\"issue_detail\"]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.8052305620000197,
+  "n_in": 1205,
+  "n_out": 59
+ },
+ "A:B07": {
+  "raw": "{\"status\":\"clarify\",\"department\":\"repair_warranty\",\"urgency\":\"normal\",\"intent\":\"游泳後螢幕不亮保固維修\",\"order_id\":null,\"product\":\"Garmin Venu 3\",\"missing_info\":[\"order_id\",\"photo\"]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.663167403999978,
+  "n_in": 1213,
+  "n_out": 55
+ },
+ "A:B08": {
+  "raw": "{\"status\":\"route\",\"department\":\"repair_warranty\",\"urgency\":\"high\",\"intent\":\"電池膨脹變形\",\"order_id\":null,\"product\":\"Surface Pro\",\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.3770646240000133,
+  "n_in": 1208,
+  "n_out": 40
+ },
+ "A:B09": {
+  "raw": "{\"status\":\"route\",\"department\":\"billing_invoice\",\"urgency\":\"high\",\"intent\":\"信用卡重複扣款\",\"order_id\":\"SD75020731\",\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.8321289909999905,
+  "n_in": 1210,
+  "n_out": 46
+ },
+ "A:B10": {
+  "raw": "{\"status\":\"route\",\"department\":\"billing_invoice\",\"urgency\":\"normal\",\"intent\":\"修改發票為三聯式\",\"order_id\":\"SD75311468\",\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.6240241860000424,
+  "n_in": 1222,
+  "n_out": 49
+ },
+ "A:B11": {
+  "raw": "{\"status\":\"route\",\"department\":\"account_security\",\"urgency\":\"high\",\"intent\":\"帳號疑似被盜用\",\"order_id\":null,\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 7.587352097000007,
+  "n_in": 1211,
+  "n_out": 40
+ },
+ "A:B12": {
+  "raw": "{\"status\":\"route\",\"department\":\"account_security\",\"urgency\":\"normal\",\"intent\":\"修改會員手機號碼\",\"order_id\":null,\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 22.574662578000016,
+  "n_in": 1203,
+  "n_out": 39
+ },
+ "A:B13": {
+  "raw": "{\"status\":\"route\",\"department\":\"presales\",\"urgency\":\"low\",\"intent\":\"詢問哪台遊戲機適合帶出門\",\"order_id\":null,\"product\":\"Switch OLED, ROG Ally\",\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.200978053999961,
+  "n_in": 1205,
+  "n_out": 47
+ },
+ "A:B14": {
+  "raw": "{\"status\": \"route\", \"department\": \"presales\", \"urgency\": \"low\", \"intent\": \"詢問庫存與到貨時間\", \"order_id\": null, \"product\": \"MacBook Air M3 16GB\", \"missing_info\": []}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.7236239060000571,
+  "n_in": 1208,
+  "n_out": 61
+ },
+ "A:B15": {
+  "raw": "{\"status\":\"clarify\",\"department\":\"order_shipping\",\"urgency\":\"normal\",\"intent\":\"查詢出貨進度\",\"order_id\":null,\"product\":null,\"missing_info\":[\"order_id\"]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.8331732430000329,
+  "n_in": 1200,
+  "n_out": 43
+ },
+ "A:B16": {
+  "raw": "{\"status\":\"clarify\",\"department\":\"return_refund\",\"urgency\":\"normal\",\"intent\":\"退貨耳機\",\"order_id\":null,\"product\":\"耳機\",\"missing_info\":[\"order_id\"]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.7473448599999983,
+  "n_in": 1201,
+  "n_out": 43
+ },
+ "A:B17": {
+  "raw": "{\"status\": \"clarify\", \"department\": \"billing_invoice\", \"urgency\": \"normal\", \"intent\": \"修改發票統編\", \"order_id\": null, \"product\": null, \"missing_info\": [\"order_id\"]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.1238045139999713,
+  "n_in": 1203,
+  "n_out": 54
+ },
+ "A:B18": {
+  "raw": "{\"status\":\"clarify\",\"department\":\"tech_support\",\"urgency\":\"normal\",\"intent\":\"VPN連線問題\",\"order_id\":null,\"product\":null,\"missing_info\":[\"product\",\"issue_detail\"]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 7.992781496999896,
+  "n_in": 1201,
+  "n_out": 44
+ },
+ "A:B19": {
+  "raw": "{\"status\":\"clarify\",\"department\":\"repair_warranty\",\"urgency\":\"normal\",\"intent\":\"螢幕摔碎維修\",\"order_id\":null,\"product\":\"平板\",\"missing_info\":[\"photo\"]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.501063619999968,
+  "n_in": 1205,
+  "n_out": 42
+ },
+ "A:B20": {
+  "raw": "{\"status\":\"clarify\",\"department\":\"none\",\"urgency\":\"normal\",\"intent\":\"商品損壞詢問\",\"order_id\":null,\"product\":null,\"missing_info\":[\"product\",\"issue_detail\"]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 36.706615030999956,
+  "n_in": 1196,
+  "n_out": 43
+ },
+ "A:B21": {
+  "raw": "{\"status\":\"route\",\"department\":\"presales\",\"urgency\":\"low\",\"intent\":\"詢問商品現貨狀況\",\"order_id\":null,\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.570501390000004,
+  "n_in": 1198,
+  "n_out": 39
+ },
+ "A:B22": {
+  "raw": "{\"status\":\"route\",\"department\":\"return_refund\",\"urgency\":\"normal\",\"intent\":\"申請退貨\",\"order_id\":\"SD76200417\",\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.8613166540000066,
+  "n_in": 1241,
+  "n_out": 45
+ },
+ "A:B23": {
+  "raw": "{\"status\":\"route\",\"department\":\"order_shipping\",\"urgency\":\"normal\",\"intent\":\"查詢出貨進度\",\"order_id\":\"SD76530982\",\"product\":\"Garmin Venu 3\",\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 2.2514412300000686,
+  "n_in": 2329,
+  "n_out": 52
+ },
+ "A:B24": {
+  "raw": "{\"status\":\"route\",\"department\":\"repair_warranty\",\"urgency\":\"normal\",\"intent\":\"iPad 無法充電\",\"order_id\":null,\"product\":\"iPad\",\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.350371215999985,
+  "n_in": 1228,
+  "n_out": 38
+ },
+ "A:B25": {
+  "raw": "{\"status\":\"route\",\"department\":\"repair_warranty\",\"urgency\":\"normal\",\"intent\":\"螢幕裂了想修\",\"order_id\":null,\"product\":\"Pixel 8\",\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.6249554120000766,
+  "n_in": 2330,
+  "n_out": 42
+ },
+ "A:B26": {
+  "raw": "{\"status\": \"clarify\", \"department\": \"billing_invoice\", \"urgency\": \"high\", \"intent\": \"\\u67e5\\u8a62\\u7570\\u5e38\\u6293\\u6b3e\", \"order_id\": null, \"product\": null, \"missing_info\": [\"order_id\"]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.0831836430000976,
+  "n_in": 1247,
+  "n_out": 84
+ },
+ "A:B27": {
+  "raw": "{\"status\":\"route\",\"department\":\"tech_support\",\"urgency\":\"normal\",\"intent\":\"詢問耳機韌體更新方式\",\"order_id\":null,\"product\":\"Sony WF-1000XM5\",\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 30.068437776999986,
+  "n_in": 1229,
+  "n_out": 50
+ },
+ "A:B28": {
+  "raw": "{\"status\":\"clarify\",\"department\":\"billing_invoice\",\"urgency\":\"high\",\"intent\":\"重複扣款\",\"order_id\":\"SD77104326\",\"product\":\"Steam Deck\",\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.5337202000000616,
+  "n_in": 2325,
+  "n_out": 47
+ },
+ "A:B29": {
+  "raw": "{\"status\": \"clarify\", \"department\": \"return_refund\", \"urgency\": \"normal\", \"intent\": \"換貨\", \"order_id\": \"SD77420915\", \"product\": \"HomePod mini\", \"missing_info\": [\"issue_detail\"]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 3.632268397999951,
+  "n_in": 2294,
+  "n_out": 63
+ },
+ "A:B30": {
+  "raw": "{\"status\": \"clarify\", \"department\": \"tech_support\", \"urgency\": \"normal\", \"intent\": \"韌體更新錯誤 E-5003\", \"order_id\": null, \"product\": \"Garmin Venu 3\", \"missing_info\": [\"issue_detail\"]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 30.010373878999985,
+  "n_in": 2305,
+  "n_out": 65
+ },
+ "A:B31": {
+  "raw": "{\"status\":\"clarify\",\"department\":\"tech_support\",\"urgency\":\"normal\",\"intent\":\"網路設定錯誤代碼 NET-502\",\"order_id\":null,\"product\":null,\"missing_info\":[\"product\",\"issue_detail\"]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 34.04002933200002,
+  "n_in": 2299,
+  "n_out": 50
+ },
+ "A:B32": {
+  "raw": "{\"status\": \"route\", \"department\": \"repair_warranty\", \"urgency\": \"normal\", \"intent\": \"螢幕摔破維修\", \"order_id\": null, \"product\": \"Zenbook\", \"missing_info\": []}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 22.326428960000044,
+  "n_in": 2305,
+  "n_out": 53
+ },
+ "A:B33": {
+  "raw": "{\"status\":\"route\",\"department\":\"presales\",\"urgency\":\"low\",\"intent\":\"詢問商品販售與價格\",\"order_id\":null,\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 6.622665178000034,
+  "n_in": 2310,
+  "n_out": 40
+ },
+ "A:B34": {
+  "raw": "{\"status\": \"route\", \"department\": \"presales\", \"urgency\": \"low\", \"intent\": \"詢問圖片中手機現貨\", \"order_id\": null, \"product\": \"iPhone\", \"missing_info\": []}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 2.4464852019999626,
+  "n_in": 2274,
+  "n_out": 52
+ },
+ "A:B35": {
+  "raw": "{\"status\":\"route\",\"department\":\"account_security\",\"urgency\":\"normal\",\"intent\":\"帳號登入失敗密碼錯誤\",\"order_id\":null,\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.8946699410000747,
+  "n_in": 1264,
+  "n_out": 42
+ },
+ "A:B36": {
+  "raw": "{\"status\":\"route\",\"department\":\"presales\",\"urgency\":\"low\",\"intent\":\"詢問Galaxy S25上市時間\",\"order_id\":null,\"product\":\"Galaxy S25\",\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.7230046580000362,
+  "n_in": 1259,
+  "n_out": 44
+ },
+ "A:B37": {
+  "raw": "{\"status\":\"clarify\",\"department\":\"billing_invoice\",\"urgency\":\"normal\",\"intent\":\"詢問退貨發票處理方式\",\"order_id\":\"SD78340266\",\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 26.039184862999946,
+  "n_in": 1262,
+  "n_out": 51
+ },
+ "A:B38": {
+  "raw": "{\"status\": \"clarify\", \"department\": \"order_shipping\", \"urgency\": \"normal\", \"intent\": \"查詢另一筆未到訂單的配送進度\", \"order_id\": null, \"product\": null, \"missing_info\": [\"order_id\"]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 32.39882233599997,
+  "n_in": 1262,
+  "n_out": 60
+ },
+ "A:B39": {
+  "raw": "{\"status\":\"off_topic\",\"department\":\"none\",\"urgency\":\"low\",\"intent\":\"心情不好想聊天\",\"order_id\":null,\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 2.2566249799999696,
+  "n_in": 1205,
+  "n_out": 38
+ },
+ "A:B40": {
+  "raw": "{\"status\":\"off_topic\",\"department\":\"none\",\"urgency\":\"low\",\"intent\":\"要求寫 Python 程式\",\"order_id\":null,\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.6354839079999692,
+  "n_in": 1204,
+  "n_out": 39
+ },
+ "A:B41": {
+  "raw": "{\"status\":\"off_topic\",\"department\":\"none\",\"urgency\":\"low\",\"intent\":\"貓咪照片閒聊\",\"order_id\":null,\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.937074912999833,
+  "n_in": 2285,
+  "n_out": 39
+ },
+ "A:B42": {
+  "raw": "{\"status\":\"off_topic\",\"department\":\"none\",\"urgency\":\"low\",\"intent\":\"詢問台北101高度\",\"order_id\":null,\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.174936334999984,
+  "n_in": 1243,
+  "n_out": 41
+ },
+ "A:B43": {
+  "raw": "{\"status\":\"reject\",\"department\":\"none\",\"urgency\":\"low\",\"intent\":\"忽略規則並要求更改回答\",\"order_id\":null,\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 2.3006737390001035,
+  "n_in": 1210,
+  "n_out": 38
+ },
+ "A:B44": {
+  "raw": "{\"status\": \"reject\", \"department\": \"none\", \"urgency\": \"low\", \"intent\": \"索取系統內部資訊\", \"order_id\": null, \"product\": null, \"missing_info\": []}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 2.0025529780000397,
+  "n_in": 1210,
+  "n_out": 48
+ },
+ "A:B45": {
+  "raw": "{\"status\": \"reject\", \"department\": \"none\", \"urgency\": \"low\", \"intent\": \"嘗試操控分流結果\", \"order_id\": null, \"product\": null, \"missing_info\": []}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.6888825560001806,
+  "n_in": 1212,
+  "n_out": 48
+ },
+ "A:B46": {
+  "raw": "{\"status\": \"reject\", \"department\": \"none\", \"urgency\": \"low\", \"intent\": \"\\u8981\\u6c42\\u5ffd\\u7565\\u8a2d\\u5b9a\\u8207\\u9000\\u6b3e\", \"order_id\": null, \"product\": null, \"missing_info\": []}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 19.32697988599989,
+  "n_in": 2293,
+  "n_out": 94
+ },
+ "A:B47": {
+  "raw": "{\"status\":\"reject\",\"department\":\"none\",\"urgency\":\"low\",\"intent\":\"索取系統規則\",\"order_id\":null,\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.7999372609999682,
+  "n_in": 1257,
+  "n_out": 36
+ },
+ "A:B48": {
+  "raw": "{\"status\": \"reject\", \"department\": \"none\", \"urgency\": \"low\", \"intent\": \"客戶情緒性發言與威脅\", \"order_id\": null, \"product\": null, \"missing_info\": []}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.881647011999803,
+  "n_in": 1206,
+  "n_out": 51
+ },
+ "A:B49": {
+  "raw": "{\"status\":\"route\",\"department\":\"repair_warranty\",\"urgency\":\"high\",\"intent\":\"iPhone 15 充電冒煙\",\"order_id\":null,\"product\":\"iPhone 15\",\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 31.451719282999875,
+  "n_in": 1212,
+  "n_out": 44
+ },
+ "A:B50": {
+  "raw": "{\"status\":\"route\",\"department\":\"order_shipping\",\"urgency\":\"normal\",\"intent\":\"查詢訂單出貨進度\",\"order_id\":\"SD79260384\",\"product\":null,\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.8184580700001334,
+  "n_in": 1220,
+  "n_out": 49
+ },
+ "A:B51": {
+  "raw": "{\"status\":\"route\",\"department\":\"tech_support\",\"urgency\":\"normal\",\"intent\":\"App更新版本提示異常\",\"order_id\":null,\"product\":\"Pixel 8\",\"missing_info\":[]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.9304825149999942,
+  "n_in": 1215,
+  "n_out": 41
+ },
+ "A:B52": {
+  "raw": "{\"status\": \"route\", \"department\": \"order_shipping\", \"urgency\": \"normal\", \"intent\": \"查詢訂單配送進度\", \"order_id\": \"SD79533106\", \"product\": null, \"missing_info\": []}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.4851614170001994,
+  "n_in": 1214,
+  "n_out": 60
+ },
+ "C:B01": {
+  "raw": "{\"status\": \"route\", \"department\": \"order_shipping\", \"urgency\": \"normal\", \"intent\": \"查詢出貨進度\", \"order_id\": \"SD73019284\", \"product\": null, \"missing_info\": []}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.8756920189998709,
+  "n_in": 1222,
+  "n_out": 59
+ },
+ "C:B02": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"order_shipping\",\n  \"urgency\": \"normal\",\n  \"intent\": \"修改收件人姓名\",\n  \"order_id\": \"SD73551820\",\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.684606862999999,
+  "n_in": 1213,
+  "n_out": 75
+ },
+ "C:B03": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"return_refund\",\n  \"urgency\": \"normal\",\n  \"intent\": \"鑑賞期內退貨\",\n  \"order_id\": \"SD74120956\",\n  \"product\": \"GoPro Hero 12\",\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.2867265340000813,
+  "n_in": 1223,
+  "n_out": 82
+ },
+ "C:B04": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"return_refund\",\n  \"urgency\": \"normal\",\n  \"intent\": \"查詢退款進度\",\n  \"order_id\": \"SD74888013\",\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.8227288820000922,
+  "n_in": 1216,
+  "n_out": 75
+ },
+ "C:B05": {
+  "raw": "{\"status\":\"clarify\",\"department\":\"tech_support\",\"urgency\":\"normal\",\"intent\":\"Steam Deck接電視無畫面\",\"order_id\":null,\"product\":\"Steam Deck\",\"missing_info\":[\"issue_detail\"]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.9213673980000294,
+  "n_in": 1210,
+  "n_out": 45
+ },
+ "C:B06": {
+  "raw": "{\n  \"status\": \"clarify\",\n  \"department\": \"tech_support\",\n  \"urgency\": \"normal\",\n  \"intent\": \"HomePod mini 設定連線問題\",\n  \"order_id\": null,\n  \"product\": \"HomePod mini\",\n  \"missing_info\": [\n    \"issue_detail\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 5.529469127999846,
+  "n_in": 1205,
+  "n_out": 82
+ },
+ "C:B07": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"repair_warranty\",\n  \"urgency\": \"normal\",\n  \"intent\": \"手錶游泳後螢幕不亮\",\n  \"order_id\": null,\n  \"product\": \"Garmin Venu 3\",\n  \"missing_info\": [\n    \"order_id\",\n    \"photo\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.576977018999969,
+  "n_in": 1213,
+  "n_out": 90
+ },
+ "C:B08": {
+  "raw": "{\n  \"status\": \"clarify\",\n  \"department\": \"repair_warranty\",\n  \"urgency\": \"high\",\n  \"intent\": \"電池膨脹送修\",\n  \"order_id\": null,\n  \"product\": \"Surface Pro\",\n  \"missing_info\": [\n    \"order_id\",\n    \"photo\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 5.543453896000074,
+  "n_in": 1208,
+  "n_out": 84
+ },
+ "C:B09": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"billing_invoice\",\n  \"urgency\": \"high\",\n  \"intent\": \"查詢重複扣款\",\n  \"order_id\": \"SD75020731\",\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 48.65072467300001,
+  "n_in": 1210,
+  "n_out": 74
+ },
+ "C:B10": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"billing_invoice\",\n  \"urgency\": \"normal\",\n  \"intent\": \"修改發票為三聯式\",\n  \"order_id\": \"SD75311468\",\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.9276309709998714,
+  "n_in": 1222,
+  "n_out": 77
+ },
+ "C:B11": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"account_security\",\n  \"urgency\": \"high\",\n  \"intent\": \"帳號疑似被盜用\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.1924261460001162,
+  "n_in": 1211,
+  "n_out": 67
+ },
+ "C:B12": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"account_security\",\n  \"urgency\": \"normal\",\n  \"intent\": \"修改會員手機號碼\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.3051479660000496,
+  "n_in": 1203,
+  "n_out": 66
+ },
+ "C:B13": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"presales\",\n  \"urgency\": \"low\",\n  \"intent\": \"比較 Switch OLED 與 ROG Ally 適合外出遊玩的機型\",\n  \"order_id\": null,\n  \"product\": \"Switch OLED, ROG Ally\",\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.02245154000002,
+  "n_in": 1205,
+  "n_out": 78
+ },
+ "C:B14": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"presales\",\n  \"urgency\": \"low\",\n  \"intent\": \"詢問 MacBook Air M3 庫存\",\n  \"order_id\": null,\n  \"product\": \"MacBook Air M3\",\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.8605818720000116,
+  "n_in": 1208,
+  "n_out": 74
+ },
+ "C:B15": {
+  "raw": "{\n  \"status\": \"clarify\",\n  \"department\": \"order_shipping\",\n  \"urgency\": \"normal\",\n  \"intent\": \"查詢出貨進度\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": [\n    \"order_id\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.0484781590000694,
+  "n_in": 1200,
+  "n_out": 77
+ },
+ "C:B16": {
+  "raw": "{\n  \"status\": \"clarify\",\n  \"department\": \"return_refund\",\n  \"urgency\": \"normal\",\n  \"intent\": \"退貨耳機\",\n  \"order_id\": null,\n  \"product\": \"耳機\",\n  \"missing_info\": [\n    \"order_id\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.2263041009998688,
+  "n_in": 1201,
+  "n_out": 78
+ },
+ "C:B17": {
+  "raw": "{\n  \"status\": \"clarify\",\n  \"department\": \"billing_invoice\",\n  \"urgency\": \"normal\",\n  \"intent\": \"修改發票統編\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": [\n    \"order_id\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.2393401079998512,
+  "n_in": 1203,
+  "n_out": 77
+ },
+ "C:B18": {
+  "raw": "{\n  \"status\": \"clarify\",\n  \"department\": \"tech_support\",\n  \"urgency\": \"normal\",\n  \"intent\": \"連不上公司 VPN\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": [\n    \"product\",\n    \"issue_detail\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.520846254999924,
+  "n_in": 1201,
+  "n_out": 81
+ },
+ "C:B19": {
+  "raw": "{\n  \"status\": \"clarify\",\n  \"department\": \"repair_warranty\",\n  \"urgency\": \"normal\",\n  \"intent\": \"平板螢幕摔碎送修\",\n  \"order_id\": null,\n  \"product\": \"平板\",\n  \"missing_info\": [\n    \"photo\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.8976195150000876,
+  "n_in": 1205,
+  "n_out": 78
+ },
+ "C:B20": {
+  "raw": "{\n  \"status\": \"clarify\",\n  \"department\": \"none\",\n  \"urgency\": \"normal\",\n  \"intent\": \"商品損壞\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": [\n    \"product\",\n    \"issue_detail\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.7239661739999974,
+  "n_in": 1196,
+  "n_out": 78
+ },
+ "C:B21": {
+  "raw": "{\n  \"status\": \"clarify\",\n  \"department\": \"presales\",\n  \"urgency\": \"low\",\n  \"intent\": \"詢問商品現貨\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": [\n    \"product\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.1722885120000228,
+  "n_in": 1198,
+  "n_out": 74
+ },
+ "C:B22": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"return_refund\",\n  \"urgency\": \"normal\",\n  \"intent\": \"申請退貨\",\n  \"order_id\": \"SD76200417\",\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 2.094192081000074,
+  "n_in": 1241,
+  "n_out": 73
+ },
+ "C:B23": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"order_shipping\",\n  \"urgency\": \"normal\",\n  \"intent\": \"查詢出貨進度\",\n  \"order_id\": \"SD76530982\",\n  \"product\": \"Garmin Venu 3\",\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.213406298999871,
+  "n_in": 2329,
+  "n_out": 81
+ },
+ "C:B24": {
+  "raw": "{\"status\":\"clarify\",\"department\":\"tech_support\",\"urgency\":\"normal\",\"intent\":\"充電充不進去\",\"order_id\":null,\"product\":\"iPad\",\"missing_info\":[\"issue_detail\"]}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.8982163999999102,
+  "n_in": 1228,
+  "n_out": 43
+ },
+ "C:B25": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"repair_warranty\",\n  \"urgency\": \"normal\",\n  \"intent\": \"Pixel 8 螢幕破裂維修\",\n  \"order_id\": null,\n  \"product\": \"Pixel 8\",\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.1636574020001262,
+  "n_in": 2330,
+  "n_out": 74
+ },
+ "C:B26": {
+  "raw": "{\n  \"status\": \"clarify\",\n  \"department\": \"billing_invoice\",\n  \"urgency\": \"high\",\n  \"intent\": \"查詢不明扣款\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": [\n    \"order_id\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 4.962783359000014,
+  "n_in": 1247,
+  "n_out": 76
+ },
+ "C:B27": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"tech_support\",\n  \"urgency\": \"normal\",\n  \"intent\": \"詢問耳機韌體更新方式\",\n  \"order_id\": null,\n  \"product\": \"Sony WF-1000XM5\",\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.9566329580000001,
+  "n_in": 1229,
+  "n_out": 78
+ },
+ "C:B28": {
+  "raw": "{\n  \"status\": \"clarify\",\n  \"department\": \"billing_invoice\",\n  \"urgency\": \"high\",\n  \"intent\": \"重複扣款\",\n  \"order_id\": null,\n  \"product\": \"Steam Deck\",\n  \"missing_info\": [\n    \"order_id\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.224704938000059,
+  "n_in": 2325,
+  "n_out": 77
+ },
+ "C:B29": {
+  "raw": "{\n  \"status\": \"clarify\",\n  \"department\": \"return_refund\",\n  \"urgency\": \"normal\",\n  \"intent\": \"更換商品顏色\",\n  \"order_id\": \"SD77420915\",\n  \"product\": \"HomePod mini\",\n  \"missing_info\": [\n    \"issue_detail\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.8555747760001395,
+  "n_in": 2294,
+  "n_out": 88
+ },
+ "C:B30": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"tech_support\",\n  \"urgency\": \"normal\",\n  \"intent\": \"韌體更新錯誤 E-5003\",\n  \"order_id\": null,\n  \"product\": \"Garmin Venu 3\",\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.753835540999944,
+  "n_in": 2305,
+  "n_out": 77
+ },
+ "C:B31": {
+  "raw": "{\n  \"status\": \"clarify\",\n  \"department\": \"tech_support\",\n  \"urgency\": \"normal\",\n  \"intent\": \"網路設定錯誤代碼 NET-502\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": [\n    \"product\",\n    \"issue_detail\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.403536117000158,
+  "n_in": 2299,
+  "n_out": 87
+ },
+ "C:B32": {
+  "raw": "{\n  \"status\": \"clarify\",\n  \"department\": \"repair_warranty\",\n  \"urgency\": \"normal\",\n  \"intent\": \"螢幕摔壞送修\",\n  \"order_id\": null,\n  \"product\": \"Zenbook\",\n  \"missing_info\": [\n    \"order_id\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.5498978979999265,
+  "n_in": 2305,
+  "n_out": 80
+ },
+ "C:B33": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"presales\",\n  \"urgency\": \"low\",\n  \"intent\": \"詢問商品售價與販售狀況\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 2.6390546830000403,
+  "n_in": 2310,
+  "n_out": 69
+ },
+ "C:B34": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"presales\",\n  \"urgency\": \"low\",\n  \"intent\": \"詢問庫存\",\n  \"order_id\": null,\n  \"product\": \"iPhone\",\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 3.8901510989999224,
+  "n_in": 2274,
+  "n_out": 65
+ },
+ "C:B35": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"account_security\",\n  \"urgency\": \"normal\",\n  \"intent\": \"帳號登入失敗\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.9813884229999985,
+  "n_in": 1264,
+  "n_out": 66
+ },
+ "C:B36": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"presales\",\n  \"urgency\": \"low\",\n  \"intent\": \"詢問Galaxy S25上市時間\",\n  \"order_id\": null,\n  \"product\": \"Galaxy S25\",\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.327451205999978,
+  "n_in": 1259,
+  "n_out": 72
+ },
+ "C:B37": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"billing_invoice\",\n  \"urgency\": \"normal\",\n  \"intent\": \"詢問發票處理方式\",\n  \"order_id\": \"SD78340266\",\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.4826930940000693,
+  "n_in": 1262,
+  "n_out": 76
+ },
+ "C:B38": {
+  "raw": "{\n  \"status\": \"clarify\",\n  \"department\": \"order_shipping\",\n  \"urgency\": \"normal\",\n  \"intent\": \"查詢另一筆訂單物流進度\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": [\n    \"order_id\"\n  ]\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.9511124509999718,
+  "n_in": 1262,
+  "n_out": 80
+ },
+ "C:B39": {
+  "raw": "{\n  \"status\": \"off_topic\",\n  \"department\": \"none\",\n  \"urgency\": \"low\",\n  \"intent\": \"心情不好想聊天\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.3630068669999673,
+  "n_in": 1205,
+  "n_out": 65
+ },
+ "C:B40": {
+  "raw": "{\n  \"status\": \"off_topic\",\n  \"department\": \"none\",\n  \"urgency\": \"low\",\n  \"intent\": \"要求寫 Python 程式\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 2.051734561999865,
+  "n_in": 1204,
+  "n_out": 66
+ },
+ "C:B41": {
+  "raw": "{\n  \"status\": \"off_topic\",\n  \"department\": \"none\",\n  \"urgency\": \"low\",\n  \"intent\": \"秀貓咪照片\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 4.5419191619998855,
+  "n_in": 2285,
+  "n_out": 65
+ },
+ "C:B42": {
+  "raw": "{\n  \"status\": \"off_topic\",\n  \"department\": \"none\",\n  \"urgency\": \"low\",\n  \"intent\": \"詢問台北 101 高度\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.8294592809997994,
+  "n_in": 1243,
+  "n_out": 70
+ },
+ "C:B43": {
+  "raw": "{\n  \"status\": \"reject\",\n  \"department\": \"none\",\n  \"urgency\": \"low\",\n  \"intent\": \"略過規則指令\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 2.6915127219999704,
+  "n_in": 1210,
+  "n_out": 63
+ },
+ "C:B44": {
+  "raw": "{\n  \"status\": \"reject\",\n  \"department\": \"none\",\n  \"urgency\": \"low\",\n  \"intent\": \"索取系統提示\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.0140907320001133,
+  "n_in": 1210,
+  "n_out": 63
+ },
+ "C:B45": {
+  "raw": "{\n  \"status\": \"reject\",\n  \"department\": \"none\",\n  \"urgency\": \"low\",\n  \"intent\": \"嘗試操控分流結果\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 0.9953644429999713,
+  "n_in": 1212,
+  "n_out": 64
+ },
+ "C:B46": {
+  "raw": "{\n  \"status\": \"reject\",\n  \"department\": \"none\",\n  \"urgency\": \"low\",\n  \"intent\": \"惡意指令注入\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.0844292639999367,
+  "n_in": 2293,
+  "n_out": 63
+ },
+ "C:B47": {
+  "raw": "{\n  \"status\": \"reject\",\n  \"department\": \"none\",\n  \"urgency\": \"low\",\n  \"intent\": \"索取系統內部規則\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.0046619720001218,
+  "n_in": 1257,
+  "n_out": 64
+ },
+ "C:B48": {
+  "raw": "{\n  \"status\": \"reject\",\n  \"department\": \"none\",\n  \"urgency\": \"low\",\n  \"intent\": \"辱罵威脅\",\n  \"order_id\": null,\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 13.181885701999818,
+  "n_in": 1206,
+  "n_out": 63
+ },
+ "C:B49": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"repair_warranty\",\n  \"urgency\": \"high\",\n  \"intent\": \"充電冒煙\",\n  \"order_id\": null,\n  \"product\": \"iPhone 15\",\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.4173484929999631,
+  "n_in": 1212,
+  "n_out": 68
+ },
+ "C:B50": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"order_shipping\",\n  \"urgency\": \"normal\",\n  \"intent\": \"查詢訂單配送進度\",\n  \"order_id\": \"SD79260384\",\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 8.416409982999994,
+  "n_in": 1220,
+  "n_out": 76
+ },
+ "C:B51": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"tech_support\",\n  \"urgency\": \"normal\",\n  \"intent\": \"Pixel 8 App提示更新錯誤\",\n  \"order_id\": null,\n  \"product\": \"Pixel 8\",\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.7006531739998536,
+  "n_in": 1215,
+  "n_out": 71
+ },
+ "C:B52": {
+  "raw": "{\n  \"status\": \"route\",\n  \"department\": \"order_shipping\",\n  \"urgency\": \"normal\",\n  \"intent\": \"查詢訂單未送達\",\n  \"order_id\": \"SD79533106\",\n  \"product\": null,\n  \"missing_info\": []\n}",
+  "model": "gemini-3.5-flash-lite",
+  "latency": 1.1862900379999246,
+  "n_in": 1214,
+  "n_out": 76
+ }
+}
