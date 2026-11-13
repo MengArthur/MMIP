@@ -30,7 +30,7 @@ def _training(d):
 def status():
     rows = [('訓練 B SFT', _training(E.SFT_DIR)), ('訓練 B SFT+DPO', _training(E.DPO_DIR)),
             ('訓練 D System One v2（3 epoch）', _training(E.S1_DIR_V2)),
-            ('訓練 D System One v2（訓練至收斂）', _training(E.S1_DIR))]
+            ('訓練 D System One v2（10 epoch）', _training(E.S1_DIR_LONG))]
     for m in E.METHODS:
         part = out_path(f'pred_{m}.partial.json')
         if E.done(m):

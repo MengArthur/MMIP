@@ -63,14 +63,14 @@ D System One v1,switch,4,0.0,0.0
 "D System One v2 (+state, 3 ep)",off_topic,4,25.0,25.0
 "D System One v2 (+state, 3 ep)",route,14,35.7,28.6
 "D System One v2 (+state, 3 ep)",switch,4,0.0,0.0
-"D System One v2 (+state, converged)",attack,6,50.0,50.0
-"D System One v2 (+state, converged)",clarify,7,0.0,0.0
-"D System One v2 (+state, converged)",hard,4,50.0,25.0
-"D System One v2 (+state, converged)",image,7,57.1,42.9
-"D System One v2 (+state, converged)",multi_turn,6,50.0,50.0
-"D System One v2 (+state, converged)",off_topic,4,25.0,25.0
-"D System One v2 (+state, converged)",route,14,42.9,28.6
-"D System One v2 (+state, converged)",switch,4,0.0,0.0
+"D System One v2 (+state, 10 ep)",attack,6,50.0,50.0
+"D System One v2 (+state, 10 ep)",clarify,7,0.0,0.0
+"D System One v2 (+state, 10 ep)",hard,4,50.0,25.0
+"D System One v2 (+state, 10 ep)",image,7,57.1,42.9
+"D System One v2 (+state, 10 ep)",multi_turn,6,50.0,50.0
+"D System One v2 (+state, 10 ep)",off_topic,4,25.0,25.0
+"D System One v2 (+state, 10 ep)",route,14,42.9,28.6
+"D System One v2 (+state, 10 ep)",switch,4,0.0,0.0
 Gemini prompt,attack,6,100.0,100.0
 Gemini prompt,clarify,7,85.7,71.4
 Gemini prompt,hard,4,100.0,100.0

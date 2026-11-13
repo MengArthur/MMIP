@@ -27,15 +27,16 @@ GPU_PRICE_PER_HOUR = 0.35   # USD, on-demand NVIDIA T4 on Google Cloud (referenc
 SFT_DIR = os.path.join(CKPT_DIR, 'sft_lora')
 DPO_DIR = os.path.join(CKPT_DIR, 'sft_dpo_lora')
 S1_DIR_V1 = os.path.join(CKPT_DIR, 'system_one')        # v1: cross-attention only (first run, did not learn)
-S1_DIR_V2 = os.path.join(CKPT_DIR, 'system_one_v2')     # v2: + state token, 3 epochs (second run, not converged)
-S1_DIR = os.path.join(CKPT_DIR, 'system_one_v2_long')    # v2 trained up to 10 epochs with early stopping; used by the chatbot
+S1_DIR_V2 = os.path.join(CKPT_DIR, 'system_one_v2')     # v2: + state token, 3 epochs (second run)
+S1_DIR_LONG = os.path.join(CKPT_DIR, 'system_one_v2_long')   # v2 trained for up to 10 epochs with early stopping (third run)
+S1_DIR = S1_DIR_V2   # System One used by the chatbot: the 3-epoch v2, whose high-confidence predictions are reliable (README 2-3)
 S1_LONG_EPOCHS, S1_PATIENCE = 10, 2
 METHODS = ['A_prompt', 'C_constrained', 'B_sft', 'B_sft_dpo', 'B+C_sft_constrained', 'B+C_sft_dpo_constrained',
            'D_system_one', 'D_system_one_v2', 'D_system_one_v2_long', 'Gemini_prompt', 'Gemini_structured']
 LABEL = {'A_prompt': 'A Prompt', 'C_constrained': 'C Constrained decoding', 'B_sft': 'B SFT', 'B_sft_dpo': 'B SFT+DPO',
          'B+C_sft_constrained': 'B+C SFT + constrained', 'B+C_sft_dpo_constrained': 'B+C SFT+DPO + constrained',
          'D_system_one': 'D System One v1', 'D_system_one_v2': 'D System One v2 (+state, 3 ep)',
-         'D_system_one_v2_long': 'D System One v2 (+state, converged)',
+         'D_system_one_v2_long': 'D System One v2 (+state, 10 ep)',
          'Gemini_prompt': 'Gemini prompt', 'Gemini_structured': 'Gemini structured output'}
 TYPED = ('D_system_one', 'D_system_one_v2', 'D_system_one_v2_long')            # typed output: no JSON parsing, decision fields only
 
@@ -157,11 +158,11 @@ def stage_dpo(bench, train, val, n_train=360, n_val=60, epochs=2):
     del pm, model; free_gpu()
 
 
-def stage_system_one(bench, train, val, version='v2_long'):
+def stage_system_one(bench, train, val, version='v2'):
     """v1: cross-attention only, 3 epochs; v2: + state token, 3 epochs; v2_long: v2 trained until the validation loss
     stops improving (at most 10 epochs, patience 2; the best epoch is kept)."""
     method, out_dir = {'v1': ('D_system_one', S1_DIR_V1), 'v2': ('D_system_one_v2', S1_DIR_V2),
-                       'v2_long': ('D_system_one_v2_long', S1_DIR)}[version]
+                       'v2_long': ('D_system_one_v2_long', S1_DIR_LONG)}[version]
     epochs, patience = (S1_LONG_EPOCHS, S1_PATIENCE) if version == 'v2_long' else (3, None)
     if done(method):
         return
@@ -221,7 +222,7 @@ def score_method(method, bench):
 
 def train_seconds(method):
     h = {'B_sft': SFT_DIR, 'B+C_sft_constrained': SFT_DIR, 'B_sft_dpo': DPO_DIR, 'B+C_sft_dpo_constrained': DPO_DIR,
-         'D_system_one': S1_DIR_V1, 'D_system_one_v2': S1_DIR_V2, 'D_system_one_v2_long': S1_DIR}.get(method)
+         'D_system_one': S1_DIR_V1, 'D_system_one_v2': S1_DIR_V2, 'D_system_one_v2_long': S1_DIR_LONG}.get(method)
     if not h or not os.path.exists(os.path.join(h, 'history.json')):
         return 0.0
     s = load_json(os.path.join(h, 'history.json')).get('train_seconds', 0.0)
@@ -308,7 +309,7 @@ def training_curves():
     fig, ax = plt.subplots(1, 4, figsize=(20, 3.8))
     for a, (d, title, key) in zip(ax, ((SFT_DIR, 'B: SFT loss', 'loss'), (DPO_DIR, 'B: DPO (+SFT term) loss', 'loss'),
                                        (S1_DIR_V2, 'D: System One v2, 3 epochs (sum of 7 CE)', 'loss'),
-                                       (S1_DIR, 'D: System One v2, until converged', 'loss'))):
+                                       (S1_DIR_LONG, 'D: System One v2, 10 epochs', 'loss'))):
         p = os.path.join(d, 'history.json')
         if not os.path.exists(p):
             a.set_title(title + ' (not trained)'); continue
@@ -327,7 +328,8 @@ def run_all(gemini=True):
     stage_prompt_and_constrained(bench)
     stage_sft(bench, train, val)
     stage_dpo(bench, train, val)
-    stage_system_one(bench, train, val)
+    for version in ('v1', 'v2', 'v2_long'):
+        stage_system_one(bench, train, val, version=version)
     if gemini:
         stage_gemini(bench)
     S, C = summary(bench)

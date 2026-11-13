@@ -33,7 +33,7 @@ def refused(reply):
     return any(w in (reply or '') for w in REFUSAL_WORDS)
 
 
-TAG = '_v3'   # chatbot with System One v2 trained until converged; '' = System One v1, '_v2' = v2 3 epochs (kept in Output/)
+TAG = '_v2'   # final chatbot (System One v2, 3 epochs). Other runs kept in Output/: '' = System One v1, '_v3' = v2 trained 10 epochs
 
 
 class Progress:
