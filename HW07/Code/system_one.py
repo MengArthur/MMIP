@@ -201,10 +201,10 @@ def evaluate(so, rows):
 
 
 def train(so, train_rows, val_rows, out_dir, epochs=3, lr_lora=1e-4, lr_head=1e-3, grad_accum=8, warmup_ratio=0.05,
-          max_grad_norm=1.0, seed=42, log_every=10, save_every=25):
+          max_grad_norm=1.0, seed=42, log_every=10, save_every=25, patience=None):
     """Trains LoRA + head together; resumable (trainer.fit). Keeps the epoch with the lowest validation loss."""
     from peft import get_peft_model_state_dict, set_peft_model_state_dict
-    hist = {'epochs': epochs, 'lr_lora': lr_lora, 'lr_head': lr_head, 'grad_accum': grad_accum, 'n_train': len(train_rows),
+    hist = {'epochs': epochs, 'patience': patience, 'lr_lora': lr_lora, 'lr_head': lr_head, 'grad_accum': grad_accum, 'n_train': len(train_rows),
             'n_val': len(val_rows), 'questions': [q[0] for q in QUESTIONS], 'steps': [], 'epochs_log': []}
     lora = [p for p in so.model.parameters() if p.requires_grad]
     head = list(so.head.parameters())
@@ -229,7 +229,7 @@ def train(so, train_rows, val_rows, out_dir, epochs=3, lr_lora=1e-4, lr_head=1e-
 
     hist, store = trainer.fit(out_dir, len(train_rows), epochs, step, lora + head, opt, scaler, lambda: evaluate(so, val_rows),
                               get_state, set_state, hist, train_mode, grad_accum, warmup_ratio, max_grad_norm, seed,
-                              save_every, log_every, 'system one')
+                              save_every, log_every, 'system one', patience)
     so.model.save_pretrained(out_dir)
     torch.save(so.head.state_dict(), os.path.join(out_dir, 'head.pt'))
     save_json(hist, os.path.join(out_dir, 'history.json'))

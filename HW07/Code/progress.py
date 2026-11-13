@@ -7,15 +7,18 @@ import pandas as pd
 
 from . import experiments as E
 from .common import out_path
+from .hw3_eval import TAG
 
-HW3 = {'hw3_demo_transcript_v2.json': ('作業三 示範對話', 9), 'hw3_topic_results_v2.json': ('作業三 UX 話題銜接', 24),
-       'hw3_false_positive_results_v2.json': ('作業三 誤判率', 50), 'hw3_offtopic_results_v2.json': ('作業三 無脈絡問題', 32),
-       'hw3_attack_results_v2.json': ('作業三 攻擊', 56)}
+HW3 = {f'hw3_demo_transcript{TAG}.json': ('作業三 示範對話', 9), f'hw3_topic_results{TAG}.json': ('作業三 UX 話題銜接', 24),
+       f'hw3_false_positive_results{TAG}.json': ('作業三 誤判率', 50), f'hw3_offtopic_results{TAG}.json': ('作業三 無脈絡問題', 32),
+       f'hw3_attack_results{TAG}.json': ('作業三 攻擊', 56)}
 
 
 def _training(d):
     if os.path.exists(os.path.join(d, 'history.json')):
-        return '完成'
+        with open(os.path.join(d, 'history.json'), encoding='utf-8') as f:
+            h = json.load(f)
+        return f'完成（{len(h["epochs_log"]) - 1} epoch，最佳 epoch {h.get("best_epoch")}）'
     p = os.path.join(d, 'resume.pt')
     if os.path.exists(p):
         import torch
@@ -26,7 +29,8 @@ def _training(d):
 
 def status():
     rows = [('訓練 B SFT', _training(E.SFT_DIR)), ('訓練 B SFT+DPO', _training(E.DPO_DIR)),
-            ('訓練 D System One v2', _training(E.S1_DIR))]
+            ('訓練 D System One v2（3 epoch）', _training(E.S1_DIR_V2)),
+            ('訓練 D System One v2（訓練至收斂）', _training(E.S1_DIR))]
     for m in E.METHODS:
         part = out_path(f'pred_{m}.partial.json')
         if E.done(m):

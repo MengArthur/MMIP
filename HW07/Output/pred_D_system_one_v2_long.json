@@ -1,0 +1,3561 @@
+{
+ "method": "D_system_one_v2_long",
+ "memory": {
+  "n_samples": 875,
+  "sessions": 1,
+  "seconds": 18.74,
+  "avg_allocated_mib": 4161.2,
+  "avg_reserved_mib": 4586.0,
+  "avg_process_mib": 4732.0,
+  "peak_allocated_mib": 4246.0,
+  "peak_reserved_mib": 4586.0
+ },
+ "records": [
+  {
+   "obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.9993020296096802,
+    "department": 0.37827131152153015,
+    "urgency": 0.8804141283035278,
+    "miss_order_id": 0.9968957901000977,
+    "miss_product": 0.9999967813491821,
+    "miss_issue_detail": 0.9999986886978149,
+    "miss_photo": 0.9999998807907104
+   },
+   "probs": {
+    "status": {
+     "route": 0.9993,
+     "clarify": 0.0002,
+     "off_topic": 0.0002,
+     "reject": 0.0003
+    },
+    "department": {
+     "order_shipping": 0.3783,
+     "return_refund": 0.2536,
+     "tech_support": 0.0001,
+     "repair_warranty": 0.0005,
+     "billing_invoice": 0.3673,
+     "account_security": 0.0002,
+     "presales": 0.0,
+     "none": 0.0
+    },
+    "urgency": {
+     "low": 0.0,
+     "normal": 0.8804,
+     "high": 0.1196
+    },
+    "miss_order_id": {
+     "yes": 0.0031,
+     "no": 0.9969
+    },
+    "miss_product": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_issue_detail": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_photo": {
+     "yes": 0.0,
+     "no": 1.0
+    }
+   },
+   "n_in": 88,
+   "n_out": 0,
+   "latency": 0.10535547800009226,
+   "ttft": 0.10535547800009226,
+   "id": "B01",
+   "category": "route"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.984838604927063,
+    "department": 0.4756554365158081,
+    "urgency": 0.7508707046508789,
+    "miss_order_id": 0.993750274181366,
+    "miss_product": 0.9997641444206238,
+    "miss_issue_detail": 0.9999550580978394,
+    "miss_photo": 0.999991774559021
+   },
+   "probs": {
+    "status": {
+     "route": 0.9848,
+     "clarify": 0.0131,
+     "off_topic": 0.0009,
+     "reject": 0.0012
+    },
+    "department": {
+     "order_shipping": 0.4757,
+     "return_refund": 0.1878,
+     "tech_support": 0.0001,
+     "repair_warranty": 0.0006,
+     "billing_invoice": 0.3358,
+     "account_security": 0.0001,
+     "presales": 0.0,
+     "none": 0.0
+    },
+    "urgency": {
+     "low": 0.0,
+     "normal": 0.7509,
+     "high": 0.2491
+    },
+    "miss_order_id": {
+     "yes": 0.0062,
+     "no": 0.9938
+    },
+    "miss_product": {
+     "yes": 0.0002,
+     "no": 0.9998
+    },
+    "miss_issue_detail": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_photo": {
+     "yes": 0.0,
+     "no": 1.0
+    }
+   },
+   "n_in": 80,
+   "n_out": 0,
+   "latency": 0.10781338200013124,
+   "ttft": 0.10781338200013124,
+   "id": "B02",
+   "category": "route"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.565717875957489,
+    "department": 0.27895689010620117,
+    "urgency": 0.9078601598739624,
+    "miss_order_id": 0.9995098114013672,
+    "miss_product": 0.9981096982955933,
+    "miss_issue_detail": 0.9991200566291809,
+    "miss_photo": 0.9999098777770996
+   },
+   "probs": {
+    "status": {
+     "route": 0.5657,
+     "clarify": 0.4049,
+     "off_topic": 0.0105,
+     "reject": 0.0189
+    },
+    "department": {
+     "order_shipping": 0.279,
+     "return_refund": 0.2424,
+     "tech_support": 0.0715,
+     "repair_warranty": 0.0747,
+     "billing_invoice": 0.2644,
+     "account_security": 0.0435,
+     "presales": 0.0082,
+     "none": 0.0163
+    },
+    "urgency": {
+     "low": 0.009,
+     "normal": 0.9079,
+     "high": 0.0831
+    },
+    "miss_order_id": {
+     "yes": 0.0005,
+     "no": 0.9995
+    },
+    "miss_product": {
+     "yes": 0.0019,
+     "no": 0.9981
+    },
+    "miss_issue_detail": {
+     "yes": 0.0009,
+     "no": 0.9991
+    },
+    "miss_photo": {
+     "yes": 0.0001,
+     "no": 0.9999
+    }
+   },
+   "n_in": 91,
+   "n_out": 0,
+   "latency": 0.10081538899976294,
+   "ttft": 0.10081538899976294,
+   "id": "B03",
+   "category": "route"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.9475640058517456,
+    "department": 0.3993816375732422,
+    "urgency": 0.9149051308631897,
+    "miss_order_id": 0.9979292154312134,
+    "miss_product": 0.9994394183158875,
+    "miss_issue_detail": 0.9998745918273926,
+    "miss_photo": 0.9999828338623047
+   },
+   "probs": {
+    "status": {
+     "route": 0.9476,
+     "clarify": 0.0351,
+     "off_topic": 0.0061,
+     "reject": 0.0112
+    },
+    "department": {
+     "order_shipping": 0.3994,
+     "return_refund": 0.2679,
+     "tech_support": 0.0005,
+     "repair_warranty": 0.0023,
+     "billing_invoice": 0.3268,
+     "account_security": 0.0023,
+     "presales": 0.0,
+     "none": 0.0008
+    },
+    "urgency": {
+     "low": 0.0016,
+     "normal": 0.9149,
+     "high": 0.0835
+    },
+    "miss_order_id": {
+     "yes": 0.0021,
+     "no": 0.9979
+    },
+    "miss_product": {
+     "yes": 0.0006,
+     "no": 0.9994
+    },
+    "miss_issue_detail": {
+     "yes": 0.0001,
+     "no": 0.9999
+    },
+    "miss_photo": {
+     "yes": 0.0,
+     "no": 1.0
+    }
+   },
+   "n_in": 80,
+   "n_out": 0,
+   "latency": 0.10382535199914855,
+   "ttft": 0.10382535199914855,
+   "id": "B04",
+   "category": "route"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "tech_support",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "tech_support",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.6023399829864502,
+    "department": 0.3683120012283325,
+    "urgency": 0.8333197236061096,
+    "miss_order_id": 0.9667719602584839,
+    "miss_product": 0.7693450450897217,
+    "miss_issue_detail": 0.7947609424591064,
+    "miss_photo": 0.9361183643341064
+   },
+   "probs": {
+    "status": {
+     "route": 0.6023,
+     "clarify": 0.3581,
+     "off_topic": 0.0224,
+     "reject": 0.0171
+    },
+    "department": {
+     "order_shipping": 0.0074,
+     "return_refund": 0.0075,
+     "tech_support": 0.3683,
+     "repair_warranty": 0.3149,
+     "billing_invoice": 0.0054,
+     "account_security": 0.0247,
+     "presales": 0.1928,
+     "none": 0.0789
+    },
+    "urgency": {
+     "low": 0.1456,
+     "normal": 0.8333,
+     "high": 0.0211
+    },
+    "miss_order_id": {
+     "yes": 0.0332,
+     "no": 0.9668
+    },
+    "miss_product": {
+     "yes": 0.2307,
+     "no": 0.7693
+    },
+    "miss_issue_detail": {
+     "yes": 0.2052,
+     "no": 0.7948
+    },
+    "miss_photo": {
+     "yes": 0.0639,
+     "no": 0.9361
+    }
+   },
+   "n_in": 81,
+   "n_out": 0,
+   "latency": 0.10107481299928622,
+   "ttft": 0.10107481299928622,
+   "id": "B05",
+   "category": "route"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.7014773488044739,
+    "department": 0.4706737697124481,
+    "urgency": 0.9440907835960388,
+    "miss_order_id": 0.947881817817688,
+    "miss_product": 0.8829526305198669,
+    "miss_issue_detail": 0.904312014579773,
+    "miss_photo": 0.9629273414611816
+   },
+   "probs": {
+    "status": {
+     "route": 0.7015,
+     "clarify": 0.2898,
+     "off_topic": 0.0044,
+     "reject": 0.0044
+    },
+    "department": {
+     "order_shipping": 0.0177,
+     "return_refund": 0.0165,
+     "tech_support": 0.3958,
+     "repair_warranty": 0.4707,
+     "billing_invoice": 0.0127,
+     "account_security": 0.0418,
+     "presales": 0.0229,
+     "none": 0.0219
+    },
+    "urgency": {
+     "low": 0.0185,
+     "normal": 0.9441,
+     "high": 0.0374
+    },
+    "miss_order_id": {
+     "yes": 0.0521,
+     "no": 0.9479
+    },
+    "miss_product": {
+     "yes": 0.117,
+     "no": 0.883
+    },
+    "miss_issue_detail": {
+     "yes": 0.0957,
+     "no": 0.9043
+    },
+    "miss_photo": {
+     "yes": 0.0371,
+     "no": 0.9629
+    }
+   },
+   "n_in": 73,
+   "n_out": 0,
+   "latency": 0.10161083700040763,
+   "ttft": 0.10161083700040763,
+   "id": "B06",
+   "category": "route"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "presales",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "presales",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.558652400970459,
+    "department": 0.5867539644241333,
+    "urgency": 0.5170918703079224,
+    "miss_order_id": 0.9896066784858704,
+    "miss_product": 0.7447845339775085,
+    "miss_issue_detail": 0.7649667263031006,
+    "miss_photo": 0.9140465259552002
+   },
+   "probs": {
+    "status": {
+     "route": 0.5587,
+     "clarify": 0.3522,
+     "off_topic": 0.0526,
+     "reject": 0.0366
+    },
+    "department": {
+     "order_shipping": 0.0004,
+     "return_refund": 0.0006,
+     "tech_support": 0.1014,
+     "repair_warranty": 0.0465,
+     "billing_invoice": 0.0003,
+     "account_security": 0.0044,
+     "presales": 0.5868,
+     "none": 0.2597
+    },
+    "urgency": {
+     "low": 0.5171,
+     "normal": 0.4814,
+     "high": 0.0015
+    },
+    "miss_order_id": {
+     "yes": 0.0104,
+     "no": 0.9896
+    },
+    "miss_product": {
+     "yes": 0.2552,
+     "no": 0.7448
+    },
+    "miss_issue_detail": {
+     "yes": 0.235,
+     "no": 0.765
+    },
+    "miss_photo": {
+     "yes": 0.086,
+     "no": 0.914
+    }
+   },
+   "n_in": 79,
+   "n_out": 0,
+   "latency": 0.09967242699985945,
+   "ttft": 0.09967242699985945,
+   "id": "B07",
+   "category": "route"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.7059705853462219,
+    "department": 0.4630656838417053,
+    "urgency": 0.939460277557373,
+    "miss_order_id": 0.9456250667572021,
+    "miss_product": 0.9242784380912781,
+    "miss_issue_detail": 0.9385842680931091,
+    "miss_photo": 0.9787213802337646
+   },
+   "probs": {
+    "status": {
+     "route": 0.706,
+     "clarify": 0.2819,
+     "off_topic": 0.0058,
+     "reject": 0.0063
+    },
+    "department": {
+     "order_shipping": 0.0181,
+     "return_refund": 0.0168,
+     "tech_support": 0.3811,
+     "repair_warranty": 0.4631,
+     "billing_invoice": 0.0128,
+     "account_security": 0.0395,
+     "presales": 0.0342,
+     "none": 0.0344
+    },
+    "urgency": {
+     "low": 0.0295,
+     "normal": 0.9395,
+     "high": 0.031
+    },
+    "miss_order_id": {
+     "yes": 0.0544,
+     "no": 0.9456
+    },
+    "miss_product": {
+     "yes": 0.0757,
+     "no": 0.9243
+    },
+    "miss_issue_detail": {
+     "yes": 0.0614,
+     "no": 0.9386
+    },
+    "miss_photo": {
+     "yes": 0.0213,
+     "no": 0.9787
+    }
+   },
+   "n_in": 76,
+   "n_out": 0,
+   "latency": 0.09692348600037803,
+   "ttft": 0.09692348600037803,
+   "id": "B08",
+   "category": "route"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "billing_invoice",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "billing_invoice",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.9251563549041748,
+    "department": 0.36411407589912415,
+    "urgency": 0.9678748250007629,
+    "miss_order_id": 0.9998593330383301,
+    "miss_product": 0.9999133348464966,
+    "miss_issue_detail": 0.9999754428863525,
+    "miss_photo": 0.9999985694885254
+   },
+   "probs": {
+    "status": {
+     "route": 0.9252,
+     "clarify": 0.0556,
+     "off_topic": 0.007,
+     "reject": 0.0122
+    },
+    "department": {
+     "order_shipping": 0.353,
+     "return_refund": 0.2763,
+     "tech_support": 0.001,
+     "repair_warranty": 0.0037,
+     "billing_invoice": 0.3641,
+     "account_security": 0.0009,
+     "presales": 0.0001,
+     "none": 0.0008
+    },
+    "urgency": {
+     "low": 0.0006,
+     "normal": 0.9679,
+     "high": 0.0315
+    },
+    "miss_order_id": {
+     "yes": 0.0001,
+     "no": 0.9999
+    },
+    "miss_product": {
+     "yes": 0.0001,
+     "no": 0.9999
+    },
+    "miss_issue_detail": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_photo": {
+     "yes": 0.0,
+     "no": 1.0
+    }
+   },
+   "n_in": 76,
+   "n_out": 0,
+   "latency": 0.11783225199997105,
+   "ttft": 0.11783225199997105,
+   "id": "B09",
+   "category": "route"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "billing_invoice",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "billing_invoice",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.9964728951454163,
+    "department": 0.38688522577285767,
+    "urgency": 0.9307032227516174,
+    "miss_order_id": 0.9994346499443054,
+    "miss_product": 0.9999673366546631,
+    "miss_issue_detail": 0.9999970197677612,
+    "miss_photo": 0.9999994039535522
+   },
+   "probs": {
+    "status": {
+     "route": 0.9965,
+     "clarify": 0.0019,
+     "off_topic": 0.0005,
+     "reject": 0.0011
+    },
+    "department": {
+     "order_shipping": 0.3395,
+     "return_refund": 0.2725,
+     "tech_support": 0.0,
+     "repair_warranty": 0.0008,
+     "billing_invoice": 0.3869,
+     "account_security": 0.0002,
+     "presales": 0.0,
+     "none": 0.0001
+    },
+    "urgency": {
+     "low": 0.0,
+     "normal": 0.9307,
+     "high": 0.0693
+    },
+    "miss_order_id": {
+     "yes": 0.0006,
+     "no": 0.9994
+    },
+    "miss_product": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_issue_detail": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_photo": {
+     "yes": 0.0,
+     "no": 1.0
+    }
+   },
+   "n_in": 87,
+   "n_out": 0,
+   "latency": 0.10397918899980141,
+   "ttft": 0.10397918899980141,
+   "id": "B10",
+   "category": "route"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.6652866005897522,
+    "department": 0.4161550998687744,
+    "urgency": 0.9247932434082031,
+    "miss_order_id": 0.9520266056060791,
+    "miss_product": 0.817895770072937,
+    "miss_issue_detail": 0.8378309607505798,
+    "miss_photo": 0.9377852082252502
+   },
+   "probs": {
+    "status": {
+     "route": 0.6653,
+     "clarify": 0.3147,
+     "off_topic": 0.0112,
+     "reject": 0.0088
+    },
+    "department": {
+     "order_shipping": 0.0132,
+     "return_refund": 0.0139,
+     "tech_support": 0.3922,
+     "repair_warranty": 0.4162,
+     "billing_invoice": 0.0087,
+     "account_security": 0.0322,
+     "presales": 0.0832,
+     "none": 0.0406
+    },
+    "urgency": {
+     "low": 0.0544,
+     "normal": 0.9248,
+     "high": 0.0208
+    },
+    "miss_order_id": {
+     "yes": 0.048,
+     "no": 0.952
+    },
+    "miss_product": {
+     "yes": 0.1821,
+     "no": 0.8179
+    },
+    "miss_issue_detail": {
+     "yes": 0.1622,
+     "no": 0.8378
+    },
+    "miss_photo": {
+     "yes": 0.0622,
+     "no": 0.9378
+    }
+   },
+   "n_in": 77,
+   "n_out": 0,
+   "latency": 0.10533605399996304,
+   "ttft": 0.10533605399996304,
+   "id": "B11",
+   "category": "route"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": [
+     "order_id"
+    ]
+   },
+   "confidence": {
+    "status": 0.767626941204071,
+    "department": 0.2945706248283386,
+    "urgency": 0.9418364763259888,
+    "miss_order_id": 0.5197926759719849,
+    "miss_product": 0.9755666851997375,
+    "miss_issue_detail": 0.9770876169204712,
+    "miss_photo": 0.9885872006416321
+   },
+   "probs": {
+    "status": {
+     "route": 0.7676,
+     "clarify": 0.2145,
+     "off_topic": 0.0075,
+     "reject": 0.0105
+    },
+    "department": {
+     "order_shipping": 0.141,
+     "return_refund": 0.1552,
+     "tech_support": 0.2084,
+     "repair_warranty": 0.2946,
+     "billing_invoice": 0.0789,
+     "account_security": 0.0893,
+     "presales": 0.0088,
+     "none": 0.0239
+    },
+    "urgency": {
+     "low": 0.0195,
+     "normal": 0.9418,
+     "high": 0.0387
+    },
+    "miss_order_id": {
+     "yes": 0.5198,
+     "no": 0.4802
+    },
+    "miss_product": {
+     "yes": 0.0244,
+     "no": 0.9756
+    },
+    "miss_issue_detail": {
+     "yes": 0.0229,
+     "no": 0.9771
+    },
+    "miss_photo": {
+     "yes": 0.0114,
+     "no": 0.9886
+    }
+   },
+   "n_in": 69,
+   "n_out": 0,
+   "latency": 0.10169673100062937,
+   "ttft": 0.10169673100062937,
+   "id": "B12",
+   "category": "route"
+  },
+  {
+   "obj": {
+    "status": "reject",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "reject",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.8617435097694397,
+    "department": 0.9906573295593262,
+    "urgency": 0.999998927116394,
+    "miss_order_id": 0.9927302002906799,
+    "miss_product": 0.9974699020385742,
+    "miss_issue_detail": 0.999848484992981,
+    "miss_photo": 0.9998449087142944
+   },
+   "probs": {
+    "status": {
+     "route": 0.0678,
+     "clarify": 0.0104,
+     "off_topic": 0.0601,
+     "reject": 0.8617
+    },
+    "department": {
+     "order_shipping": 0.0,
+     "return_refund": 0.0,
+     "tech_support": 0.0,
+     "repair_warranty": 0.0,
+     "billing_invoice": 0.0,
+     "account_security": 0.0,
+     "presales": 0.0093,
+     "none": 0.9907
+    },
+    "urgency": {
+     "low": 1.0,
+     "normal": 0.0,
+     "high": 0.0
+    },
+    "miss_order_id": {
+     "yes": 0.0073,
+     "no": 0.9927
+    },
+    "miss_product": {
+     "yes": 0.0025,
+     "no": 0.9975
+    },
+    "miss_issue_detail": {
+     "yes": 0.0002,
+     "no": 0.9998
+    },
+    "miss_photo": {
+     "yes": 0.0002,
+     "no": 0.9998
+    }
+   },
+   "n_in": 74,
+   "n_out": 0,
+   "latency": 0.10809490799965715,
+   "ttft": 0.10809490799965715,
+   "id": "B13",
+   "category": "route"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.7551863789558411,
+    "department": 0.5018960237503052,
+    "urgency": 0.949544370174408,
+    "miss_order_id": 0.8732945322990417,
+    "miss_product": 0.9546536207199097,
+    "miss_issue_detail": 0.9646164774894714,
+    "miss_photo": 0.986143946647644
+   },
+   "probs": {
+    "status": {
+     "route": 0.7552,
+     "clarify": 0.2413,
+     "off_topic": 0.0015,
+     "reject": 0.002
+    },
+    "department": {
+     "order_shipping": 0.0221,
+     "return_refund": 0.0194,
+     "tech_support": 0.3934,
+     "repair_warranty": 0.5019,
+     "billing_invoice": 0.0163,
+     "account_security": 0.0357,
+     "presales": 0.0046,
+     "none": 0.0065
+    },
+    "urgency": {
+     "low": 0.0064,
+     "normal": 0.9495,
+     "high": 0.0441
+    },
+    "miss_order_id": {
+     "yes": 0.1267,
+     "no": 0.8733
+    },
+    "miss_product": {
+     "yes": 0.0453,
+     "no": 0.9547
+    },
+    "miss_issue_detail": {
+     "yes": 0.0354,
+     "no": 0.9646
+    },
+    "miss_photo": {
+     "yes": 0.0139,
+     "no": 0.9861
+    }
+   },
+   "n_in": 77,
+   "n_out": 0,
+   "latency": 0.1093564630000401,
+   "ttft": 0.1093564630000401,
+   "id": "B14",
+   "category": "route"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "account_security",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "account_security",
+    "urgency": "normal",
+    "missing_info": [
+     "order_id"
+    ]
+   },
+   "confidence": {
+    "status": 0.5802450776100159,
+    "department": 0.269009530544281,
+    "urgency": 0.7657294869422913,
+    "miss_order_id": 0.6076906323432922,
+    "miss_product": 0.9587271213531494,
+    "miss_issue_detail": 0.9648649096488953,
+    "miss_photo": 0.9598720669746399
+   },
+   "probs": {
+    "status": {
+     "route": 0.5802,
+     "clarify": 0.3573,
+     "off_topic": 0.0223,
+     "reject": 0.0402
+    },
+    "department": {
+     "order_shipping": 0.185,
+     "return_refund": 0.2145,
+     "tech_support": 0.0468,
+     "repair_warranty": 0.0671,
+     "billing_invoice": 0.1809,
+     "account_security": 0.269,
+     "presales": 0.0036,
+     "none": 0.0331
+    },
+    "urgency": {
+     "low": 0.0236,
+     "normal": 0.7657,
+     "high": 0.2107
+    },
+    "miss_order_id": {
+     "yes": 0.6077,
+     "no": 0.3923
+    },
+    "miss_product": {
+     "yes": 0.0413,
+     "no": 0.9587
+    },
+    "miss_issue_detail": {
+     "yes": 0.0351,
+     "no": 0.9649
+    },
+    "miss_photo": {
+     "yes": 0.0401,
+     "no": 0.9599
+    }
+   },
+   "n_in": 66,
+   "n_out": 0,
+   "latency": 0.10559587599982478,
+   "ttft": 0.10559587599982478,
+   "id": "B15",
+   "category": "clarify"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "account_security",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "account_security",
+    "urgency": "normal",
+    "missing_info": [
+     "order_id"
+    ]
+   },
+   "confidence": {
+    "status": 0.5576117634773254,
+    "department": 0.25771835446357727,
+    "urgency": 0.7891479730606079,
+    "miss_order_id": 0.5930565595626831,
+    "miss_product": 0.9562811255455017,
+    "miss_issue_detail": 0.9628168344497681,
+    "miss_photo": 0.9797453284263611
+   },
+   "probs": {
+    "status": {
+     "route": 0.5576,
+     "clarify": 0.3727,
+     "off_topic": 0.0251,
+     "reject": 0.0445
+    },
+    "department": {
+     "order_shipping": 0.1782,
+     "return_refund": 0.2108,
+     "tech_support": 0.0562,
+     "repair_warranty": 0.0766,
+     "billing_invoice": 0.175,
+     "account_security": 0.2577,
+     "presales": 0.0053,
+     "none": 0.0402
+    },
+    "urgency": {
+     "low": 0.0271,
+     "normal": 0.7891,
+     "high": 0.1837
+    },
+    "miss_order_id": {
+     "yes": 0.5931,
+     "no": 0.4069
+    },
+    "miss_product": {
+     "yes": 0.0437,
+     "no": 0.9563
+    },
+    "miss_issue_detail": {
+     "yes": 0.0372,
+     "no": 0.9628
+    },
+    "miss_photo": {
+     "yes": 0.0203,
+     "no": 0.9797
+    }
+   },
+   "n_in": 67,
+   "n_out": 0,
+   "latency": 0.10496870299994043,
+   "ttft": 0.10496870299994043,
+   "id": "B16",
+   "category": "clarify"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "account_security",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "account_security",
+    "urgency": "normal",
+    "missing_info": [
+     "order_id"
+    ]
+   },
+   "confidence": {
+    "status": 0.5551785826683044,
+    "department": 0.2142026573419571,
+    "urgency": 0.7809664011001587,
+    "miss_order_id": 0.6043485403060913,
+    "miss_product": 0.947607159614563,
+    "miss_issue_detail": 0.9519129395484924,
+    "miss_photo": 0.9682097434997559
+   },
+   "probs": {
+    "status": {
+     "route": 0.5552,
+     "clarify": 0.3881,
+     "off_topic": 0.0212,
+     "reject": 0.0355
+    },
+    "department": {
+     "order_shipping": 0.178,
+     "return_refund": 0.1923,
+     "tech_support": 0.0919,
+     "repair_warranty": 0.1108,
+     "billing_invoice": 0.1688,
+     "account_security": 0.2142,
+     "presales": 0.0081,
+     "none": 0.036
+    },
+    "urgency": {
+     "low": 0.0261,
+     "normal": 0.781,
+     "high": 0.1929
+    },
+    "miss_order_id": {
+     "yes": 0.6043,
+     "no": 0.3957
+    },
+    "miss_product": {
+     "yes": 0.0524,
+     "no": 0.9476
+    },
+    "miss_issue_detail": {
+     "yes": 0.0481,
+     "no": 0.9519
+    },
+    "miss_photo": {
+     "yes": 0.0318,
+     "no": 0.9682
+    }
+   },
+   "n_in": 69,
+   "n_out": 0,
+   "latency": 0.15531280400045944,
+   "ttft": 0.15531280400045944,
+   "id": "B17",
+   "category": "clarify"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.6956934332847595,
+    "department": 0.4323532283306122,
+    "urgency": 0.930338442325592,
+    "miss_order_id": 0.9577545523643494,
+    "miss_product": 0.8824129700660706,
+    "miss_issue_detail": 0.8984686136245728,
+    "miss_photo": 0.9646881818771362
+   },
+   "probs": {
+    "status": {
+     "route": 0.6957,
+     "clarify": 0.2884,
+     "off_topic": 0.0086,
+     "reject": 0.0073
+    },
+    "department": {
+     "order_shipping": 0.016,
+     "return_refund": 0.0153,
+     "tech_support": 0.3926,
+     "repair_warranty": 0.4324,
+     "billing_invoice": 0.0115,
+     "account_security": 0.0372,
+     "presales": 0.0596,
+     "none": 0.0356
+    },
+    "urgency": {
+     "low": 0.0381,
+     "normal": 0.9303,
+     "high": 0.0315
+    },
+    "miss_order_id": {
+     "yes": 0.0422,
+     "no": 0.9578
+    },
+    "miss_product": {
+     "yes": 0.1176,
+     "no": 0.8824
+    },
+    "miss_issue_detail": {
+     "yes": 0.1015,
+     "no": 0.8985
+    },
+    "miss_photo": {
+     "yes": 0.0353,
+     "no": 0.9647
+    }
+   },
+   "n_in": 68,
+   "n_out": 0,
+   "latency": 0.154310066999642,
+   "ttft": 0.154310066999642,
+   "id": "B18",
+   "category": "clarify"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.689210832118988,
+    "department": 0.4697841703891754,
+    "urgency": 0.9300320148468018,
+    "miss_order_id": 0.8914340138435364,
+    "miss_product": 0.922606348991394,
+    "miss_issue_detail": 0.9383764863014221,
+    "miss_photo": 0.9729655385017395
+   },
+   "probs": {
+    "status": {
+     "route": 0.6892,
+     "clarify": 0.2978,
+     "off_topic": 0.0059,
+     "reject": 0.007
+    },
+    "department": {
+     "order_shipping": 0.0187,
+     "return_refund": 0.0179,
+     "tech_support": 0.3829,
+     "repair_warranty": 0.4698,
+     "billing_invoice": 0.0136,
+     "account_security": 0.0423,
+     "presales": 0.0255,
+     "none": 0.0294
+    },
+    "urgency": {
+     "low": 0.0307,
+     "normal": 0.93,
+     "high": 0.0393
+    },
+    "miss_order_id": {
+     "yes": 0.1086,
+     "no": 0.8914
+    },
+    "miss_product": {
+     "yes": 0.0774,
+     "no": 0.9226
+    },
+    "miss_issue_detail": {
+     "yes": 0.0616,
+     "no": 0.9384
+    },
+    "miss_photo": {
+     "yes": 0.027,
+     "no": 0.973
+    }
+   },
+   "n_in": 73,
+   "n_out": 0,
+   "latency": 0.14680486399993242,
+   "ttft": 0.14680486399993242,
+   "id": "B19",
+   "category": "clarify"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "tech_support",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "tech_support",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.5789161324501038,
+    "department": 0.3569600284099579,
+    "urgency": 0.7938432097434998,
+    "miss_order_id": 0.9680518507957458,
+    "miss_product": 0.6817662119865417,
+    "miss_issue_detail": 0.70088130235672,
+    "miss_photo": 0.8914978504180908
+   },
+   "probs": {
+    "status": {
+     "route": 0.5789,
+     "clarify": 0.373,
+     "off_topic": 0.0279,
+     "reject": 0.0201
+    },
+    "department": {
+     "order_shipping": 0.005,
+     "return_refund": 0.0052,
+     "tech_support": 0.357,
+     "repair_warranty": 0.2722,
+     "billing_invoice": 0.0037,
+     "account_security": 0.0194,
+     "presales": 0.2398,
+     "none": 0.0978
+    },
+    "urgency": {
+     "low": 0.1898,
+     "normal": 0.7938,
+     "high": 0.0164
+    },
+    "miss_order_id": {
+     "yes": 0.0319,
+     "no": 0.9681
+    },
+    "miss_product": {
+     "yes": 0.3182,
+     "no": 0.6818
+    },
+    "miss_issue_detail": {
+     "yes": 0.2991,
+     "no": 0.7009
+    },
+    "miss_photo": {
+     "yes": 0.1085,
+     "no": 0.8915
+    }
+   },
+   "n_in": 63,
+   "n_out": 0,
+   "latency": 0.13403551200008224,
+   "ttft": 0.13403551200008224,
+   "id": "B20",
+   "category": "clarify"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "presales",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.7108939290046692,
+    "department": 0.6093890070915222,
+    "urgency": 0.9960414171218872,
+    "miss_order_id": 0.9996064305305481,
+    "miss_product": 0.9936255216598511,
+    "miss_issue_detail": 0.9972246885299683,
+    "miss_photo": 0.9991995692253113
+   },
+   "probs": {
+    "status": {
+     "route": 0.7109,
+     "clarify": 0.1081,
+     "off_topic": 0.0984,
+     "reject": 0.0826
+    },
+    "department": {
+     "order_shipping": 0.0,
+     "return_refund": 0.0,
+     "tech_support": 0.0008,
+     "repair_warranty": 0.0003,
+     "billing_invoice": 0.0,
+     "account_security": 0.0,
+     "presales": 0.3895,
+     "none": 0.6094
+    },
+    "urgency": {
+     "low": 0.996,
+     "normal": 0.004,
+     "high": 0.0
+    },
+    "miss_order_id": {
+     "yes": 0.0004,
+     "no": 0.9996
+    },
+    "miss_product": {
+     "yes": 0.0064,
+     "no": 0.9936
+    },
+    "miss_issue_detail": {
+     "yes": 0.0028,
+     "no": 0.9972
+    },
+    "miss_photo": {
+     "yes": 0.0008,
+     "no": 0.9992
+    }
+   },
+   "n_in": 63,
+   "n_out": 0,
+   "latency": 0.13337262799996097,
+   "ttft": 0.13337262799996097,
+   "id": "B21",
+   "category": "clarify"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "billing_invoice",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "billing_invoice",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.977796733379364,
+    "department": 0.3948945701122284,
+    "urgency": 0.9643184542655945,
+    "miss_order_id": 0.9977721571922302,
+    "miss_product": 0.9999964237213135,
+    "miss_issue_detail": 0.9999992847442627,
+    "miss_photo": 1.0
+   },
+   "probs": {
+    "status": {
+     "route": 0.9778,
+     "clarify": 0.0009,
+     "off_topic": 0.0088,
+     "reject": 0.0125
+    },
+    "department": {
+     "order_shipping": 0.3343,
+     "return_refund": 0.2685,
+     "tech_support": 0.0,
+     "repair_warranty": 0.0002,
+     "billing_invoice": 0.3949,
+     "account_security": 0.0013,
+     "presales": 0.0,
+     "none": 0.0008
+    },
+    "urgency": {
+     "low": 0.0003,
+     "normal": 0.9643,
+     "high": 0.0354
+    },
+    "miss_order_id": {
+     "yes": 0.0022,
+     "no": 0.9978
+    },
+    "miss_product": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_issue_detail": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_photo": {
+     "yes": 0.0,
+     "no": 1.0
+    }
+   },
+   "n_in": 112,
+   "n_out": 0,
+   "latency": 0.1256780229996366,
+   "ttft": 0.1256780229996366,
+   "id": "B22",
+   "category": "multi_turn"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.9778017401695251,
+    "department": 0.5201016664505005,
+    "urgency": 0.8862342834472656,
+    "miss_order_id": 0.9999929666519165,
+    "miss_product": 0.999984622001648,
+    "miss_issue_detail": 0.9999991655349731,
+    "miss_photo": 1.0
+   },
+   "probs": {
+    "status": {
+     "route": 0.9778,
+     "clarify": 0.0081,
+     "off_topic": 0.0035,
+     "reject": 0.0106
+    },
+    "department": {
+     "order_shipping": 0.5201,
+     "return_refund": 0.1845,
+     "tech_support": 0.0,
+     "repair_warranty": 0.0001,
+     "billing_invoice": 0.2941,
+     "account_security": 0.0011,
+     "presales": 0.0,
+     "none": 0.0001
+    },
+    "urgency": {
+     "low": 0.0,
+     "normal": 0.8862,
+     "high": 0.1137
+    },
+    "miss_order_id": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_product": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_issue_detail": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_photo": {
+     "yes": 0.0,
+     "no": 1.0
+    }
+   },
+   "n_in": 299,
+   "n_out": 0,
+   "latency": 0.2143527449998146,
+   "ttft": 0.2143527449998146,
+   "id": "B23",
+   "category": "multi_turn"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.8606052994728088,
+    "department": 0.5499789118766785,
+    "urgency": 0.9819097518920898,
+    "miss_order_id": 0.9269793629646301,
+    "miss_product": 0.9675301313400269,
+    "miss_issue_detail": 0.9716019034385681,
+    "miss_photo": 0.9929983615875244
+   },
+   "probs": {
+    "status": {
+     "route": 0.8606,
+     "clarify": 0.1356,
+     "off_topic": 0.0018,
+     "reject": 0.002
+    },
+    "department": {
+     "order_shipping": 0.0147,
+     "return_refund": 0.0102,
+     "tech_support": 0.3907,
+     "repair_warranty": 0.55,
+     "billing_invoice": 0.0077,
+     "account_security": 0.0118,
+     "presales": 0.0075,
+     "none": 0.0074
+    },
+    "urgency": {
+     "low": 0.0062,
+     "normal": 0.9819,
+     "high": 0.0119
+    },
+    "miss_order_id": {
+     "yes": 0.073,
+     "no": 0.927
+    },
+    "miss_product": {
+     "yes": 0.0325,
+     "no": 0.9675
+    },
+    "miss_issue_detail": {
+     "yes": 0.0284,
+     "no": 0.9716
+    },
+    "miss_photo": {
+     "yes": 0.007,
+     "no": 0.993
+    }
+   },
+   "n_in": 98,
+   "n_out": 0,
+   "latency": 0.13155137200010358,
+   "ttft": 0.13155137200010358,
+   "id": "B24",
+   "category": "multi_turn"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.7200745344161987,
+    "department": 0.4429473578929901,
+    "urgency": 0.9408797025680542,
+    "miss_order_id": 0.9435065388679504,
+    "miss_product": 0.9399314522743225,
+    "miss_issue_detail": 0.9498298764228821,
+    "miss_photo": 0.9837346076965332
+   },
+   "probs": {
+    "status": {
+     "route": 0.7201,
+     "clarify": 0.2651,
+     "off_topic": 0.0072,
+     "reject": 0.0076
+    },
+    "department": {
+     "order_shipping": 0.0164,
+     "return_refund": 0.0155,
+     "tech_support": 0.3778,
+     "repair_warranty": 0.4429,
+     "billing_invoice": 0.0116,
+     "account_security": 0.039,
+     "presales": 0.0481,
+     "none": 0.0486
+    },
+    "urgency": {
+     "low": 0.0353,
+     "normal": 0.9409,
+     "high": 0.0239
+    },
+    "miss_order_id": {
+     "yes": 0.0565,
+     "no": 0.9435
+    },
+    "miss_product": {
+     "yes": 0.0601,
+     "no": 0.9399
+    },
+    "miss_issue_detail": {
+     "yes": 0.0502,
+     "no": 0.9498
+    },
+    "miss_photo": {
+     "yes": 0.0163,
+     "no": 0.9837
+    }
+   },
+   "n_in": 306,
+   "n_out": 0,
+   "latency": 0.2118350749997262,
+   "ttft": 0.2118350749997262,
+   "id": "B25",
+   "category": "multi_turn"
+  },
+  {
+   "obj": {
+    "status": "clarify",
+    "department": "none",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "clarify",
+    "department": "none",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.41336169838905334,
+    "department": 0.4826948344707489,
+    "urgency": 0.693719208240509,
+    "miss_order_id": 0.5010267496109009,
+    "miss_product": 0.9629387259483337,
+    "miss_issue_detail": 0.9663693904876709,
+    "miss_photo": 0.9823688864707947
+   },
+   "probs": {
+    "status": {
+     "route": 0.1631,
+     "clarify": 0.4134,
+     "off_topic": 0.1549,
+     "reject": 0.2687
+    },
+    "department": {
+     "order_shipping": 0.0569,
+     "return_refund": 0.0959,
+     "tech_support": 0.0226,
+     "repair_warranty": 0.0233,
+     "billing_invoice": 0.0669,
+     "account_security": 0.2031,
+     "presales": 0.0485,
+     "none": 0.4827
+    },
+    "urgency": {
+     "low": 0.2565,
+     "normal": 0.6937,
+     "high": 0.0498
+    },
+    "miss_order_id": {
+     "yes": 0.499,
+     "no": 0.501
+    },
+    "miss_product": {
+     "yes": 0.0371,
+     "no": 0.9629
+    },
+    "miss_issue_detail": {
+     "yes": 0.0336,
+     "no": 0.9664
+    },
+    "miss_photo": {
+     "yes": 0.0176,
+     "no": 0.9824
+    }
+   },
+   "n_in": 118,
+   "n_out": 0,
+   "latency": 0.13066106000042055,
+   "ttft": 0.13066106000042055,
+   "id": "B26",
+   "category": "multi_turn"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "presales",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "presales",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.5555106401443481,
+    "department": 0.33446353673934937,
+    "urgency": 0.7670987844467163,
+    "miss_order_id": 0.9736717939376831,
+    "miss_product": 0.6103704571723938,
+    "miss_issue_detail": 0.6307772994041443,
+    "miss_photo": 0.8634581565856934
+   },
+   "probs": {
+    "status": {
+     "route": 0.5555,
+     "clarify": 0.3891,
+     "off_topic": 0.0322,
+     "reject": 0.0231
+    },
+    "department": {
+     "order_shipping": 0.0032,
+     "return_refund": 0.0033,
+     "tech_support": 0.3049,
+     "repair_warranty": 0.1979,
+     "billing_invoice": 0.0024,
+     "account_security": 0.0147,
+     "presales": 0.3345,
+     "none": 0.1392
+    },
+    "urgency": {
+     "low": 0.2237,
+     "normal": 0.7671,
+     "high": 0.0092
+    },
+    "miss_order_id": {
+     "yes": 0.0263,
+     "no": 0.9737
+    },
+    "miss_product": {
+     "yes": 0.3896,
+     "no": 0.6104
+    },
+    "miss_issue_detail": {
+     "yes": 0.3692,
+     "no": 0.6308
+    },
+    "miss_photo": {
+     "yes": 0.1365,
+     "no": 0.8635
+    }
+   },
+   "n_in": 98,
+   "n_out": 0,
+   "latency": 0.13689549599985185,
+   "ttft": 0.13689549599985185,
+   "id": "B27",
+   "category": "multi_turn"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "billing_invoice",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "billing_invoice",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.9996547698974609,
+    "department": 0.3857938349246979,
+    "urgency": 0.9182637333869934,
+    "miss_order_id": 0.9999353885650635,
+    "miss_product": 0.9999992847442627,
+    "miss_issue_detail": 1.0,
+    "miss_photo": 1.0
+   },
+   "probs": {
+    "status": {
+     "route": 0.9997,
+     "clarify": 0.0003,
+     "off_topic": 0.0,
+     "reject": 0.0001
+    },
+    "department": {
+     "order_shipping": 0.3588,
+     "return_refund": 0.2519,
+     "tech_support": 0.0001,
+     "repair_warranty": 0.0005,
+     "billing_invoice": 0.3858,
+     "account_security": 0.003,
+     "presales": 0.0,
+     "none": 0.0
+    },
+    "urgency": {
+     "low": 0.0,
+     "normal": 0.9183,
+     "high": 0.0817
+    },
+    "miss_order_id": {
+     "yes": 0.0001,
+     "no": 0.9999
+    },
+    "miss_product": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_issue_detail": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_photo": {
+     "yes": 0.0,
+     "no": 1.0
+    }
+   },
+   "n_in": 261,
+   "n_out": 0,
+   "latency": 0.18956198299929383,
+   "ttft": 0.18956198299929383,
+   "id": "B28",
+   "category": "image"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "billing_invoice",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "billing_invoice",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.9994238615036011,
+    "department": 0.4001094400882721,
+    "urgency": 0.8570370078086853,
+    "miss_order_id": 0.9998719692230225,
+    "miss_product": 1.0,
+    "miss_issue_detail": 1.0,
+    "miss_photo": 1.0
+   },
+   "probs": {
+    "status": {
+     "route": 0.9994,
+     "clarify": 0.0,
+     "off_topic": 0.0,
+     "reject": 0.0005
+    },
+    "department": {
+     "order_shipping": 0.3797,
+     "return_refund": 0.2199,
+     "tech_support": 0.0,
+     "repair_warranty": 0.0,
+     "billing_invoice": 0.4001,
+     "account_security": 0.0003,
+     "presales": 0.0,
+     "none": 0.0
+    },
+    "urgency": {
+     "low": 0.0,
+     "normal": 0.857,
+     "high": 0.143
+    },
+    "miss_order_id": {
+     "yes": 0.0001,
+     "no": 0.9999
+    },
+    "miss_product": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_issue_detail": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_photo": {
+     "yes": 0.0,
+     "no": 1.0
+    }
+   },
+   "n_in": 255,
+   "n_out": 0,
+   "latency": 0.17348616900017078,
+   "ttft": 0.17348616900017078,
+   "id": "B29",
+   "category": "image"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.7084981203079224,
+    "department": 0.39322230219841003,
+    "urgency": 0.9279804229736328,
+    "miss_order_id": 0.9510836005210876,
+    "miss_product": 0.927627444267273,
+    "miss_issue_detail": 0.9376193881034851,
+    "miss_photo": 0.9801629781723022
+   },
+   "probs": {
+    "status": {
+     "route": 0.7085,
+     "clarify": 0.2728,
+     "off_topic": 0.0098,
+     "reject": 0.0089
+    },
+    "department": {
+     "order_shipping": 0.0147,
+     "return_refund": 0.0142,
+     "tech_support": 0.3679,
+     "repair_warranty": 0.3932,
+     "billing_invoice": 0.0106,
+     "account_security": 0.0383,
+     "presales": 0.095,
+     "none": 0.0661
+    },
+    "urgency": {
+     "low": 0.0507,
+     "normal": 0.928,
+     "high": 0.0213
+    },
+    "miss_order_id": {
+     "yes": 0.0489,
+     "no": 0.9511
+    },
+    "miss_product": {
+     "yes": 0.0724,
+     "no": 0.9276
+    },
+    "miss_issue_detail": {
+     "yes": 0.0624,
+     "no": 0.9376
+    },
+    "miss_photo": {
+     "yes": 0.0198,
+     "no": 0.9802
+    }
+   },
+   "n_in": 213,
+   "n_out": 0,
+   "latency": 0.16798967700015055,
+   "ttft": 0.16798967700015055,
+   "id": "B30",
+   "category": "image"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "tech_support",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "tech_support",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.6805137395858765,
+    "department": 0.415109783411026,
+    "urgency": 0.9353213310241699,
+    "miss_order_id": 0.9342147707939148,
+    "miss_product": 0.908150315284729,
+    "miss_issue_detail": 0.9200403690338135,
+    "miss_photo": 0.9731177687644958
+   },
+   "probs": {
+    "status": {
+     "route": 0.6805,
+     "clarify": 0.3022,
+     "off_topic": 0.0098,
+     "reject": 0.0075
+    },
+    "department": {
+     "order_shipping": 0.0089,
+     "return_refund": 0.0089,
+     "tech_support": 0.4151,
+     "repair_warranty": 0.347,
+     "billing_invoice": 0.0062,
+     "account_security": 0.0275,
+     "presales": 0.1268,
+     "none": 0.0596
+    },
+    "urgency": {
+     "low": 0.054,
+     "normal": 0.9353,
+     "high": 0.0107
+    },
+    "miss_order_id": {
+     "yes": 0.0658,
+     "no": 0.9342
+    },
+    "miss_product": {
+     "yes": 0.0918,
+     "no": 0.9082
+    },
+    "miss_issue_detail": {
+     "yes": 0.08,
+     "no": 0.92
+    },
+    "miss_photo": {
+     "yes": 0.0269,
+     "no": 0.9731
+    }
+   },
+   "n_in": 205,
+   "n_out": 0,
+   "latency": 0.16193500999997923,
+   "ttft": 0.16193500999997923,
+   "id": "B31",
+   "category": "image"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.7200489044189453,
+    "department": 0.43051770329475403,
+    "urgency": 0.9390735626220703,
+    "miss_order_id": 0.9472081661224365,
+    "miss_product": 0.9438822269439697,
+    "miss_issue_detail": 0.9524787664413452,
+    "miss_photo": 0.9850308299064636
+   },
+   "probs": {
+    "status": {
+     "route": 0.72,
+     "clarify": 0.2655,
+     "off_topic": 0.0072,
+     "reject": 0.0073
+    },
+    "department": {
+     "order_shipping": 0.0161,
+     "return_refund": 0.0155,
+     "tech_support": 0.373,
+     "repair_warranty": 0.4305,
+     "billing_invoice": 0.0114,
+     "account_security": 0.0404,
+     "presales": 0.0572,
+     "none": 0.056
+    },
+    "urgency": {
+     "low": 0.0384,
+     "normal": 0.9391,
+     "high": 0.0225
+    },
+    "miss_order_id": {
+     "yes": 0.0528,
+     "no": 0.9472
+    },
+    "miss_product": {
+     "yes": 0.0561,
+     "no": 0.9439
+    },
+    "miss_issue_detail": {
+     "yes": 0.0475,
+     "no": 0.9525
+    },
+    "miss_photo": {
+     "yes": 0.015,
+     "no": 0.985
+    }
+   },
+   "n_in": 278,
+   "n_out": 0,
+   "latency": 0.2210492880003585,
+   "ttft": 0.2210492880003585,
+   "id": "B32",
+   "category": "image"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "presales",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "presales",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.8275603652000427,
+    "department": 0.9121670126914978,
+    "urgency": 0.9459607601165771,
+    "miss_order_id": 0.9964103102684021,
+    "miss_product": 0.9903760552406311,
+    "miss_issue_detail": 0.9909886717796326,
+    "miss_photo": 0.9987372756004333
+   },
+   "probs": {
+    "status": {
+     "route": 0.8276,
+     "clarify": 0.1219,
+     "off_topic": 0.0326,
+     "reject": 0.018
+    },
+    "department": {
+     "order_shipping": 0.0,
+     "return_refund": 0.0,
+     "tech_support": 0.0022,
+     "repair_warranty": 0.001,
+     "billing_invoice": 0.0,
+     "account_security": 0.0,
+     "presales": 0.9122,
+     "none": 0.0847
+    },
+    "urgency": {
+     "low": 0.946,
+     "normal": 0.054,
+     "high": 0.0
+    },
+    "miss_order_id": {
+     "yes": 0.0036,
+     "no": 0.9964
+    },
+    "miss_product": {
+     "yes": 0.0096,
+     "no": 0.9904
+    },
+    "miss_issue_detail": {
+     "yes": 0.009,
+     "no": 0.991
+    },
+    "miss_photo": {
+     "yes": 0.0013,
+     "no": 0.9987
+    }
+   },
+   "n_in": 219,
+   "n_out": 0,
+   "latency": 0.1522126890004074,
+   "ttft": 0.1522126890004074,
+   "id": "B33",
+   "category": "image"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "presales",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "presales",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.7949914932250977,
+    "department": 0.8392878174781799,
+    "urgency": 0.982043445110321,
+    "miss_order_id": 0.9972760081291199,
+    "miss_product": 0.9931527376174927,
+    "miss_issue_detail": 0.9941410422325134,
+    "miss_photo": 0.9991647005081177
+   },
+   "probs": {
+    "status": {
+     "route": 0.795,
+     "clarify": 0.1209,
+     "off_topic": 0.0529,
+     "reject": 0.0312
+    },
+    "department": {
+     "order_shipping": 0.0,
+     "return_refund": 0.0,
+     "tech_support": 0.0013,
+     "repair_warranty": 0.0006,
+     "billing_invoice": 0.0,
+     "account_security": 0.0,
+     "presales": 0.8393,
+     "none": 0.1588
+    },
+    "urgency": {
+     "low": 0.982,
+     "normal": 0.018,
+     "high": 0.0
+    },
+    "miss_order_id": {
+     "yes": 0.0027,
+     "no": 0.9973
+    },
+    "miss_product": {
+     "yes": 0.0068,
+     "no": 0.9932
+    },
+    "miss_issue_detail": {
+     "yes": 0.0059,
+     "no": 0.9941
+    },
+    "miss_photo": {
+     "yes": 0.0008,
+     "no": 0.9992
+    }
+   },
+   "n_in": 268,
+   "n_out": 0,
+   "latency": 0.2060320069995214,
+   "ttft": 0.2060320069995214,
+   "id": "B34",
+   "category": "image"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.6526070833206177,
+    "department": 0.2536894679069519,
+    "urgency": 0.8720553517341614,
+    "miss_order_id": 0.5656879544258118,
+    "miss_product": 0.9650072455406189,
+    "miss_issue_detail": 0.9776760339736938,
+    "miss_photo": 0.9887183904647827
+   },
+   "probs": {
+    "status": {
+     "route": 0.6526,
+     "clarify": 0.3051,
+     "off_topic": 0.0165,
+     "reject": 0.0258
+    },
+    "department": {
+     "order_shipping": 0.2537,
+     "return_refund": 0.2374,
+     "tech_support": 0.0365,
+     "repair_warranty": 0.0494,
+     "billing_invoice": 0.2447,
+     "account_security": 0.1575,
+     "presales": 0.003,
+     "none": 0.0179
+    },
+    "urgency": {
+     "low": 0.0125,
+     "normal": 0.8721,
+     "high": 0.1154
+    },
+    "miss_order_id": {
+     "yes": 0.4343,
+     "no": 0.5657
+    },
+    "miss_product": {
+     "yes": 0.035,
+     "no": 0.965
+    },
+    "miss_issue_detail": {
+     "yes": 0.0223,
+     "no": 0.9777
+    },
+    "miss_photo": {
+     "yes": 0.0113,
+     "no": 0.9887
+    }
+   },
+   "n_in": 131,
+   "n_out": 0,
+   "latency": 0.13656982300017262,
+   "ttft": 0.13656982300017262,
+   "id": "B35",
+   "category": "switch"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "tech_support",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.3600989878177643,
+    "department": 0.7789158821105957,
+    "urgency": 0.9995402097702026,
+    "miss_order_id": 0.9802752137184143,
+    "miss_product": 0.9629243612289429,
+    "miss_issue_detail": 0.9136406183242798,
+    "miss_photo": 0.9993426203727722
+   },
+   "probs": {
+    "status": {
+     "route": 0.3601,
+     "clarify": 0.1912,
+     "off_topic": 0.2501,
+     "reject": 0.1985
+    },
+    "department": {
+     "order_shipping": 0.0015,
+     "return_refund": 0.0016,
+     "tech_support": 0.0789,
+     "repair_warranty": 0.0583,
+     "billing_invoice": 0.001,
+     "account_security": 0.0051,
+     "presales": 0.0747,
+     "none": 0.7789
+    },
+    "urgency": {
+     "low": 0.9995,
+     "normal": 0.0005,
+     "high": 0.0
+    },
+    "miss_order_id": {
+     "yes": 0.0197,
+     "no": 0.9803
+    },
+    "miss_product": {
+     "yes": 0.0371,
+     "no": 0.9629
+    },
+    "miss_issue_detail": {
+     "yes": 0.0864,
+     "no": 0.9136
+    },
+    "miss_photo": {
+     "yes": 0.0007,
+     "no": 0.9993
+    }
+   },
+   "n_in": 131,
+   "n_out": 0,
+   "latency": 0.21521511199989618,
+   "ttft": 0.21521511199989618,
+   "id": "B36",
+   "category": "switch"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": [
+     "order_id"
+    ]
+   },
+   "confidence": {
+    "status": 0.6276910901069641,
+    "department": 0.2688407599925995,
+    "urgency": 0.8264906406402588,
+    "miss_order_id": 0.6223757266998291,
+    "miss_product": 0.9816873669624329,
+    "miss_issue_detail": 0.9938294291496277,
+    "miss_photo": 0.9923437237739563
+   },
+   "probs": {
+    "status": {
+     "route": 0.6277,
+     "clarify": 0.3343,
+     "off_topic": 0.014,
+     "reject": 0.024
+    },
+    "department": {
+     "order_shipping": 0.2688,
+     "return_refund": 0.2412,
+     "tech_support": 0.0292,
+     "repair_warranty": 0.0416,
+     "billing_invoice": 0.2486,
+     "account_security": 0.1567,
+     "presales": 0.0016,
+     "none": 0.0123
+    },
+    "urgency": {
+     "low": 0.0075,
+     "normal": 0.8265,
+     "high": 0.166
+    },
+    "miss_order_id": {
+     "yes": 0.6224,
+     "no": 0.3776
+    },
+    "miss_product": {
+     "yes": 0.0183,
+     "no": 0.9817
+    },
+    "miss_issue_detail": {
+     "yes": 0.0062,
+     "no": 0.9938
+    },
+    "miss_photo": {
+     "yes": 0.0077,
+     "no": 0.9923
+    }
+   },
+   "n_in": 134,
+   "n_out": 0,
+   "latency": 0.1556563530002677,
+   "ttft": 0.1556563530002677,
+   "id": "B37",
+   "category": "switch"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.6907092928886414,
+    "department": 0.27001452445983887,
+    "urgency": 0.9046221375465393,
+    "miss_order_id": 0.936190128326416,
+    "miss_product": 0.9782057404518127,
+    "miss_issue_detail": 0.9829897880554199,
+    "miss_photo": 0.9948245286941528
+   },
+   "probs": {
+    "status": {
+     "route": 0.6907,
+     "clarify": 0.2637,
+     "off_topic": 0.0168,
+     "reject": 0.0288
+    },
+    "department": {
+     "order_shipping": 0.27,
+     "return_refund": 0.2421,
+     "tech_support": 0.0291,
+     "repair_warranty": 0.0381,
+     "billing_invoice": 0.2666,
+     "account_security": 0.1204,
+     "presales": 0.0041,
+     "none": 0.0296
+    },
+    "urgency": {
+     "low": 0.0166,
+     "normal": 0.9046,
+     "high": 0.0788
+    },
+    "miss_order_id": {
+     "yes": 0.0638,
+     "no": 0.9362
+    },
+    "miss_product": {
+     "yes": 0.0218,
+     "no": 0.9782
+    },
+    "miss_issue_detail": {
+     "yes": 0.017,
+     "no": 0.983
+    },
+    "miss_photo": {
+     "yes": 0.0052,
+     "no": 0.9948
+    }
+   },
+   "n_in": 132,
+   "n_out": 0,
+   "latency": 0.10462153800017404,
+   "ttft": 0.10462153800017404,
+   "id": "B38",
+   "category": "switch"
+  },
+  {
+   "obj": {
+    "status": "reject",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "reject",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.5724880695343018,
+    "department": 0.9981302618980408,
+    "urgency": 0.9999946355819702,
+    "miss_order_id": 0.9993473887443542,
+    "miss_product": 0.9997686743736267,
+    "miss_issue_detail": 0.9992945194244385,
+    "miss_photo": 0.9999901056289673
+   },
+   "probs": {
+    "status": {
+     "route": 0.0002,
+     "clarify": 0.0001,
+     "off_topic": 0.4273,
+     "reject": 0.5725
+    },
+    "department": {
+     "order_shipping": 0.0,
+     "return_refund": 0.0,
+     "tech_support": 0.0,
+     "repair_warranty": 0.0,
+     "billing_invoice": 0.0,
+     "account_security": 0.0,
+     "presales": 0.0019,
+     "none": 0.9981
+    },
+    "urgency": {
+     "low": 1.0,
+     "normal": 0.0,
+     "high": 0.0
+    },
+    "miss_order_id": {
+     "yes": 0.0007,
+     "no": 0.9993
+    },
+    "miss_product": {
+     "yes": 0.0002,
+     "no": 0.9998
+    },
+    "miss_issue_detail": {
+     "yes": 0.0007,
+     "no": 0.9993
+    },
+    "miss_photo": {
+     "yes": 0.0,
+     "no": 1.0
+    }
+   },
+   "n_in": 70,
+   "n_out": 0,
+   "latency": 0.10461971000040649,
+   "ttft": 0.10461971000040649,
+   "id": "B39",
+   "category": "off_topic"
+  },
+  {
+   "obj": {
+    "status": "off_topic",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "off_topic",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.5869759321212769,
+    "department": 0.987537682056427,
+    "urgency": 0.9999926090240479,
+    "miss_order_id": 0.994387149810791,
+    "miss_product": 0.9997262358665466,
+    "miss_issue_detail": 0.9973047971725464,
+    "miss_photo": 0.9999449253082275
+   },
+   "probs": {
+    "status": {
+     "route": 0.0049,
+     "clarify": 0.0011,
+     "off_topic": 0.587,
+     "reject": 0.407
+    },
+    "department": {
+     "order_shipping": 0.0,
+     "return_refund": 0.0,
+     "tech_support": 0.0,
+     "repair_warranty": 0.0,
+     "billing_invoice": 0.0,
+     "account_security": 0.0,
+     "presales": 0.0125,
+     "none": 0.9875
+    },
+    "urgency": {
+     "low": 1.0,
+     "normal": 0.0,
+     "high": 0.0
+    },
+    "miss_order_id": {
+     "yes": 0.0056,
+     "no": 0.9944
+    },
+    "miss_product": {
+     "yes": 0.0003,
+     "no": 0.9997
+    },
+    "miss_issue_detail": {
+     "yes": 0.0027,
+     "no": 0.9973
+    },
+    "miss_photo": {
+     "yes": 0.0001,
+     "no": 0.9999
+    }
+   },
+   "n_in": 71,
+   "n_out": 0,
+   "latency": 0.10750032899977668,
+   "ttft": 0.10750032899977668,
+   "id": "B40",
+   "category": "off_topic"
+  },
+  {
+   "obj": {
+    "status": "reject",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "reject",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.5009481310844421,
+    "department": 0.9924351572990417,
+    "urgency": 0.9999963045120239,
+    "miss_order_id": 0.9991810917854309,
+    "miss_product": 0.9994451403617859,
+    "miss_issue_detail": 0.9996154308319092,
+    "miss_photo": 0.999919056892395
+   },
+   "probs": {
+    "status": {
+     "route": 0.0029,
+     "clarify": 0.0008,
+     "off_topic": 0.4954,
+     "reject": 0.5009
+    },
+    "department": {
+     "order_shipping": 0.0,
+     "return_refund": 0.0,
+     "tech_support": 0.0,
+     "repair_warranty": 0.0,
+     "billing_invoice": 0.0,
+     "account_security": 0.0,
+     "presales": 0.0076,
+     "none": 0.9924
+    },
+    "urgency": {
+     "low": 1.0,
+     "normal": 0.0,
+     "high": 0.0
+    },
+    "miss_order_id": {
+     "yes": 0.0008,
+     "no": 0.9992
+    },
+    "miss_product": {
+     "yes": 0.0006,
+     "no": 0.9994
+    },
+    "miss_issue_detail": {
+     "yes": 0.0004,
+     "no": 0.9996
+    },
+    "miss_photo": {
+     "yes": 0.0001,
+     "no": 0.9999
+    }
+   },
+   "n_in": 231,
+   "n_out": 0,
+   "latency": 0.1587234709995755,
+   "ttft": 0.1587234709995755,
+   "id": "B41",
+   "category": "off_topic"
+  },
+  {
+   "obj": {
+    "status": "reject",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "reject",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.4419231414794922,
+    "department": 0.8256151080131531,
+    "urgency": 0.9990052580833435,
+    "miss_order_id": 0.863185703754425,
+    "miss_product": 0.9965489506721497,
+    "miss_issue_detail": 0.9989504814147949,
+    "miss_photo": 0.9998979568481445
+   },
+   "probs": {
+    "status": {
+     "route": 0.0477,
+     "clarify": 0.09,
+     "off_topic": 0.4205,
+     "reject": 0.4419
+    },
+    "department": {
+     "order_shipping": 0.0002,
+     "return_refund": 0.0004,
+     "tech_support": 0.0024,
+     "repair_warranty": 0.0015,
+     "billing_invoice": 0.0002,
+     "account_security": 0.0023,
+     "presales": 0.1673,
+     "none": 0.8256
+    },
+    "urgency": {
+     "low": 0.999,
+     "normal": 0.001,
+     "high": 0.0
+    },
+    "miss_order_id": {
+     "yes": 0.1368,
+     "no": 0.8632
+    },
+    "miss_product": {
+     "yes": 0.0035,
+     "no": 0.9965
+    },
+    "miss_issue_detail": {
+     "yes": 0.001,
+     "no": 0.999
+    },
+    "miss_photo": {
+     "yes": 0.0001,
+     "no": 0.9999
+    }
+   },
+   "n_in": 116,
+   "n_out": 0,
+   "latency": 0.10826696099957189,
+   "ttft": 0.10826696099957189,
+   "id": "B42",
+   "category": "off_topic"
+  },
+  {
+   "obj": {
+    "status": "reject",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "reject",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.8512434959411621,
+    "department": 0.9982637763023376,
+    "urgency": 0.9999949932098389,
+    "miss_order_id": 0.9993409514427185,
+    "miss_product": 0.9993830919265747,
+    "miss_issue_detail": 0.9998987913131714,
+    "miss_photo": 0.9999251365661621
+   },
+   "probs": {
+    "status": {
+     "route": 0.0008,
+     "clarify": 0.0002,
+     "off_topic": 0.1477,
+     "reject": 0.8512
+    },
+    "department": {
+     "order_shipping": 0.0,
+     "return_refund": 0.0,
+     "tech_support": 0.0,
+     "repair_warranty": 0.0,
+     "billing_invoice": 0.0,
+     "account_security": 0.0,
+     "presales": 0.0017,
+     "none": 0.9983
+    },
+    "urgency": {
+     "low": 1.0,
+     "normal": 0.0,
+     "high": 0.0
+    },
+    "miss_order_id": {
+     "yes": 0.0007,
+     "no": 0.9993
+    },
+    "miss_product": {
+     "yes": 0.0006,
+     "no": 0.9994
+    },
+    "miss_issue_detail": {
+     "yes": 0.0001,
+     "no": 0.9999
+    },
+    "miss_photo": {
+     "yes": 0.0001,
+     "no": 0.9999
+    }
+   },
+   "n_in": 77,
+   "n_out": 0,
+   "latency": 0.10457052400033717,
+   "ttft": 0.10457052400033717,
+   "id": "B43",
+   "category": "attack"
+  },
+  {
+   "obj": {
+    "status": "reject",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "reject",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.8469921946525574,
+    "department": 0.9755191206932068,
+    "urgency": 0.999902606010437,
+    "miss_order_id": 0.9938668608665466,
+    "miss_product": 0.9963074922561646,
+    "miss_issue_detail": 0.9996919631958008,
+    "miss_photo": 0.9996750354766846
+   },
+   "probs": {
+    "status": {
+     "route": 0.0675,
+     "clarify": 0.0131,
+     "off_topic": 0.0724,
+     "reject": 0.847
+    },
+    "department": {
+     "order_shipping": 0.0,
+     "return_refund": 0.0,
+     "tech_support": 0.0,
+     "repair_warranty": 0.0,
+     "billing_invoice": 0.0,
+     "account_security": 0.0,
+     "presales": 0.0244,
+     "none": 0.9755
+    },
+    "urgency": {
+     "low": 0.9999,
+     "normal": 0.0001,
+     "high": 0.0
+    },
+    "miss_order_id": {
+     "yes": 0.0061,
+     "no": 0.9939
+    },
+    "miss_product": {
+     "yes": 0.0037,
+     "no": 0.9963
+    },
+    "miss_issue_detail": {
+     "yes": 0.0003,
+     "no": 0.9997
+    },
+    "miss_photo": {
+     "yes": 0.0003,
+     "no": 0.9997
+    }
+   },
+   "n_in": 79,
+   "n_out": 0,
+   "latency": 0.14222170199991524,
+   "ttft": 0.14222170199991524,
+   "id": "B44",
+   "category": "attack"
+  },
+  {
+   "obj": {
+    "status": "reject",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "reject",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.8363507986068726,
+    "department": 0.9981572031974792,
+    "urgency": 0.9999957084655762,
+    "miss_order_id": 0.9996138215065002,
+    "miss_product": 0.9998486042022705,
+    "miss_issue_detail": 0.9999257326126099,
+    "miss_photo": 0.9999879598617554
+   },
+   "probs": {
+    "status": {
+     "route": 0.0003,
+     "clarify": 0.0001,
+     "off_topic": 0.1633,
+     "reject": 0.8364
+    },
+    "department": {
+     "order_shipping": 0.0,
+     "return_refund": 0.0,
+     "tech_support": 0.0,
+     "repair_warranty": 0.0,
+     "billing_invoice": 0.0,
+     "account_security": 0.0,
+     "presales": 0.0018,
+     "none": 0.9982
+    },
+    "urgency": {
+     "low": 1.0,
+     "normal": 0.0,
+     "high": 0.0
+    },
+    "miss_order_id": {
+     "yes": 0.0004,
+     "no": 0.9996
+    },
+    "miss_product": {
+     "yes": 0.0002,
+     "no": 0.9998
+    },
+    "miss_issue_detail": {
+     "yes": 0.0001,
+     "no": 0.9999
+    },
+    "miss_photo": {
+     "yes": 0.0,
+     "no": 1.0
+    }
+   },
+   "n_in": 81,
+   "n_out": 0,
+   "latency": 0.29975847999958205,
+   "ttft": 0.29975847999958205,
+   "id": "B45",
+   "category": "attack"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "presales",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "presales",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.7689533829689026,
+    "department": 0.6955567598342896,
+    "urgency": 0.999091386795044,
+    "miss_order_id": 0.993739128112793,
+    "miss_product": 0.9816942811012268,
+    "miss_issue_detail": 0.987046480178833,
+    "miss_photo": 0.9974914789199829
+   },
+   "probs": {
+    "status": {
+     "route": 0.769,
+     "clarify": 0.1626,
+     "off_topic": 0.0435,
+     "reject": 0.0249
+    },
+    "department": {
+     "order_shipping": 0.0,
+     "return_refund": 0.0,
+     "tech_support": 0.0027,
+     "repair_warranty": 0.0013,
+     "billing_invoice": 0.0,
+     "account_security": 0.0001,
+     "presales": 0.6956,
+     "none": 0.3003
+    },
+    "urgency": {
+     "low": 0.9991,
+     "normal": 0.0009,
+     "high": 0.0
+    },
+    "miss_order_id": {
+     "yes": 0.0063,
+     "no": 0.9937
+    },
+    "miss_product": {
+     "yes": 0.0183,
+     "no": 0.9817
+    },
+    "miss_issue_detail": {
+     "yes": 0.013,
+     "no": 0.987
+    },
+    "miss_photo": {
+     "yes": 0.0025,
+     "no": 0.9975
+    }
+   },
+   "n_in": 266,
+   "n_out": 0,
+   "latency": 0.4018549790007455,
+   "ttft": 0.4018549790007455,
+   "id": "B46",
+   "category": "attack"
+  },
+  {
+   "obj": {
+    "status": "off_topic",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "off_topic",
+    "department": "none",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.4077949523925781,
+    "department": 0.7138716578483582,
+    "urgency": 0.99997878074646,
+    "miss_order_id": 0.9760947227478027,
+    "miss_product": 0.9824956655502319,
+    "miss_issue_detail": 0.9994950294494629,
+    "miss_photo": 0.9982854723930359
+   },
+   "probs": {
+    "status": {
+     "route": 0.1284,
+     "clarify": 0.1403,
+     "off_topic": 0.4078,
+     "reject": 0.3235
+    },
+    "department": {
+     "order_shipping": 0.0002,
+     "return_refund": 0.0002,
+     "tech_support": 0.0091,
+     "repair_warranty": 0.0059,
+     "billing_invoice": 0.0001,
+     "account_security": 0.0011,
+     "presales": 0.2695,
+     "none": 0.7139
+    },
+    "urgency": {
+     "low": 1.0,
+     "normal": 0.0,
+     "high": 0.0
+    },
+    "miss_order_id": {
+     "yes": 0.0239,
+     "no": 0.9761
+    },
+    "miss_product": {
+     "yes": 0.0175,
+     "no": 0.9825
+    },
+    "miss_issue_detail": {
+     "yes": 0.0005,
+     "no": 0.9995
+    },
+    "miss_photo": {
+     "yes": 0.0017,
+     "no": 0.9983
+    }
+   },
+   "n_in": 132,
+   "n_out": 0,
+   "latency": 0.2659799339999154,
+   "ttft": 0.2659799339999154,
+   "id": "B47",
+   "category": "attack"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "presales",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "presales",
+    "urgency": "low",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.4909787178039551,
+    "department": 0.3095915913581848,
+    "urgency": 0.9376214146614075,
+    "miss_order_id": 0.9338338375091553,
+    "miss_product": 0.8941321969032288,
+    "miss_issue_detail": 0.914142370223999,
+    "miss_photo": 0.9659663438796997
+   },
+   "probs": {
+    "status": {
+     "route": 0.491,
+     "clarify": 0.373,
+     "off_topic": 0.0668,
+     "reject": 0.0692
+    },
+    "department": {
+     "order_shipping": 0.0059,
+     "return_refund": 0.0073,
+     "tech_support": 0.2121,
+     "repair_warranty": 0.1471,
+     "billing_invoice": 0.0051,
+     "account_security": 0.0277,
+     "presales": 0.3096,
+     "none": 0.2852
+    },
+    "urgency": {
+     "low": 0.9376,
+     "normal": 0.0606,
+     "high": 0.0017
+    },
+    "miss_order_id": {
+     "yes": 0.0662,
+     "no": 0.9338
+    },
+    "miss_product": {
+     "yes": 0.1059,
+     "no": 0.8941
+    },
+    "miss_issue_detail": {
+     "yes": 0.0859,
+     "no": 0.9141
+    },
+    "miss_photo": {
+     "yes": 0.034,
+     "no": 0.966
+    }
+   },
+   "n_in": 71,
+   "n_out": 0,
+   "latency": 0.22002672700000403,
+   "ttft": 0.22002672700000403,
+   "id": "B48",
+   "category": "attack"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "repair_warranty",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.5778000354766846,
+    "department": 0.2515295743942261,
+    "urgency": 0.6055908203125,
+    "miss_order_id": 0.8713236451148987,
+    "miss_product": 0.9448824524879456,
+    "miss_issue_detail": 0.9562757015228271,
+    "miss_photo": 0.9801851511001587
+   },
+   "probs": {
+    "status": {
+     "route": 0.5778,
+     "clarify": 0.3641,
+     "off_topic": 0.0236,
+     "reject": 0.0345
+    },
+    "department": {
+     "order_shipping": 0.0557,
+     "return_refund": 0.0662,
+     "tech_support": 0.2188,
+     "repair_warranty": 0.2515,
+     "billing_invoice": 0.0547,
+     "account_security": 0.1159,
+     "presales": 0.0223,
+     "none": 0.2149
+    },
+    "urgency": {
+     "low": 0.3488,
+     "normal": 0.6056,
+     "high": 0.0456
+    },
+    "miss_order_id": {
+     "yes": 0.1287,
+     "no": 0.8713
+    },
+    "miss_product": {
+     "yes": 0.0551,
+     "no": 0.9449
+    },
+    "miss_issue_detail": {
+     "yes": 0.0437,
+     "no": 0.9563
+    },
+    "miss_photo": {
+     "yes": 0.0198,
+     "no": 0.9802
+    }
+   },
+   "n_in": 81,
+   "n_out": 0,
+   "latency": 0.2119948290001048,
+   "ttft": 0.2119948290001048,
+   "id": "B49",
+   "category": "hard"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "order_shipping",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.9593087434768677,
+    "department": 0.39206695556640625,
+    "urgency": 0.9346362352371216,
+    "miss_order_id": 0.9959563612937927,
+    "miss_product": 0.9998775720596313,
+    "miss_issue_detail": 0.9999620914459229,
+    "miss_photo": 0.9999932050704956
+   },
+   "probs": {
+    "status": {
+     "route": 0.9593,
+     "clarify": 0.0401,
+     "off_topic": 0.0002,
+     "reject": 0.0004
+    },
+    "department": {
+     "order_shipping": 0.3921,
+     "return_refund": 0.2667,
+     "tech_support": 0.0011,
+     "repair_warranty": 0.0035,
+     "billing_invoice": 0.3339,
+     "account_security": 0.0027,
+     "presales": 0.0,
+     "none": 0.0
+    },
+    "urgency": {
+     "low": 0.0,
+     "normal": 0.9346,
+     "high": 0.0653
+    },
+    "miss_order_id": {
+     "yes": 0.004,
+     "no": 0.996
+    },
+    "miss_product": {
+     "yes": 0.0001,
+     "no": 0.9999
+    },
+    "miss_issue_detail": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_photo": {
+     "yes": 0.0,
+     "no": 1.0
+    }
+   },
+   "n_in": 89,
+   "n_out": 0,
+   "latency": 0.18278014899988193,
+   "ttft": 0.18278014899988193,
+   "id": "B50",
+   "category": "hard"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "presales",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "presales",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.5833026766777039,
+    "department": 0.5514991879463196,
+    "urgency": 0.5043958425521851,
+    "miss_order_id": 0.9816449880599976,
+    "miss_product": 0.6859859228134155,
+    "miss_issue_detail": 0.7881072163581848,
+    "miss_photo": 0.924621045589447
+   },
+   "probs": {
+    "status": {
+     "route": 0.5833,
+     "clarify": 0.335,
+     "off_topic": 0.0496,
+     "reject": 0.032
+    },
+    "department": {
+     "order_shipping": 0.001,
+     "return_refund": 0.0011,
+     "tech_support": 0.1378,
+     "repair_warranty": 0.0761,
+     "billing_invoice": 0.0007,
+     "account_security": 0.0058,
+     "presales": 0.5515,
+     "none": 0.226
+    },
+    "urgency": {
+     "low": 0.493,
+     "normal": 0.5044,
+     "high": 0.0026
+    },
+    "miss_order_id": {
+     "yes": 0.0184,
+     "no": 0.9816
+    },
+    "miss_product": {
+     "yes": 0.314,
+     "no": 0.686
+    },
+    "miss_issue_detail": {
+     "yes": 0.2119,
+     "no": 0.7881
+    },
+    "miss_photo": {
+     "yes": 0.0754,
+     "no": 0.9246
+    }
+   },
+   "n_in": 82,
+   "n_out": 0,
+   "latency": 0.1897202179998203,
+   "ttft": 0.1897202179998203,
+   "id": "B51",
+   "category": "hard"
+  },
+  {
+   "obj": {
+    "status": "route",
+    "department": "billing_invoice",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "raw_obj": {
+    "status": "route",
+    "department": "billing_invoice",
+    "urgency": "normal",
+    "missing_info": []
+   },
+   "confidence": {
+    "status": 0.9964949488639832,
+    "department": 0.49956634640693665,
+    "urgency": 0.9988837838172913,
+    "miss_order_id": 0.9997372031211853,
+    "miss_product": 1.0,
+    "miss_issue_detail": 1.0,
+    "miss_photo": 1.0
+   },
+   "probs": {
+    "status": {
+     "route": 0.9965,
+     "clarify": 0.0,
+     "off_topic": 0.0019,
+     "reject": 0.0016
+    },
+    "department": {
+     "order_shipping": 0.2181,
+     "return_refund": 0.2658,
+     "tech_support": 0.0,
+     "repair_warranty": 0.0002,
+     "billing_invoice": 0.4996,
+     "account_security": 0.0,
+     "presales": 0.0,
+     "none": 0.0163
+    },
+    "urgency": {
+     "low": 0.0006,
+     "normal": 0.9989,
+     "high": 0.0005
+    },
+    "miss_order_id": {
+     "yes": 0.0003,
+     "no": 0.9997
+    },
+    "miss_product": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_issue_detail": {
+     "yes": 0.0,
+     "no": 1.0
+    },
+    "miss_photo": {
+     "yes": 0.0,
+     "no": 1.0
+    }
+   },
+   "n_in": 77,
+   "n_out": 0,
+   "latency": 0.18385063499954413,
+   "ttft": 0.18385063499954413,
+   "id": "B52",
+   "category": "hard"
+  }
+ ]
+}

@@ -10,6 +10,7 @@ Stages (each loads a fresh copy of Qwen3-VL-2B, because merging / adding adapter
   Gemini-A/C    gemini-3.5-flash-lite, prompt only vs structured output (optional, needs GEMINI_API_KEY)
 """
 
+import math
 import os
 import time
 
@@ -26,14 +27,17 @@ GPU_PRICE_PER_HOUR = 0.35   # USD, on-demand NVIDIA T4 on Google Cloud (referenc
 SFT_DIR = os.path.join(CKPT_DIR, 'sft_lora')
 DPO_DIR = os.path.join(CKPT_DIR, 'sft_dpo_lora')
 S1_DIR_V1 = os.path.join(CKPT_DIR, 'system_one')        # v1: cross-attention only (first run, did not learn)
-S1_DIR = os.path.join(CKPT_DIR, 'system_one_v2')        # v2: + state token; used by the chatbot
+S1_DIR_V2 = os.path.join(CKPT_DIR, 'system_one_v2')     # v2: + state token, 3 epochs (second run, not converged)
+S1_DIR = os.path.join(CKPT_DIR, 'system_one_v2_long')    # v2 trained up to 10 epochs with early stopping; used by the chatbot
+S1_LONG_EPOCHS, S1_PATIENCE = 10, 2
 METHODS = ['A_prompt', 'C_constrained', 'B_sft', 'B_sft_dpo', 'B+C_sft_constrained', 'B+C_sft_dpo_constrained',
-           'D_system_one', 'D_system_one_v2', 'Gemini_prompt', 'Gemini_structured']
+           'D_system_one', 'D_system_one_v2', 'D_system_one_v2_long', 'Gemini_prompt', 'Gemini_structured']
 LABEL = {'A_prompt': 'A Prompt', 'C_constrained': 'C Constrained decoding', 'B_sft': 'B SFT', 'B_sft_dpo': 'B SFT+DPO',
          'B+C_sft_constrained': 'B+C SFT + constrained', 'B+C_sft_dpo_constrained': 'B+C SFT+DPO + constrained',
-         'D_system_one': 'D System One v1', 'D_system_one_v2': 'D System One v2 (+state)',
+         'D_system_one': 'D System One v1', 'D_system_one_v2': 'D System One v2 (+state, 3 ep)',
+         'D_system_one_v2_long': 'D System One v2 (+state, converged)',
          'Gemini_prompt': 'Gemini prompt', 'Gemini_structured': 'Gemini structured output'}
-TYPED = ('D_system_one', 'D_system_one_v2')            # typed output: no JSON parsing, decision fields only
+TYPED = ('D_system_one', 'D_system_one_v2', 'D_system_one_v2_long')            # typed output: no JSON parsing, decision fields only
 
 
 def data(name):
@@ -153,8 +157,12 @@ def stage_dpo(bench, train, val, n_train=360, n_val=60, epochs=2):
     del pm, model; free_gpu()
 
 
-def stage_system_one(bench, train, val, epochs=3, version='v2'):
-    method, out_dir = ('D_system_one_v2', S1_DIR) if version == 'v2' else ('D_system_one', S1_DIR_V1)
+def stage_system_one(bench, train, val, version='v2_long'):
+    """v1: cross-attention only, 3 epochs; v2: + state token, 3 epochs; v2_long: v2 trained until the validation loss
+    stops improving (at most 10 epochs, patience 2; the best epoch is kept)."""
+    method, out_dir = {'v1': ('D_system_one', S1_DIR_V1), 'v2': ('D_system_one_v2', S1_DIR_V2),
+                       'v2_long': ('D_system_one_v2_long', S1_DIR)}[version]
+    epochs, patience = (S1_LONG_EPOCHS, S1_PATIENCE) if version == 'v2_long' else (3, None)
     if done(method):
         return
     set_seed(42)
@@ -163,8 +171,8 @@ def stage_system_one(bench, train, val, epochs=3, version='v2'):
         so = system_one.load(model, proc, out_dir)
     else:
         pm = dpo.add_lora(model, r=16, alpha=32)
-        so = system_one.build(pm, proc, use_state=version == 'v2')
-        system_one.train(so, train, val, out_dir, epochs=epochs)
+        so = system_one.build(pm, proc, use_state=version != 'v1')
+        system_one.train(so, train, val, out_dir, epochs=epochs, patience=patience)
         pm.config.use_cache = True
     run(method, so.predict, bench)
     del so, model; free_gpu()
@@ -213,7 +221,7 @@ def score_method(method, bench):
 
 def train_seconds(method):
     h = {'B_sft': SFT_DIR, 'B+C_sft_constrained': SFT_DIR, 'B_sft_dpo': DPO_DIR, 'B+C_sft_dpo_constrained': DPO_DIR,
-         'D_system_one': S1_DIR_V1, 'D_system_one_v2': S1_DIR}.get(method)
+         'D_system_one': S1_DIR_V1, 'D_system_one_v2': S1_DIR_V2, 'D_system_one_v2_long': S1_DIR}.get(method)
     if not h or not os.path.exists(os.path.join(h, 'history.json')):
         return 0.0
     s = load_json(os.path.join(h, 'history.json')).get('train_seconds', 0.0)
@@ -297,16 +305,17 @@ def plots(S, C):
 
 
 def training_curves():
-    fig, ax = plt.subplots(1, 3, figsize=(15, 3.8))
+    fig, ax = plt.subplots(1, 4, figsize=(20, 3.8))
     for a, (d, title, key) in zip(ax, ((SFT_DIR, 'B: SFT loss', 'loss'), (DPO_DIR, 'B: DPO (+SFT term) loss', 'loss'),
-                                       (S1_DIR, 'D: System One v2 loss (sum over 7 questions)', 'loss'))):
+                                       (S1_DIR_V2, 'D: System One v2, 3 epochs (sum of 7 CE)', 'loss'),
+                                       (S1_DIR, 'D: System One v2, until converged', 'loss'))):
         p = os.path.join(d, 'history.json')
         if not os.path.exists(p):
             a.set_title(title + ' (not trained)'); continue
         h = load_json(p)
         a.plot([s['step'] for s in h['steps']], [s[key] for s in h['steps']], lw=1, label='train (per update)')
         ev = [e for e in h['epochs_log'] if 'val_loss' in e]
-        steps_per_epoch = max(1, len(h['steps']) // max(1, h['epochs']))
+        steps_per_epoch = math.ceil(h['n_train'] / h['grad_accum']) if 'n_train' in h else max(1, len(h['steps']) // max(1, h['epochs']))
         a.plot([e['epoch'] * steps_per_epoch for e in ev], [e['val_loss'] for e in ev], 'o-', label='validation')
         a.set_title(title); a.set_xlabel('optimizer step'); a.legend(fontsize=8)
     plt.tight_layout(); plt.savefig(out_path('hw2_training_curves.png'), dpi=130); plt.show()

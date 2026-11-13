@@ -20,6 +20,7 @@
 | 真實模型試跑 | 在本機 CPU 以 bf16 載入真實的 Qwen3-VL-2B，對 Benchmark 的 B16、B28 跑實驗 A、C：模型能從收據圖片讀出訂單編號；只靠 Prompt 已能輸出合法 JSON，但會違反跨欄位規則（route 卻填了 missing_info） | 發現模型照抄 Prompt 中唯一的範例（`missing_info:["order_id"]`），改為 clarify / route 各一個範例，讓實驗 A 是公平的「盡力而為的 Prompt」 |
 | 程式驗證（執行前） | 本機只有 CPU：以「真實 processor / tokenizer + 2 層隨機權重的 Qwen3-VL」測試完整流程：多圖對話編碼、`logits_to_keep` 的 SFT loss 與完整前向傳播一致、DPO、System One 訓練 / 儲存 / 重新載入後機率一致、兩個 adapter 共用一個 base model、作業二所有階段、快取接續、作業三三個實驗與 Gradio 介面 | 這些測試只檢查程式能否正確執行；報告中的數字全部來自 Colab T4 上的正式執行 |
 | 第一次 Colab 結果檢查 | 逐題檢查 `pred_*.json` 與訓練紀錄 | 發現兩個異常。（1）System One v1 的部門機率幾乎平均分配，驗證集部門正確率只有 41%，判斷為架構問題，依第 70 頁加入 state token（v2）。（2）SFT + DPO 會產生不存在的部門名稱，判斷是 DPO 壓低易混淆部門後的副作用，新增「SFT + DPO + 約束解碼」組驗證。第二次執行只跑新增的部分 |
+| 第二次結果檢查 | 使用者問「為什麼不訓練到收斂」 | AI 承認只訓練 3 epoch 是自己為了省時間做的判斷，應該先詢問使用者。之後加入提早停止，把 v2 訓練到 10 epoch：val loss 從 3.06 降到 2.32，但 Benchmark 的 decision 沒變，而且高信心預測變得過度自信，作業三的攻擊成功率從 0% 回到 5%。兩個版本都照實寫進報告，也註明「3 epoch 版較適合當快速通道」這個結論是看了測試結果才得出的 |
 | 結果撰寫 | README 的分析由 AI 依 `Output/` 的 CSV 與逐題紀錄撰寫 | 每個數字與題號都回到原始 JSON 核對。例如 DPO 經約束解碼後是 6 題中 5 題部門正確，不是全部；Keeper 實驗中 T10、T11 在兩種設定下都正確，不是 Keeper 修好的。沒有實測的部分（LoRA 合併後的延遲、改用 DPO 作 System 2）明確標示為推測 |
 
 ---

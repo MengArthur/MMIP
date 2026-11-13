@@ -42,10 +42,12 @@ def _cpu(sd):
 
 
 def fit(out_dir, n, epochs, step_fn, params, opt, scaler, eval_fn, get_state, set_state, hist, train_mode,
-        grad_accum=8, warmup_ratio=0.05, max_grad_norm=1.0, seed=42, save_every=25, log_every=10, tag='train'):
+        grad_accum=8, warmup_ratio=0.05, max_grad_norm=1.0, seed=42, save_every=25, log_every=10, tag='train',
+        patience=None):
     """step_fn(i) -> (loss tensor, {metric: float} incl. 'loss') for training item i.
     eval_fn() -> {metric: float} incl. 'loss' (validation). get_state() / set_state(sd): trainable weights.
-    Keeps the epoch with the lowest validation loss. Returns the history (hist is filled in place)."""
+    Keeps the epoch with the lowest validation loss. patience: stop early once the validation loss has not improved for
+    this many epochs (None = always run all epochs). Returns the history (hist is filled in place)."""
     total = math.ceil(n / grad_accum) * epochs
     warm = max(1, int(warmup_ratio * total))
     sched = torch.optim.lr_scheduler.LambdaLR(
@@ -71,6 +73,10 @@ def fit(out_dir, n, epochs, step_fn, params, opt, scaler, eval_fn, get_state, se
                     'run': run, 'elapsed': time.perf_counter() - t0}, store.state)
 
     for ep in range(ep0, epochs + 1):
+        if patience and 'best_epoch' in hist and ep - 1 - hist['best_epoch'] >= patience:   # also after a resume
+            hist['stopped_early_after_epoch'] = ep - 1
+            print(f'[{tag}] early stop: validation loss has not improved since epoch {hist["best_epoch"]}')
+            break
         order = np.random.default_rng(seed + ep).permutation(n)
         start = k0 if ep == ep0 else 0
         if start == 0:
