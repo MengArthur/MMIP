@@ -1,0 +1,6 @@
+variant,video_hit@1,video_hit@3,temporal_recall,frame_precision,citation_accuracy,faithfulness,context_recall,frame_usefulness,answer_correctness
+VideoRAG (frames + text),0.8333,0.9444,0.8333,0.6574,0.7778,0.8981,0.8704,0.5926,0.7296
+text only,0.8333,0.9444,0.8333,,0.7778,1.0,0.4306,,0.4074
+frames only,0.8333,0.9444,0.7778,0.6574,0.6667,0.9271,0.8235,0.549,0.5951
+"frames + text, uniform frames",0.8333,0.9444,0.8333,0.6389,0.8333,0.8981,0.8333,0.3519,0.6963
+multi-turn dialogue,0.3333,1.0,0.3333,0.3056,0.3333,0.9167,0.6667,0.1944,0.4444

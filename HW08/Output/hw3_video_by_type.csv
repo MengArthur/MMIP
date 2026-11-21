@@ -1,0 +1,9 @@
+variant,type,temporal_recall,answer_correctness
+VideoRAG (frames + text),speech,0.875,0.8333
+VideoRAG (frames + text),visual,0.8,0.6467
+text only,speech,0.875,0.7917
+text only,visual,0.8,0.1
+frames only,speech,0.75,0.6286
+frames only,visual,0.8,0.5717
+"frames + text, uniform frames",speech,0.875,0.875
+"frames + text, uniform frames",visual,0.8,0.5533

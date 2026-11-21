@@ -1,0 +1,14 @@
+torch
+numpy
+pandas
+matplotlib
+Pillow
+transformers==5.15.0   # version used in HW06 / HW07 (Qwen3, Qwen3-VL, Whisper, Chinese-CLIP)
+accelerate
+scikit-learn           # K-means frame selection (作業二)
+networkx>=3.2          # knowledge graph + Louvain communities (作業四)
+opencc-python-reimplemented   # Whisper output: Simplified -> Traditional Chinese
+opencv-python-headless        # reading video frames
+gradio>=5
+google-genai>=1.30     # Gemini judge (optional)
+nvidia-ml-py

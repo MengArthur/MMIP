@@ -1,0 +1,2600 @@
+{
+ "VideoRAG (frames + text)|V01": {
+  "question": "這組報告的是哪一篇論文？",
+  "standalone": "這組報告的是哪一篇論文？",
+  "answer": "這組報告的是「自我修正透過情境對齊」的論文，主題為「A Theoretical Understanding of Self-Correction through In-context Alignment」，由陳柏韋、林孟萱、溫皇翔組成。【talk_outline 00:00】",
+  "videos": [
+   "talk_outline",
+   "talk_paper_intro",
+   "op_review_report"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03252,
+   "talk_paper_intro": 0.03252,
+   "op_review_report": 0.0315
+  },
+  "frames": [
+   {
+    "video": "talk_outline",
+    "t": 0.0,
+    "file": "video_index/talk_outline/000_0s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 1.0,
+    "file": "video_index/talk_outline/001_1s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 2.0,
+    "file": "video_index/talk_outline/002_2s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 4.0,
+    "file": "video_index/talk_outline/004_4s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 6.0,
+    "file": "video_index/talk_outline/006_6s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 10.0,
+    "file": "video_index/talk_outline/010_10s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "talk_outline",
+    "start": 0.0,
+    "end": 1.0,
+    "kind": "visual",
+    "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。",
+    "score": 0.5073437094688416
+   },
+   {
+    "video": "talk_outline",
+    "start": 1.0,
+    "end": 2.0,
+    "kind": "visual",
+    "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。",
+    "score": 0.5073437094688416
+   },
+   {
+    "video": "talk_outline",
+    "start": 2.0,
+    "end": 3.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.494409441947937
+   },
+   {
+    "video": "talk_outline",
+    "start": 3.0,
+    "end": 4.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.494409441947937
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V02": {
+  "question": "這篇論文是從什麼角度解釋大型語言模型的自我修正？",
+  "standalone": "這篇論文是從什麼角度解釋大型語言模型的自我修正？",
+  "answer": "這篇論文從理論和數學的角度來解釋大型語言模型的自我修正。【talk_paper_intro 00:01】",
+  "videos": [
+   "talk_paper_intro",
+   "talk_outline",
+   "op_database_tables"
+  ],
+  "video_scores": {
+   "talk_paper_intro": 0.03279,
+   "talk_outline": 0.03226,
+   "op_database_tables": 0.0315
+  },
+  "frames": [
+   {
+    "video": "talk_paper_intro",
+    "t": 0.0,
+    "file": "video_index/talk_paper_intro/000_0s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 1.0,
+    "file": "video_index/talk_paper_intro/001_1s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 4.0,
+    "file": "video_index/talk_paper_intro/004_4s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 5.0,
+    "file": "video_index/talk_paper_intro/005_5s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 6.0,
+    "file": "video_index/talk_paper_intro/006_6s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 10.0,
+    "file": "video_index/talk_paper_intro/010_10s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "talk_paper_intro",
+    "start": 0.0,
+    "end": 1.0,
+    "kind": "visual",
+    "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。",
+    "score": 0.5123914480209351
+   },
+   {
+    "video": "talk_paper_intro",
+    "start": 0.6,
+    "end": 30.56,
+    "kind": "speech",
+    "text": "大家好,我們是第15組我們今天要報告的論文是Theoretical Understanding of Self-Correction Through In-Context Alignment這篇論文主要是從理論和數學的角度去解釋大語言模型LM的自我修正到底是怎麼發生的那我們今天主要會涵蓋論文的背景動機他們如何把自我修正建模成一個叫做In-Context Alignment ICA的架構",
+    "score": 0.7266287803649902
+   },
+   {
+    "video": "talk_paper_intro",
+    "start": 1.0,
+    "end": 2.0,
+    "kind": "visual",
+    "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。",
+    "score": 0.5123914480209351
+   },
+   {
+    "video": "talk_paper_intro",
+    "start": 2.0,
+    "end": 3.0,
+    "kind": "visual",
+    "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。",
+    "score": 0.5123914480209351
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V03": {
+  "question": "這次報告預計涵蓋哪些內容？",
+  "standalone": "這次報告預計涵蓋哪些內容？",
+  "answer": "本次報告預計涵蓋自修正的挑戰、合成實驗、真實世界應用、理論架構以及Transformer模組的角色。【talk_outline 00:17】",
+  "videos": [
+   "talk_outline",
+   "op_database_tables",
+   "op_review_report"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03227,
+   "op_database_tables": 0.03202,
+   "op_review_report": 0.032
+  },
+  "frames": [
+   {
+    "video": "talk_outline",
+    "t": 17.0,
+    "file": "video_index/talk_outline/017_17s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 18.0,
+    "file": "video_index/talk_outline/018_18s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 21.0,
+    "file": "video_index/talk_outline/021_21s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 22.0,
+    "file": "video_index/talk_outline/022_22s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 23.0,
+    "file": "video_index/talk_outline/023_23s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 25.0,
+    "file": "video_index/talk_outline/025_25s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "talk_outline",
+    "start": 18.0,
+    "end": 19.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.47502022981643677
+   },
+   {
+    "video": "talk_outline",
+    "start": 19.0,
+    "end": 20.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.47502022981643677
+   },
+   {
+    "video": "talk_outline",
+    "start": 20.0,
+    "end": 21.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.47502022981643677
+   },
+   {
+    "video": "talk_outline",
+    "start": 21.0,
+    "end": 22.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.47502022981643677
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V04": {
+  "question": "這篇論文發表在哪個會議？",
+  "standalone": "這篇論文發表在哪個會議？",
+  "answer": "這篇論文發表在 NeurIPS 2024 會議上。【talk_paper_intro 00:01】",
+  "videos": [
+   "talk_paper_intro",
+   "talk_outline",
+   "op_database_tables"
+  ],
+  "video_scores": {
+   "talk_paper_intro": 0.03279,
+   "talk_outline": 0.032,
+   "op_database_tables": 0.03175
+  },
+  "frames": [
+   {
+    "video": "talk_paper_intro",
+    "t": 1.0,
+    "file": "video_index/talk_paper_intro/001_1s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 2.0,
+    "file": "video_index/talk_paper_intro/002_2s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 4.0,
+    "file": "video_index/talk_paper_intro/004_4s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 29.0,
+    "file": "video_index/talk_paper_intro/029_29s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 31.0,
+    "file": "video_index/talk_paper_intro/031_31s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 32.0,
+    "file": "video_index/talk_paper_intro/032_32s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "talk_paper_intro",
+    "start": 0.0,
+    "end": 1.0,
+    "kind": "visual",
+    "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。",
+    "score": 0.4516375958919525
+   },
+   {
+    "video": "talk_paper_intro",
+    "start": 0.6,
+    "end": 30.56,
+    "kind": "speech",
+    "text": "大家好,我們是第15組我們今天要報告的論文是Theoretical Understanding of Self-Correction Through In-Context Alignment這篇論文主要是從理論和數學的角度去解釋大語言模型LM的自我修正到底是怎麼發生的那我們今天主要會涵蓋論文的背景動機他們如何把自我修正建模成一個叫做In-Context Alignment ICA的架構",
+    "score": 0.5063754320144653
+   },
+   {
+    "video": "talk_paper_intro",
+    "start": 1.0,
+    "end": 2.0,
+    "kind": "visual",
+    "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。",
+    "score": 0.4516375958919525
+   },
+   {
+    "video": "talk_paper_intro",
+    "start": 30.56,
+    "end": 34.78,
+    "kind": "speech",
+    "text": "相關的數學定理證明以及最後的實驗驗證",
+    "score": 0.4535105228424072
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V05": {
+  "question": "Outline 的第一部分 motivation 要討論什麼？",
+  "standalone": "Outline 的第一部分 motivation 要討論什麼？",
+  "answer": "Outline 的第一部分 motivation 是討論為什麼大模型的自我修正在理論上很難解釋。【talk_outline 00:00】",
+  "videos": [
+   "talk_outline",
+   "talk_paper_intro",
+   "op_database_tables"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03252,
+   "talk_paper_intro": 0.03252,
+   "op_database_tables": 0.03175
+  },
+  "frames": [
+   {
+    "video": "talk_outline",
+    "t": 0.0,
+    "file": "video_index/talk_outline/000_0s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 1.0,
+    "file": "video_index/talk_outline/001_1s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 16.0,
+    "file": "video_index/talk_outline/016_16s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 19.0,
+    "file": "video_index/talk_outline/019_19s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 21.0,
+    "file": "video_index/talk_outline/021_21s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 22.0,
+    "file": "video_index/talk_outline/022_22s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "talk_outline",
+    "start": 0.0,
+    "end": 29.54,
+    "kind": "speech",
+    "text": "這是今天的Outline第一是Motivation我們會聊聊為什麼大模型的自我修正目前在理論上很難解釋第二是From ICL to ICA也就是這篇論文怎麼把自我修正轉化成In-Context Alignment的問題第三和第四是理論框架我們會介紹Bradley Terry,BT和PL模型並拆解Transformer的各個元件像是Softmax",
+    "score": 0.6254849433898926
+   },
+   {
+    "video": "talk_outline",
+    "start": 18.0,
+    "end": 19.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.47817057371139526
+   },
+   {
+    "video": "talk_outline",
+    "start": 19.0,
+    "end": 20.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.47817057371139526
+   },
+   {
+    "video": "talk_outline",
+    "start": 20.0,
+    "end": 21.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.47817057371139526
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V06": {
+  "question": "「From ICL to ICA」這一部分在講什麼？",
+  "standalone": "「From ICL to ICA」這一部分在講什麼？",
+  "answer": "「From ICL to ICA」這一部分講述了如何將大模型的自我修正從傳統的ICL（In-context Learning）轉化為In-context Alignment（ICA），並提出了一個新的理論框架。\n\n【talk_outline 00:02】",
+  "videos": [
+   "talk_outline",
+   "talk_paper_intro",
+   "op_review_report"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03279,
+   "talk_paper_intro": 0.03226,
+   "op_review_report": 0.03126
+  },
+  "frames": [
+   {
+    "video": "talk_outline",
+    "t": 0.0,
+    "file": "video_index/talk_outline/000_0s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 1.0,
+    "file": "video_index/talk_outline/001_1s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 3.0,
+    "file": "video_index/talk_outline/003_3s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 5.0,
+    "file": "video_index/talk_outline/005_5s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 7.0,
+    "file": "video_index/talk_outline/007_7s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 9.0,
+    "file": "video_index/talk_outline/009_9s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "talk_outline",
+    "start": 0.0,
+    "end": 29.54,
+    "kind": "speech",
+    "text": "這是今天的Outline第一是Motivation我們會聊聊為什麼大模型的自我修正目前在理論上很難解釋第二是From ICL to ICA也就是這篇論文怎麼把自我修正轉化成In-Context Alignment的問題第三和第四是理論框架我們會介紹Bradley Terry,BT和PL模型並拆解Transformer的各個元件像是Softmax",
+    "score": 0.5746352672576904
+   },
+   {
+    "video": "talk_outline",
+    "start": 2.0,
+    "end": 3.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.37694570422172546
+   },
+   {
+    "video": "talk_outline",
+    "start": 3.0,
+    "end": 4.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.37694570422172546
+   },
+   {
+    "video": "talk_outline",
+    "start": 6.0,
+    "end": 7.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.37694570422172546
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V07": {
+  "question": "理論框架會介紹哪兩種模型？",
+  "standalone": "理論框架會介紹哪兩種模型？",
+  "answer": "理論框架會介紹Bradley-Terry & Plackett-Luce模型。【talk_outline 00:03】",
+  "videos": [
+   "talk_outline",
+   "talk_paper_intro",
+   "op_review_report"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03252,
+   "talk_paper_intro": 0.03252,
+   "op_review_report": 0.0315
+  },
+  "frames": [
+   {
+    "video": "talk_outline",
+    "t": 0.0,
+    "file": "video_index/talk_outline/000_0s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 1.0,
+    "file": "video_index/talk_outline/001_1s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 4.0,
+    "file": "video_index/talk_outline/004_4s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 6.0,
+    "file": "video_index/talk_outline/006_6s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 7.0,
+    "file": "video_index/talk_outline/007_7s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 14.0,
+    "file": "video_index/talk_outline/014_14s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "talk_outline",
+    "start": 0.0,
+    "end": 29.54,
+    "kind": "speech",
+    "text": "這是今天的Outline第一是Motivation我們會聊聊為什麼大模型的自我修正目前在理論上很難解釋第二是From ICL to ICA也就是這篇論文怎麼把自我修正轉化成In-Context Alignment的問題第三和第四是理論框架我們會介紹Bradley Terry,BT和PL模型並拆解Transformer的各個元件像是Softmax",
+    "score": 0.5855152010917664
+   },
+   {
+    "video": "talk_outline",
+    "start": 2.0,
+    "end": 3.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.5809837579727173
+   },
+   {
+    "video": "talk_outline",
+    "start": 3.0,
+    "end": 4.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.5809837579727173
+   },
+   {
+    "video": "talk_outline",
+    "start": 6.0,
+    "end": 7.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.5809837579727173
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V08": {
+  "question": "報告會拆解 Transformer 的哪些元件？",
+  "standalone": "報告會拆解 Transformer 的哪些元件？",
+  "answer": "報告會拆解 Transformer 的元件，包括 Softmax、Multihead、FFN 和 Depth。【talk_outline 00:25】",
+  "videos": [
+   "talk_outline",
+   "op_review_report",
+   "talk_paper_intro"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03279,
+   "op_review_report": 0.032,
+   "talk_paper_intro": 0.03151
+  },
+  "frames": [
+   {
+    "video": "talk_outline",
+    "t": 2.0,
+    "file": "video_index/talk_outline/002_2s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 3.0,
+    "file": "video_index/talk_outline/003_3s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 5.0,
+    "file": "video_index/talk_outline/005_5s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 7.0,
+    "file": "video_index/talk_outline/007_7s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 8.0,
+    "file": "video_index/talk_outline/008_8s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 25.0,
+    "file": "video_index/talk_outline/025_25s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "talk_outline",
+    "start": 2.0,
+    "end": 3.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.5147790312767029
+   },
+   {
+    "video": "talk_outline",
+    "start": 3.0,
+    "end": 4.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.5147790312767029
+   },
+   {
+    "video": "talk_outline",
+    "start": 6.0,
+    "end": 7.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.5147790312767029
+   },
+   {
+    "video": "talk_outline",
+    "start": 25.64,
+    "end": 44.44,
+    "kind": "speech",
+    "text": "並拆解Transformer的各個元件 像是Softmax Multihead FFN 和Depth第五是Synthetic Experiments我們會講這篇論文裡面做的實驗 還有它實驗做出來的資料代表了什麼",
+    "score": 0.6308475732803345
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V09": {
+  "question": "第五部分 Synthetic Experiments 會講什麼？",
+  "standalone": "第五部分 Synthetic Experiments 會講什麼？",
+  "answer": "第五部分 Synthetic Experiments 會講述論文裡做的實驗，以及實驗產生的資料代表了什麼。【talk_outline 00:25】",
+  "videos": [
+   "talk_outline",
+   "talk_paper_intro",
+   "op_database_tables"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03279,
+   "talk_paper_intro": 0.03226,
+   "op_database_tables": 0.03175
+  },
+  "frames": [
+   {
+    "video": "talk_outline",
+    "t": 16.0,
+    "file": "video_index/talk_outline/016_16s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 17.0,
+    "file": "video_index/talk_outline/017_17s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 19.0,
+    "file": "video_index/talk_outline/019_19s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 20.0,
+    "file": "video_index/talk_outline/020_20s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 21.0,
+    "file": "video_index/talk_outline/021_21s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 25.0,
+    "file": "video_index/talk_outline/025_25s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "talk_outline",
+    "start": 18.0,
+    "end": 19.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.5286972522735596
+   },
+   {
+    "video": "talk_outline",
+    "start": 19.0,
+    "end": 20.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.5286972522735596
+   },
+   {
+    "video": "talk_outline",
+    "start": 20.0,
+    "end": 21.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.5286972522735596
+   },
+   {
+    "video": "talk_outline",
+    "start": 25.64,
+    "end": 44.44,
+    "kind": "speech",
+    "text": "並拆解Transformer的各個元件 像是Softmax Multihead FFN 和Depth第五是Synthetic Experiments我們會講這篇論文裡面做的實驗 還有它實驗做出來的資料代表了什麼",
+    "score": 0.6753541231155396
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V10": {
+  "question": "醫療助理系統的表單中輸入的病患姓名和病患 ID 是什麼？",
+  "standalone": "醫療助理系統的表單中輸入的病患姓名和病患 ID 是什麼？",
+  "answer": "病患姓名為 Russell Westbrook，病患 ID 為 0000。【op_review_report 00:00】",
+  "videos": [
+   "op_review_report",
+   "op_patient_inference",
+   "op_database_tables"
+  ],
+  "video_scores": {
+   "op_review_report": 0.03252,
+   "op_patient_inference": 0.03227,
+   "op_database_tables": 0.032
+  },
+  "frames": [
+   {
+    "video": "op_review_report",
+    "t": 0.0,
+    "file": "video_index/op_review_report/000_0s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 11.0,
+    "file": "video_index/op_review_report/011_11s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 13.0,
+    "file": "video_index/op_review_report/013_13s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 15.0,
+    "file": "video_index/op_review_report/015_15s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 28.0,
+    "file": "video_index/op_review_report/028_28s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 29.0,
+    "file": "video_index/op_review_report/029_29s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "op_review_report",
+    "start": 0.0,
+    "end": 1.0,
+    "kind": "visual",
+    "text": "在醫學助理模型中輸入病人資料並執行推理。",
+    "score": 0.7142308950424194
+   },
+   {
+    "video": "op_review_report",
+    "start": 13.0,
+    "end": 14.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示肺部影像與審核人資訊。",
+    "score": 0.5774461030960083
+   },
+   {
+    "video": "op_review_report",
+    "start": 14.0,
+    "end": 15.0,
+    "kind": "visual",
+    "text": "醫學影像分析系統，顯示肺部X光片與審核人員資訊欄位。",
+    "score": 0.6101211309432983
+   },
+   {
+    "video": "op_review_report",
+    "start": 30.0,
+    "end": 31.0,
+    "kind": "visual",
+    "text": "醫學影像分析系統，顯示肺部X光片與評估表單。",
+    "score": 0.5824469327926636
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V11": {
+  "question": "上傳的胸腔 X 光會依序經過哪些模型？",
+  "standalone": "上傳的胸腔 X 光會依序經過哪些模型？",
+  "answer": "【op_review_report 00:05】上傳的胸腔 X 光會依序經過「醫學影像分析軟體」與「評估報告模型」。",
+  "videos": [
+   "op_review_report",
+   "op_database_tables",
+   "op_patient_inference"
+  ],
+  "video_scores": {
+   "op_review_report": 0.03227,
+   "op_database_tables": 0.03226,
+   "op_patient_inference": 0.03202
+  },
+  "frames": [
+   {
+    "video": "op_review_report",
+    "t": 1.0,
+    "file": "video_index/op_review_report/001_1s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 3.0,
+    "file": "video_index/op_review_report/003_3s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 4.0,
+    "file": "video_index/op_review_report/004_4s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 5.0,
+    "file": "video_index/op_review_report/005_5s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 12.0,
+    "file": "video_index/op_review_report/012_12s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 13.0,
+    "file": "video_index/op_review_report/013_13s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "op_review_report",
+    "start": 5.0,
+    "end": 6.0,
+    "kind": "visual",
+    "text": "在醫學影像分析軟體中，顯示肺部X光片與評估報告。",
+    "score": 0.5741649866104126
+   },
+   {
+    "video": "op_review_report",
+    "start": 9.0,
+    "end": 10.0,
+    "kind": "visual",
+    "text": "醫學影像分析系統，顯示肺部X光片與審核欄位。",
+    "score": 0.5671902298927307
+   },
+   {
+    "video": "op_review_report",
+    "start": 10.0,
+    "end": 11.0,
+    "kind": "visual",
+    "text": "醫學影像分析系統，顯示肺部X光片與審核欄位。",
+    "score": 0.5671902298927307
+   },
+   {
+    "video": "op_review_report",
+    "start": 12.0,
+    "end": 13.0,
+    "kind": "visual",
+    "text": "醫學影像分析系統，顯示肺部X光片與審核欄位。",
+    "score": 0.5671902298927307
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V12": {
+  "question": "按下 Run Inference 之後畫面顯示什麼訊息？",
+  "standalone": "按下 Run Inference 之後畫面顯示什麼訊息？",
+  "answer": "【op_database_tables 00:36】（畫面描述）在資料庫管理工具中，正在新增一筆記錄。",
+  "videos": [
+   "op_database_tables",
+   "op_review_report",
+   "op_patient_inference"
+  ],
+  "video_scores": {
+   "op_database_tables": 0.03279,
+   "op_review_report": 0.032,
+   "op_patient_inference": 0.03175
+  },
+  "frames": [
+   {
+    "video": "op_database_tables",
+    "t": 11.0,
+    "file": "video_index/op_database_tables/011_11s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 12.0,
+    "file": "video_index/op_database_tables/012_12s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 29.0,
+    "file": "video_index/op_database_tables/029_29s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 30.0,
+    "file": "video_index/op_database_tables/030_30s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 32.0,
+    "file": "video_index/op_database_tables/032_32s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 35.0,
+    "file": "video_index/op_database_tables/035_35s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "op_database_tables",
+    "start": 9.0,
+    "end": 10.0,
+    "kind": "visual",
+    "text": "在一個資料庫管理介面中，正在操作「production」分支的「Tables」，並顯示了「a_inference_results」等表格名稱。",
+    "score": 0.5483559966087341
+   },
+   {
+    "video": "op_database_tables",
+    "start": 11.0,
+    "end": 12.0,
+    "kind": "visual",
+    "text": "在資料庫管理介面中，正在查看並操作「a_inference_results」表。",
+    "score": 0.5997660160064697
+   },
+   {
+    "video": "op_database_tables",
+    "start": 30.0,
+    "end": 31.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增一筆資料。",
+    "score": 0.5165850520133972
+   },
+   {
+    "video": "op_database_tables",
+    "start": 36.0,
+    "end": 37.0,
+    "kind": "visual",
+    "text": "在一個資料庫管理工具中，正在新增一筆記錄。",
+    "score": 0.5137753486633301
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V13": {
+  "question": "系統在 X 光片上偵測到什麼？怎麼標示？",
+  "standalone": "系統在 X 光片上偵測到什麼？怎麼標示？",
+  "answer": "系統在X光片上偵測到肺部異常，並用綠色框標示。【op_review_report 00:14】",
+  "videos": [
+   "op_review_report",
+   "op_database_tables",
+   "talk_outline"
+  ],
+  "video_scores": {
+   "op_review_report": 0.03279,
+   "op_database_tables": 0.03226,
+   "talk_outline": 0.0315
+  },
+  "frames": [
+   {
+    "video": "op_review_report",
+    "t": 14.0,
+    "file": "video_index/op_review_report/014_14s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 16.0,
+    "file": "video_index/op_review_report/016_16s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 18.0,
+    "file": "video_index/op_review_report/018_18s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 19.0,
+    "file": "video_index/op_review_report/019_19s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 21.0,
+    "file": "video_index/op_review_report/021_21s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 22.0,
+    "file": "video_index/op_review_report/022_22s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "op_review_report",
+    "start": 17.0,
+    "end": 18.0,
+    "kind": "visual",
+    "text": "醫學影像分析系統，顯示X光片與審核欄位。",
+    "score": 0.6800055503845215
+   },
+   {
+    "video": "op_review_report",
+    "start": 19.0,
+    "end": 20.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示X光片與審核欄位。",
+    "score": 0.6671088933944702
+   },
+   {
+    "video": "op_review_report",
+    "start": 20.0,
+    "end": 21.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示X光片與審核欄位。",
+    "score": 0.6671088933944702
+   },
+   {
+    "video": "op_review_report",
+    "start": 21.0,
+    "end": 22.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示X光片與審核欄位。",
+    "score": 0.6671088933944702
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V14": {
+  "question": "AI 產生的草稿報告說氣胸位在哪裡？",
+  "standalone": "AI 產生的草稿報告說氣胸位在哪裡？",
+  "answer": "AI 產生的草稿報告說氣胸位於肺部與胸壁之間，並指出其在左上肺葉。【op_review_report 00:04】",
+  "videos": [
+   "op_review_report",
+   "op_database_tables",
+   "op_patient_inference"
+  ],
+  "video_scores": {
+   "op_review_report": 0.03279,
+   "op_database_tables": 0.03226,
+   "op_patient_inference": 0.03175
+  },
+  "frames": [
+   {
+    "video": "op_review_report",
+    "t": 1.0,
+    "file": "video_index/op_review_report/001_1s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 2.0,
+    "file": "video_index/op_review_report/002_2s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 4.0,
+    "file": "video_index/op_review_report/004_4s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 6.0,
+    "file": "video_index/op_review_report/006_6s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 7.0,
+    "file": "video_index/op_review_report/007_7s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 11.0,
+    "file": "video_index/op_review_report/011_11s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "op_review_report",
+    "start": 1.0,
+    "end": 2.0,
+    "kind": "visual",
+    "text": "在醫學影像分析軟體中，顯示肺部病變的檢測結果與報告。",
+    "score": 0.5219000577926636
+   },
+   {
+    "video": "op_review_report",
+    "start": 2.0,
+    "end": 3.0,
+    "kind": "visual",
+    "text": "在瀏覽器中進行影像分析，顯示肺部病變的檢測圖與報告。",
+    "score": 0.5174833536148071
+   },
+   {
+    "video": "op_review_report",
+    "start": 5.0,
+    "end": 6.0,
+    "kind": "visual",
+    "text": "在醫學影像分析軟體中，顯示肺部X光片與評估報告。",
+    "score": 0.5434924364089966
+   },
+   {
+    "video": "op_review_report",
+    "start": 6.0,
+    "end": 7.0,
+    "kind": "visual",
+    "text": "在醫學影像評估界面，顯示肺部X光片與評論文本。",
+    "score": 0.5196845531463623
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V15": {
+  "question": "使用者把報告改成什麼內容？審核人填了誰？",
+  "standalone": "使用者把報告改成什麼內容？審核人填了誰？",
+  "answer": "使用者將報告內容修改為「Russell Westbrook's medical report」，審核人填入「Dr Lin」。【op_review_report 00:28】",
+  "videos": [
+   "op_review_report",
+   "op_database_tables",
+   "op_patient_inference"
+  ],
+  "video_scores": {
+   "op_review_report": 0.03202,
+   "op_database_tables": 0.032,
+   "op_patient_inference": 0.032
+  },
+  "frames": [
+   {
+    "video": "op_review_report",
+    "t": 13.0,
+    "file": "video_index/op_review_report/013_13s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 18.0,
+    "file": "video_index/op_review_report/018_18s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 21.0,
+    "file": "video_index/op_review_report/021_21s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 28.0,
+    "file": "video_index/op_review_report/028_28s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 29.0,
+    "file": "video_index/op_review_report/029_29s.jpg"
+   },
+   {
+    "video": "op_review_report",
+    "t": 30.0,
+    "file": "video_index/op_review_report/030_30s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "op_review_report",
+    "start": 11.0,
+    "end": 12.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示X光片與審核人資訊。",
+    "score": 0.6375377178192139
+   },
+   {
+    "video": "op_review_report",
+    "start": 13.0,
+    "end": 14.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示肺部影像與審核人資訊。",
+    "score": 0.6145286560058594
+   },
+   {
+    "video": "op_review_report",
+    "start": 19.0,
+    "end": 20.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示X光片與審核欄位。",
+    "score": 0.5667946338653564
+   },
+   {
+    "video": "op_review_report",
+    "start": 29.0,
+    "end": 30.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示肺部影像與審核人員資訊。",
+    "score": 0.5983675718307495
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V16": {
+  "question": "雲端資料庫裡有哪些資料表？",
+  "standalone": "雲端資料庫裡有哪些資料表？",
+  "answer": "雲端資料庫裡有以下資料表：a_inference_results、medical_reports、patient_data、patient_visits。【op_database_tables 00:15】",
+  "videos": [
+   "op_database_tables",
+   "talk_outline",
+   "op_patient_inference"
+  ],
+  "video_scores": {
+   "op_database_tables": 0.03279,
+   "talk_outline": 0.032,
+   "op_patient_inference": 0.03175
+  },
+  "frames": [
+   {
+    "video": "op_database_tables",
+    "t": 11.0,
+    "file": "video_index/op_database_tables/011_11s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 12.0,
+    "file": "video_index/op_database_tables/012_12s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 15.0,
+    "file": "video_index/op_database_tables/015_15s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 16.0,
+    "file": "video_index/op_database_tables/016_16s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 34.0,
+    "file": "video_index/op_database_tables/034_34s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 36.0,
+    "file": "video_index/op_database_tables/036_36s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "op_database_tables",
+    "start": 13.0,
+    "end": 14.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增資料記錄。",
+    "score": 0.6314385533332825
+   },
+   {
+    "video": "op_database_tables",
+    "start": 14.0,
+    "end": 15.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增資料記錄。",
+    "score": 0.6314385533332825
+   },
+   {
+    "video": "op_database_tables",
+    "start": 15.0,
+    "end": 16.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增資料記錄。",
+    "score": 0.6314385533332825
+   },
+   {
+    "video": "op_database_tables",
+    "start": 34.0,
+    "end": 35.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在查看並操作醫療報告的資料表。",
+    "score": 0.6343399286270142
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V17": {
+  "question": "medical_reports 資料表中 Russell Westbrook 那份報告的審核狀態是什麼？",
+  "standalone": "medical_reports 資料表中 Russell Westbrook 那份報告的審核狀態是什麼？",
+  "answer": "根據畫面顯示，Russell Westbrook 的報告審核狀態為「已核准」。【op_database_tables 00:28】",
+  "videos": [
+   "op_database_tables",
+   "op_review_report",
+   "op_patient_inference"
+  ],
+  "video_scores": {
+   "op_database_tables": 0.03252,
+   "op_review_report": 0.03252,
+   "op_patient_inference": 0.03175
+  },
+  "frames": [
+   {
+    "video": "op_database_tables",
+    "t": 0.0,
+    "file": "video_index/op_database_tables/000_0s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 1.0,
+    "file": "video_index/op_database_tables/001_1s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 26.0,
+    "file": "video_index/op_database_tables/026_26s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 28.0,
+    "file": "video_index/op_database_tables/028_28s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 29.0,
+    "file": "video_index/op_database_tables/029_29s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 33.0,
+    "file": "video_index/op_database_tables/033_33s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "op_database_tables",
+    "start": 26.0,
+    "end": 27.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在查看並操作「medical_reports」表。",
+    "score": 0.6242603659629822
+   },
+   {
+    "video": "op_database_tables",
+    "start": 29.0,
+    "end": 30.0,
+    "kind": "visual",
+    "text": "在一個資料庫管理介面中，正在查看並操作「medical_reports」表的資料。",
+    "score": 0.6045621633529663
+   },
+   {
+    "video": "op_database_tables",
+    "start": 33.0,
+    "end": 34.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在查看並編輯「medical_reports」表的資料。",
+    "score": 0.6225529909133911
+   },
+   {
+    "video": "op_database_tables",
+    "start": 35.0,
+    "end": 36.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在查看並操作「medical_reports」表。",
+    "score": 0.6243817806243896
+   }
+  ]
+ },
+ "VideoRAG (frames + text)|V18": {
+  "question": "資料庫用的是哪個服務？專案名稱和分支是什麼？",
+  "standalone": "資料庫用的是哪個服務？專案名稱和分支是什麼？",
+  "answer": "資料庫服務為「console.neon.tech」，專案名稱為「CheetahNeonSQL」，分支為「production」。【op_database_tables 00:13】",
+  "videos": [
+   "op_database_tables",
+   "talk_outline",
+   "op_patient_inference"
+  ],
+  "video_scores": {
+   "op_database_tables": 0.03252,
+   "talk_outline": 0.03202,
+   "op_patient_inference": 0.03175
+  },
+  "frames": [
+   {
+    "video": "op_database_tables",
+    "t": 8.0,
+    "file": "video_index/op_database_tables/008_8s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 14.0,
+    "file": "video_index/op_database_tables/014_14s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 15.0,
+    "file": "video_index/op_database_tables/015_15s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 16.0,
+    "file": "video_index/op_database_tables/016_16s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 17.0,
+    "file": "video_index/op_database_tables/017_17s.jpg"
+   },
+   {
+    "video": "op_database_tables",
+    "t": 18.0,
+    "file": "video_index/op_database_tables/018_18s.jpg"
+   }
+  ],
+  "text_units": [
+   {
+    "video": "op_database_tables",
+    "start": 13.0,
+    "end": 14.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增資料記錄。",
+    "score": 0.6391000747680664
+   },
+   {
+    "video": "op_database_tables",
+    "start": 14.0,
+    "end": 15.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增資料記錄。",
+    "score": 0.6391000747680664
+   },
+   {
+    "video": "op_database_tables",
+    "start": 15.0,
+    "end": 16.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增資料記錄。",
+    "score": 0.6391000747680664
+   },
+   {
+    "video": "op_database_tables",
+    "start": 16.0,
+    "end": 17.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增資料記錄。",
+    "score": 0.6391000747680664
+   }
+  ]
+ },
+ "text only|V01": {
+  "question": "這組報告的是哪一篇論文？",
+  "standalone": "這組報告的是哪一篇論文？",
+  "answer": "影片內容僅顯示「NeurIPS 2024」學術講座主題為「自我修正透過情境對齊」，並列出三位組員，以及講義目錄，但未提供具體論文名稱或內容。【talk_outline 00:02】",
+  "videos": [
+   "talk_outline",
+   "talk_paper_intro",
+   "op_review_report"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03252,
+   "talk_paper_intro": 0.03252,
+   "op_review_report": 0.0315
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "talk_outline",
+    "start": 0.0,
+    "end": 1.0,
+    "kind": "visual",
+    "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。",
+    "score": 0.5073437094688416
+   },
+   {
+    "video": "talk_outline",
+    "start": 1.0,
+    "end": 2.0,
+    "kind": "visual",
+    "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。",
+    "score": 0.5073437094688416
+   },
+   {
+    "video": "talk_outline",
+    "start": 2.0,
+    "end": 3.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.494409441947937
+   },
+   {
+    "video": "talk_outline",
+    "start": 3.0,
+    "end": 4.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.494409441947937
+   }
+  ]
+ },
+ "text only|V02": {
+  "question": "這篇論文是從什麼角度解釋大型語言模型的自我修正？",
+  "standalone": "這篇論文是從什麼角度解釋大型語言模型的自我修正？",
+  "answer": "這篇論文從理論和數學的角度解釋大型語言模型的自我修正。【talk_paper_intro 00:01】",
+  "videos": [
+   "talk_paper_intro",
+   "talk_outline",
+   "op_database_tables"
+  ],
+  "video_scores": {
+   "talk_paper_intro": 0.03279,
+   "talk_outline": 0.03226,
+   "op_database_tables": 0.0315
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "talk_paper_intro",
+    "start": 0.0,
+    "end": 1.0,
+    "kind": "visual",
+    "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。",
+    "score": 0.5123914480209351
+   },
+   {
+    "video": "talk_paper_intro",
+    "start": 0.6,
+    "end": 30.56,
+    "kind": "speech",
+    "text": "大家好,我們是第15組我們今天要報告的論文是Theoretical Understanding of Self-Correction Through In-Context Alignment這篇論文主要是從理論和數學的角度去解釋大語言模型LM的自我修正到底是怎麼發生的那我們今天主要會涵蓋論文的背景動機他們如何把自我修正建模成一個叫做In-Context Alignment ICA的架構",
+    "score": 0.7266287803649902
+   },
+   {
+    "video": "talk_paper_intro",
+    "start": 1.0,
+    "end": 2.0,
+    "kind": "visual",
+    "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。",
+    "score": 0.5123914480209351
+   },
+   {
+    "video": "talk_paper_intro",
+    "start": 2.0,
+    "end": 3.0,
+    "kind": "visual",
+    "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。",
+    "score": 0.5123914480209351
+   }
+  ]
+ },
+ "text only|V03": {
+  "question": "這次報告預計涵蓋哪些內容？",
+  "standalone": "這次報告預計涵蓋哪些內容？",
+  "answer": "報告預計涵蓋六個主題，包括「自修正的挑戰」、「合成實驗」等。【talk_outline 00:18】",
+  "videos": [
+   "talk_outline",
+   "op_database_tables",
+   "op_review_report"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03227,
+   "op_database_tables": 0.03202,
+   "op_review_report": 0.032
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "talk_outline",
+    "start": 18.0,
+    "end": 19.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.47502022981643677
+   },
+   {
+    "video": "talk_outline",
+    "start": 19.0,
+    "end": 20.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.47502022981643677
+   },
+   {
+    "video": "talk_outline",
+    "start": 20.0,
+    "end": 21.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.47502022981643677
+   },
+   {
+    "video": "talk_outline",
+    "start": 21.0,
+    "end": 22.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.47502022981643677
+   }
+  ]
+ },
+ "text only|V04": {
+  "question": "這篇論文發表在哪個會議？",
+  "standalone": "這篇論文發表在哪個會議？",
+  "answer": "這篇論文發表在 NeurIPS 2024 會議。【talk_paper_intro 00:00】",
+  "videos": [
+   "talk_paper_intro",
+   "talk_outline",
+   "op_database_tables"
+  ],
+  "video_scores": {
+   "talk_paper_intro": 0.03279,
+   "talk_outline": 0.032,
+   "op_database_tables": 0.03175
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "talk_paper_intro",
+    "start": 0.0,
+    "end": 1.0,
+    "kind": "visual",
+    "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。",
+    "score": 0.4516375958919525
+   },
+   {
+    "video": "talk_paper_intro",
+    "start": 0.6,
+    "end": 30.56,
+    "kind": "speech",
+    "text": "大家好,我們是第15組我們今天要報告的論文是Theoretical Understanding of Self-Correction Through In-Context Alignment這篇論文主要是從理論和數學的角度去解釋大語言模型LM的自我修正到底是怎麼發生的那我們今天主要會涵蓋論文的背景動機他們如何把自我修正建模成一個叫做In-Context Alignment ICA的架構",
+    "score": 0.5063754320144653
+   },
+   {
+    "video": "talk_paper_intro",
+    "start": 1.0,
+    "end": 2.0,
+    "kind": "visual",
+    "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。",
+    "score": 0.4516375958919525
+   },
+   {
+    "video": "talk_paper_intro",
+    "start": 30.56,
+    "end": 34.78,
+    "kind": "speech",
+    "text": "相關的數學定理證明以及最後的實驗驗證",
+    "score": 0.4535105228424072
+   }
+  ]
+ },
+ "text only|V05": {
+  "question": "Outline 的第一部分 motivation 要討論什麼？",
+  "standalone": "Outline 的第一部分 motivation 要討論什麼？",
+  "answer": "Outline 的第一部分 motivation 要討論大模型的自我修正目前在理論上很難解釋。【talk_outline 00:00】",
+  "videos": [
+   "talk_outline",
+   "talk_paper_intro",
+   "op_database_tables"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03252,
+   "talk_paper_intro": 0.03252,
+   "op_database_tables": 0.03175
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "talk_outline",
+    "start": 0.0,
+    "end": 29.54,
+    "kind": "speech",
+    "text": "這是今天的Outline第一是Motivation我們會聊聊為什麼大模型的自我修正目前在理論上很難解釋第二是From ICL to ICA也就是這篇論文怎麼把自我修正轉化成In-Context Alignment的問題第三和第四是理論框架我們會介紹Bradley Terry,BT和PL模型並拆解Transformer的各個元件像是Softmax",
+    "score": 0.6254849433898926
+   },
+   {
+    "video": "talk_outline",
+    "start": 18.0,
+    "end": 19.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.47817057371139526
+   },
+   {
+    "video": "talk_outline",
+    "start": 19.0,
+    "end": 20.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.47817057371139526
+   },
+   {
+    "video": "talk_outline",
+    "start": 20.0,
+    "end": 21.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.47817057371139526
+   }
+  ]
+ },
+ "text only|V06": {
+  "question": "「From ICL to ICA」這一部分在講什麼？",
+  "standalone": "「From ICL to ICA」這一部分在講什麼？",
+  "answer": "「From ICL to ICA」這一部分講述如何將大模型的自我修正從In-Context Learning（ICL）轉化為In-Context Alignment（ICA）的問題，並介紹相關理論框架。【talk_outline 00:00】",
+  "videos": [
+   "talk_outline",
+   "talk_paper_intro",
+   "op_review_report"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03279,
+   "talk_paper_intro": 0.03226,
+   "op_review_report": 0.03126
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "talk_outline",
+    "start": 0.0,
+    "end": 29.54,
+    "kind": "speech",
+    "text": "這是今天的Outline第一是Motivation我們會聊聊為什麼大模型的自我修正目前在理論上很難解釋第二是From ICL to ICA也就是這篇論文怎麼把自我修正轉化成In-Context Alignment的問題第三和第四是理論框架我們會介紹Bradley Terry,BT和PL模型並拆解Transformer的各個元件像是Softmax",
+    "score": 0.5746352672576904
+   },
+   {
+    "video": "talk_outline",
+    "start": 2.0,
+    "end": 3.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.37694570422172546
+   },
+   {
+    "video": "talk_outline",
+    "start": 3.0,
+    "end": 4.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.37694570422172546
+   },
+   {
+    "video": "talk_outline",
+    "start": 6.0,
+    "end": 7.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.37694570422172546
+   }
+  ]
+ },
+ "text only|V07": {
+  "question": "理論框架會介紹哪兩種模型？",
+  "standalone": "理論框架會介紹哪兩種模型？",
+  "answer": "理論框架會介紹Bradley Terry模型與PL模型。【talk_outline 00:00】",
+  "videos": [
+   "talk_outline",
+   "talk_paper_intro",
+   "op_review_report"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03252,
+   "talk_paper_intro": 0.03252,
+   "op_review_report": 0.0315
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "talk_outline",
+    "start": 0.0,
+    "end": 29.54,
+    "kind": "speech",
+    "text": "這是今天的Outline第一是Motivation我們會聊聊為什麼大模型的自我修正目前在理論上很難解釋第二是From ICL to ICA也就是這篇論文怎麼把自我修正轉化成In-Context Alignment的問題第三和第四是理論框架我們會介紹Bradley Terry,BT和PL模型並拆解Transformer的各個元件像是Softmax",
+    "score": 0.5855152010917664
+   },
+   {
+    "video": "talk_outline",
+    "start": 2.0,
+    "end": 3.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.5809837579727173
+   },
+   {
+    "video": "talk_outline",
+    "start": 3.0,
+    "end": 4.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.5809837579727173
+   },
+   {
+    "video": "talk_outline",
+    "start": 6.0,
+    "end": 7.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.5809837579727173
+   }
+  ]
+ },
+ "text only|V08": {
+  "question": "報告會拆解 Transformer 的哪些元件？",
+  "standalone": "報告會拆解 Transformer 的哪些元件？",
+  "answer": "報告會拆解 Transformer 的元件包括 Softmax、Multihead FFN 和 Depth。【talk_outline 00:26–00:44】",
+  "videos": [
+   "talk_outline",
+   "op_review_report",
+   "talk_paper_intro"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03279,
+   "op_review_report": 0.032,
+   "talk_paper_intro": 0.03151
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "talk_outline",
+    "start": 2.0,
+    "end": 3.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.5147790312767029
+   },
+   {
+    "video": "talk_outline",
+    "start": 3.0,
+    "end": 4.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.5147790312767029
+   },
+   {
+    "video": "talk_outline",
+    "start": 6.0,
+    "end": 7.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個學術講義的目錄，包含六個主題，如自修正、理論框架和Transformer模組角色。",
+    "score": 0.5147790312767029
+   },
+   {
+    "video": "talk_outline",
+    "start": 25.64,
+    "end": 44.44,
+    "kind": "speech",
+    "text": "並拆解Transformer的各個元件 像是Softmax Multihead FFN 和Depth第五是Synthetic Experiments我們會講這篇論文裡面做的實驗 還有它實驗做出來的資料代表了什麼",
+    "score": 0.6308475732803345
+   }
+  ]
+ },
+ "text only|V09": {
+  "question": "第五部分 Synthetic Experiments 會講什麼？",
+  "standalone": "第五部分 Synthetic Experiments 會講什麼？",
+  "answer": "第五部分 Synthetic Experiments 會講述論文裡所做的實驗，以及實驗產生的資料代表了什麼。【talk_outline 00:26–00:44】",
+  "videos": [
+   "talk_outline",
+   "talk_paper_intro",
+   "op_database_tables"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03279,
+   "talk_paper_intro": 0.03226,
+   "op_database_tables": 0.03175
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "talk_outline",
+    "start": 18.0,
+    "end": 19.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.5286972522735596
+   },
+   {
+    "video": "talk_outline",
+    "start": 19.0,
+    "end": 20.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.5286972522735596
+   },
+   {
+    "video": "talk_outline",
+    "start": 20.0,
+    "end": 21.0,
+    "kind": "visual",
+    "text": "影片畫面顯示一個簡潔的演講提綱，包含六個主題，如「自修正的挑戰」、「合成實驗」等。",
+    "score": 0.5286972522735596
+   },
+   {
+    "video": "talk_outline",
+    "start": 25.64,
+    "end": 44.44,
+    "kind": "speech",
+    "text": "並拆解Transformer的各個元件 像是Softmax Multihead FFN 和Depth第五是Synthetic Experiments我們會講這篇論文裡面做的實驗 還有它實驗做出來的資料代表了什麼",
+    "score": 0.6753541231155396
+   }
+  ]
+ },
+ "text only|V10": {
+  "question": "醫療助理系統的表單中輸入的病患姓名和病患 ID 是什麼？",
+  "standalone": "醫療助理系統的表單中輸入的病患姓名和病患 ID 是什麼？",
+  "answer": "影片中未提及醫療助理系統表單中輸入的病患姓名和病患 ID，因此無法回答。【op_review_report 00:30】",
+  "videos": [
+   "op_review_report",
+   "op_patient_inference",
+   "op_database_tables"
+  ],
+  "video_scores": {
+   "op_review_report": 0.03252,
+   "op_patient_inference": 0.03227,
+   "op_database_tables": 0.032
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "op_review_report",
+    "start": 0.0,
+    "end": 1.0,
+    "kind": "visual",
+    "text": "在醫學助理模型中輸入病人資料並執行推理。",
+    "score": 0.7142308950424194
+   },
+   {
+    "video": "op_review_report",
+    "start": 13.0,
+    "end": 14.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示肺部影像與審核人資訊。",
+    "score": 0.5774461030960083
+   },
+   {
+    "video": "op_review_report",
+    "start": 14.0,
+    "end": 15.0,
+    "kind": "visual",
+    "text": "醫學影像分析系統，顯示肺部X光片與審核人員資訊欄位。",
+    "score": 0.6101211309432983
+   },
+   {
+    "video": "op_review_report",
+    "start": 30.0,
+    "end": 31.0,
+    "kind": "visual",
+    "text": "醫學影像分析系統，顯示肺部X光片與評估表單。",
+    "score": 0.5824469327926636
+   }
+  ]
+ },
+ "text only|V11": {
+  "question": "上傳的胸腔 X 光會依序經過哪些模型？",
+  "standalone": "上傳的胸腔 X 光會依序經過哪些模型？",
+  "answer": "胸腔X光會依序經過影像分析軟體中的肺部X光片與審核欄位模型。【op_review_report 00:05】",
+  "videos": [
+   "op_review_report",
+   "op_database_tables",
+   "op_patient_inference"
+  ],
+  "video_scores": {
+   "op_review_report": 0.03227,
+   "op_database_tables": 0.03226,
+   "op_patient_inference": 0.03202
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "op_review_report",
+    "start": 5.0,
+    "end": 6.0,
+    "kind": "visual",
+    "text": "在醫學影像分析軟體中，顯示肺部X光片與評估報告。",
+    "score": 0.5741649866104126
+   },
+   {
+    "video": "op_review_report",
+    "start": 9.0,
+    "end": 10.0,
+    "kind": "visual",
+    "text": "醫學影像分析系統，顯示肺部X光片與審核欄位。",
+    "score": 0.5671902298927307
+   },
+   {
+    "video": "op_review_report",
+    "start": 10.0,
+    "end": 11.0,
+    "kind": "visual",
+    "text": "醫學影像分析系統，顯示肺部X光片與審核欄位。",
+    "score": 0.5671902298927307
+   },
+   {
+    "video": "op_review_report",
+    "start": 12.0,
+    "end": 13.0,
+    "kind": "visual",
+    "text": "醫學影像分析系統，顯示肺部X光片與審核欄位。",
+    "score": 0.5671902298927307
+   }
+  ]
+ },
+ "text only|V12": {
+  "question": "按下 Run Inference 之後畫面顯示什麼訊息？",
+  "standalone": "按下 Run Inference 之後畫面顯示什麼訊息？",
+  "answer": "影片中未提及「按下 Run Inference」後畫面顯示的訊息，僅顯示操作「a_inference_results」表與新增資料。【op_database_tables 00:30–00:31】",
+  "videos": [
+   "op_database_tables",
+   "op_review_report",
+   "op_patient_inference"
+  ],
+  "video_scores": {
+   "op_database_tables": 0.03279,
+   "op_review_report": 0.032,
+   "op_patient_inference": 0.03175
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "op_database_tables",
+    "start": 9.0,
+    "end": 10.0,
+    "kind": "visual",
+    "text": "在一個資料庫管理介面中，正在操作「production」分支的「Tables」，並顯示了「a_inference_results」等表格名稱。",
+    "score": 0.5483559966087341
+   },
+   {
+    "video": "op_database_tables",
+    "start": 11.0,
+    "end": 12.0,
+    "kind": "visual",
+    "text": "在資料庫管理介面中，正在查看並操作「a_inference_results」表。",
+    "score": 0.5997660160064697
+   },
+   {
+    "video": "op_database_tables",
+    "start": 30.0,
+    "end": 31.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增一筆資料。",
+    "score": 0.5165850520133972
+   },
+   {
+    "video": "op_database_tables",
+    "start": 36.0,
+    "end": 37.0,
+    "kind": "visual",
+    "text": "在一個資料庫管理工具中，正在新增一筆記錄。",
+    "score": 0.5137753486633301
+   }
+  ]
+ },
+ "text only|V13": {
+  "question": "系統在 X 光片上偵測到什麼？怎麼標示？",
+  "standalone": "系統在 X 光片上偵測到什麼？怎麼標示？",
+  "answer": "系統在X光片上偵測到異常，並以審核欄位標示。【op_review_report 00:17】",
+  "videos": [
+   "op_review_report",
+   "op_database_tables",
+   "talk_outline"
+  ],
+  "video_scores": {
+   "op_review_report": 0.03279,
+   "op_database_tables": 0.03226,
+   "talk_outline": 0.0315
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "op_review_report",
+    "start": 17.0,
+    "end": 18.0,
+    "kind": "visual",
+    "text": "醫學影像分析系統，顯示X光片與審核欄位。",
+    "score": 0.6800055503845215
+   },
+   {
+    "video": "op_review_report",
+    "start": 19.0,
+    "end": 20.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示X光片與審核欄位。",
+    "score": 0.6671088933944702
+   },
+   {
+    "video": "op_review_report",
+    "start": 20.0,
+    "end": 21.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示X光片與審核欄位。",
+    "score": 0.6671088933944702
+   },
+   {
+    "video": "op_review_report",
+    "start": 21.0,
+    "end": 22.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示X光片與審核欄位。",
+    "score": 0.6671088933944702
+   }
+  ]
+ },
+ "text only|V14": {
+  "question": "AI 產生的草稿報告說氣胸位在哪裡？",
+  "standalone": "AI 產生的草稿報告說氣胸位在哪裡？",
+  "answer": "影片中未提及AI產生的草稿報告，僅顯示醫學影像分析軟體與評估界面，無相關內容可確認氣胸位置。【op_review_report 00:05】",
+  "videos": [
+   "op_review_report",
+   "op_database_tables",
+   "op_patient_inference"
+  ],
+  "video_scores": {
+   "op_review_report": 0.03279,
+   "op_database_tables": 0.03226,
+   "op_patient_inference": 0.03175
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "op_review_report",
+    "start": 1.0,
+    "end": 2.0,
+    "kind": "visual",
+    "text": "在醫學影像分析軟體中，顯示肺部病變的檢測結果與報告。",
+    "score": 0.5219000577926636
+   },
+   {
+    "video": "op_review_report",
+    "start": 2.0,
+    "end": 3.0,
+    "kind": "visual",
+    "text": "在瀏覽器中進行影像分析，顯示肺部病變的檢測圖與報告。",
+    "score": 0.5174833536148071
+   },
+   {
+    "video": "op_review_report",
+    "start": 5.0,
+    "end": 6.0,
+    "kind": "visual",
+    "text": "在醫學影像分析軟體中，顯示肺部X光片與評估報告。",
+    "score": 0.5434924364089966
+   },
+   {
+    "video": "op_review_report",
+    "start": 6.0,
+    "end": 7.0,
+    "kind": "visual",
+    "text": "在醫學影像評估界面，顯示肺部X光片與評論文本。",
+    "score": 0.5196845531463623
+   }
+  ]
+ },
+ "text only|V15": {
+  "question": "使用者把報告改成什麼內容？審核人填了誰？",
+  "standalone": "使用者把報告改成什麼內容？審核人填了誰？",
+  "answer": "影片中未顯示使用者修改報告內容或審核人資訊，僅顯示審核系統的影像與資訊。【op_review_report 00:13】",
+  "videos": [
+   "op_review_report",
+   "op_database_tables",
+   "op_patient_inference"
+  ],
+  "video_scores": {
+   "op_review_report": 0.03202,
+   "op_database_tables": 0.032,
+   "op_patient_inference": 0.032
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "op_review_report",
+    "start": 11.0,
+    "end": 12.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示X光片與審核人資訊。",
+    "score": 0.6375377178192139
+   },
+   {
+    "video": "op_review_report",
+    "start": 13.0,
+    "end": 14.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示肺部影像與審核人資訊。",
+    "score": 0.6145286560058594
+   },
+   {
+    "video": "op_review_report",
+    "start": 19.0,
+    "end": 20.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示X光片與審核欄位。",
+    "score": 0.5667946338653564
+   },
+   {
+    "video": "op_review_report",
+    "start": 29.0,
+    "end": 30.0,
+    "kind": "visual",
+    "text": "醫學影像報告審核系統，顯示肺部影像與審核人員資訊。",
+    "score": 0.5983675718307495
+   }
+  ]
+ },
+ "text only|V16": {
+  "question": "雲端資料庫裡有哪些資料表？",
+  "standalone": "雲端資料庫裡有哪些資料表？",
+  "answer": "影片中未提及雲端資料庫或其資料表名稱，僅顯示在資料庫管理工具中新增與查看資料記錄，無法回答雲端資料庫裡有哪些資料表。【op_database_tables 00:34】",
+  "videos": [
+   "op_database_tables",
+   "talk_outline",
+   "op_patient_inference"
+  ],
+  "video_scores": {
+   "op_database_tables": 0.03279,
+   "talk_outline": 0.032,
+   "op_patient_inference": 0.03175
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "op_database_tables",
+    "start": 13.0,
+    "end": 14.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增資料記錄。",
+    "score": 0.6314385533332825
+   },
+   {
+    "video": "op_database_tables",
+    "start": 14.0,
+    "end": 15.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增資料記錄。",
+    "score": 0.6314385533332825
+   },
+   {
+    "video": "op_database_tables",
+    "start": 15.0,
+    "end": 16.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增資料記錄。",
+    "score": 0.6314385533332825
+   },
+   {
+    "video": "op_database_tables",
+    "start": 34.0,
+    "end": 35.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在查看並操作醫療報告的資料表。",
+    "score": 0.6343399286270142
+   }
+  ]
+ },
+ "text only|V17": {
+  "question": "medical_reports 資料表中 Russell Westbrook 那份報告的審核狀態是什麼？",
+  "standalone": "medical_reports 資料表中 Russell Westbrook 那份報告的審核狀態是什麼？",
+  "answer": "影片中未提及 Russell Westbrook 的報告或其審核狀態，僅顯示操作「medical_reports」表的畫面，無法得知審核狀態。【op_database_tables 00:35】",
+  "videos": [
+   "op_database_tables",
+   "op_review_report",
+   "op_patient_inference"
+  ],
+  "video_scores": {
+   "op_database_tables": 0.03252,
+   "op_review_report": 0.03252,
+   "op_patient_inference": 0.03175
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "op_database_tables",
+    "start": 26.0,
+    "end": 27.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在查看並操作「medical_reports」表。",
+    "score": 0.6242603659629822
+   },
+   {
+    "video": "op_database_tables",
+    "start": 29.0,
+    "end": 30.0,
+    "kind": "visual",
+    "text": "在一個資料庫管理介面中，正在查看並操作「medical_reports」表的資料。",
+    "score": 0.6045621633529663
+   },
+   {
+    "video": "op_database_tables",
+    "start": 33.0,
+    "end": 34.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在查看並編輯「medical_reports」表的資料。",
+    "score": 0.6225529909133911
+   },
+   {
+    "video": "op_database_tables",
+    "start": 35.0,
+    "end": 36.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在查看並操作「medical_reports」表。",
+    "score": 0.6243817806243896
+   }
+  ]
+ },
+ "text only|V18": {
+  "question": "資料庫用的是哪個服務？專案名稱和分支是什麼？",
+  "standalone": "資料庫用的是哪個服務？專案名稱和分支是什麼？",
+  "answer": "影片內容未提及資料庫所使用的服務、專案名稱或分支資訊，因此無法回答。【op_database_tables 00:13】",
+  "videos": [
+   "op_database_tables",
+   "talk_outline",
+   "op_patient_inference"
+  ],
+  "video_scores": {
+   "op_database_tables": 0.03252,
+   "talk_outline": 0.03202,
+   "op_patient_inference": 0.03175
+  },
+  "frames": [],
+  "text_units": [
+   {
+    "video": "op_database_tables",
+    "start": 13.0,
+    "end": 14.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增資料記錄。",
+    "score": 0.6391000747680664
+   },
+   {
+    "video": "op_database_tables",
+    "start": 14.0,
+    "end": 15.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增資料記錄。",
+    "score": 0.6391000747680664
+   },
+   {
+    "video": "op_database_tables",
+    "start": 15.0,
+    "end": 16.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增資料記錄。",
+    "score": 0.6391000747680664
+   },
+   {
+    "video": "op_database_tables",
+    "start": 16.0,
+    "end": 17.0,
+    "kind": "visual",
+    "text": "在資料庫管理工具中，正在新增資料記錄。",
+    "score": 0.6391000747680664
+   }
+  ]
+ },
+ "frames only|V01": {
+  "question": "這組報告的是哪一篇論文？",
+  "standalone": "這組報告的是哪一篇論文？",
+  "answer": "這組報告的是《A Theoretical Understanding of Self-Correction through In-context Alignment》。【talk_outline 00:00】",
+  "videos": [
+   "talk_outline",
+   "talk_paper_intro",
+   "op_review_report"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03252,
+   "talk_paper_intro": 0.03252,
+   "op_review_report": 0.0315
+  },
+  "frames": [
+   {
+    "video": "talk_outline",
+    "t": 0.0,
+    "file": "video_index/talk_outline/000_0s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 1.0,
+    "file": "video_index/talk_outline/001_1s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 2.0,
+    "file": "video_index/talk_outline/002_2s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 4.0,
+    "file": "video_index/talk_outline/004_4s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 6.0,
+    "file": "video_index/talk_outline/006_6s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 10.0,
+    "file": "video_index/talk_outline/010_10s.jpg"
+   }
+  ],
+  "text_units": []
+ },
+ "frames only|V02": {
+  "question": "這篇論文是從什麼角度解釋大型語言模型的自我修正？",
+  "standalone": "這篇論文是從什麼角度解釋大型語言模型的自我修正？",
+  "answer": "這篇論文從「內語境對齊」（in-context alignment）的角度，解釋大型語言模型的自我修正機制。【talk_paper_intro 00:00】",
+  "videos": [
+   "talk_paper_intro",
+   "talk_outline",
+   "op_database_tables"
+  ],
+  "video_scores": {
+   "talk_paper_intro": 0.03279,
+   "talk_outline": 0.03226,
+   "op_database_tables": 0.0315
+  },
+  "frames": [
+   {
+    "video": "talk_paper_intro",
+    "t": 0.0,
+    "file": "video_index/talk_paper_intro/000_0s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 1.0,
+    "file": "video_index/talk_paper_intro/001_1s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 4.0,
+    "file": "video_index/talk_paper_intro/004_4s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 5.0,
+    "file": "video_index/talk_paper_intro/005_5s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 6.0,
+    "file": "video_index/talk_paper_intro/006_6s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 10.0,
+    "file": "video_index/talk_paper_intro/010_10s.jpg"
+   }
+  ],
+  "text_units": []
+ },
+ "frames only|V03": {
+  "question": "這次報告預計涵蓋哪些內容？",
+  "standalone": "這次報告預計涵蓋哪些內容？",
+  "answer": "本次報告預計涵蓋：1. 為何自我修正難以理解？2. 從 ICL 到 ICA 的轉變：在上下文對齊中的自我修正。3. 理論架構：布拉德利-泰瑞與普拉克特-盧模型。4. 变换模块角色：Softmax、多頭、FFN、深度。5. 確認實驗：在受控數據上的理論驗證。6. 實際應用：偏見減少與司法系統防禦。7. 結論：洞察與未來方向。【talk_outline 00:17】",
+  "videos": [
+   "talk_outline",
+   "op_database_tables",
+   "op_review_report"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03227,
+   "op_database_tables": 0.03202,
+   "op_review_report": 0.032
+  },
+  "frames": [
+   {
+    "video": "talk_outline",
+    "t": 17.0,
+    "file": "video_index/talk_outline/017_17s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 18.0,
+    "file": "video_index/talk_outline/018_18s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 21.0,
+    "file": "video_index/talk_outline/021_21s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 22.0,
+    "file": "video_index/talk_outline/022_22s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 23.0,
+    "file": "video_index/talk_outline/023_23s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 25.0,
+    "file": "video_index/talk_outline/025_25s.jpg"
+   }
+  ],
+  "text_units": []
+ },
+ "frames only|V04": {
+  "question": "這篇論文發表在哪個會議？",
+  "standalone": "這篇論文發表在哪個會議？",
+  "answer": "這篇論文發表在 NeurIPS 2024 會議上。【talk_paper_intro 00:01】",
+  "videos": [
+   "talk_paper_intro",
+   "talk_outline",
+   "op_database_tables"
+  ],
+  "video_scores": {
+   "talk_paper_intro": 0.03279,
+   "talk_outline": 0.032,
+   "op_database_tables": 0.03175
+  },
+  "frames": [
+   {
+    "video": "talk_paper_intro",
+    "t": 1.0,
+    "file": "video_index/talk_paper_intro/001_1s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 2.0,
+    "file": "video_index/talk_paper_intro/002_2s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 4.0,
+    "file": "video_index/talk_paper_intro/004_4s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 29.0,
+    "file": "video_index/talk_paper_intro/029_29s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 31.0,
+    "file": "video_index/talk_paper_intro/031_31s.jpg"
+   },
+   {
+    "video": "talk_paper_intro",
+    "t": 32.0,
+    "file": "video_index/talk_paper_intro/032_32s.jpg"
+   }
+  ],
+  "text_units": []
+ },
+ "frames only|V05": {
+  "question": "Outline 的第一部分 motivation 要討論什麼？",
+  "standalone": "Outline 的第一部分 motivation 要討論什麼？",
+  "answer": "Outline 的第一部分 Motivation & Challenges 要討論為什麼自我修正難以理解。【talk_outline 00:16】",
+  "videos": [
+   "talk_outline",
+   "talk_paper_intro",
+   "op_database_tables"
+  ],
+  "video_scores": {
+   "talk_outline": 0.03252,
+   "talk_paper_intro": 0.03252,
+   "op_database_tables": 0.03175
+  },
+  "frames": [
+   {
+    "video": "talk_outline",
+    "t": 0.0,
+    "file": "video_index/talk_outline/000_0s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 1.0,
+    "file": "video_index/talk_outline/001_1s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 16.0,
+    "file": "video_index/talk_outline/016_16s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 19.0,
+    "file": "video_index/talk_outline/019_19s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 21.0,
+    "file": "video_index/talk_outline/021_21s.jpg"
+   },
+   {
+    "video": "talk_outline",
+    "t": 22.0,
+    "file": "video_index/talk_outline/022_22s.jpg"
+   }
+  ],
+  "text_units": []
+ }
+}

@@ -1,0 +1,309 @@
+[
+ {
+  "question": "Self-RAG 使用哪四種 reflection tokens？",
+  "route": "global",
+  "answer": "Self-RAG 並未提及使用四種 reflection tokens。根據提供的內容，無相關資訊支持此問題的答案。",
+  "context": "",
+  "communities": []
+ },
+ {
+  "question": "ISSUP token 有哪些可能的值？",
+  "route": "global",
+  "answer": "ISSUP token 的可能值為 'fully supported'（完全支持）和 'partially supported'（部分支持），或 'Supported' 與 'Unsupported'。其值反映輸出是否被事實支持，與 perceived utility 和 factual support 相關。部分報告提及 ISSUP 作為支持評估機制，但亦有報告未明確定義其可能值，僅提到 ISUSE 為五類效用標記，故 ISSUP 具體值依文獻推論為上述兩組可能值。",
+  "context": "ISSUP token 的可能值包括 'fully supported'（完全支持）和 'partially supported'（部分支持）。例如，d1 被标记为 fully supported，d3 被标记为 partially supported。\nISSUP token 的可能值包括 'Supported' 和 'Unsupported'。根據報告，'Supported output (ISSUP)' 被引用於 Menick et al. (2022) 和 Bohnet et al. (2022)，並與 'perceived utility' 和 'factual support' 相關，表明其值反映了輸出內容是否被事實支持。\n報告中未提及 ISSUP token 的可能值，僅提到 Self-RAG 生成反射 token 以評估輸出支持，但未具體說明 ISSUP token 的定義或可能值。\n報告中未提及 ISSUP token 的具體值或其可能的取值，僅提到 Self-RAG 中存在反射 token 和詞彙擴展機制，但未定義 ISSUP token 的性質或可能值，因此無法確定其可能的值。\n報告中提到 ISUSE 是一個五種類別的效用標記（five-way utility token），但並未明確列出 ISSUP token 的可能值。由於問題詢問的是 ISSUP token 的值，而報告中實際提及的是 ISUSE，且無任何關於 ISSUP 的資訊，因此無法提供正確答案。",
+  "communities": [
+   7,
+   8,
+   0,
+   6,
+   27
+  ]
+ },
+ {
+  "question": "ISUSE token 的輸出是什麼形式？",
+  "route": "global",
+  "answer": "ISUSE token 是一個五類效用標記，用來表示「Useful」（感知效用），其輸出形式為模型在生成過程中對回答是否有幫助的感知評估，並非對應具體語義內容，而是作為衡量回答足夠性的指標。",
+  "context": "ISUSE 是一個五類的效用標記（five-way utility token），用來指示輸出的足夠性。\n報告中未提及 ISUSE token 的輸出形式，僅提到 Self-RAG 生成反射 token 以評估輸出支持，但未具體說明 ISUSE token 的定義或輸出形式。\n報告中未提及 ISUSE token，也未說明其輸出形式，僅描述了 Self-RAG 中輸出由多個段落（segments）組成，包含原始詞彙和反射 token，但未具體說明 ISUSE token 的定義或輸出形式。\nISUSE token 是用來表示 'Useful'（即感知效用）的標記，其輸出形式為模型在生成過程中對回答的感知效用進行評估的標記，並非直接對應於某種具體的語義內容或結構，而是作為衡量回答是否有幫助的指標。\n報告中未提及 ISUSE token 的輸出形式，僅提到 reflection tokens 和 retrieval 的相關訓練機制，因此無法確定 ISUSE token 的輸出形式。",
+  "communities": [
+   27,
+   0,
+   6,
+   8,
+   9
+  ]
+ },
+ {
+  "question": "Retrieve token 有哪些可能的值？",
+  "route": "global",
+  "answer": "Retrieve token 的可能值包括 ISREL 和 ISSUP。ISREL 用於標記不相關的段落，ISSUP 用於評估支持程度（如完全支持或部分支持）。此外，token 也可能包含來自原始詞彙的標準詞元及反射機制產生的反射詞元。",
+  "context": "Retrieve token 的可能值包括 ISREL 和 ISSUP。ISREL 用于标记不相关的段落（例如 d2），而 ISSUP 用于评估支持程度（例如 d1 完全支持，d3 部分支持）\n報告中未提及 retrieve token 的可能值，僅提到 Self-RAG 生成 reflection tokens 來評估輸出支持，但未說明 retrieve token 的定義或可能取值。因此無法確定其可能值。\n報告中未提及retrieve token可能的值，僅描述其觸發機制與功能，因此無法確定其可能的值。\n報告中未提及 Retrieve token 的可能值，僅提到 SELF-RAG 受控制標記（control tokens）的設計啟發，並引用了相關研究，但沒有具體說明 Retrieve token 的取值或相關細節。因此，對問題的回答幫助有限。\ntoken 的可能值包括來自原始詞彙的標準詞元以及反射機制產生的反射詞元。\n報告中未提及 retrieve token 有哪些可能的值，僅說明其在訓練過程中被用於強化推理，並與檢索段落結合，但未定義或列出其具體可能值。",
+  "communities": [
+   7,
+   0,
+   1,
+   4,
+   6,
+   9
+  ]
+ },
+ {
+  "question": "Self-RAG 的 generator 與 critic 分別使用什麼基底模型？",
+  "route": "global",
+  "answer": "Self-RAG 的 generator 與 critic 分別使用的基底模型未明確提及。報告僅指出 GPT-4 用於生成 reflection tokens 並訓練 critic model，且 Poem generation 使用 Stanford Alpaca，model C 負責預測 ISREL 和 ISSUP tokens 並評估相關性與支持度，但均未說明 generator 與 critic 的基底模型。因此，無法準確回答其基底模型。",
+  "context": "報告中未提及 generator 與 critic 分別使用什麼基底模型。\n報告中未提及 generator 的基底模型，僅提到 Poem generation 使用 Stanford Alpaca，且 Self-RAG community 中的 model C 負責預測 ISREL 和 ISSUP tokens，但未明確說明 generator 的基底模型。Critic 部分提到 model C 用於評估相關性與支持度，但未說明其基底模型。因此，無法準確回答 generator 與 critic 的基底模型。\n報告中僅提到 Self-RAG 使用 GPT-4 來生成 reflection tokens，並用於訓練 critic model，但未明確指出 generator 和 critic 分別使用的基底模型。因此，無法準確回答 generator 與 critic 的基底模型是什麼。",
+  "communities": [
+   0,
+   7,
+   27
+  ]
+ },
+ {
+  "question": "Self-RAG 預設使用哪個檢索器？每個輸入取幾篇文件？",
+  "route": "global",
+  "answer": "Self-RAG 論文未明確指出預設使用哪個檢索器，也未說明每個輸入取幾篇文件。僅提到當出現檢索 token 時，會觸發檢索模型（retriever model）取得恰好 K 篇文件，但未給出 K 的具體值或檢索器的名稱。因此，相關設定均未明確定義。",
+  "context": "Self-RAG 論文中未明確指出預設使用哪個檢索器，但說明了當出現一個檢索 token 時，會觸發檢索模型（retriever model）來獲取恰好 K 篇文件。因此，每個輸入取 K 篇文件，但檢索器的具體型態未在報告中說明。\n報告中未提及 Self-RAG 預設使用哪個檢索器，也未明確說明每個輸入取幾篇文件。僅提到檢索模組 R 取得 top K 份文件，但未給出 K 的具體值或預設檢索器名稱。因此對問題的回答幫助有限。\n報告中未提及 Self-RAG 預設使用哪個檢索器，也未說明每個輸入取幾篇文件，因此無法回答問題。\n報告中未提及 Self-RAG 預設使用哪個檢索器，也未說明每個輸入取幾篇文件，僅提到 ablation study 的結構與分離訓練與推論的影響，因此對問題的幫助有限。\n報告中未提及 Self-RAG 預設使用的檢索器，也未說明每個輸入取幾篇文件。\n報告中未提及 Self-RAG 預設使用哪個檢索器，也未說明每個輸入取幾篇文件。僅提到使用指令驅動的相關性判斷，並因輸入長度限制使用一個演示（demonstration） per task，但未明確回答檢索器類型或文件數量。",
+  "communities": [
+   1,
+   7,
+   0,
+   10,
+   11,
+   21
+  ]
+ },
+ {
+  "question": "Self-RAG 的訓練資料規模與來源為何？",
+  "route": "global",
+  "answer": "Self-RAG 的訓練資料規模為 150k 個實例，來源為精心整理的語料庫，包含交替出現的段落與反思標記。部分訓練資料來自 GPT-4 生成的 reflection tokens，透過 few-shot 演示產生，溫度設為 1，最大輸出 200 token，用於訓練預測 ISREL、ISSUP 與 ISUSE 標記的模型。資料亦包含 PopQA、ASQA 與 PubHealth 數據集，用於評估引用精確度。",
+  "context": "Self-RAG 的訓練資料規模為 150k 個實例，來源為一個經過精心整理的語料庫，其中包含交替出現的段落和反思標記。\nSelf-RAG 的訓練資料規模為每種任務類型 4k 至 20k 筆，來源為監督數據（supervised data），用於訓練模型 C 以預測 ISREL 和 ISSUP token。\nSelf-RAG 的訓練資料規模分析評估了所有資料集上的引用精確度，訓練資料來源包括 PopQA、ASQA 和 PubHealth 數據集。\nSelf-RAG 的訓練資料來自於 GPT-4 生成的 reflection tokens，這些 tokens 透過 few-shot 演示產生，設定溫度為 1，最大輸出 token 數為 200。這些 tokens 被收集並用來訓練一個評論模型，該模型預測 ISUSE（五種輸出足夠性標記），而 ISUSE 是根據 30 個指令或演示定義的。因此，訓練資料的規模與來源為 GPT-4 生成的 reflection tokens，其規模由 few-shot 演示的數量和每次生成的 token 數量決定，來源為 GPT-4 的輸出。\nSelf-RAG 的訓練資料規模與來源在報告中未明確提及。報告提到訓練資料為增強後的語料庫 Dgen，包含原始輸入、反思標記和檢索到的段落，但未說明資料規模（如資料量、來源範圍或具體數據集）\n報告提到 Self-RAG 的 Retrieve task 使用了超過 100 個指令、演示和證據，且 gpt4 alpaca 提供了演示的輸入指令，但未明確說明訓練資料的總規模或來源。因此，雖然有部分資訊，但對訓練資料規模與來源的完整回答不足。",
+  "communities": [
+   0,
+   7,
+   11,
+   27,
+   9,
+   21
+  ]
+ },
+ {
+  "question": "推論時 ISREL、ISSUP、ISUSE 的預設權重是多少？",
+  "route": "global",
+  "answer": "推論時 ISREL、ISSUP、ISUSE 的預設權重未在論文中提及。報告僅說明 wG 权重調整 ISSUP 的重要性，並提及 ablation study 的結構與目的，但未提供三者任何預設權重值或相關資訊。因此，無法確定其預設權重。",
+  "context": "報告中提到使用 wG 权重調整 ISSUP 的重要性，但未提及 ISREL 或 ISUSE 的預設權重，也未說明 ISUSE 的任何資訊。因此無法確定三者預設權重。\n報告中未提及推論時 ISREL、ISSUP、ISUSE 的預設權重，僅說明了 ablation study 的結構與目的，因此無法回答具體權重值。",
+  "communities": [
+   7,
+   10
+  ]
+ },
+ {
+  "question": "推論時 segment-level beam search 的 beam width 是多少？token 層級怎麼解碼？",
+  "route": "global",
+  "answer": "推論時 segment-level beam search 的 beam width 未提及，也未說明 token 層級的解碼方式。",
+  "context": "報告中未提及 segment-level beam search 的 beam width，也未說明 token 層級的解碼方式。\n報告中未提及推論時 segment-level beam search 的 beam width，也未說明 token 層級如何解碼，因此無法回答問題。",
+  "communities": [
+   7,
+   10
+  ]
+ },
+ {
+  "question": "預設的 retrieval threshold 是多少？",
+  "route": "global",
+  "answer": "預設的 retrieval threshold 在 Self-RAG 論文中未提及。",
+  "context": "",
+  "communities": []
+ },
+ {
+  "question": "Self-RAG 13B 在 PopQA 的準確率是多少？7B 呢？",
+  "route": "global",
+  "answer": "Self-RAG 論文未提供 Self-RAG 13B 或 7B 在 PopQA 上的準確率數據，僅提及在短形式 PopQA 上取得較高的 S&P 得分，但無具體準確率數值，因此無法回答兩者在 PopQA 的準確率。",
+  "context": "報告中提到 PopQA 被用於消融研究，並提到從 PopQA 中抽取了 150 個樣本進行評估，以及人類評估使用了 50 個 PopQA 和 Bio 的樣本，但未提供 Self-RAG 13B 或 7B 在 PopQA 上的準確率數據。因此無法回答準確率問題。\n報告中提到 Self-RAG 在短形式 PopQA 上取得較高的 S&P 得分，但未提供關於 Self-RAG 13B 或 7B 在 PopQA 上的準確率數據，因此無法回答問題。",
+  "communities": [
+   11,
+   18
+  ]
+ },
+ {
+  "question": "Self-RAG 13B 在 ASQA 的 citation precision 是多少？與 Ret-ChatGPT 相比如何？",
+  "route": "global",
+  "answer": "Self-RAG 13B 在 ASQA 的 citation precision 具體數值未提供，也未與 Ret-ChatGPT 進行比較，因此無法得知其精確度與對照模型的差異。",
+  "context": "報告提到在訓練規模分析中會評估所有數據集的引用精確度，但未提供 Self-RAG 13B 在 ASQA 上的具體 citation precision 數值，也未與 Ret-ChatGPT 進行比較。因此無法準確回答問題。",
+  "communities": [
+   11
+  ]
+ },
+ {
+  "question": "實驗用的 PopQA 是哪個子集？有多少題？",
+  "route": "global",
+  "answer": "實驗用的 PopQA 是短形式的子集（short-form PopQA），題目數量未明確提及。評估時抽樣了 150 個樣本，但未指明具體子集。",
+  "context": "報告中提到實驗用的 PopQA 是用於 ablation studies，並提到有 150 個樣本被抽樣用於評估，但未明確指出是哪個子集。因此無法精確回答是哪個子集，僅能知道樣本數為 150。\n實驗用的 PopQA 是短形式的子集（short-form PopQA），包含的題目數量未在報告中明確提及。",
+  "communities": [
+   11,
+   18
+  ]
+ },
+ {
+  "question": "人工評估中，ISREL 與 ISSUP 在 PopQA 上與人工判斷的一致率是多少？",
+  "route": "global",
+  "answer": "無相關內容。",
+  "context": "",
+  "communities": []
+ },
+ {
+  "question": "為什麼要訓練一個 critic 模型，而不是直接用 GPT-4 產生 reflection tokens？效果如何？",
+  "route": "global",
+  "answer": "訓練一個 critic 模型而非直接用 GPT-4 產生 reflection tokens，是為了提升反思過程的可控性、效率與一致性。GPT-4 生成的 tokens 可能缺乏可解釋性、穩定性與針對性，且成本高、耗時長。Self-RAG 的 critic 模型透過 supervised data（4k–20k per task）訓練，專門評估文段的相關性（ISREL）與支援程度（ISSUP），並以 wG 权重調整重要性，能精準判斷輸出足夠性，提升事實正確性與推理品質。實驗顯示 ISSUP 對 ASQA 性能關鍵，且在減少對 GPT-4 依賴、確保輸出穩定與可重複性方面表現良好。",
+  "context": "訓練一個 critic 模型（如 Self-RAG 中的模型 C）是為了專門評估文段的相關性（ISREL）和支援程度（ISSUP），而非直接使用 GPT-4 產生 reflection tokens。GPT-4 雖然強大，但其產生的 reflection tokens 可能缺乏一致性、可解釋性與針對性，且訓練成本高、效率低。Self-RAG 的 critic 模型透過 supervised data（4k–20k per task）進行訓練，並使用 wG 权重調整 ISSUP 的重要性，能更精準地判斷文段是否相關或提供支援，進而提升事實正確性與推理品質。實驗顯示，ISSUP 在提升事實性方面表現良好，但若在 beam search 中移除，會影響 ASQA 性能，顯示其關鍵作用。相較之下，直接使用 GPT-4 產生 tokens 可能導致過度模糊或不穩定的評估，因此專門訓練 critic 模型更有效、更可控。\n訓練一個 critic 模型的目的是為了更高效、更精確地評估 reflection tokens 的輸出足夠性，而不需要每次都依賴 GPT-4 進行生成和判斷。GPT-4 產生 reflection tokens 需要大量計算資源和時間，且可能因模型的隨機性或溫度設定導致不一致的結果。透過訓練一個專門的 critic 模型，可以基於大量標註的 reflection tokens 和 ISUSE（五種輸出足夠性標籤）進行學習，實現快速、穩定且低成本的評估。此 critic 模型在檢測輸出是否足夠時，能有效支援無檢索生成，提升系統效率與穩定性。效果上，這種方法在減少對 GPT-4 的依賴、提升生成過程的可控性與效率方面表現良好，特別是在需要大量重複評估的場景中。\n訓練一個 critic 模型而不是直接用 GPT-4 產生 reflection tokens，是因為 critic 模型可以在離線環境中評估和更新訓練資料，確保 reflection tokens 的品質與一致性，避免 GPT-4 在即時推理中可能出現的不穩定或偏誤。這種方法提升了訓練資料的可靠性，進而讓生成器模型 M 能更準確地學習如何產生有支持的輸出。效果上，Self-RAG 透過這種自反思機制，能有效提升輸出的流暢度與完整性，並確保輸出內容有明確的來源支持，相較於傳統 RAG 方法表現更佳。\n報告中未提及 critic 模型的訓練目的或其與 GPT-4 產生 reflection tokens 的對比，也未討論效果評估，因此對問題的回答幫助有限。\n訓練一個 critic 模型而不是直接用 GPT-4 產生 reflection tokens，是為了提升反思過程的可控性、效率和可重複性。使用 GPT-4 直接產生 reflection tokens 可能導致生成結果不一致、成本高昂且缺乏可解釋性。而 critic 模型作為專門評估和優化反思內容的工具，能更精確地檢視和修正生成內容，確保反思的質量與相關性。這使得 SELF-RAG 能在不依賴外部大模型的情況下，實現更穩定、可調控的自我反思機制。\n報告中未提及訓練 critic 模型或與 GPT-4 產生 reflection tokens 的比較，也未討論效果，因此對此問題的幫助有限。\n報告中未提及訓練 critic 模型或使用 GPT-4 產生 reflection tokens 的相關內容，也未討論其效果，因此對此問題的幫助有限。\n報告中未提及訓練 critic 模型的原因，也未比較使用 GPT-4 產生 reflection tokens 的效果，因此對問題的回答幫助有限。",
+  "communities": [
+   7,
+   27,
+   0,
+   1,
+   4,
+   6,
+   8,
+   9
+  ]
+ },
+ {
+  "question": "Self-RAG 的訓練方式和 RLHF（PPO）相比，成本上有什麼差異？為什麼？",
+  "route": "global",
+  "answer": "Self-RAG 與 RLHF（PPO）在訓練成本上的差異未在論文中提及，亦無相關原因說明。Self-RAG 的訓練流程僅描述為使用 GPT-4 生成反思標記，並以評論模型預測 ISUSE，未比較其與 RLHF（PPO）的訓練成本。因此，無法提供兩者在成本上的差異及原因。",
+  "context": "報告中未提及 Self-RAG 與 RLHF（PPO）在訓練成本上的差異，也未說明相關原因，僅描述了 Self-RAG 的訓練流程（如使用批判模型 C 進行離線評估和訓練於 15 萬個樣本上），缺乏與 RLHF（PPO）的成本比較資訊，因此對回答問題幫助有限。\n報告未提及 Self-RAG 與 RLHF（PPO）在訓練成本上的差異，也未說明相關原因，僅描述了 Self-RAG 使用 GPT-4 生成反思標記並訓練評論模型以預測 ISUSE 的流程。因此，無法回答問題中關於成本差異與原因的具體內容。",
+  "communities": [
+   0,
+   27
+  ]
+ },
+ {
+  "question": "Generator 訓練時如何處理檢索到的段落與 reflection tokens？",
+  "route": "global",
+  "answer": "Generator 訓練時，檢索到的段落與 reflection tokens 會被納入訓練資料 Dgen，以交替結構（interleaved）呈現，模型學習根據檢索段落生成 reflection tokens 以評估輸出支援程度。檢索段落使用「mask out 方法」在損失計算時排除，維持訓練穩定性。Generator 透過 next token objective 預測目標輸出與 reflection tokens，整合檢索資訊與自我反思，提升推理能力。",
+  "context": "在 Generator 訓練時，檢索到的段落與 reflection tokens 會被納入增強的訓練資料 Dgen 中。其中，檢索到的段落使用「mask out 方法」在損失計算時排除掉位於 <p> 和 </p> 之間的文本塊，以維持訓練穩定性。Generator 模型 M 會使用 next token objective 來預測目標輸出以及 reflection tokens，進而透過整合反思與檢索資訊來提升推理能力。\n在 Generator 訓練時，訓練資料包含交替出現的檢索段落和 reflection tokens。模型在訓練過程中學習如何根據檢索到的段落生成 reflection tokens，以評估輸出內容的支援程度。這種 interleaved 的結構讓模型在生成過程中同時學習內容生成與自我反思的能力。\n報告中提到 Self-RAG 的檢索模組 R 會取得 top K 段落並更新組件 D，但未明確說明 Generator 訓練時如何處理檢索到的段落與 reflection tokens。報告提及 ISREL 和 ISSUP tokens 用於評估段落相關性與支持度，並由模型 C 預測，且 ISSUP 在 beam search 中被移除，可能影響 ASQA 表現。然而，關於 Generator 訓練過程如何整合檢索段落與 reflection tokens 的具體機制，報告未提供詳細資訊。因此，部分資訊可推斷出檢索段落會被用於評估與更新，reflection tokens（如 ISREL 和 ISSUP）可能在訓練中作為信號，但訓練過程的具體處理方式未明確說明。\n報告提到 Self-RAG 的 ablation study 分別評估了訓練和推論階段中各組件的影響，並指出訓練階段的組件移除或修改會影響模型表現，但未具體說明 Generator 在訓練時如何處理檢索到的段落與 reflection tokens。因此，雖有相關背景，但缺乏直接答案。\n報告中未提及 Generator 訓練時如何處理檢索到的段落與 reflection tokens，僅描述了 retrieval token 觸發檢索機制及檢索流程，缺乏關於 Generator 訓練過程與段落處理的資訊，因此對問題幫助有限。\n報告提到 SELF-RAG 受 control tokens 的啟發，並指出 control tokens 作為概念橋樑連結先前研究與 SELF-RAG 的自我反思機制，但未具體說明 generator 訓練時如何處理檢索到的段落與 reflection tokens。因此，雖有相關背景資訊，但對問題的直接幫助有限。\n在 Self-RAG 中，Generator 訓練時會將檢索到的段落與 reflection tokens 作為輸入的一部分，並在輸出中以段落形式（segments）進行結構化處理。這些段落由原始詞彙和 reflection tokens 組成，訓練過程會學習如何根據上下文整合這些資訊，以提升推理的準確性與一致性。然而，報告未明確說明訓練時如何具體處理或融合這些 tokens 的機制，因此對訓練過程的細節幫助有限。\n報告中未提及 generator 訓練時如何處理檢索到的段落與 reflection tokens，僅討論了 perceived utility 和 supported output 的概念，與問題中的訓練過程無直接關聯。",
+  "communities": [
+   9,
+   0,
+   7,
+   10,
+   1,
+   4,
+   6,
+   8
+  ]
+ },
+ {
+  "question": "Ablation 中「Retrieve top 1」（像傳統 RAG 一樣固定用第一篇）對哪些資料集影響最大？",
+  "route": "global",
+  "answer": "Ablation 中「Retrieve top 1」對 PopQA 和 ASQA 資料集影響最大。",
+  "context": "Ablation 中「Retrieve top 1」對 PopQA 和 ASQA 資料集影響最大。\n報告中未提及 Ablation 实驗或「Retrieve top 1」對特定資料集的影響，僅描述了 Self-RAG 的 retrieval mecha-nism，因此無法判斷其對哪些資料集影響最大。\n報告中未提及「Retrieve top 1」對哪些資料集影響最大，僅描述了 Retrieval 模組的通用行為與 ISREL/ISSUP 的作用，以及詩歌生成的評估方式，缺乏針對 ablation study 中特定資料集的分析。因此無法準確回答問題。\n報告中未提及 Ablation 实驗中「Retrieve top 1」對哪些資料集影響最大，僅描述了 Self-RAG 的訓練框架與掩碼方法，因此無法回答問題。\n報告中未提及「Retrieve top 1」對哪些資料集影響最大，僅說明了 ablation 分析的結構與目的，缺乏具體的資料集影響結果。\n報告中未提及「Retrieve top 1」或其在不同資料集上的影響，僅討論了超參數 δ 對檢索頻率和準確率的影響，因此無法回答問題中關於「Retrieve top 1」對哪些資料集影響最大的問題。\n報告中未提及「Ablation」或「Retrieve top 1」的具體實驗結果，也未說明不同資料集上該設定的影響程度，僅提到外部檢索對健康建議類任務有幫助，對個人或敘事類任務無幫助。因此無法判斷「Retrieve top 1」對哪些資料集影響最大。\n報告中未提及 Ablation 中「Retrieve top 1」對哪些資料集影響最大，僅說明了 Retrieve task 的評估方式、指令驅動的相關性判斷以及使用單一演示的限制，缺乏關於 Ablation 实驗或不同資料集上影響的具體資訊。",
+  "communities": [
+   11,
+   1,
+   7,
+   9,
+   10,
+   12,
+   19,
+   21
+  ]
+ },
+ {
+  "question": "「No Critic」ablation 在 ASQA 的表現如何變化？這代表什麼？",
+  "route": "global",
+  "answer": "報告未提及「No Critic」ablation在ASQA的表現變化，也未解釋其代表的意義。雖提及ISSUP移除會傷害ASQA性能，但未連結至「No Critic」ablation的影響。僅說明ablation研究結構與訓練推論分離，無法提供具體答案。",
+  "context": "報告中未提及「No Critic」ablation 在 ASQA 的表現變化，也未解釋其代表的意義。雖然報告提到 ISSUP 被移除會傷害 ASQA 性能，但未明確連結到「No Critic」ablation 的影響。因此，無法從報告中得出具體答案。\n報告中未提及「No Critic」ablation在ASQA的表現變化，也未解釋其代表的意義，僅說明了Self-RAG中ablation研究的結構與分離訓練與推論階段的分析，因此對此具體問題幫助有限。\n報告中提到 'Retrieve top 1 causes significant performance drops on PopQA and ASQA'，但未提及 'No Critic' ablation 的具體表現，因此無法確定其在 ASQA 的變化或所代表的意義。",
+  "communities": [
+   7,
+   10,
+   11
+  ]
+ },
+ {
+  "question": "提高 ISSUP 權重會對輸出造成什麼影響？",
+  "route": "global",
+  "answer": "提高 ISSUP 權重會使模型更傾向選擇具有強烈支持的文段，增加輸出對事實支持的強調，生成更具根據、有事實依據的回應，並有效抑制不支持的陳述，提升輸出的正確性與事實準確性。然而，由於 ISSUP 在 beam search 階段被移除，過高的權重可能對問答質量（ASQA）產生負面影響。",
+  "context": "提高 ISSUP 權重會增加模型對支持程度的關注，使模型更傾向選擇具有強烈支持的文段（如 d1 全部支持），進而提升輸出的正確性和事實性。然而，由於 ISSUP 在 beam search 階段被移除，過高的權重可能對 ASQA（問答質量）表現產生負面影響。\n提高 ISSUP 權重會增加輸出中對事實支持的強調，因為 ISSUP（Supported output）代表被支持的內容，提升其權重會促使模型更傾向生成有根據、有事實依據的回應，從而減少不支持的陳述。這與 Liu et al.（2023a）的研究結果一致，即較長且流暢的生成容易導致不支持的陳述，因此增加 ISSUP 權重可有效抑制這種現象，提升輸出的可靠性和事實準確性。\n報告中未提及 ISSUP 權重或其對輸出的影響，僅討論了 Self-RAG 中各組件在訓練和推論階段的消融分析，因此無法回答關於 ISSUP 權重的具體影響。",
+  "communities": [
+   7,
+   8,
+   10
+  ]
+ },
+ {
+  "question": "調高 retrieval threshold 會對檢索頻率與準確率造成什麼影響？",
+  "route": "global",
+  "answer": "調高 retrieval threshold 會減少檢索頻率，因僅較相關的項目被檢索，導致檢索結果更精確，但可能漏檢相關項目。雖有報告指出「Retrieve top 1 causes significant performance drops」，暗示過度限制會惡化性能，然而並未明確證實其對準確率的直接影響。綜合而言，檢索頻率降低，準確率可能因過度限制而惡化。",
+  "context": "調高 retrieval threshold 會減少檢索頻率，因為較高的閾值會導致較少的檢索結果被選取。根據報告，檢索頻率的減少會直接影響準確率，且隨著檢索頻率降低，準確率會顯著下降。因此，調高 retrieval threshold 會導致檢索頻率降低，並使準確率惡化。\n報告中未提及 retrieval threshold 的概念，也未討論調高 threshold 對檢索頻率或準確率的影響，因此無法根據此報告回答問題。\n報告中未提及調高 retrieval threshold 的具體影響，僅描述了 ISREL 和 ISSUP 在評估相關性與支持度上的作用，以及其在檢索過程中的應用。因此，無法直接推斷調高 retrieval threshold 對檢索頻率與準確率的影響。\n報告中未提及調高 retrieval threshold 的具體影響，因此無法確定其對檢索頻率與準確率的影響。\n報告中未提及調高 retrieval threshold 對檢索頻率與準確率的具體影響，僅說明了 ablation study 的結構與目的，因此無法直接回答問題。\n調高 retrieval threshold 會減少檢索頻率，因為只有更相關的項目會被檢索出來。這通常會提高檢索的準確率，因為檢索結果更精確，但可能導致漏檢一些相關項目。報告中提到 'Retrieve top 1 causes significant performance drops on PopQA and ASQA'，暗示檢索過度限制可能影響性能，但未明確說明 threshold 調高對檢索頻率與準確率的直接影響。",
+  "communities": [
+   12,
+   1,
+   7,
+   9,
+   10,
+   11
+  ]
+ },
+ {
+  "question": "請用 5W1H 整理這篇論文：誰提出、要解決什麼問題、提出什麼方法、怎麼做？",
+  "route": "global",
+  "answer": "Self-RAG 由 Liu et al. 提出，受 Ziegler et al. (2019)、Ouyang et al. (2022) 及控制標記啟發。解決 RAG 中輸出缺乏來源支持、不完整或不正確的問題，提出自我反思機制，透過生成反思標記（如 ISREL、ISSUP）評估文段相關性與支持度，並以權重 wG 調整判斷。做法為：訓練生成模型 M 在擴充語料庫中預測反思令牌與檢索段落，使用評估模型 C 在離線模式下評估並更新資料，推理時生成反思標記檢視支援程度，並依結果調整輸出。",
+  "context": "誰提出：Self-RAG 由 Liu et al. 提出，受 Ziegler et al. (2019) 和 Ouyang et al. (2022) 的啟發，並參考 Liu et al. (2023b) 的反饋。\n要解決什麼問題：解決 RAG 方法中輸出缺乏源頭支持、回答不完整或流暢的問題，提升生成內容的正確性與完整性。\n提出什麼方法：提出一種自我反思的 RAG 方法（Self-RAG），在推理過程中生成反思標記（reflection tokens）來評估輸出的支援程度，確保回答有明確的來源支持。\n怎麼做：訓練一個生成模型 M，在一個包含 15 萬個樣本的精選語料庫中，語料庫包含交錯的段落和反思標記；使用一個評估模型 C 在離線模式下評估並更新語料庫；在推理時，模型會生成反思標記以檢視輸出是否被來源支持，並根據此進行調整。該方法支持自定義解碼與零-shot 評估。\n誰提出：Self-RAG 社群提出。\n要解決什麼問題：解決在問答系統中如何有效評估文段相關性與支持度，提升事實正確性與回答品質，特別是針對不相關或部分支持的文段進行判斷。\n提出什麼方法：引入 ISREL 和 ISSUP 令牌，其中 ISREL 用於標記不相關文段，ISSUP 用於評估文段支持程度（完全或部分支持），並透過權重 wG 調整 ISSUP 的重要性，以提升事實正確性。\n怎麼做：模型 C 預測 ISREL 和 ISSUP 令牌來評估文段相關性與支持度；檢索模組 R 取出最相關的 K 個文段，並將增強後的輸出傳給組件 D；人類註解者驗證這些令牌；使用 supervised data（每種任務類型 4k–20k）訓練模型 C；在 beam search 階段移除 ISSUP 以避免影響 ASQA 表現；圖 1（右）顯示因 d2 被標為不相關、d3 僅部分支持，故選取 d1。\n誰提出：Self-RAG 論文提出者未明確提及，但屬於 Self-RAG 框架的研究團隊。\n要解決什麼問題：解決大模型在複雜推理任務中缺乏反思與知識檢索能力的問題，提升其推理的準確性與完整性。\n提出什麼方法：提出一種結合反思（reflection）與知識檢索（retrieval）的訓練框架，稱為 Self-RAG，透過在生成過程中引入反思令牌與檢索段落來增強推理能力。\n怎麼做：訓練生成模型 M 在擴充的語料庫 Dgen 上，Dgen 包含原始輸入、反思令牌與檢索段落；在損失計算中使用 mask out 方法排除 <p> 和 </p> 之間的文本段落，以維持訓練穩定性；模型採用 next token 目標，同時預測目標輸出與反思令牌，實現反思與檢索的整合。\n誰提出：Self-RAG 論文提出者（未明確指出名稱，但框架由 Self-RAG 小組提出）。\n要解決什麼問題：解決在 RAG（檢索強化生成）中，檢索結果不夠或不相關時，如何有效生成足夠且正確的輸出，提升生成的足夠性與效率。\n提出什麼方法：提出 Self-RAG 反思 token 訓練框架，利用 GPT-4 生成反思 token，並訓練一個評論模型（critic model）來預測 ISUSE（輸出足夠性指標），以實現無檢索的高效生成。\n怎麼做：使用 GPT-4 透過少樣本示範（few-shot demonstrations）生成反思 token，設定溫度為 1，最大輸出 token 數為 200；收集這些 token 用於訓練評論模型，模型預測 ISUSE（五種足夠性標籤），在檢索無需時，透過人工標註支援來監督生成過程，實現檢索自由的高效生成。\n誰提出：Self-RAG 論文提出此機制。\n要解決什麼問題：解決傳統 RAG 中資訊檢索過度或不足、缺乏上下文感知的問題，提升推理過程中的資訊準確性與相關性。\n提出什麼方法：提出一種基於檢索標記（retrieval token）的動態檢索機制，透過檢索標記觸發檢索模型，主動獲取 K 個相關文件。\n怎麼做：當檢索標記（TOKEN）出現時，觸發檢索模型（MODEL）執行，模型會根據上下文條件性地檢索恰好 K 個文件，形成結構化且上下文感知的資訊獲取流程。\n這篇報告未提及論文的作者（誰提出）、研究問題（要解決什麼問題）、所提出的方法或具體執行步驟（怎麼做），僅描述了美國州名與原住民部落的關聯及文化現象。因此無法完整以5W1H整理論文內容。\n誰提出：SELF-RAG 的設計受到 Keskar et al., 2019 和 Lu et al., 2022 的控制標記（control tokens）啟發，但報告未明確指出誰直接提出 SELF-RAG。要解決什麼問題：報告未說明 SELF-RAG 要解決的具體問題。提出什麼方法：報告提到 SELF-RAG 受控制標記啟發，用於引導文本生成，並建立自我反思機制，但未詳細說明其具體方法。怎麼做：報告僅指出控制標記作為概念橋樑，連結先前研究與 SELF-RAG 的自我反思機制，缺乏具體的實施步驟或流程。\n報告中未提及論文的提出者（誰），也未明確說明要解決的具體問題、提出的方法或具體執行步驟。雖然提到 RAG 在引用預測和完整性任務中的效果，但缺乏關於 5W1H 的詳細資訊，僅提供一般性結論，因此對回答問題幫助有限。",
+  "communities": [
+   0,
+   7,
+   9,
+   27,
+   1,
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "question": "請完整說明 Self-RAG 從訓練到推論的流程。",
+  "route": "global",
+  "answer": "Self-RAG 的訓練流程於擴充語料庫 Dgen 上進行，包含原始輸入、反思標記（reflection tokens）與檢索段落，使用「mask out」方法維持穩定性，模型 M 以下一個詞預測輸出與反思標記。訓練中，GPT-4 生成反思標記並訓練評論模型 C，預測 ISUSE（五類效用標記）以判斷輸出足夠性，實現檢索-free 監督。推論時，模型生成反思標記，評論模型根據 ISUSE 判斷內容是否足夠，並指導生成，提升輸出完整性與來源支持。",
+  "context": "Self-RAG 的訓練流程是：在一個精心整理的包含 150k 個樣本的語料庫上訓練生成模型 M，這些樣本包含交替出現的文段和反思標記（reflection tokens）。訓練過程中，使用評論模型 C 在線評估並更新語料庫，以確保生成內容的質量與正確性。在推論階段，Self-RAG 會在生成過程中產生反思標記，用來評估輸出內容是否得到足夠的來源支持，進而提升輸出的流暢度與完整性。此方法支持自定義解碼與零-shot 評估，並透過反思機制確保輸出內容有明確的來源支持，進而優化傳統 RAG 方法的表現。\nSelf-RAG 的流程從訓練到推論大致如下：在訓練階段，使用 GPT-4 透過少樣本示範（few-shot demonstrations）生成反思標記（reflection tokens），設定溫度為 1，最大輸出 token 數為 200。這些反思標記被收集並用來訓練一個評論模型（critic model），該模型會預測 ISUSE，即一個五類效用標記，用以判斷輸出是否足夠。ISUSE 的訓練基於 30 個指令或示範，評論模型在不需要檢索的情況下監督反思標記，並預測 ISUSE，從而支援高效的檢索-free 生成。在推論階段，當檢索不必要時，評論模型會根據反思標記預測 ISUSE，以判斷生成內容是否足夠，進而指導生成過程，實現更精確的輸出。\nSelf-RAG 的訓練流程中，生成模型 M 是在擴充的語料庫 Dgen 上進行訓練，Dgen 包含原始輸入、反思標記（reflection tokens）和檢索到的段落。在損失計算時，使用「mask out」方法排除位於 <p> 和 </p> 之間的文本塊，以維持訓練穩定性。模型 M 以下一個詞預測目標輸出和反思標記的方式進行訓練，透過整合反思與檢索資訊來提升推理能力。在推論階段，模型會根據輸入生成反思內容，並檢索相關文檔以輔助回答，再結合反思與檢索結果進行最終輸出。然而，報告未完整描述推論階段的詳細流程，如檢索機制、反思生成的具體邏輯或如何整合資訊，因此對完整流程的說明不夠充分。\n報告僅描述了 Self-RAG 中的檢索機制，即檢索令牌觸發檢索模型取得 K 個文件，並強調其上下文感知與效率，但未涵蓋從訓練到推論的完整流程。訓練階段（如模型預訓練、檢索模組訓練、自我反思模組的學習）以及推論過程中的各步驟（如問題解析、檢索、推理、答案生成等）均未提及。因此，報告對完整流程的說明不完整，幫助程度有限。\n報告主要說明了 SELF-RAG 的設計受到控制標記（control tokens）的啟發，並提及 Keskar et al., 2019 和 Lu et al., 2022 的研究對其架構的影響，強調控制標記作為自我反思機制的理論橋樑。然而，報告並未詳細描述從訓練到推論的完整流程，例如訓練階段的數據處理、損失函數設計、自我反思的具體實現步驟，或推論時的生成過程與控制標記的實際應用。因此，雖然提供了設計靈感的背景，但對回答問題的幫助有限。\n報告僅描述了 Self-RAG 輸出的結構與詞彙使用方式，包括輸入到輸出的段落分割及反射令牌的機制，但未涉及從訓練到推論的完整流程，如訓練階段的數據處理、模型架構設計、損失函數、訓練步驟，或推論時的段落生成、反思機制執行、推理循環等細節。因此，對回答問題幫助有限。\nSelf-RAG 的訓練流程中，會進行各組件的消融實驗，評估移除或修改不同部分對模型表現的影響，訓練部分的消融結果顯示各組件對模型學習的貢獻。在推論階段，同樣進行消融實驗，分析各組件在實際回答問題時的影響，並區分訓練與推論階段的表現差異。然而，報告未完整描述從訓練到推論的完整流程，僅提及消融實驗的結構與目的，缺乏對訓練數據處理、模型結構、知識圖譜整合、問題生成與答案生成等關鍵步驟的詳細說明。\n報告中提及了 Self-RAG 社群關注 Ronaldinho、資料集（如 PopQA、ASQA、PubHealth）以及評估指標，並提到訓練規模分析和人類評估的樣本數，以及檢索頂部原因對 PopQA 和 ASQA 的表現影響，但並未完整說明從訓練到推論的流程。因此，報告僅提供部分相關資訊，無法完整回答問題。",
+  "communities": [
+   0,
+   27,
+   9,
+   1,
+   4,
+   6,
+   10,
+   11
+  ]
+ },
+ {
+  "question": "Self-RAG 在哪些任務上評估？主要結論是什麼？",
+  "route": "global",
+  "answer": "Self-RAG 在「three tips for staying healthy」、「a difficult decision」、「short story in third person narration」、ASQA、詩歌生成、PopQA、Retrieve 及自由踢球任務上評估。主要結論是：外部檢索僅提升事實性任務（如健康建議）品質，對個人決策或敘事無助；ISSUP token 增強事實支持但 beam search 階段移除導致 ASQA 性能下降；自我反思機制有效提升輸出支持與完整性，尤其在知識密集型場景；然而檢索頂部原因會導致精確性下降，且回應雖事實正確但完整性不足，實用性僅部分滿足。",
+  "context": "Self-RAG 在以下三個任務上進行評估：'three tips for staying healthy'、'a difficult decision' 和 'short story in third person narration'。主要結論是：外部文件檢索僅在提供事實性建議（如健康建議）時能提升回答品質，對於個人決策或敘事類任務則無助，顯示檢索對事實性任務更有幫助，對個人或創意類任務無明顯效益。\nSelf-RAG 在 ASQA（Answer Selection and Question Answering）和詩歌生成任務上進行評估。主要結論是：ISSUP token 用於評估文段支持程度，對事實性有重要貢獻，但在 beam search 階段被移除，導致 ASQA 性能下降；詩歌生成則使用 Stanford Alpaca 進行評估，並以 ISSUP=5 作為評估標準。\nSelf-RAG 在評估任務上主要針對 RAG 方法的輸出支持（output support）進行評估，透過生成反思標記（reflection tokens）來檢視生成內容是否得到足夠的來源支持，進而提升回答的流暢度與完整性。主要結論是，Self-RAG 透過自我反思機制，能有效確保生成內容有明確的來源支持，相比常見的 RAG 方法表現更優，並具備可客製化解碼與零-shot 評估能力。\nSelf-RAG 在引用預測和完整性任務上進行評估。主要結論是，Self-RAG 通過檢索相關文本段落，提升了引用預測的準確性和上下文相關性，並增強了內容的廣度，從而改善了完整性任務的表現，有效平衡了精確性與覆蓋範圍，尤其在知識密集型場景中表現出色。\nSelf-RAG 在自由踢球（free-kicks）相關任務、數據集評估（如 PopQA、ASQA、PubHealth）和訓練規模分析上進行評估。主要結論是：在 PopQA 和 ASQA 上，檢索頂部原因（retrieve top 1 causes）會導致顯著的性能下降，顯示出該方法在精確性上的不足。\nSelf-RAG 在短形式 PopQA 任務上進行評估，主要結論是它在該任務上取得了較高的 S&P 得分，顯示其在評估真實性與支持度方面表現優異。\nSelf-RAG 在 Retrieve 任務上進行評估，主要通過指令驅動的相關性判斷來評估證據的相關性。評估過程包括指令、上下文和先前生成的句子，並使用指令提示來評估證據。報告指出，Retrieve 任務基於指令驅動的相關性判斷，且每個任務只使用一個演示，這是因為輸入長度限制。\nSelf-RAG 在評估回應的實用性（perceived utility）上進行，特別是針對事實正確性與完整性進行判斷。主要結論是，回應雖然在事實正確性上滿足需求，但缺乏完整性，導致實用性評分為2（形式設定），而計量值為3，顯示出部分滿足查詢需求，反映出一個平衡但不完整的評估結果。",
+  "communities": [
+   19,
+   7,
+   0,
+   5,
+   11,
+   18,
+   21,
+   24
+  ]
+ },
+ {
+  "question": "Self-RAG 和傳統 RAG 最主要的差別有哪些？",
+  "route": "global",
+  "answer": "Self-RAG 與傳統 RAG 最主要的差別在於引入了自我反思與動態檢索機制。Self-RAG 透過生成反思標記（reflection tokens）與檢索標記（retrieval tokens）進行內部評估，判斷內容相關性與支持程度（ISSUP / ISREL），並在生成過程中進行自我檢視與推理。其檢索模組根據模型評估結果動態調整，實現上下文感知的檢索，提升事實正確性與回答流暢度。傳統 RAG 僅依賴外部檢索，缺乏自我評估與反思機制，無法確保輸出有足夠來源支持。",
+  "context": "Self-RAG 和傳統 RAG 最主要的差別在於 Self-RAG 在推理過程中會生成反思標記（reflection tokens）來評估輸出內容的支援情況，進而提升回答的流暢度和完整性。傳統 RAG 僅依賴檢索到的資料來生成回答，缺乏對輸出是否被來源支援的自我檢視。Self-RAG 透過訓練一個生成模型 M 和一個評論模型 C，使用反思機制來確保回答有足夠的來源支持，並能進行零-shot 評估，這使得它在保證輸出支持性方面優於傳統 RAG 方法。\nSelf-RAG 與傳統 RAG 最主要的差別在於 Self-RAG 引入了自我評估機制，透過模型預測 ISREL（ irrelevant）和 ISSUP（support）tokens 來判斷文段的相關性與支持程度，而傳統 RAG 則僅依賴外部檢索模組進行相關性排序。Self-RAG 的檢索模組（R）會根據模型評估結果更新輸出（D），並結合人類註解進行訓練，提升了檢索的準確性與事實性。此外，ISSUP token 用於評估支持程度，並在訓練中透過 wG 权重調整其重要性，有助於提升事實正確性；而傳統 RAG 通常缺乏這種自我評估與事實性檢驗機制。\nSelf-RAG 與傳統 RAG 最主要的差別在於 Self-RAG 引入了反思機制（reflection）與內部檢索（retrieval）的整合。傳統 RAG 僅依賴外部知識庫進行資訊檢索，並直接將檢索到的內容作為輸入給生成模型。而 Self-RAG 在訓練過程中，不僅使用原始輸入，還加入反思標記（reflection tokens）與檢索到的段落，並透過掩碼方法（mask out）在損失計算中排除檢索段落，使模型在生成過程中能進行自我反思與推理。此外，Self-RAG 的生成模型（M）以預測目標輸出與反思標記為目標，提升推理能力與回答的合理性，而傳統 RAG 則僅聚焦於資訊補充與直接回答，缺乏內部反思與推理過程。\nSelf-RAG 與傳統 RAG 最主要的差別在於自我反思與動態檢索機制。傳統 RAG 通常在問題提出後一次性檢索相關文件，而 Self-RAG 引入了 retrieval token（檢索標記）機制，當檢索標記觸發時，會啟動檢索模型（retriever model）即時取得 K 個文件，實現動態且上下文感知的檢索。這種機制讓 Self-RAG 能根據當前推理狀態調整檢索內容，提升推理的準確性與靈活性。\nSelf-RAG 和傳統 RAG 的主要差別在於 Self-RAG 引入了控制標記（control tokens）的概念，用來引導生成過程，並在架構中建立自我反思機制。這與傳統 RAG 僅依賴外部知識庫進行資訊檢索和回答不同，Self-RAG 透過控制標記實現對生成過程的主動指導，使模型能夠在生成過程中進行自我檢視與反思，進而提升回答的準確性與合理性。\nSelf-RAG 與傳統 RAG 的主要差別在於 Self-RAG 引入了輸出的分段機制（segmentation）和反射 token（reflection tokens），使得生成的輸出由多個段落（segments）組成，每個段落包含來自原始詞彙和反射 token 的 token。這種結構讓系統能進行更動態、上下文感知的生成，並透過詞彙擴展提升推理準確度與生成的連貫性。傳統 RAG 則主要依賴於檢索與重構的資訊，缺乏這種分段與反射機制，因此在複雜任務中的推理能力較弱。\n報告主要討論了 Self-RAG 中的「 perceived utility value」概念，以及其與生成內容流暢性與事實支持之間的關係，但未明確比較 Self-RAG 與傳統 RAG 的主要差別。因此，雖然提供了一些相關概念（如 perceived utility、supported output），卻缺乏對兩者在架構、機制或功能上的直接對比，無法完整回答問題。\n報告主要描述了 Self-RAG 中的消融研究，分析了訓練和推論階段各組件的影響，但並未明確指出 Self-RAG 與傳統 RAG 最主要的差別。因此，雖然報告提供了部分技術背景，卻缺乏直接對比或核心差異的說明。",
+  "communities": [
+   0,
+   7,
+   9,
+   1,
+   4,
+   6,
+   8,
+   10
+  ]
+ }
+]

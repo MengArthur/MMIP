@@ -1,0 +1,431 @@
+{
+ "name": "talk_paper_intro",
+ "path": "videos/talk_paper_intro.mp4",
+ "duration": 36.06936666666667,
+ "n_frames_1fps": 37,
+ "audio_rms": 0.0647386759519577,
+ "has_speech": true,
+ "reps": [
+  {
+   "t": 0.0,
+   "file": "video_index/talk_paper_intro/000_0s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 1.0,
+   "file": "video_index/talk_paper_intro/001_1s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 2.0,
+   "file": "video_index/talk_paper_intro/002_2s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 3.0,
+   "file": "video_index/talk_paper_intro/003_3s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 4.0,
+   "file": "video_index/talk_paper_intro/004_4s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 5.0,
+   "file": "video_index/talk_paper_intro/005_5s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 6.0,
+   "file": "video_index/talk_paper_intro/006_6s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 7.0,
+   "file": "video_index/talk_paper_intro/007_7s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 8.0,
+   "file": "video_index/talk_paper_intro/008_8s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 9.0,
+   "file": "video_index/talk_paper_intro/009_9s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 10.0,
+   "file": "video_index/talk_paper_intro/010_10s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 11.0,
+   "file": "video_index/talk_paper_intro/011_11s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 12.0,
+   "file": "video_index/talk_paper_intro/012_12s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 13.0,
+   "file": "video_index/talk_paper_intro/013_13s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 14.0,
+   "file": "video_index/talk_paper_intro/014_14s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 15.0,
+   "file": "video_index/talk_paper_intro/015_15s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 16.0,
+   "file": "video_index/talk_paper_intro/016_16s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 17.0,
+   "file": "video_index/talk_paper_intro/017_17s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 18.0,
+   "file": "video_index/talk_paper_intro/018_18s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 19.0,
+   "file": "video_index/talk_paper_intro/019_19s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 20.0,
+   "file": "video_index/talk_paper_intro/020_20s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 21.0,
+   "file": "video_index/talk_paper_intro/021_21s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 22.0,
+   "file": "video_index/talk_paper_intro/022_22s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 23.0,
+   "file": "video_index/talk_paper_intro/023_23s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 24.0,
+   "file": "video_index/talk_paper_intro/024_24s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 25.0,
+   "file": "video_index/talk_paper_intro/025_25s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 26.0,
+   "file": "video_index/talk_paper_intro/026_26s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 27.0,
+   "file": "video_index/talk_paper_intro/027_27s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 28.0,
+   "file": "video_index/talk_paper_intro/028_28s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 29.0,
+   "file": "video_index/talk_paper_intro/029_29s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 30.0,
+   "file": "video_index/talk_paper_intro/030_30s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 31.0,
+   "file": "video_index/talk_paper_intro/031_31s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 32.0,
+   "file": "video_index/talk_paper_intro/032_32s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 33.0,
+   "file": "video_index/talk_paper_intro/033_33s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 34.0,
+   "file": "video_index/talk_paper_intro/034_34s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 35.0,
+   "file": "video_index/talk_paper_intro/035_35s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "t": 36.0,
+   "file": "video_index/talk_paper_intro/036_36s.jpg",
+   "caption": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  }
+ ],
+ "units": [
+  {
+   "kind": "speech",
+   "start": 0.6,
+   "end": 30.56,
+   "text": "大家好,我們是第15組我們今天要報告的論文是Theoretical Understanding of Self-Correction Through In-Context Alignment這篇論文主要是從理論和數學的角度去解釋大語言模型LM的自我修正到底是怎麼發生的那我們今天主要會涵蓋論文的背景動機他們如何把自我修正建模成一個叫做In-Context Alignment ICA的架構"
+  },
+  {
+   "kind": "speech",
+   "start": 30.56,
+   "end": 34.78,
+   "text": "相關的數學定理證明以及最後的實驗驗證"
+  },
+  {
+   "kind": "visual",
+   "start": 0.0,
+   "end": 1.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 1.0,
+   "end": 2.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 2.0,
+   "end": 3.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 3.0,
+   "end": 4.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 4.0,
+   "end": 5.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 5.0,
+   "end": 6.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 6.0,
+   "end": 7.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 7.0,
+   "end": 8.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 8.0,
+   "end": 9.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 9.0,
+   "end": 10.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 10.0,
+   "end": 11.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 11.0,
+   "end": 12.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 12.0,
+   "end": 13.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 13.0,
+   "end": 14.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 14.0,
+   "end": 15.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 15.0,
+   "end": 16.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 16.0,
+   "end": 17.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 17.0,
+   "end": 18.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 18.0,
+   "end": 19.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 19.0,
+   "end": 20.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 20.0,
+   "end": 21.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 21.0,
+   "end": 22.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 22.0,
+   "end": 23.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 23.0,
+   "end": 24.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 24.0,
+   "end": 25.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 25.0,
+   "end": 26.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 26.0,
+   "end": 27.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 27.0,
+   "end": 28.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 28.0,
+   "end": 29.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 29.0,
+   "end": 30.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 30.0,
+   "end": 31.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 31.0,
+   "end": 32.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 32.0,
+   "end": 33.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 33.0,
+   "end": 34.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 34.0,
+   "end": 35.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 35.0,
+   "end": 36.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  },
+  {
+   "kind": "visual",
+   "start": 36.0,
+   "end": 37.0,
+   "text": "影片畫面顯示「NeurIPS 2024」的學術講座，主題為「自我修正透過情境對齊」，並列出三位組員。"
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+system,id,type,route,key_point_recall,correctness,has_error,answer
+vector,G01,local,vector,0.75,2.0,1.0,資料中僅提及 ISREL 和 ISSUP 兩種 reflection token，未說明其他兩種，故無法回答四種 reflection tokens。
+vector,G02,local,vector,0.0,2.0,1.0,"ISSUP token 有三個可能的值：{FULLY, PARTIALLY, NO}。"
+vector,G03,local,vector,1.0,5.0,0.0,"ISUSE token 的輸出是五種等級的得分，形式為 {1, 2, 3, 4, 5}，並依 weighted scores {−1, −0.5, 0, 0.5, 1} 計算加權總和，最終得分為 s(ISUSE) = Σ wi × p(ISUSE = i) / S，其中 S 為所有 p(ISUSE = t) 的總和。"
+vector,G04,local,vector,1.0,5.0,0.0,"Retrieve token 有以下可能的值：{yes, no, continue}。"
+vector,G05,local,vector,1.0,4.0,0.0,Generator 使用 Llama 2-7B；Critic 使用相同的 Llama 2-7B 作為初始模型。
+vector,G06,local,vector,1.0,5.0,0.0,Self-RAG 預設使用 Contriever-MS MARCO 作為檢索器，每個輸入取前十篇文件。
+vector,G07,local,vector,0.3333333333333333,2.0,1.0,Self-RAG 的訓練資料規模為 150k  instances。訓練資料來自原始集合，並隨機抽樣 5k、10k、20k 和 50k 進行分析。訓練資料由多樣化文本與反思標記（reflection tokens）及檢索段落交錯組成，其中反思標記由訓練的評論模型離線插入，並以 GPT-4 提示收集輸入、輸出與反射標記。
+vector,G08,local,vector,1.0,5.0,0.0,推論時 ISREL、ISSUP、ISUSE 的預設權重分別為 1.0、1.0 和 0.5。
+vector,G09,local,vector,1.0,5.0,0.0,推論時 segment-level beam search 的 beam width 是 2。token 層級使用 greedy decoding。
+vector,G10,local,vector,0.3333333333333333,2.0,0.0,預設的 retrieval threshold 是 0.2。
+vector,G11,local,vector,0.0,1.0,1.0,Self-RAG 13B 在 PopQA 的準確率是 73.1。7B 的準確率為 67.3。
+vector,G12,local,vector,0.3333333333333333,2.0,0.0,Self-RAG 13B 在 ASQA 的 citation precision 無直接數值，資料僅提及 SELF-RAG 在 citation precision 上超越 ChatGPT，且在多項任務中表現優於 ChatGPT。資料不足無法提供確切數值與對比。
+vector,G13,local,vector,0.6666666666666666,3.0,0.0,"實驗用的 PopQA 是長尾子集，包含 1,399 題。"
+vector,G14,local,vector,1.0,5.0,0.0,人工評估中，ISREL 與 ISSUP 反射標記的預測大多與人工判斷一致。在 PopQA 上，S&P 得分為 92.5，ISREL 得分為 95.0，ISSUP 得分為 90.0，顯示一致性良好。
+vector,G15,multihop,vector,0.6,3.0,1.0,因直接使用 GPT-4 產生 reflection tokens 會導致 API 成本高且影響可重現性。訓練 critic 模型可將 GPT-4 的判斷知識蒸餾成內部模型，降低開支並提升可重現性。效果上，GPT-4 的預測與人類評估高度一致，且訓練後的 critic 模型能高效生成 reflection tokens，用於評估輸出品質，使系統在推論時具備自我評估與調整能力。
+vector,G16,multihop,vector,0.75,3.0,0.0,Self-RAG 的訓練成本遠低於 RLHF（PPO）。Self-RAG 在訓練時將批判 token 偏離資料庫，並以標準 LM 目標訓練，無需使用獨立的獎勵模型，大幅降低訓練成本。RLHF 則需依賴額外的獎勵模型進行訓練，成本較高。
+vector,G17,multihop,vector,1.0,5.0,0.0,Generator 訓練時，將檢索到的段落（surrounded by <p> and </p>）遮蔽於損失計算中，並以擴充後的語彙（原語彙加上 reflection tokens）訓練，學習預測目標輸出及 reflection tokens。
+vector,G18,multihop,vector,0.0,2.0,0.0,「Retrieve top 1」對 PopQA 和 ASQA 的影響最大，導致性能大幅下降。
+vector,G19,multihop,vector,0.5,2.0,1.0,「No Critic」ablation 在 ASQA 的表現為 citation precision 18.1，遠低於 SELF-RAG 的 90.0。代表缺乏 critic 指導會嚴重影響對引用支持的判斷，顯示 SELF-RAG 的自我反思機制對確保生成內容被文獻充分支持至關重要。
+vector,G20,multihop,vector,0.3333333333333333,2.0,0.0,提高 ISSUP 權重會提升模型的引用精確度，因為這會讓模型更重視輸出是否由證據支持。
+vector,G21,multihop,vector,1.0,5.0,0.0,調高 retrieval threshold 會導致檢索頻率降低。在 PubHealth 與 PopQA 上，檢索頻率隨 δ 變化而大幅改變；檢索較少時，準確率退化較小（PubHealth）或較大（PopQA），顯示存在精確率與檢索頻率之間的權衡。
+vector,G22,global,vector,0.8,4.0,0.0,"誰：Akari Asai 等人；要解決問題：LLMs 因僅依賴內建知識導致事實錯誤與不正確建議；提出方法：Self-RAG（Self-Reflective Retrieval-Augmented Generation）；怎麼做：透過自我反思、檢索相關知識、評估輸出正確性與事實性，並使用權重（ISREL, ISSUP, ISUSE）與檢索門檻控制檢索行為。"
+vector,G23,global,vector,0.16666666666666666,2.0,0.0,Self-RAG 在訓練階段，將反射標記（reflection tokens）統一為下一個 token 預測，並訓練生成器 LM 在包含檢索段落與反射標記的資料集中生成文本。訓練時，由評論模型（critic model）預測反射標記，評估檢索段落與輸出品質。推論時，針對每一段生成，根據反射標記的預測（如是否需檢索、內容是否被支持）進行控制，支援自適應檢索與段落級束搜，並透過反射標記強制軟或硬約束，確保輸出內容與段落相關且有事實支持。
+vector,G24,global,vector,0.5,3.0,0.0,Self-RAG 在六項任務上評估，包含推理與長篇生成。主要結論是：Self-RAG 显著超越參數更多或採用傳統 RAG 方法的 LLM，尤其在事實準確性與任務自適應方面表現優異，且在四項任務上超越 retrieval-augmented ChatGPT，於所有任務超越 Llama2-chat 與 Alpaca。
+vector,G25,global,vector,1.0,5.0,0.0,Self-RAG 與傳統 RAG 最主要差別在於：(1) Self-RAG 建立自我反思機制，於每段生成後以 reflection token 做自我評估，確保輸出與檢索內容相關、支持或完整；(2) 傳統 RAG 會無差別檢索資料，無法保證引用內容完整支持輸出；(3) Self-RAG 可透過 reflection token 在推論時自訂模型行為，提升事實正確性與引用準確度。
+local,G01,local,local,0.25,2.0,1.0,Self-RAG 使用的四種 reflection tokens 為：retrieval token、critique token、relevance token 與 support token。其中 retrieval token 用於信號檢索需求，critique token 用於評估輸出品質，relevance token 與 support token 用於確認輸出的相關性與支持度。資料中提及 Table 1 與 Appendix Table 4 定義並提供這些 token 的使用範例。
+local,G02,local,local,1.0,3.0,1.0,ISSUP token 的可能值為 Fully Supported 或 Partially Supported。此外，ISSUP = No support 會被用於濾除不願的生成，且在詩（poem）評估中值為 5，關於 321 AD 的陳述有 fully support。
+local,G03,local,local,0.0,2.0,0.0,ISUSE token 的輸出形式為五種可能回應的輸出格式，稱為 five-way output tokens。
+local,G04,local,local,0.0,1.0,0.0,資料中未提及 Retrieve token 的可能值。僅提到「Retrieve =Yes」為輸出格式之一，但未說明其可能的值範圍或選項。因此，無法根據資料回答此問題。
+local,G05,local,local,0.0,1.0,1.0,Self-RAG 的 generator model M 以傳統 LM 目標訓練，使用擴展詞彙中的反射標記；criticC 模型用於評估檢索內容與任務輸出，其訓練資料來自提示 GPT-4 所產生的輸入、輸出與反射標記。資料未明確指出 generator 與 critic 的基底模型名稱。
+local,G06,local,local,0.0,1.0,1.0,Self-RAG 未指定預設檢索器；每個輸入取 K 篇文件。
+local,G07,local,local,0.3333333333333333,2.0,1.0,Self-RAG 的訓練資料規模為 150k。資料來源包含指令與範例數據，並使用 GPT-4 提供的資料進行訓練。
+local,G08,local,local,0.0,1.0,0.0,資料中未提及 ISREL、ISSUP、ISUSE 的預設權重。僅提到 ISSUP 的權重可被提高以確保結果由證據支持，但無預設值。故無法回答權重數值。
+local,G09,local,local,0.0,1.0,0.0,資料不足，無法回答 beam width 與 token 層級解碼方式。
+local,G10,local,local,0.0,1.0,0.0,資料中未提及預設的 retrieval threshold 值。僅說明 δ 是一個控制檢索頻率的超參數，且較大的 δ 會導致較少檢索，但未給出預設值。
+local,G11,local,local,0.0,1.0,0.0,資料中未提及 Self-RAG 13B 或 7B 在 PopQA 的準確率，無相關數字或資訊。
+local,G12,local,local,0.0,1.0,0.0,資料不足，無法提供 Self-RAG 13B 在 ASQA 的 citation precision 數值，亦無提及 Ret-ChatGPT 的相關資訊。
+local,G13,local,local,0.0,1.0,1.0,實驗用的 PopQA 是 short-form PopQA 子集，有 50 題。
+local,G14,local,local,0.0,1.0,0.0,資料不足，無法得知 ISREL 與 ISSUP 在 PopQA 上與人工判斷的一致率。
+local,G15,multihop,local,0.8,3.0,0.0,訓練 critic 模型是因 GPT-4 產生 reflection tokens 需耗費 API 成本且影響可重現性。critic 模型由 GPT-4 提供的資料訓練，用於監督 reflection tokens，並在離線階段插入語料中，提升模型效能與可擴展性。效果上，reflection tokens 有助於評估輸出是否被文段支持，並改善整體表現與測試時的自訂能力。
+local,G16,multihop,local,0.25,2.0,0.0,Self-RAG 與 RLHF（PPO）相比，成本上較低，因 Self-RAG 无需額外訓練即可調整模型行為，而 RLHF 需透過訓練來改變模型行為。
+local,G17,multihop,local,1.0,5.0,0.0,Generator 訓練時，將檢索到的段落以 <p> 和 </p> 包圍，並在損失計算中遮蔽（mask out）這些段落。同時，generator model M 使用標準的 next token objective，預測目標輸出與 reflection tokens，並在擴展的詞彙中學習其生成。
+local,G18,multihop,local,0.0,3.0,0.0,「Retrieve top 1」對 PopQA 和 ASQA 資料集影響最大，造成兩者表現大幅下降。
+local,G19,multihop,local,0.0,1.0,0.0,資料中未提及「No Critic」ablation 在 ASQA 的表現變化，亦無相關資訊說明其影響或意義。故無法根據提供的資料回答此問題。
+local,G20,multihop,local,0.3333333333333333,2.0,0.0,提高 ISSUP 權重會確保結果主要由證據支持（weighted higher: The weight for the ISSUP score can be increased to ensure that the result y is mostly supported by evidence）。
+local,G21,multihop,local,0.3333333333333333,2.0,0.0,調高 δ（retrieval threshold）會導致檢索頻率降低，因較大的 δ 值使檢索次數減少。此行為會導致準確率惡化，尤其在 PubHealth 與 PopQA 數據集上，檢索頻率減少會使整體準確率下降。
+local,G22,global,local,0.2,1.0,1.0,"誰：Liu et al., 2023b 與 Self-RAG 提出。  
+要解決：提升 RAG 的可重現性與降低 API 成本。  
+提出方法：使用 reflection tokens 生成反饋，並透過 GPT-4 生成後蒸餾至模型 C。  
+怎麼做：以指令與 few-shot 示範提示 GPT-4 產生 reflection tokens，隨機抽樣訓練資料，範圍為 4k–20k，結合形成模型 C 的訓練資料，並用於 per-segment retrieval 决策。"
+local,G23,global,local,0.16666666666666666,2.0,0.0,Self-RAG 在訓練階段使用指令與範例資料，將反思標記（reflection tokens）與檢索段落插進文本中，並以擴充的詞彙進行下一個標記預測，訓練生成模型 M。推論時，Self-RAG 生成檢索標記以調用檢索器，並生成批判標記評估輸出的正確性與支持度，透過自省機制檢驗內容是否被文段支持，並在必要時過濾不相關段落，實現自反思的生成流程。
+local,G24,global,local,0.16666666666666666,2.0,0.0,Self-RAG 在 evaluation (TASK) 上透過自動化與人類評估方法進行評估。主要結論是：Self-RAG 相較於 Critic 基線模型，在各任務上表現有顯著差距，且其透過自我檢視與精確篩選，有效提升輸出的正確性與事實支持度。
+local,G25,global,local,1.0,5.0,0.0,Self-RAG 與傳統 RAG 最主要的差別在於：Self-RAG 透過自我反思確保引用來源的完整支持，並使用反思標記進行自我評估，以驗證輸出是否被文段支持；而傳統 RAG 則是無差別地檢索並使用頂部結果，缺乏對輸出支持的細緻判斷。Self-RAG 進一步透過自我批判與過濾機制，提升事實正確性與輸出品質。
+global,G01,local,global,0.0,1.0,1.0,Self-RAG 並未提及使用四種 reflection tokens。根據提供的內容，無相關資訊支持此問題的答案。
+global,G02,local,global,0.6666666666666666,2.0,1.0,ISSUP token 的可能值為 'fully supported'（完全支持）和 'partially supported'（部分支持），或 'Supported' 與 'Unsupported'。其值反映輸出是否被事實支持，與 perceived utility 和 factual support 相關。部分報告提及 ISSUP 作為支持評估機制，但亦有報告未明確定義其可能值，僅提到 ISUSE 為五類效用標記，故 ISSUP 具體值依文獻推論為上述兩組可能值。
+global,G03,local,global,1.0,5.0,0.0,ISUSE token 是一個五類效用標記，用來表示「Useful」（感知效用），其輸出形式為模型在生成過程中對回答是否有幫助的感知評估，並非對應具體語義內容，而是作為衡量回答足夠性的指標。
+global,G04,local,global,0.0,1.0,1.0,Retrieve token 的可能值包括 ISREL 和 ISSUP。ISREL 用於標記不相關的段落，ISSUP 用於評估支持程度（如完全支持或部分支持）。此外，token 也可能包含來自原始詞彙的標準詞元及反射機制產生的反射詞元。
+global,G05,local,global,0.0,1.0,1.0,Self-RAG 的 generator 與 critic 分別使用的基底模型未明確提及。報告僅指出 GPT-4 用於生成 reflection tokens 並訓練 critic model，且 Poem generation 使用 Stanford Alpaca，model C 負責預測 ISREL 和 ISSUP tokens 並評估相關性與支持度，但均未說明 generator 與 critic 的基底模型。因此，無法準確回答其基底模型。
+global,G06,local,global,0.0,1.0,1.0,Self-RAG 論文未明確指出預設使用哪個檢索器，也未說明每個輸入取幾篇文件。僅提到當出現檢索 token 時，會觸發檢索模型（retriever model）取得恰好 K 篇文件，但未給出 K 的具體值或檢索器的名稱。因此，相關設定均未明確定義。
+global,G07,local,global,0.3333333333333333,2.0,1.0,Self-RAG 的訓練資料規模為 150k 個實例，來源為精心整理的語料庫，包含交替出現的段落與反思標記。部分訓練資料來自 GPT-4 生成的 reflection tokens，透過 few-shot 演示產生，溫度設為 1，最大輸出 200 token，用於訓練預測 ISREL、ISSUP 與 ISUSE 標記的模型。資料亦包含 PopQA、ASQA 與 PubHealth 數據集，用於評估引用精確度。
+global,G08,local,global,0.0,1.0,0.0,推論時 ISREL、ISSUP、ISUSE 的預設權重未在論文中提及。報告僅說明 wG 权重調整 ISSUP 的重要性，並提及 ablation study 的結構與目的，但未提供三者任何預設權重值或相關資訊。因此，無法確定其預設權重。
+global,G09,local,global,0.0,1.0,0.0,推論時 segment-level beam search 的 beam width 未提及，也未說明 token 層級的解碼方式。
+global,G10,local,global,0.0,1.0,1.0,預設的 retrieval threshold 在 Self-RAG 論文中未提及。
+global,G11,local,global,0.0,1.0,1.0,Self-RAG 論文未提供 Self-RAG 13B 或 7B 在 PopQA 上的準確率數據，僅提及在短形式 PopQA 上取得較高的 S&P 得分，但無具體準確率數值，因此無法回答兩者在 PopQA 的準確率。
+global,G12,local,global,0.0,1.0,0.0,Self-RAG 13B 在 ASQA 的 citation precision 具體數值未提供，也未與 Ret-ChatGPT 進行比較，因此無法得知其精確度與對照模型的差異。
+global,G13,local,global,0.0,1.0,1.0,實驗用的 PopQA 是短形式的子集（short-form PopQA），題目數量未明確提及。評估時抽樣了 150 個樣本，但未指明具體子集。
+global,G14,local,global,0.0,1.0,0.0,無相關內容。
+global,G15,multihop,global,1.0,4.0,0.0,訓練一個 critic 模型而非直接用 GPT-4 產生 reflection tokens，是為了提升反思過程的可控性、效率與一致性。GPT-4 生成的 tokens 可能缺乏可解釋性、穩定性與針對性，且成本高、耗時長。Self-RAG 的 critic 模型透過 supervised data（4k–20k per task）訓練，專門評估文段的相關性（ISREL）與支援程度（ISSUP），並以 wG 权重調整重要性，能精準判斷輸出足夠性，提升事實正確性與推理品質。實驗顯示 ISSUP 對 ASQA 性能關鍵，且在減少對 GPT-4 依賴、確保輸出穩定與可重複性方面表現良好。
+global,G16,multihop,global,0.0,1.0,0.0,Self-RAG 與 RLHF（PPO）在訓練成本上的差異未在論文中提及，亦無相關原因說明。Self-RAG 的訓練流程僅描述為使用 GPT-4 生成反思標記，並以評論模型預測 ISUSE，未比較其與 RLHF（PPO）的訓練成本。因此，無法提供兩者在成本上的差異及原因。
+global,G17,multihop,global,1.0,5.0,0.0,Generator 訓練時，檢索到的段落與 reflection tokens 會被納入訓練資料 Dgen，以交替結構（interleaved）呈現，模型學習根據檢索段落生成 reflection tokens 以評估輸出支援程度。檢索段落使用「mask out 方法」在損失計算時排除，維持訓練穩定性。Generator 透過 next token objective 預測目標輸出與 reflection tokens，整合檢索資訊與自我反思，提升推理能力。
+global,G18,multihop,global,0.0,2.0,0.0,Ablation 中「Retrieve top 1」對 PopQA 和 ASQA 資料集影響最大。
+global,G19,multihop,global,0.0,1.0,0.0,報告未提及「No Critic」ablation在ASQA的表現變化，也未解釋其代表的意義。雖提及ISSUP移除會傷害ASQA性能，但未連結至「No Critic」ablation的影響。僅說明ablation研究結構與訓練推論分離，無法提供具體答案。
+global,G20,multihop,global,0.3333333333333333,2.0,0.0,提高 ISSUP 權重會使模型更傾向選擇具有強烈支持的文段，增加輸出對事實支持的強調，生成更具根據、有事實依據的回應，並有效抑制不支持的陳述，提升輸出的正確性與事實準確性。然而，由於 ISSUP 在 beam search 階段被移除，過高的權重可能對問答質量（ASQA）產生負面影響。
+global,G21,multihop,global,0.3333333333333333,2.0,1.0,調高 retrieval threshold 會減少檢索頻率，因僅較相關的項目被檢索，導致檢索結果更精確，但可能漏檢相關項目。雖有報告指出「Retrieve top 1 causes significant performance drops」，暗示過度限制會惡化性能，然而並未明確證實其對準確率的直接影響。綜合而言，檢索頻率降低，準確率可能因過度限制而惡化。
+global,G22,global,global,0.8,3.0,1.0,Self-RAG 由 Liu et al. 提出，受 Ziegler et al. (2019)、Ouyang et al. (2022) 及控制標記啟發。解決 RAG 中輸出缺乏來源支持、不完整或不正確的問題，提出自我反思機制，透過生成反思標記（如 ISREL、ISSUP）評估文段相關性與支持度，並以權重 wG 調整判斷。做法為：訓練生成模型 M 在擴充語料庫中預測反思令牌與檢索段落，使用評估模型 C 在離線模式下評估並更新資料，推理時生成反思標記檢視支援程度，並依結果調整輸出。
+global,G23,global,global,0.5,2.0,1.0,Self-RAG 的訓練流程於擴充語料庫 Dgen 上進行，包含原始輸入、反思標記（reflection tokens）與檢索段落，使用「mask out」方法維持穩定性，模型 M 以下一個詞預測輸出與反思標記。訓練中，GPT-4 生成反思標記並訓練評論模型 C，預測 ISUSE（五類效用標記）以判斷輸出足夠性，實現檢索-free 監督。推論時，模型生成反思標記，評論模型根據 ISUSE 判斷內容是否足夠，並指導生成，提升輸出完整性與來源支持。
+global,G24,global,global,0.0,1.0,1.0,Self-RAG 在「three tips for staying healthy」、「a difficult decision」、「short story in third person narration」、ASQA、詩歌生成、PopQA、Retrieve 及自由踢球任務上評估。主要結論是：外部檢索僅提升事實性任務（如健康建議）品質，對個人決策或敘事無助；ISSUP token 增強事實支持但 beam search 階段移除導致 ASQA 性能下降；自我反思機制有效提升輸出支持與完整性，尤其在知識密集型場景；然而檢索頂部原因會導致精確性下降，且回應雖事實正確但完整性不足，實用性僅部分滿足。
+global,G25,global,global,1.0,5.0,0.0,Self-RAG 與傳統 RAG 最主要的差別在於引入了自我反思與動態檢索機制。Self-RAG 透過生成反思標記（reflection tokens）與檢索標記（retrieval tokens）進行內部評估，判斷內容相關性與支持程度（ISSUP / ISREL），並在生成過程中進行自我檢視與推理。其檢索模組根據模型評估結果動態調整，實現上下文感知的檢索，提升事實正確性與回答流暢度。傳統 RAG 僅依賴外部檢索，缺乏自我評估與反思機制，無法確保輸出有足夠來源支持。
+graph,G01,local,global,0.0,1.0,1.0,Self-RAG 並未提及使用四種 reflection tokens。根據提供的內容，無相關資訊支持此問題的答案。
+graph,G02,local,local,1.0,3.0,1.0,ISSUP token 的可能值為 Fully Supported 或 Partially Supported。此外，ISSUP = No support 會被用於濾除不願的生成，且在詩（poem）評估中值為 5，關於 321 AD 的陳述有 fully support。
+graph,G03,local,local,0.0,2.0,0.0,ISUSE token 的輸出形式為五種可能回應的輸出格式，稱為 five-way output tokens。
+graph,G04,local,global,0.0,1.0,1.0,Retrieve token 的可能值包括 ISREL 和 ISSUP。ISREL 用於標記不相關的段落，ISSUP 用於評估支持程度（如完全支持或部分支持）。此外，token 也可能包含來自原始詞彙的標準詞元及反射機制產生的反射詞元。
+graph,G05,local,global,0.0,1.0,1.0,Self-RAG 的 generator 與 critic 分別使用的基底模型未明確提及。報告僅指出 GPT-4 用於生成 reflection tokens 並訓練 critic model，且 Poem generation 使用 Stanford Alpaca，model C 負責預測 ISREL 和 ISSUP tokens 並評估相關性與支持度，但均未說明 generator 與 critic 的基底模型。因此，無法準確回答其基底模型。
+graph,G06,local,global,0.0,1.0,1.0,Self-RAG 論文未明確指出預設使用哪個檢索器，也未說明每個輸入取幾篇文件。僅提到當出現檢索 token 時，會觸發檢索模型（retriever model）取得恰好 K 篇文件，但未給出 K 的具體值或檢索器的名稱。因此，相關設定均未明確定義。
+graph,G07,local,global,0.3333333333333333,2.0,1.0,Self-RAG 的訓練資料規模為 150k 個實例，來源為精心整理的語料庫，包含交替出現的段落與反思標記。部分訓練資料來自 GPT-4 生成的 reflection tokens，透過 few-shot 演示產生，溫度設為 1，最大輸出 200 token，用於訓練預測 ISREL、ISSUP 與 ISUSE 標記的模型。資料亦包含 PopQA、ASQA 與 PubHealth 數據集，用於評估引用精確度。
+graph,G08,local,local,0.0,1.0,0.0,資料中未提及 ISREL、ISSUP、ISUSE 的預設權重。僅提到 ISSUP 的權重可被提高以確保結果由證據支持，但無預設值。故無法回答權重數值。
+graph,G09,local,global,0.0,1.0,0.0,推論時 segment-level beam search 的 beam width 未提及，也未說明 token 層級的解碼方式。
+graph,G10,local,local,0.0,1.0,0.0,資料中未提及預設的 retrieval threshold 值。僅說明 δ 是一個控制檢索頻率的超參數，且較大的 δ 會導致較少檢索，但未給出預設值。
+graph,G11,local,local,0.0,1.0,0.0,資料中未提及 Self-RAG 13B 或 7B 在 PopQA 的準確率，無相關數字或資訊。
+graph,G12,local,local,0.0,1.0,0.0,資料不足，無法提供 Self-RAG 13B 在 ASQA 的 citation precision 數值，亦無提及 Ret-ChatGPT 的相關資訊。
+graph,G13,local,global,0.0,1.0,1.0,實驗用的 PopQA 是短形式的子集（short-form PopQA），題目數量未明確提及。評估時抽樣了 150 個樣本，但未指明具體子集。
+graph,G14,local,local,0.0,1.0,0.0,資料不足，無法得知 ISREL 與 ISSUP 在 PopQA 上與人工判斷的一致率。
+graph,G15,multihop,global,0.8,3.0,0.0,訓練一個 critic 模型而非直接用 GPT-4 產生 reflection tokens，是為了提升反思過程的可控性、效率與一致性。GPT-4 生成的 tokens 可能缺乏可解釋性、穩定性與針對性，且成本高、耗時長。Self-RAG 的 critic 模型透過 supervised data（4k–20k per task）訓練，專門評估文段的相關性（ISREL）與支援程度（ISSUP），並以 wG 权重調整重要性，能精準判斷輸出足夠性，提升事實正確性與推理品質。實驗顯示 ISSUP 對 ASQA 性能關鍵，且在減少對 GPT-4 依賴、確保輸出穩定與可重複性方面表現良好。
+graph,G16,multihop,global,0.0,1.0,0.0,Self-RAG 與 RLHF（PPO）在訓練成本上的差異未在論文中提及，亦無相關原因說明。Self-RAG 的訓練流程僅描述為使用 GPT-4 生成反思標記，並以評論模型預測 ISUSE，未比較其與 RLHF（PPO）的訓練成本。因此，無法提供兩者在成本上的差異及原因。
+graph,G17,multihop,global,1.0,5.0,0.0,Generator 訓練時，檢索到的段落與 reflection tokens 會被納入訓練資料 Dgen，以交替結構（interleaved）呈現，模型學習根據檢索段落生成 reflection tokens 以評估輸出支援程度。檢索段落使用「mask out 方法」在損失計算時排除，維持訓練穩定性。Generator 透過 next token objective 預測目標輸出與 reflection tokens，整合檢索資訊與自我反思，提升推理能力。
+graph,G18,multihop,global,0.0,2.0,0.0,Ablation 中「Retrieve top 1」對 PopQA 和 ASQA 資料集影響最大。
+graph,G19,multihop,global,0.0,1.0,0.0,報告未提及「No Critic」ablation在ASQA的表現變化，也未解釋其代表的意義。雖提及ISSUP移除會傷害ASQA性能，但未連結至「No Critic」ablation的影響。僅說明ablation研究結構與訓練推論分離，無法提供具體答案。
+graph,G20,multihop,global,0.3333333333333333,2.0,0.0,提高 ISSUP 權重會使模型更傾向選擇具有強烈支持的文段，增加輸出對事實支持的強調，生成更具根據、有事實依據的回應，並有效抑制不支持的陳述，提升輸出的正確性與事實準確性。然而，由於 ISSUP 在 beam search 階段被移除，過高的權重可能對問答質量（ASQA）產生負面影響。
+graph,G21,multihop,global,0.3333333333333333,2.0,1.0,調高 retrieval threshold 會減少檢索頻率，因僅較相關的項目被檢索，導致檢索結果更精確，但可能漏檢相關項目。雖有報告指出「Retrieve top 1 causes significant performance drops」，暗示過度限制會惡化性能，然而並未明確證實其對準確率的直接影響。綜合而言，檢索頻率降低，準確率可能因過度限制而惡化。
+graph,G22,global,global,0.8,3.0,1.0,Self-RAG 由 Liu et al. 提出，受 Ziegler et al. (2019)、Ouyang et al. (2022) 及控制標記啟發。解決 RAG 中輸出缺乏來源支持、不完整或不正確的問題，提出自我反思機制，透過生成反思標記（如 ISREL、ISSUP）評估文段相關性與支持度，並以權重 wG 調整判斷。做法為：訓練生成模型 M 在擴充語料庫中預測反思令牌與檢索段落，使用評估模型 C 在離線模式下評估並更新資料，推理時生成反思標記檢視支援程度，並依結果調整輸出。
+graph,G23,global,global,0.6666666666666666,2.0,1.0,Self-RAG 的訓練流程於擴充語料庫 Dgen 上進行，包含原始輸入、反思標記（reflection tokens）與檢索段落，使用「mask out」方法維持穩定性，模型 M 以下一個詞預測輸出與反思標記。訓練中，GPT-4 生成反思標記並訓練評論模型 C，預測 ISUSE（五類效用標記）以判斷輸出足夠性，實現檢索-free 監督。推論時，模型生成反思標記，評論模型根據 ISUSE 判斷內容是否足夠，並指導生成，提升輸出完整性與來源支持。
+graph,G24,global,global,0.0,1.0,1.0,Self-RAG 在「three tips for staying healthy」、「a difficult decision」、「short story in third person narration」、ASQA、詩歌生成、PopQA、Retrieve 及自由踢球任務上評估。主要結論是：外部檢索僅提升事實性任務（如健康建議）品質，對個人決策或敘事無助；ISSUP token 增強事實支持但 beam search 階段移除導致 ASQA 性能下降；自我反思機制有效提升輸出支持與完整性，尤其在知識密集型場景；然而檢索頂部原因會導致精確性下降，且回應雖事實正確但完整性不足，實用性僅部分滿足。
+graph,G25,global,global,1.0,5.0,0.0,Self-RAG 與傳統 RAG 最主要的差別在於引入了自我反思與動態檢索機制。Self-RAG 透過生成反思標記（reflection tokens）與檢索標記（retrieval tokens）進行內部評估，判斷內容相關性與支持程度（ISSUP / ISREL），並在生成過程中進行自我檢視與推理。其檢索模組根據模型評估結果動態調整，實現上下文感知的檢索，提升事實正確性與回答流暢度。傳統 RAG 僅依賴外部檢索，缺乏自我評估與反思機制，無法確保輸出有足夠來源支持。

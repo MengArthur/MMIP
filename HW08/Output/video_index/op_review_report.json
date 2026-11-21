@@ -1,0 +1,353 @@
+{
+ "name": "op_review_report",
+ "path": "videos/op_review_report.mp4",
+ "duration": 30.066666666666666,
+ "n_frames_1fps": 31,
+ "audio_rms": 0.0,
+ "has_speech": false,
+ "reps": [
+  {
+   "t": 0.0,
+   "file": "video_index/op_review_report/000_0s.jpg",
+   "caption": "在醫學助理模型中輸入病人資料並執行推理。"
+  },
+  {
+   "t": 1.0,
+   "file": "video_index/op_review_report/001_1s.jpg",
+   "caption": "在醫學影像分析軟體中，顯示肺部病變的檢測結果與報告。"
+  },
+  {
+   "t": 2.0,
+   "file": "video_index/op_review_report/002_2s.jpg",
+   "caption": "在瀏覽器中進行影像分析，顯示肺部病變的檢測圖與報告。"
+  },
+  {
+   "t": 3.0,
+   "file": "video_index/op_review_report/003_3s.jpg",
+   "caption": "醫學影像分析系統，顯示肺部X光片與評估報告。"
+  },
+  {
+   "t": 4.0,
+   "file": "video_index/op_review_report/004_4s.jpg",
+   "caption": "在醫學影像評估系統中，評審人員正在審查肺部X光片。"
+  },
+  {
+   "t": 5.0,
+   "file": "video_index/op_review_report/005_5s.jpg",
+   "caption": "在醫學影像分析軟體中，顯示肺部X光片與評估報告。"
+  },
+  {
+   "t": 6.0,
+   "file": "video_index/op_review_report/006_6s.jpg",
+   "caption": "在醫學影像評估界面，顯示肺部X光片與評論文本。"
+  },
+  {
+   "t": 7.0,
+   "file": "video_index/op_review_report/007_7s.jpg",
+   "caption": "在醫學影像評估界面，顯示X光片與評論文本。"
+  },
+  {
+   "t": 8.0,
+   "file": "video_index/op_review_report/008_8s.jpg",
+   "caption": "醫學影像分析系統，顯示X光片與評審欄位。"
+  },
+  {
+   "t": 9.0,
+   "file": "video_index/op_review_report/009_9s.jpg",
+   "caption": "醫學影像分析系統，顯示肺部X光片與審核欄位。"
+  },
+  {
+   "t": 10.0,
+   "file": "video_index/op_review_report/010_10s.jpg",
+   "caption": "醫學影像分析系統，顯示肺部X光片與審核欄位。"
+  },
+  {
+   "t": 11.0,
+   "file": "video_index/op_review_report/011_11s.jpg",
+   "caption": "醫學影像報告審核系統，顯示X光片與審核人資訊。"
+  },
+  {
+   "t": 12.0,
+   "file": "video_index/op_review_report/012_12s.jpg",
+   "caption": "醫學影像分析系統，顯示肺部X光片與審核欄位。"
+  },
+  {
+   "t": 13.0,
+   "file": "video_index/op_review_report/013_13s.jpg",
+   "caption": "醫學影像報告審核系統，顯示肺部影像與審核人資訊。"
+  },
+  {
+   "t": 14.0,
+   "file": "video_index/op_review_report/014_14s.jpg",
+   "caption": "醫學影像分析系統，顯示肺部X光片與審核人員資訊欄位。"
+  },
+  {
+   "t": 15.0,
+   "file": "video_index/op_review_report/015_15s.jpg",
+   "caption": "醫學影像分析系統，顯示肺部X光片與審核欄位。"
+  },
+  {
+   "t": 16.0,
+   "file": "video_index/op_review_report/016_16s.jpg",
+   "caption": "醫學影像分析系統，顯示肺部X光片與審核欄位。"
+  },
+  {
+   "t": 17.0,
+   "file": "video_index/op_review_report/017_17s.jpg",
+   "caption": "醫學影像分析系統，顯示X光片與審核欄位。"
+  },
+  {
+   "t": 18.0,
+   "file": "video_index/op_review_report/018_18s.jpg",
+   "caption": "醫學影像分析系統，顯示肺部X光片與審核欄位。"
+  },
+  {
+   "t": 19.0,
+   "file": "video_index/op_review_report/019_19s.jpg",
+   "caption": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "t": 20.0,
+   "file": "video_index/op_review_report/020_20s.jpg",
+   "caption": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "t": 21.0,
+   "file": "video_index/op_review_report/021_21s.jpg",
+   "caption": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "t": 22.0,
+   "file": "video_index/op_review_report/022_22s.jpg",
+   "caption": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "t": 23.0,
+   "file": "video_index/op_review_report/023_23s.jpg",
+   "caption": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "t": 24.0,
+   "file": "video_index/op_review_report/024_24s.jpg",
+   "caption": "醫學影像報告審核系統，顯示X光片與評審欄位。"
+  },
+  {
+   "t": 25.0,
+   "file": "video_index/op_review_report/025_25s.jpg",
+   "caption": "醫學影像報告審核系統，顯示X光片與評審欄位。"
+  },
+  {
+   "t": 26.0,
+   "file": "video_index/op_review_report/026_26s.jpg",
+   "caption": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "t": 27.0,
+   "file": "video_index/op_review_report/027_27s.jpg",
+   "caption": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "t": 28.0,
+   "file": "video_index/op_review_report/028_28s.jpg",
+   "caption": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "t": 29.0,
+   "file": "video_index/op_review_report/029_29s.jpg",
+   "caption": "醫學影像報告審核系統，顯示肺部影像與審核人員資訊。"
+  },
+  {
+   "t": 30.0,
+   "file": "video_index/op_review_report/030_30s.jpg",
+   "caption": "醫學影像分析系統，顯示肺部X光片與評估表單。"
+  }
+ ],
+ "units": [
+  {
+   "kind": "visual",
+   "start": 0.0,
+   "end": 1.0,
+   "text": "在醫學助理模型中輸入病人資料並執行推理。"
+  },
+  {
+   "kind": "visual",
+   "start": 1.0,
+   "end": 2.0,
+   "text": "在醫學影像分析軟體中，顯示肺部病變的檢測結果與報告。"
+  },
+  {
+   "kind": "visual",
+   "start": 2.0,
+   "end": 3.0,
+   "text": "在瀏覽器中進行影像分析，顯示肺部病變的檢測圖與報告。"
+  },
+  {
+   "kind": "visual",
+   "start": 3.0,
+   "end": 4.0,
+   "text": "醫學影像分析系統，顯示肺部X光片與評估報告。"
+  },
+  {
+   "kind": "visual",
+   "start": 4.0,
+   "end": 5.0,
+   "text": "在醫學影像評估系統中，評審人員正在審查肺部X光片。"
+  },
+  {
+   "kind": "visual",
+   "start": 5.0,
+   "end": 6.0,
+   "text": "在醫學影像分析軟體中，顯示肺部X光片與評估報告。"
+  },
+  {
+   "kind": "visual",
+   "start": 6.0,
+   "end": 7.0,
+   "text": "在醫學影像評估界面，顯示肺部X光片與評論文本。"
+  },
+  {
+   "kind": "visual",
+   "start": 7.0,
+   "end": 8.0,
+   "text": "在醫學影像評估界面，顯示X光片與評論文本。"
+  },
+  {
+   "kind": "visual",
+   "start": 8.0,
+   "end": 9.0,
+   "text": "醫學影像分析系統，顯示X光片與評審欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 9.0,
+   "end": 10.0,
+   "text": "醫學影像分析系統，顯示肺部X光片與審核欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 10.0,
+   "end": 11.0,
+   "text": "醫學影像分析系統，顯示肺部X光片與審核欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 11.0,
+   "end": 12.0,
+   "text": "醫學影像報告審核系統，顯示X光片與審核人資訊。"
+  },
+  {
+   "kind": "visual",
+   "start": 12.0,
+   "end": 13.0,
+   "text": "醫學影像分析系統，顯示肺部X光片與審核欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 13.0,
+   "end": 14.0,
+   "text": "醫學影像報告審核系統，顯示肺部影像與審核人資訊。"
+  },
+  {
+   "kind": "visual",
+   "start": 14.0,
+   "end": 15.0,
+   "text": "醫學影像分析系統，顯示肺部X光片與審核人員資訊欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 15.0,
+   "end": 16.0,
+   "text": "醫學影像分析系統，顯示肺部X光片與審核欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 16.0,
+   "end": 17.0,
+   "text": "醫學影像分析系統，顯示肺部X光片與審核欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 17.0,
+   "end": 18.0,
+   "text": "醫學影像分析系統，顯示X光片與審核欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 18.0,
+   "end": 19.0,
+   "text": "醫學影像分析系統，顯示肺部X光片與審核欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 19.0,
+   "end": 20.0,
+   "text": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 20.0,
+   "end": 21.0,
+   "text": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 21.0,
+   "end": 22.0,
+   "text": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 22.0,
+   "end": 23.0,
+   "text": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 23.0,
+   "end": 24.0,
+   "text": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 24.0,
+   "end": 25.0,
+   "text": "醫學影像報告審核系統，顯示X光片與評審欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 25.0,
+   "end": 26.0,
+   "text": "醫學影像報告審核系統，顯示X光片與評審欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 26.0,
+   "end": 27.0,
+   "text": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 27.0,
+   "end": 28.0,
+   "text": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 28.0,
+   "end": 29.0,
+   "text": "醫學影像報告審核系統，顯示X光片與審核欄位。"
+  },
+  {
+   "kind": "visual",
+   "start": 29.0,
+   "end": 30.0,
+   "text": "醫學影像報告審核系統，顯示肺部影像與審核人員資訊。"
+  },
+  {
+   "kind": "visual",
+   "start": 30.0,
+   "end": 31.0,
+   "text": "醫學影像分析系統，顯示肺部X光片與評估表單。"
+  }
+ ]
+}

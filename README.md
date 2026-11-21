@@ -51,6 +51,12 @@ NYCU College of Artificial Intelligence
   - **作業二**: Four Routing Nodes on Qwen3-VL-2B — Prompt, SFT / SFT+DPO, Self-implemented FSM Constrained Decoding, System One (Joint Schema Head); 52-Case Multimodal Benchmark (Structure / Accuracy / Latency / Cost)
   - **作業三**: Gradio Chatbot (System One + System 2 Routing), UX Topic Transition, Off-topic Handling, Text / Image Prompt-Injection Defence
 
+- **[HW08: Retrieval-Augmented Generation (點此查閱完整作業報告)](HW08/README.md)**
+  - **作業一**: Multi-turn RAG on 14 Taiwanese Labour Laws (bge-m3 + Re-ranker + Qwen3-4B), Chunk / Overlap / Top-K Stability Search, Prompting Techniques, Gradio UI
+  - **作業二**: Multi-turn VideoRAG on Self-recorded Videos (Whisper, Chinese-CLIP K-means Frames, Subset Frame Selection, Qwen3-VL)
+  - **作業三**: RAGAS Evaluation of the RAG System; VideoRAG Evaluation (Retrieval, Temporal Grounding, Multimodal Faithfulness)
+  - **作業四**: GraphRAG on the Self-RAG Paper (Entity / Relation Graph, Louvain Communities, Local / Global Search) vs. Vector RAG on a 25-Question Benchmark
+
 ---
 
 ## 環境建置說明（Miniconda / Anaconda）
@@ -115,4 +121,9 @@ cd ../HW07
 pip install -r requirements.txt
 python HW07_main.py            # 作業二 + 作業三；加上 --ui 啟動聊天介面
 # 或啟動互動介面：jupyter notebook HW07_notebook.ipynb
+
+# 10. 執行 HW08（RAG / VideoRAG / RAGAS / GraphRAG；需要 GPU：Colab T4）
+cd ../HW08
+pip install -r requirements.txt
+jupyter notebook HW08_notebook.ipynb
 ```

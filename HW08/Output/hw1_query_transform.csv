@@ -1,0 +1,5 @@
+query_mode,hit@10 all turns,turn 1,turns 2-3 (need context)
+none,0.6667,0.9091,0.5455
+rewrite,0.9394,0.9091,0.9545
+multi,0.9697,1.0,0.9545
+stepback,0.9394,0.9091,0.9545

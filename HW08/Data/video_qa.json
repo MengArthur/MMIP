@@ -1,0 +1,227 @@
+{
+ "_how_to": "Gold Q&A for the 作業三 advanced VideoRAG evaluation. video = clip name in Data/videos (no extension); start / end = seconds inside that clip where the answer is said (speech) or shown (visual).",
+ "questions": [
+  {
+   "id": "V01",
+   "question": "這組報告的是哪一篇論文？",
+   "answer": "A Theoretical Understanding of Self-Correction through In-context Alignment。",
+   "video": "talk_paper_intro",
+   "start": 0,
+   "end": 11,
+   "type": "speech"
+  },
+  {
+   "id": "V02",
+   "question": "這篇論文是從什麼角度解釋大型語言模型的自我修正？",
+   "answer": "從理論和數學的角度，解釋 LLM 的自我修正到底是怎麼發生的。",
+   "video": "talk_paper_intro",
+   "start": 10,
+   "end": 20,
+   "type": "speech"
+  },
+  {
+   "id": "V03",
+   "question": "這次報告預計涵蓋哪些內容？",
+   "answer": "論文的背景動機、如何把自我修正建模成 in-context alignment（ICA）架構、相關的數學定理證明，以及最後的實驗驗證。",
+   "video": "talk_paper_intro",
+   "start": 19,
+   "end": 36,
+   "type": "speech"
+  },
+  {
+   "id": "V04",
+   "question": "這篇論文發表在哪個會議？",
+   "answer": "NeurIPS 2024（標題投影片左上角的標籤）。",
+   "video": "talk_paper_intro",
+   "start": 0,
+   "end": 36,
+   "type": "visual"
+  },
+  {
+   "id": "V05",
+   "question": "Outline 的第一部分 motivation 要討論什麼？",
+   "answer": "為什麼大模型的自我修正目前在理論上很難解釋。",
+   "video": "talk_outline",
+   "start": 1,
+   "end": 10,
+   "type": "speech"
+  },
+  {
+   "id": "V06",
+   "question": "「From ICL to ICA」這一部分在講什麼？",
+   "answer": "說明這篇論文怎麼把自我修正轉化成 in-context alignment 的問題。",
+   "video": "talk_outline",
+   "start": 9,
+   "end": 17.5,
+   "type": "speech"
+  },
+  {
+   "id": "V07",
+   "question": "理論框架會介紹哪兩種模型？",
+   "answer": "Bradley-Terry（BT）模型與 Plackett-Luce（PL）模型。",
+   "video": "talk_outline",
+   "start": 17.6,
+   "end": 26.6,
+   "type": "speech"
+  },
+  {
+   "id": "V08",
+   "question": "報告會拆解 Transformer 的哪些元件？",
+   "answer": "Softmax、Multi-head attention、FFN 與 Depth（深度）。",
+   "video": "talk_outline",
+   "start": 25.6,
+   "end": 35.6,
+   "type": "speech"
+  },
+  {
+   "id": "V09",
+   "question": "第五部分 Synthetic Experiments 會講什麼？",
+   "answer": "講這篇論文裡做的實驗，以及實驗做出來的資料代表什麼。",
+   "video": "talk_outline",
+   "start": 34.6,
+   "end": 44.5,
+   "type": "speech"
+  },
+  {
+   "id": "V10",
+   "question": "醫療助理系統的表單中輸入的病患姓名和病患 ID 是什麼？",
+   "answer": "病患姓名 Russell Westbrook，病患 ID 0000。",
+   "video": "op_patient_inference",
+   "start": 3,
+   "end": 12,
+   "type": "visual"
+  },
+  {
+   "id": "V11",
+   "question": "上傳的胸腔 X 光會依序經過哪些模型？",
+   "answer": "DICOM 先轉成 PNG，再依序經過 YOLO → MedSAM → LLaVA-Med。",
+   "video": "op_patient_inference",
+   "start": 0,
+   "end": 19.5,
+   "type": "visual"
+  },
+  {
+   "id": "V12",
+   "question": "按下 Run Inference 之後畫面顯示什麼訊息？",
+   "answer": "Converting DICOM (if needed) and running inference...",
+   "video": "op_patient_inference",
+   "start": 12,
+   "end": 19.5,
+   "type": "visual"
+  },
+  {
+   "id": "V13",
+   "question": "系統在 X 光片上偵測到什麼？怎麼標示？",
+   "answer": "偵測到氣胸（pneumothorax），以紅色的分割遮罩標示病灶區域，外面有綠色的偵測框。",
+   "video": "op_review_report",
+   "start": 0,
+   "end": 30,
+   "type": "visual"
+  },
+  {
+   "id": "V14",
+   "question": "AI 產生的草稿報告說氣胸位在哪裡？",
+   "answer": "左上葉（left upper lobe）。",
+   "video": "op_review_report",
+   "start": 0,
+   "end": 5,
+   "type": "visual"
+  },
+  {
+   "id": "V15",
+   "question": "使用者把報告改成什麼內容？審核人填了誰？",
+   "answer": "報告改成「Russell Westbrook's Medical Report」，審核人填 Dr Lin，然後按 Submit approved report。",
+   "video": "op_review_report",
+   "start": 6,
+   "end": 30,
+   "type": "visual"
+  },
+  {
+   "id": "V16",
+   "question": "雲端資料庫裡有哪些資料表？",
+   "answer": "ai_inference_results、medical_reports、patient_data、patient_visits。",
+   "video": "op_database_tables",
+   "start": 8,
+   "end": 36,
+   "type": "visual"
+  },
+  {
+   "id": "V17",
+   "question": "medical_reports 資料表中 Russell Westbrook 那份報告的審核狀態是什麼？",
+   "answer": "is_approved 為 TRUE，approved_by 為 Dr Lin。",
+   "video": "op_database_tables",
+   "start": 22,
+   "end": 36,
+   "type": "visual"
+  },
+  {
+   "id": "V18",
+   "question": "資料庫用的是哪個服務？專案名稱和分支是什麼？",
+   "answer": "Neon 的 PostgreSQL，專案 ChestXrayAI_SQL_ver，分支 production。",
+   "video": "op_database_tables",
+   "start": 2,
+   "end": 36,
+   "type": "visual"
+  }
+ ],
+ "dialogues": [
+  {
+   "id": "VD01",
+   "turns": [
+    {
+     "question": "醫療助理系統裡，上傳胸腔 X 光之後會經過哪些模型？",
+     "answer": "轉成 PNG 後依序經過 YOLO → MedSAM → LLaVA-Med。",
+     "video": "op_patient_inference",
+     "start": 0,
+     "end": 19.5,
+     "type": "visual"
+    },
+    {
+     "question": "那產生的報告醫師可以修改嗎？",
+     "answer": "可以，報告欄位是可編輯的，修改後填入審核人並按 Submit approved report。",
+     "video": "op_review_report",
+     "start": 0,
+     "end": 30,
+     "type": "visual"
+    },
+    {
+     "question": "送出之後會存到哪裡？",
+     "answer": "存到雲端 PostgreSQL（Neon）的 medical_reports 資料表。",
+     "video": "op_database_tables",
+     "start": 0,
+     "end": 36,
+     "type": "visual"
+    }
+   ]
+  },
+  {
+   "id": "VD02",
+   "turns": [
+    {
+     "question": "這組報告的論文在研究什麼？",
+     "answer": "從理論和數學的角度解釋大型語言模型的自我修正是怎麼發生的。",
+     "video": "talk_paper_intro",
+     "start": 10,
+     "end": 20,
+     "type": "speech"
+    },
+    {
+     "question": "它把自我修正建模成什麼？",
+     "answer": "建模成 in-context alignment（ICA）的架構。",
+     "video": "talk_paper_intro",
+     "start": 19,
+     "end": 36,
+     "type": "speech"
+    },
+    {
+     "question": "理論部分用到哪些模型？",
+     "answer": "Bradley-Terry（BT）與 Plackett-Luce（PL）模型。",
+     "video": "talk_outline",
+     "start": 17.6,
+     "end": 26.6,
+     "type": "speech"
+    }
+   ]
+  }
+ ]
+}

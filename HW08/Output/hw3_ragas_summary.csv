@@ -1,0 +1,7 @@
+system,faithfulness,answer_relevancy,context_precision,context_recall,answer_correctness,judge_ok
+basic,0.9643,0.827,0.9065,1.0,0.7698,1.0
+grounded,0.9699,0.8693,0.9216,1.0,0.7725,1.0
+cot,0.9894,0.8719,0.9128,1.0,0.7435,1.0
+fewshot,0.9674,0.8531,0.9118,1.0,0.7424,1.0
+no_rag,,0.8486,,,0.2078,0.9574
+dialogues,0.8924,0.7249,0.7818,0.9394,0.6865,1.0

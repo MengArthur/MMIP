@@ -1,0 +1,232 @@
+{
+ "name": "op_patient_inference",
+ "path": "videos/op_patient_inference.mp4",
+ "duration": 19.5,
+ "n_frames_1fps": 20,
+ "audio_rms": 0.0,
+ "has_speech": false,
+ "reps": [
+  {
+   "t": 0.0,
+   "file": "video_index/op_patient_inference/000_0s.jpg",
+   "caption": "在瀏覽器中使用醫療助理模型進行影像分析。"
+  },
+  {
+   "t": 1.0,
+   "file": "video_index/op_patient_inference/001_1s.jpg",
+   "caption": "在瀏覽器中使用醫療助理模型進行影像分析。"
+  },
+  {
+   "t": 2.0,
+   "file": "video_index/op_patient_inference/002_2s.jpg",
+   "caption": "在瀏覽器中使用醫療助理模型進行影像分析。"
+  },
+  {
+   "t": 3.0,
+   "file": "video_index/op_patient_inference/003_3s.jpg",
+   "caption": "在瀏覽器中使用醫療助理模型進行影像分析。"
+  },
+  {
+   "t": 4.0,
+   "file": "video_index/op_patient_inference/004_4s.jpg",
+   "caption": "在醫學助理模型的網頁上，輸入病人資料並上傳影像進行分析。"
+  },
+  {
+   "t": 5.0,
+   "file": "video_index/op_patient_inference/005_5s.jpg",
+   "caption": "在醫學助理模型的網頁上，輸入病人名稱並上傳X光片進行分析。"
+  },
+  {
+   "t": 6.0,
+   "file": "video_index/op_patient_inference/006_6s.jpg",
+   "caption": "在醫學助理模型的網頁上，輸入病人名稱並上傳X光片進行分析。"
+  },
+  {
+   "t": 7.0,
+   "file": "video_index/op_patient_inference/007_7s.jpg",
+   "caption": "在瀏覽器中使用醫療助理模型進行影像分析。"
+  },
+  {
+   "t": 8.0,
+   "file": "video_index/op_patient_inference/008_8s.jpg",
+   "caption": "在醫護助理模型中，輸入病人資料並上傳X光影像進行分析。"
+  },
+  {
+   "t": 9.0,
+   "file": "video_index/op_patient_inference/009_9s.jpg",
+   "caption": "醫護助理模型正在運行，輸入病人資料並上傳影像。"
+  },
+  {
+   "t": 10.0,
+   "file": "video_index/op_patient_inference/010_10s.jpg",
+   "caption": "網頁上顯示「醫療助理模型」的介面，有病人名稱、病人ID、影像選擇與執行推論按鈕。"
+  },
+  {
+   "t": 11.0,
+   "file": "video_index/op_patient_inference/011_11s.jpg",
+   "caption": "醫護助理模型正在運行，輸入病人資料並上傳影像。"
+  },
+  {
+   "t": 12.0,
+   "file": "video_index/op_patient_inference/012_12s.jpg",
+   "caption": "在醫護助理模型中輸入病人資料並上傳影像進行分析。"
+  },
+  {
+   "t": 13.0,
+   "file": "video_index/op_patient_inference/013_13s.jpg",
+   "caption": "網頁上顯示「醫療助理模型」的介面，正在處理DICOM影像。"
+  },
+  {
+   "t": 14.0,
+   "file": "video_index/op_patient_inference/014_14s.jpg",
+   "caption": "在醫學助理模型中，輸入病人資料並進行影像分析。"
+  },
+  {
+   "t": 15.0,
+   "file": "video_index/op_patient_inference/015_15s.jpg",
+   "caption": "在醫學助理模型中，輸入病人資料並進行影像分析。"
+  },
+  {
+   "t": 16.0,
+   "file": "video_index/op_patient_inference/016_16s.jpg",
+   "caption": "在醫學助理模型中，輸入病人資料並進行影像分析。"
+  },
+  {
+   "t": 17.0,
+   "file": "video_index/op_patient_inference/017_17s.jpg",
+   "caption": "在醫學助理模型中，輸入病人資料並進行影像分析。"
+  },
+  {
+   "t": 18.0,
+   "file": "video_index/op_patient_inference/018_18s.jpg",
+   "caption": "在醫學助理模型中，輸入病人資料並進行影像分析。"
+  },
+  {
+   "t": 19.0,
+   "file": "video_index/op_patient_inference/019_19s.jpg",
+   "caption": "在醫學助理模型中，輸入病人資料並進行影像分析。"
+  }
+ ],
+ "units": [
+  {
+   "kind": "visual",
+   "start": 0.0,
+   "end": 1.0,
+   "text": "在瀏覽器中使用醫療助理模型進行影像分析。"
+  },
+  {
+   "kind": "visual",
+   "start": 1.0,
+   "end": 2.0,
+   "text": "在瀏覽器中使用醫療助理模型進行影像分析。"
+  },
+  {
+   "kind": "visual",
+   "start": 2.0,
+   "end": 3.0,
+   "text": "在瀏覽器中使用醫療助理模型進行影像分析。"
+  },
+  {
+   "kind": "visual",
+   "start": 3.0,
+   "end": 4.0,
+   "text": "在瀏覽器中使用醫療助理模型進行影像分析。"
+  },
+  {
+   "kind": "visual",
+   "start": 4.0,
+   "end": 5.0,
+   "text": "在醫學助理模型的網頁上，輸入病人資料並上傳影像進行分析。"
+  },
+  {
+   "kind": "visual",
+   "start": 5.0,
+   "end": 6.0,
+   "text": "在醫學助理模型的網頁上，輸入病人名稱並上傳X光片進行分析。"
+  },
+  {
+   "kind": "visual",
+   "start": 6.0,
+   "end": 7.0,
+   "text": "在醫學助理模型的網頁上，輸入病人名稱並上傳X光片進行分析。"
+  },
+  {
+   "kind": "visual",
+   "start": 7.0,
+   "end": 8.0,
+   "text": "在瀏覽器中使用醫療助理模型進行影像分析。"
+  },
+  {
+   "kind": "visual",
+   "start": 8.0,
+   "end": 9.0,
+   "text": "在醫護助理模型中，輸入病人資料並上傳X光影像進行分析。"
+  },
+  {
+   "kind": "visual",
+   "start": 9.0,
+   "end": 10.0,
+   "text": "醫護助理模型正在運行，輸入病人資料並上傳影像。"
+  },
+  {
+   "kind": "visual",
+   "start": 10.0,
+   "end": 11.0,
+   "text": "網頁上顯示「醫療助理模型」的介面，有病人名稱、病人ID、影像選擇與執行推論按鈕。"
+  },
+  {
+   "kind": "visual",
+   "start": 11.0,
+   "end": 12.0,
+   "text": "醫護助理模型正在運行，輸入病人資料並上傳影像。"
+  },
+  {
+   "kind": "visual",
+   "start": 12.0,
+   "end": 13.0,
+   "text": "在醫護助理模型中輸入病人資料並上傳影像進行分析。"
+  },
+  {
+   "kind": "visual",
+   "start": 13.0,
+   "end": 14.0,
+   "text": "網頁上顯示「醫療助理模型」的介面，正在處理DICOM影像。"
+  },
+  {
+   "kind": "visual",
+   "start": 14.0,
+   "end": 15.0,
+   "text": "在醫學助理模型中，輸入病人資料並進行影像分析。"
+  },
+  {
+   "kind": "visual",
+   "start": 15.0,
+   "end": 16.0,
+   "text": "在醫學助理模型中，輸入病人資料並進行影像分析。"
+  },
+  {
+   "kind": "visual",
+   "start": 16.0,
+   "end": 17.0,
+   "text": "在醫學助理模型中，輸入病人資料並進行影像分析。"
+  },
+  {
+   "kind": "visual",
+   "start": 17.0,
+   "end": 18.0,
+   "text": "在醫學助理模型中，輸入病人資料並進行影像分析。"
+  },
+  {
+   "kind": "visual",
+   "start": 18.0,
+   "end": 19.0,
+   "text": "在醫學助理模型中，輸入病人資料並進行影像分析。"
+  },
+  {
+   "kind": "visual",
+   "start": 19.0,
+   "end": 20.0,
+   "text": "在醫學助理模型中，輸入病人資料並進行影像分析。"
+  }
+ ]
+}

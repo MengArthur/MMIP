@@ -1,0 +1,5 @@
+metric,gemini_mean,local_mean,mean_abs_diff,pearson_r
+faithfulness,0.9699,0.8977,0.0934,0.2906
+context_precision,0.9216,0.9483,0.0655,0.6463
+context_recall,1.0,0.9894,0.0106,
+answer_correctness,0.7725,0.8946,0.1769,0.5084

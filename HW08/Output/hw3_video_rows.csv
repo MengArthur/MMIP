@@ -1,0 +1,89 @@
+variant,id,type,video_hit@1,video_hit@3,temporal_recall,frame_precision,citation_accuracy,faithfulness,context_recall,answer_correctness,frame_usefulness,answer
+VideoRAG (frames + text),V01,speech,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,"這組報告的是《A Theoretical Understanding of Self-Correction through In-context Alignment》這篇論文。
+
+【talk_paper_intro 00:01】"
+VideoRAG (frames + text),V02,speech,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.0,這篇論文從理論和數學的角度來解釋大型語言模型的自我修正。【talk_paper_intro 00:01】
+VideoRAG (frames + text),V03,speech,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,【op_database_tables 00:30】（畫面描述）在資料庫管理工具中，正在新增一筆資料。
+VideoRAG (frames + text),V04,visual,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.16666666666666666,這篇論文發表在 NeurIPS 2024 會議上。【talk_paper_intro 00:01】
+VideoRAG (frames + text),V05,speech,1.0,1.0,1.0,0.6666666666666666,1.0,1.0,1.0,1.0,0.16666666666666666,Outline 的第一部分 motivation 是討論為什麼大模型的自我修正在理論上很難解釋。【talk_outline 00:00】
+VideoRAG (frames + text),V06,speech,1.0,1.0,1.0,1.0,1.0,0.5,1.0,0.6666666666666666,0.6666666666666666,"「From ICL to ICA」這一部分講述了如何將大模型的自我修正從傳統的ICL（In-context Learning）轉化為In-context Alignment（ICA），並提出了一個新的理論框架。
+
+【talk_outline 00:02】"
+VideoRAG (frames + text),V07,speech,1.0,1.0,1.0,0.16666666666666666,0.0,1.0,1.0,1.0,0.6666666666666666,理論框架會介紹Bradley-Terry & Plackett-Luce模型。【talk_outline 00:03】
+VideoRAG (frames + text),V08,speech,1.0,1.0,1.0,0.16666666666666666,1.0,1.0,1.0,1.0,1.0,報告會拆解 Transformer 的元件，包括 Softmax、Multihead、FFN 和 Depth。【talk_outline 00:25】
+VideoRAG (frames + text),V09,speech,1.0,1.0,1.0,0.16666666666666666,1.0,1.0,1.0,1.0,0.16666666666666666,第五部分 Synthetic Experiments 會講述論文裡做的實驗，以及實驗產生的資料代表了什麼。【talk_outline 00:25】
+VideoRAG (frames + text),V10,visual,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.8333333333333334,病患姓名為 Russell Westbrook，病患 ID 為 0000。【op_patient_inference 00:05】
+VideoRAG (frames + text),V11,visual,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.5,【op_database_tables 00:00】上傳的胸腔 X 光會依序經過影像分析模型與醫學報告審核模型。
+VideoRAG (frames + text),V12,visual,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,【op_database_tables 00:36】（畫面描述）在資料庫管理工具中，正在新增一筆記錄。
+VideoRAG (frames + text),V13,visual,1.0,1.0,1.0,1.0,1.0,1.0,0.6666666666666666,0.6666666666666666,1.0,系統在X光片上偵測到肺部異常，並用綠色框標示。【op_review_report 00:14】
+VideoRAG (frames + text),V14,visual,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.6666666666666666,1.0,AI 產生的草稿報告說氣胸位於肺部與胸壁之間，並指出其在左上肺葉。【op_review_report 00:04】
+VideoRAG (frames + text),V15,visual,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.8,1.0,使用者將報告內容修改為「Russell Westbrook's medical report」，審核人填入「Dr Lin」。【op_review_report 00:28】
+VideoRAG (frames + text),V16,visual,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,雲端資料庫裡有以下資料表：a_inference_results、medical_reports、patient_data、patient_visits。【op_database_tables 00:15】
+VideoRAG (frames + text),V17,visual,1.0,1.0,1.0,0.6666666666666666,1.0,1.0,1.0,0.6666666666666666,0.5,根據畫面顯示，Russell Westbrook 的報告審核狀態為「已核准」。【op_database_tables 00:28】
+VideoRAG (frames + text),V18,visual,1.0,1.0,1.0,1.0,1.0,0.6666666666666666,1.0,0.6666666666666666,1.0,資料庫服務為「console.neon.tech」，專案名稱為「CheetahNeonSQL」，分支為「production」。【op_database_tables 00:13】
+text only,V01,speech,1.0,1.0,1.0,,1.0,1.0,1.0,1.0,,這組報告的是《Theoretical Understanding of Self-Correction Through In-Context Alignment》這篇論文。【talk_paper_intro 00:01】
+text only,V02,speech,1.0,1.0,1.0,,1.0,1.0,1.0,1.0,,這篇論文從理論和數學的角度解釋大型語言模型的自我修正。【talk_paper_intro 00:01】
+text only,V03,speech,0.0,0.0,0.0,,0.0,1.0,0.0,0.0,,影片中僅顯示資料庫管理工具新增資料記錄的畫面，未提及報告內容。【op_database_tables 00:13】
+text only,V04,visual,1.0,1.0,1.0,,1.0,1.0,1.0,1.0,,這篇論文發表在 NeurIPS 2024 會議。【talk_paper_intro 00:00】
+text only,V05,speech,1.0,1.0,1.0,,1.0,1.0,1.0,1.0,,Outline 的第一部分 motivation 要討論大模型的自我修正目前在理論上很難解釋。【talk_outline 00:00】
+text only,V06,speech,1.0,1.0,1.0,,1.0,1.0,1.0,0.6666666666666666,,「From ICL to ICA」這一部分講述如何將大模型的自我修正從In-Context Learning（ICL）轉化為In-Context Alignment（ICA）的問題，並介紹相關理論框架。【talk_outline 00:00】
+text only,V07,speech,1.0,1.0,1.0,,0.0,1.0,1.0,1.0,,理論框架會介紹Bradley Terry模型與PL模型。【talk_outline 00:00】
+text only,V08,speech,1.0,1.0,1.0,,1.0,1.0,0.75,0.6666666666666666,,報告會拆解 Transformer 的元件包括 Softmax、Multihead FFN 和 Depth。【talk_outline 00:26–00:44】
+text only,V09,speech,1.0,1.0,1.0,,1.0,1.0,1.0,1.0,,第五部分 Synthetic Experiments 會講述論文裡所做的實驗，以及實驗產生的資料代表了什麼。【talk_outline 00:26–00:44】
+text only,V10,visual,1.0,1.0,1.0,,1.0,1.0,0.0,0.0,,影片中未提及醫療助理系統表單中輸入的病患姓名和病患 ID，因此無法回答。【op_patient_inference 00:05】
+text only,V11,visual,0.0,1.0,0.0,,0.0,1.0,0.0,0.0,,上傳的胸腔X光會依序經過醫學影像分析平台、雲端診斷平台，再進入資料庫管理工具進行審核與分析。【op_database_tables 00:02–00:03】
+text only,V12,visual,0.0,1.0,0.0,,0.0,1.0,0.0,0.0,,影片中未提及「按下 Run Inference」後畫面顯示的訊息，僅顯示操作「a_inference_results」表與新增資料。【op_database_tables 00:30–00:31】
+text only,V13,visual,1.0,1.0,1.0,,1.0,1.0,0.0,0.0,,系統在X光片上偵測到異常，並以審核欄位標示。【op_review_report 00:17】
+text only,V14,visual,1.0,1.0,1.0,,1.0,1.0,0.0,0.0,,影片中未提及AI產生的草稿報告，僅顯示醫學影像分析軟體與評估界面，無相關內容可確認氣胸位置。【op_review_report 00:05】
+text only,V15,visual,1.0,1.0,1.0,,1.0,1.0,0.0,0.0,,影片中未顯示使用者修改報告內容或審核人資訊，僅顯示審核系統的影像與資訊。【op_review_report 00:13】
+text only,V16,visual,1.0,1.0,1.0,,1.0,1.0,0.0,0.0,,影片中未提及雲端資料庫或其資料表名稱，僅顯示在資料庫管理工具中新增與查看資料記錄，無法回答雲端資料庫裡有哪些資料表。【op_database_tables 00:34】
+text only,V17,visual,1.0,1.0,1.0,,1.0,1.0,0.0,0.0,,影片中未提及 Russell Westbrook 的報告或其審核狀態，僅顯示操作「medical_reports」表的畫面，無法得知審核狀態。【op_database_tables 00:35】
+text only,V18,visual,1.0,1.0,1.0,,1.0,1.0,0.0,0.0,,影片內容未提及資料庫所使用的服務、專案名稱或分支資訊，因此無法回答。【op_database_tables 00:13】
+frames only,V01,speech,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.16666666666666666,這組報告的是《A Theoretical Understanding of Self-Correction through In-context Alignment》。【talk_paper_intro 00:00】
+frames only,V02,speech,1.0,1.0,1.0,1.0,1.0,1.0,0.0,0.0,1.0,這篇論文從「內語境對齊」（in-context alignment）的角度，解釋大型語言模型的自我修正機制。【talk_paper_intro 00:00】
+frames only,V03,speech,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,影片中未提供關於報告內容的詳細資訊，因此無法回答。【op_database_tables 00:34】
+frames only,V04,visual,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.16666666666666666,這篇論文發表在 NeurIPS 2024 會議上。【talk_paper_intro 00:01】
+frames only,V05,speech,1.0,1.0,1.0,0.6666666666666666,1.0,1.0,1.0,1.0,0.6666666666666666,Outline 的第一部分 Motivation & Challenges 要討論為什麼自我修正難以理解。【talk_outline 00:16】
+frames only,V06,speech,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.6666666666666666,「From ICL to ICA」這一部分講述了從資訊科學中的 ICL（In-context Learning）到 ICA（In-context Alignment）的轉變，並探討了自我修正的理論框架。【talk_outline 00:03】
+frames only,V07,speech,1.0,1.0,1.0,0.16666666666666666,0.0,,,,,理論框架會介紹布雷迪-泰瑞與普拉克特-盧模型。【talk_outline 00:06】
+frames only,V08,speech,1.0,1.0,1.0,0.16666666666666666,0.0,1.0,1.0,1.0,0.16666666666666666,報告會拆解 Transformer 的元件包括 Softmax、multi-head、FFN 和 depth。【talk_outline 00:04】
+frames only,V09,speech,1.0,1.0,0.0,0.16666666666666666,0.0,1.0,1.0,0.4,1.0,第五部分「Synthetic Experiments」會講述如何在受控數據上驗證理論，以驗證理論的正確性。【talk_outline 00:17】
+frames only,V10,visual,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.3333333333333333,影片中顯示的病患姓名為 Russell Westbrook，病患 ID 為 0000。【op_patient_inference 00:05】
+frames only,V11,visual,0.0,1.0,0.0,0.0,0.0,,1.0,0.0,0.5,【op_database_tables 00:00】
+frames only,V12,visual,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,按下 Run Inference 之後畫面顯示「The Image shows the se...」、「Russell Westbrook's Me...」、「Verified final report」等訊息。【op_database_tables 00:32】
+frames only,V13,visual,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.6666666666666666,1.0,X 光片上偵測到肺部異常，用綠色框標示。【op_review_report 00:14】
+frames only,V14,visual,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.6666666666666666,1.0,AI 產生的草稿報告指出，氣胸位於肺部與胸壁之間的空間，並在左上肺葉的區域。【op_review_report 00:04】
+frames only,V15,visual,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.8,0.5,使用者將報告內容修改為「Russell Westbrook's Medical Report」，審核人填入了「Dr Lin」。【op_review_report 00:28】
+frames only,V16,visual,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.75,1.0,雲端資料庫裡有以下資料表：a_inference_results、medical_reports、patient_data、patient_visits、patient_data、patient_visits。【op_database_tables 00:11】
+frames only,V17,visual,1.0,1.0,1.0,0.6666666666666666,1.0,0.5,1.0,0.5,0.16666666666666666,根據畫面顯示，medical_reports 資料表中 Russell Westbrook 的報告審核狀態為「Verified final report」，且為「TRUE」。【op_database_tables 00:29】
+frames only,V18,visual,1.0,1.0,1.0,1.0,1.0,0.3333333333333333,1.0,0.3333333333333333,1.0,資料庫使用的是 Neosql，專案名稱為 `cheetah_neon`，分支為 `production`。【op_database_tables 00:08】
+"frames + text, uniform frames",V01,speech,1.0,1.0,1.0,0.5,1.0,1.0,1.0,1.0,0.16666666666666666,"這組報告的是《A Theoretical Understanding of Self-Correction through In-context Alignment》這篇論文。
+
+【talk_paper_intro 00:00】"
+"frames + text, uniform frames",V02,speech,1.0,1.0,1.0,0.8333333333333334,1.0,1.0,1.0,1.0,0.0,這篇論文從理論和數學的角度來解釋大型語言模型的自我修正。【talk_paper_intro 00:01】
+"frames + text, uniform frames",V03,speech,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,【op_database_tables 00:14】（畫面描述）在資料庫管理工具中，正在新增資料記錄。【op_database_tables 00:22】（畫面描述）在資料庫管理工具中，正在新增資料記錄。【op_database_tables 00:29】（畫面描述）在資料庫管理工具中，正在新增一筆資料。【op_database_tables 00:36】（畫面描述）在資料庫管理工具中，正在新增一筆資料。【op_database_tables 00:36】（畫面描述）在資料庫管理工具中，正在新增一筆資料。【op_database_tables 00:36】（畫面描述）在資料庫管理工具中，正在新增一筆資料。【op_database_tables 00:36】（畫面描述）在資料庫管理工具中，正在新增一筆資料。【op_database_tables 00:36】（畫面描述）在資料庫管理工具中，正在新增一筆資料。【op_database_tables 00:36】（畫面描述）在資料庫管理工具中，正在新增一
+"frames + text, uniform frames",V04,visual,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.16666666666666666,這篇論文發表在 NeurIPS 2024 會議上。【talk_paper_intro 00:00】
+"frames + text, uniform frames",V05,speech,1.0,1.0,1.0,0.5,1.0,1.0,1.0,1.0,0.16666666666666666,Outline 的第一部分 motivation 要討論為什麼大模型的自我修正在理論上很難解釋。【talk_outline 00:00】
+"frames + text, uniform frames",V06,speech,1.0,1.0,1.0,0.6666666666666666,1.0,1.0,1.0,1.0,0.16666666666666666,"「From ICL to ICA」這一部分講述了如何將大模型的自我修正從傳統的ICL（In-context Learning）轉化為In-context Alignment（ICA），並探討其理論基礎。
+
+【talk_outline 00:09】"
+"frames + text, uniform frames",V07,speech,1.0,1.0,1.0,0.6666666666666666,1.0,1.0,1.0,1.0,0.16666666666666666,理論框架會介紹Bradley-Terry & Plackett-Luce模型。【talk_outline 00:09】
+"frames + text, uniform frames",V08,speech,1.0,1.0,1.0,0.6666666666666666,1.0,1.0,1.0,1.0,0.8333333333333334,報告會拆解 Transformer 的元件，包括 Softmax、Multihead、FFN 和 Depth。【talk_outline 00:26】
+"frames + text, uniform frames",V09,speech,1.0,1.0,1.0,0.5,1.0,1.0,1.0,1.0,0.8333333333333334,第五部分 Synthetic Experiments 會講述論文裡做的實驗，以及實驗產生的資料代表了什麼。【talk_outline 00:44】
+"frames + text, uniform frames",V10,visual,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.6666666666666666,病患姓名為 Russell Westbrook，病患 ID 為 0000。【op_patient_inference 00:08】
+"frames + text, uniform frames",V11,visual,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,【op_database_tables 00:00】上傳的胸腔 X 光會依序經過影像分析模型、醫學影像分析模型、以及診斷模型。
+"frames + text, uniform frames",V12,visual,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,"按下 Run Inference 之後，畫面會顯示「The Image shows the sa...」、「Verified final report」等訊息，並標示為「TRUE」。
+
+【op_database_tables 00:36】"
+"frames + text, uniform frames",V13,visual,1.0,1.0,1.0,1.0,1.0,0.5,1.0,0.4,0.8333333333333334,系統在X光片上偵測到肺炎，並用綠色框標示。【op_review_report 00:00】
+"frames + text, uniform frames",V14,visual,1.0,1.0,1.0,0.5,1.0,1.0,1.0,0.6666666666666666,0.16666666666666666,AI 產生的草稿報告說氣胸位於左上肺區，並指出氣胸的特徵包括肺部塌陷、肺部與胸壁之間的分界線變薄、肺部有氣體積聚等。【op_review_report 00:06】
+"frames + text, uniform frames",V15,visual,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.8,0.16666666666666666,使用者將報告內容修改為「Russell Westbrook's Medical Report」，審核人填入「Dr Lin」。【op_review_report 00:24】
+"frames + text, uniform frames",V16,visual,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.6666666666666666,0.8333333333333334,雲端資料庫裡有以下資料表：`neondb`、`Schema`、`public`、`a_inference_results`、`medical_reports`、`patient_data`、`patient_visits`。【op_database_tables 00:14】
+"frames + text, uniform frames",V17,visual,1.0,1.0,1.0,0.6666666666666666,1.0,1.0,1.0,0.6666666666666666,0.3333333333333333,Russell Westbrook 的報告審核狀態為「已批准」。【op_database_tables 00:29】
+"frames + text, uniform frames",V18,visual,1.0,1.0,1.0,1.0,1.0,0.6666666666666666,1.0,0.3333333333333333,0.8333333333333334,資料庫服務為 Neondb，專案名稱為 `ChestXrayAI`，分支為 `production`。【op_database_tables 00:14】
+multi-turn dialogue,VD01-1,visual,0.0,1.0,0.0,0.0,0.0,0.5,1.0,0.0,0.16666666666666666,系統上傳胸腔 X 光後，會經過影像分割模型與肺部病變識別模型，以進行肺部病變的評估與分析。【op_review_report 00:01】
+multi-turn dialogue,VD01-2,visual,0.0,1.0,0.0,0.0,0.0,1.0,1.0,0.5,0.3333333333333333,【op_database_tables 00:33–00:34】產生的報告可以由醫師修改，因為資料庫管理工具中顯示「medical_reports」表的資料可被編輯。
+multi-turn dialogue,VD01-3,visual,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.5,0.0,上傳的胸腔 X 光影像會存入資料庫，並由系統自動產生評估報告，供醫師審核與修改。【op_review_report 00:09】
+multi-turn dialogue,VD02-1,speech,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.6666666666666666,0.3333333333333333,"這組報告的論文從理論和數學的角度，研究大語言模型（LM）的自我修正機制，並提出「情境對齊」（In-Context Alignment, ICA）架構來建模。【talk_paper_intro 00:01】"
+multi-turn dialogue,VD02-2,speech,1.0,1.0,1.0,0.8333333333333334,1.0,1.0,1.0,1.0,0.3333333333333333,"這組報告的論文將大語言模型的自我修正機制建模為「情境對齊」（In-Context Alignment, ICA）架構。【talk_paper_intro 00:35】"
+multi-turn dialogue,VD02-3,speech,0.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,"論文使用了大語言模型（LM）的自我修正機制，並提出「情境對齊」（In-Context Alignment, ICA）架構來建模。【talk_paper_intro 00:01】"

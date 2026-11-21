@@ -1,0 +1,15 @@
+# embedding / LLM caches, video index images and the results zip are produced on Colab
+Output/emb_cache/
+Output/video_index/**/*.jpg
+Output/video_index/**/*.npy
+HW08_results.zip
+# recorded videos are large: keep them out of git
+Data/videos/*.mp4
+Data/videos/*.mov
+Data/videos/*.mkv
+Data/videos/*.webm
+Data/videos/*.avi
+Data/videos/*.m4v
+__pycache__/
+# original (uncut) recordings
+/videos/
