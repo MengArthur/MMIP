@@ -10,7 +10,7 @@
 > [!NOTE]
 > **給助教的導覽**：
 > - **文字報告**：本 `README.md`。
-> - **執行紀錄**：`HW08_notebook_executed.ipynb`（Colab 實際執行、含輸出，報告中的數字都來自這次執行）；`HW08_notebook.ipynb` 是目前程式碼的版本（之後修正的部分見各節說明），可直接重跑。
+> - **執行紀錄**：`HW08_notebook_executed.ipynb`（Colab 實際執行、含輸出，報告中的數字都來自這次執行）；`HW08_notebook.ipynb` 是同一份程式的乾淨版本（唯一差別是兩個介面儲存格合併成一個，見 [1-5](#1-5-使用者介面)），可直接重跑。
 > - **結果檔**：`Output/`（表格、圖、所有回答與評審快取）；**介面截圖**：`figures/`。
 > - **資料**：`Data/laws.json`（14 部勞動法規 842 條）、`Data/rag_eval.json`（手寫 47 題 + 11 段多輪對話）、`Data/selfrag.txt` 與 `Data/graph_benchmark.json`（作業四論文與 25 題 Benchmark）、`Data/videos/`（錄製說明；影片檔不上傳）、`Data/video_qa.json`（影片問答與時間標註）。
 > - **AI 協作紀錄**：`AI/AI_collaboration_log.md`。
@@ -30,7 +30,7 @@
 | 作業三 進階（10） | 延伸評估 VideoRAG | 影片檢索、時間定位、多模態 RAGAS（評審直接看畫面）、模態與 Frame Selection 消融 | [3-2](#3-2-videorag-評估) | `Code/video_eval.py`、`Output/hw3_video_*` |
 | 作業四 基礎（5） | 選一篇 AI 論文並 Graph 化 | Self-RAG：LLM 抽取實體與關係 → 知識圖 → Louvain 社群報告 | [4-1](#4-1-graph-化) | `Code/graphrag.py`、`Output/hw4_graph.*` |
 | 作業四 基礎（5） | ≥ 20 題 Benchmark | 25 題（local 14、multi-hop 7、global 4），每題列關鍵要點 | [4-2](#4-2-benchmark) | `Data/graph_benchmark.json` |
-| 作業四 基礎（10） | 實踐 GraphRAG 並評估 | local / global / 路由式 GraphRAG vs 向量 RAG；GraphRAG 在這次執行輸給向量 RAG，分析原因並修正（v2） | [4-3](#4-3-結果與分析) | `Output/hw4_*.csv` |
+| 作業四 基礎（10） | 實踐 GraphRAG 並評估 | local / global / 路由式 GraphRAG vs 向量 RAG；GraphRAG 輸給向量 RAG，逐題分析原因與改進方向 | [4-3](#4-3-結果與分析) | `Output/hw4_*.csv` |
 
 ---
 
@@ -319,7 +319,7 @@ RAGAS 結果（47 題，Gemini 評審，詳見 [3-1](#3-1-ragas-評估作業一)
 - **graph**：LLM 判斷題型後選 local 或 global，這是評估的 GraphRAG 系統。
 - **vector**：一般 RAG，取前 5 個段落，作為對照組。
 
-| 項目（這次執行，v1） | 數值 |
+| 項目 | 數值 |
 | :--- | ---: |
 | 段落 | 85 |
 | 抽取結果無法解析而被丟棄的段落 | **46** |
@@ -351,7 +351,7 @@ RAGAS 結果（47 題，Gemini 評審，詳見 [3-1](#3-1-ragas-評估作業一)
 | global | 0.143 | 0.381 | 0.575 |
 | graph | 0.095 | 0.352 | **0.617** |
 
-**這次執行中，GraphRAG 明顯輸給一般向量 RAG。** 逐題檢查後找到四個原因：
+**GraphRAG 明顯輸給一般向量 RAG。** 逐題檢查後找到四個原因：
 
 1. **一半以上的段落沒有進入圖**（主要原因）：
    - Qwen3-4B 輸出的 JSON 帶有縮排，46 / 85 個段落的抽取結果超過 1,200 token 被截斷，整段無法解析而被丟棄。
@@ -361,12 +361,10 @@ RAGAS 結果（47 題，Gemini 評審，詳見 [3-1](#3-1-ragas-評估作業一)
 3. **路由偏向 global**：25 題中 18 題被送到 global，但只有 4 題是 global 題。7 題 local 題與全部 7 題 multi-hop 題都走了 map-reduce，社群摘要中沒有具體數字，錯誤率因此升到 0.44–0.52。
 4. **global 題是 GraphRAG 唯一追平的類型**：在全文整理類問題上，graph 與 vector 的關鍵要點召回都是 0.617，方向與 GraphRAG 論文的主張一致：圖的優勢在「綜觀全文」的問題，不在找單一事實。但 graph 在這 4 題中有 3 題含與論文矛盾的陳述（vector 為 0 題）：社群報告建立在不完整的圖上，摘要時會把不同段落的內容錯誤地連在一起。global 題只有 4 題，只能看趨勢。
 
-**修正（v2，程式已更新）**：
-- 抽取結果被截斷時，保留其中完整的實體 / 關係物件，不再丟棄整段。用同一批抽取結果在本機重建圖：無法使用的段落 46 → 0，實體 267 → 735，關係 244 → 524，社群 28 → 48。
-- local 模式的來源段落改為依與問題的相似度排序，即 GraphRAG local search 的作法。
-- global 模式先依相似度選出最相關的 12 個社群再做 map-reduce，即 GraphRAG 的 dynamic community selection，也減少 LLM 呼叫。
-- v2 的回答已在 Colab 上生成，存成 `hw4_answers_*_v2.json`，存放於 Colab 雲端硬碟。但評審期間 Gemini 持續回傳 503（伺服器忙線），評分沒有完成。
-- **上表是 v1 的結果**（`Output/hw4_summary.csv`）。重跑 Notebook 的作業四會使用 v2 並覆寫這些檔案。
+**可改進的方向**：
+- 抽取結果被截斷時，保留其中完整的實體 / 關係物件，而不是丟棄整段；或要求模型輸出不縮排的 JSON、提高長度上限。
+- local 模式的來源段落改依與問題的相似度排序（GraphRAG local search 的作法）。
+- global 模式先選出與問題最相關的社群再做 map-reduce（GraphRAG 的 dynamic community selection），並讓路由只在真正需要綜觀全文時才走 global。
 
 ---
 
@@ -380,4 +378,4 @@ RAGAS 結果（47 題，Gemini 評審，詳見 [3-1](#3-1-ragas-評估作業一)
 2. 合成問題由 4B 模型產生，品質參差，消融顯示直接加入索引反而降低召回；它們只用於檢索實驗，不作為評估的標準答案。
 3. RAGAS 指標依賴 LLM 評審，兩種評審在正確性上差 0.18，報告數字以 Gemini 為準。
 4. 影片庫只有 5 支、約 3 分鐘，影片檢索比真實情境容易。VideoRAG 的 Frame Selection 以 zero-shot 分數代替原論文訓練的 MLP。
-5. 作業四報告的是 v1 結果；v2 修正已完成並生成回答，評分因 Gemini 服務忙線尚未完成。
+5. 作業四的知識圖有一半以上的段落因抽取輸出被截斷而缺失，GraphRAG 的結果受此限制（見 [4-3](#4-3-結果與分析)）。

@@ -13,14 +13,13 @@ Indexing
 Querying
   local   embed the question -> most similar entities (bge-m3 over "name: description") -> their 1-hop
           neighbourhood (relations by weight) + the text units they come from -> answer
-  global  map: the 12 community reports most similar to the question each answer it with a 0-100 helpfulness score; reduce: the best
+  global  map: every community report answers the question with a 0-100 helpfulness score; reduce: the best
           partial answers are combined into the final answer (for whole-paper questions)
   graph   (the GraphRAG answer that is evaluated) the question is routed to global search when the LLM judges that
           it needs an overview of the whole paper, otherwise to local search
   vector  baseline RAG: top-5 text units by embedding similarity
 """
 
-import json
 import os
 import re
 
@@ -63,22 +62,6 @@ REDUCE = ('以下是從 Self-RAG 論文不同部分整理出的部分答案（�
           '用繁體中文回答，保留英文專有名詞，不超過 200 字。\n\n{parts}\n\n問題：{q}')
 
 
-def salvage(text):
-    """Extraction output cut off by the token limit (Qwen3-4B pretty-prints the JSON): keep every complete
-    entity / relation object instead of dropping the whole text unit."""
-    ents, rels = [], []
-    for s in re.findall(r'\{[^{}]*\}', text or ''):
-        try:
-            o = json.loads(s)
-        except ValueError:
-            continue
-        if isinstance(o, dict) and o.get('name'):
-            ents.append(o)
-        elif isinstance(o, dict) and o.get('source') and o.get('target'):
-            rels.append(o)
-    return {'entities': ents, 'relations': rels} if ents or rels else None
-
-
 def norm(name):
     n = re.sub(r'[\s\-_]+', '', (name or '').lower())
     return re.sub(r'[^\w.%]', '', n)
@@ -101,7 +84,7 @@ def paper_units(size=1200, overlap=150):
 class GraphIndex:
     def __init__(self, llm, emb, cache=None):
         self.llm, self.emb = llm, emb
-        self.cache = cache or out_path('hw4_graph_v2.json')     # v2: truncated extraction outputs are salvaged
+        self.cache = cache or out_path('hw4_graph.json')
 
     # ------------------------------------------------------------------ build
     def build(self):
@@ -112,15 +95,12 @@ class GraphIndex:
         outs = self.llm.chat([[{'role': 'user', 'content': EXTRACT.format(types=', '.join(TYPES), text=u['text'])}]
                               for u in units], 1200, desc='graph extraction')
         nodes, edges = {}, {}
-        n_bad = n_salvaged = 0
+        n_bad = 0
         for u, o in zip(units, outs):
             d = parse_json(o, None)
             if not isinstance(d, dict):
-                d = salvage(o)
-                if d is None:
-                    n_bad += 1
-                    continue
-                n_salvaged += 1
+                n_bad += 1
+                continue
             for e in d.get('entities') or []:
                 if not isinstance(e, dict) or not e.get('name'):
                     continue
@@ -147,7 +127,7 @@ class GraphIndex:
                 if txt and txt not in ed['relations']:
                     ed['relations'].append(txt)
                 ed['units'].add(u['id'])
-        data = {'units': units, 'n_unparsed_units': n_bad, 'n_salvaged_units': n_salvaged,
+        data = {'units': units, 'n_unparsed_units': n_bad,
                 'nodes': [{'key': k, 'name': v['name'], 'type': max(v['types'], key=v['types'].get),
                            'description': ' '.join(v['descriptions'][:4]), 'units': sorted(v['units'])} for k, v in nodes.items()],
                 'edges': [{**v, 'units': sorted(v['units'])} for v in edges.values()]}
@@ -203,19 +183,17 @@ class GraphIndex:
         self.comms = data['communities']
         self.NE = self.emb.encode([f'{self.nodes[k]["name"]}: {self.nodes[k]["description"]}' for k in self.keys], name='graph_nodes')
         self.UE = self.emb.encode([u['text'] for u in self.units], name='paper_units')
-        self.CE = self.emb.encode([f'{c["title"]}: {c["summary"]}' for c in self.comms], name='graph_communities')
 
     def stats(self):
         import networkx as nx
         from collections import Counter
-        return {'text_units': len(self.units), 'truncated_but_salvaged_units': self.data.get('n_salvaged_units', 0),
-                'unparsed_units': self.data['n_unparsed_units'], 'entities': self.G.number_of_nodes(),
+        return {'text_units': len(self.units), 'unparsed_units': self.data['n_unparsed_units'], 'entities': self.G.number_of_nodes(),
                 'relations': self.G.number_of_edges(), 'communities': len(self.comms),
                 'connected_components': nx.number_connected_components(self.G),
                 'entity_types': dict(Counter(n['type'] for n in self.nodes.values()).most_common())}
 
     # ------------------------------------------------------------------ query
-    def local_context(self, q, qv, n_ent=8, n_rel=25, n_units=4):
+    def local_context(self, q, qv, n_ent=8, n_rel=25, n_units=3):
         sims = self.NE @ qv
         top = [self.keys[i] for i in np.argsort(-sims)[:n_ent]]
         rels = []
@@ -236,18 +214,14 @@ class GraphIndex:
         for k in top:
             for u in self.nodes[k]['units']:
                 cnt[u] = cnt.get(u, 0) + 1
-        # source text units of the selected entities, ranked by relevance to the question (+ a small bonus for units
-        # shared by several of the entities), as in GraphRAG local search
-        us = sorted(cnt, key=lambda u: -(float(self.UE[u] @ qv) + 0.02 * cnt[u]))[:n_units]
+        us = sorted(cnt, key=lambda u: (-cnt[u], -float(self.UE[u] @ qv)))[:n_units]
         ent_lines = [f'- {self.nodes[k]["name"]} ({self.nodes[k]["type"]})：{self.nodes[k]["description"][:400]}' for k in top]
         ctx = ('實體：\n' + '\n'.join(ent_lines) + '\n\n關係：\n' + '\n'.join(rel_lines) + '\n\n原文片段：\n' +
                '\n---\n'.join(self.units[u]['text'] for u in us))
         return ctx, {'entities': [self.nodes[k]['name'] for k in top], 'units': us}
 
-    def answer(self, questions, mode='graph', max_comms=12):
-        """mode: graph (routed) | local | global | vector. Returns one record per question.
-        global: map over the max_comms community reports most similar to the question (dynamic community selection),
-        then reduce."""
+    def answer(self, questions, mode='graph'):
+        """mode: graph (routed) | local | global | vector. Returns one record per question."""
         qv = self.emb.encode(questions)
         if mode == 'graph':
             routes = self.llm.chat([[{'role': 'user', 'content': ROUTE.format(q=q)}] for q in questions], 8)
@@ -269,14 +243,13 @@ class GraphIndex:
             recs[i] = {'question': questions[i], 'route': routes[i], 'answer': a, 'context': ctx, **m}
         glob = [i for i, r in enumerate(routes) if r == 'global']
         if glob:
-            sel = {i: [self.comms[j] for j in np.argsort(-(self.CE @ qv[i]))[:max_comms]] for i in glob}
             maps = [[{'role': 'user', 'content': MAP.format(report=f'{c["title"]}：{c["summary"]}', q=questions[i])}]
-                    for i in glob for c in sel[i]]
-            outs = iter(self.llm.chat(maps, 300, desc='global map'))
+                    for i in glob for c in self.comms]
+            outs = self.llm.chat(maps, 300, desc='global map')
             red, parts_all = [], []
-            for i in glob:
+            for n, i in enumerate(glob):
                 parts = []
-                for c, o in zip(sel[i], outs):
+                for c, o in zip(self.comms, outs[n * len(self.comms):(n + 1) * len(self.comms)]):
                     d = parse_json(o, {}) or {}
                     if isinstance(d, dict) and d.get('answer') and float(d.get('score', 0) or 0) > 0:
                         parts.append((float(d['score']), d['answer'], c['id']))
